@@ -1,6 +1,6 @@
-# ᵔᴥᵔ SpamAssassin - Custom rules by me
+# ᵔᴥᵔ SpamAssassin - My Custom Rules!
 
-[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/davidbl)
+[![Twitter Follow](https://img.shields.io/twitter/follow/espadrine.svg?style=social&label=Follow)](https://twitter.com/davidbl) [![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg)](https://github.com/kawaiipantsu/spamassassin-rules/issues) [![GitHub closed issues](https://img.shields.io/github/issues-closed/badges/shields.svg)](https://github.com/kawaiipantsu/spamassassin-rules/issues)
 
 > I use Spamassassin together with Amavisd and much more to support my Postfix SMTP server in fighting spam, phishing and viruses. Want to know more? - Let me know! ʘ‿ʘ
 
@@ -8,11 +8,11 @@
 
 # Table of Contents
 
- * [Spamassassin - What is it?](#spamassassin-----what--is--it)
- * [Custom Rules](#custom--rules)
-   * [Where do i put them?](#where--do--i--put--them)
+ * [Spamassassin - What is it?](#spamassassin---what-is-it)
+ * [Custom Rules](#custom-rules)
+   * [Where do i put them?](#where-do-i-put-them)
    * [Activating the new rules](#activating--the--new--rules)
-   * [Overview on custom rules](#overview--on--custom--rules)
+   * [Overview on custom rules](#overview-on-custom-rules)
      * [Rule #01](#)
      * [Rule #02](#)
      * [Rule #03](#)
