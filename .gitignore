@@ -1,0 +1,86 @@
+#    ____ _ _     ___
+#   / ___(_) |_  |_ _|__ _ _ __   ___  _ __ ___
+#  | |  _| | __|  | |/ _` | '_ \ / _ \| '__/ _ \
+#  | |_| | | |_   | | (_| | | | | (_) | | |  __/
+#   \____|_|\__| |___\__, |_| |_|\___/|_|  \___|
+#                    |___/
+#
+# -+-
+#
+# This Git ignore file is more or less custom and have multiple
+# project types included. That way i can just use my own file.
+#
+# I do also add a few Apple MacOS files that we dont want to
+# include, this is not needed if you're on a Windows system.
+# But it's always nice to have a clean git-repo!
+#
+############################################################################
+# Local OS temp/log/system files
+# -+-
+# MacOS
+.DS_Store
+.DS_Store?
+._*
+sublime-*
+
+# Windows
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Linux
+*.~
+*.swp
+pids
+*.pid
+*.seed
+*.pid.lock
+*.lock
+.env
+
+# Build environments
+# -+-
+build/Release
+conf/*.conf
+
+# NodeJS and WebPack
+# -+-
+node_modules
+build
+dist
+webpack-stats.json
+npm-debug.log
+node_modules/
+jspm_packages/
+.npm
+.node_repl_history
+
+# Log files
+# -+-
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compiled sources
+# -+-
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Compression archives
+# -+-
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
