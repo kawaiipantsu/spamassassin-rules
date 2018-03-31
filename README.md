@@ -1,6 +1,6 @@
 # ᵔᴥᵔ SpamAssassin - My Custom Rules!
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/espadrine.svg?style=social&label=Follow)](https://twitter.com/davidbl) [![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg)](https://github.com/kawaiipantsu/spamassassin-rules/issues) [![GitHub closed issues](https://img.shields.io/github/issues-closed/badges/shields.svg)](https://github.com/kawaiipantsu/spamassassin-rules/issues)
+[![Twitter Follow](https://img.shields.io/twitter/follow/davidbl.svg?style=social&label=Follow)](https://twitter.com/davidbl) [![GitHub issues](https://img.shields.io/github/issues/kawaiipantsu/spamassassin-rules.svg)](https://github.com/kawaiipantsu/spamassassin-rules/issues) [![GitHub closed issues](https://img.shields.io/github/issues-closed/kawaiipantsu/spamassassin-rules.svg)](https://github.com/kawaiipantsu/spamassassin-rules/issues) [![GitHub license](https://img.shields.io/github/license/kawaiipantsu/spamassassin-rules.svg)](https://github.com/kawaiipantsu/spamassassin-rules/blob/master/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/kawaiipantsu/spamassassin-rules.svg)](https://github.com/kawaiipantsu/spamassassin-rules/network) [![GitHub stars](https://img.shields.io/github/stars/kawaiipantsu/spamassassin-rules.svg)](https://github.com/kawaiipantsu/spamassassin-rules/stargazers)
 
 > I use Spamassassin together with Amavisd and much more to support my Postfix SMTP server in fighting spam, phishing and viruses. Want to know more? - Let me know! ʘ‿ʘ
 
