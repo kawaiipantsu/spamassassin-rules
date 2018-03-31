@@ -4,7 +4,7 @@
 
 > I use Spamassassin together with Amavisd and much more to support my Postfix SMTP server in fighting spam, phishing and viruses. Want to know more? - Let me know! ʘ‿ʘ
 
-[![Apache SpamAssassin (tm)](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/SpamAssassin_logo.png/767px-SpamAssassin_logo.png "Apache SpamAssassin (tm)")](https://spamassassin.apache.org)
+[![Apache SpamAssassin (tm)](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/SpamAssassin_logo.png/1023px-SpamAssassin_logo.png "Apache SpamAssassin (tm)")](https://spamassassin.apache.org)
 
 # Table of Contents
 
