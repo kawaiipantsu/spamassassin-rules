@@ -1,0 +1,7 @@
+ 
+# X-PHP-Originating-Script: 10000:sendme.php(3) : eval()'d code
+
+header PP_LOCAL_PHP_EVAL X-PHP-Originating-Script =~ /eval\(\)\'d code/i
+describe PP_LOCAL_PHP_EVAL Eval()'ed PHP code as source
+score PP_LOCAL_PHP_EVAL 100
+

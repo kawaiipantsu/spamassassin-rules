@@ -1,0 +1,24 @@
+# apple (ph|f)ishing.
+
+# if it looks like it's from Apple, and doesn't have a DKIM signature, 
+# and it's message id looks wrong, then it's probably rubbish.
+
+header __PP_LOCAL_APPLE_01 From =~ /Apple/i
+header __PP_LOCAL_APPLE_02 From !~ /(\@email\.apple|\@apple)\.(com|co\.uk)>$/i
+header __PP_LOCAL_APPLE_03 Message-ID !~ /(\@apple\.com|\@email\.apple\.com)>$/
+header __PP_LOCAL_APPLE_04 DKIM-Signature !~ /[a-z]+/
+body   __PP_LOCAL_APPLE_05 /\b(Apple|iCloud|iOS|AppleID|iTunes)\b/i
+header __PP_LOCAL_APPLE_06 Subject =~ /(Apple|iCloud|iOS|appstore|iTunes)/i
+
+meta PP_LOCAL_APPLE_PHISHING_01 (( __PP_LOCAL_APPLE_01 + __PP_LOCAL_APPLE_02 + __PP_LOCAL_APPLE_03 + __PP_LOCAL_APPLE_04 + __PP_LOCAL_APPLE_05 + __PP_LOCAL_APPLE_06 )) > 4
+score PP_LOCAL_APPLE_PHISHING_01 10
+describe PP_LOCAL_APPLE_PHISHING_01 Looks like Apple.com Phishing
+
+
+header __PP_LOCAL_APPLE1_01 From =~ /Apple iTunes/i
+header __PP_LOCAL_APPLE1_02 From !~ /\@apple\.(com|co\.uk)>$/i
+header __PP_LOCAL_APPLE1_03 Message-ID !~ /\@apple\.com>$/
+
+meta PP_LOCAL_APPLE_PHISHING_02 (( __PP_LOCAL_APPLE1_01 + __PP_LOCAL_APPLE1_02 + __PP_LOCAL_APPLE1_03 )) > 2
+score PP_LOCAL_APPLE_PHISHING_02 10
+describe PP_LOCAL_APPLE_PHISHING_02 Looks like Apple/iTunes Phishing

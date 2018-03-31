@@ -1,0 +1,26 @@
+# PayPal Spam
+
+body   __PP_LOCAL_PAYPAL_01 /\bPayPal\b/i
+header __PP_LOCAL_PAYPAL_02 From =~ /paypal/i
+header __PP_LOCAL_PAYPAL_03 From !~ /@.*paypal\..*/i
+header __PP_LOCAL_PAYPAL_04 X-Mailer =~ /(Outlook|Express)/i
+header __PP_LOCAL_PAYPAL_05 Subject =~ /\b(PayPal)\b/i
+body   __PP_LOCAL_PAYPAL_06 /(security|normal account activities|unusual|knowledge)/i
+body   __PP_LOCAL_PAYPAL_07 /Click here/i
+# Real paypal mails have this header. I think.
+rawbody __PP_LOCAL_PAYPAL_08 /PP\-Correlation\-Id\:/
+
+meta PP_LOCAL_PAYPAL __PP_LOCAL_PAYPAL_02 && __PP_LOCAL_PAYPAL_03 && (( __PP_LOCAL_PAYPAL_01 + __PP_LOCAL_PAYPAL_04 + __PP_LOCAL_PAYPAL_05 + __PP_LOCAL_PAYPAL_06 + __PP_LOCAL_PAYPAL_07 + ! __PP_LOCAL_PAYPAL_08 )) > 3
+
+describe PP_LOCAL_PAYPAL Looks like a PayPal phishing (1)
+score PP_LOCAL_PAYPAL 8
+
+
+
+header __PP_LOCAL_PAYPAL2_01 From =~ /PayPal/i
+header __PP_LOCAL_PAYPAL2_02 From !~ /@.*paypal\..*/i
+
+describe PP_LOCAL_PAYPAL2 Looks like PayPal phishing (2)
+meta PP_LOCAL_PAYPAL2 (( __PP_LOCAL_PAYPAL2_01 + __PP_LOCAL_PAYPAL2_02 )) > 1
+score PP_LOCAL_PAYPAL2 6
+

@@ -1,0 +1,18 @@
+# making money crap
+
+header   __PP_LOCAL_MONEY_1 From =~ /(Loans|Money)\w/i
+header   __PP_LOCAL_MONEY_2 List-Unsubscribe =~ /[a-z]+/i
+body     __PP_LOCAL_MONEY_3 /To view it online/i
+body     __PP_LOCAL_MONEY_4 /To stop receiving/i
+body     __PP_LOCAL_MONEY_5 /click here to unsubscribe/i
+
+
+meta     PP_LOCAL_MONEY_1 (( __PP_LOCAL_MONEY_1 + __PP_LOCAL_MONEY_2 + __PP_LOCAL_MONEY_3 + __PP_LOCAL_MONEY_4 + __PP_LOCAL_MONEY_5 )) > 4
+
+describe PP_LOCAL_MONEY_1 Unwanted bulk mail 
+score    PP_LOCAL_MONEY_1 5
+
+meta     PP_LOCAL_SUBSCRIPTION_HEADERS (( __PP_LOCAL_MONEY_3 + __PP_LOCAL_MONEY_4 + __PP_LOCAL_MONEY_5 )) > 2
+describe PP_LOCAL_SUBSCRIPTION_HEADERS Probably unwanted bulk email
+score    PP_LOCAL_SUBSCRIPTION_HEADERS 2
+

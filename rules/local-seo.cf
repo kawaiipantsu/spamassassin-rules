@@ -1,0 +1,38 @@
+header PP_LOCAL_SEO_1 Subject =~ /\srankings?/i
+describe PP_LOCAL_SEO_1 google seo ranking spam
+score PP_LOCAL_SEO_1 2
+
+header PP_LOCAL_SEO_2 Message-ID =~ /servicehubmail\.com/
+describe PP_LOCAL_SEO_2 spammy headers (servicehubmail)
+score PP_LOCAL_SEO_2 2
+
+
+body   PP_LOCAL_SEO_3 /(Business Owner,|Hello Team)/i
+describe PP_LOCAL_SEO_3 Generic greeting
+score PP_LOCAL_SEO_3 2
+
+body   __PP_LOCAL_SEO_01 /\s(SEO|Search Engine Optimization)/i
+body   __PP_LOCAL_SEO_02 /\s(1st page of|page one of|first page of|top of|front page of) google/i
+body   __PP_LOCAL_SEO_03 /\s(analysis|analyze)\W/i
+body   __PP_LOCAL_SEO_04 /\s(optimize|optimizing|optimization|visibility)\W/i
+body   __PP_LOCAL_SEO_05 /\s(Ethical|Organic)\W/i
+body   __PP_LOCAL_SEO_06 /\s(ROI|sales|proposal|strategy)/i
+body   __PP_LOCAL_SEO_07 /\s(website|keywords?|ranking)/i
+body   __PP_LOCAL_SEO_08 /\s(higher|more|better) traffic/i
+body   __PP_LOCAL_SEO_09 /\s(google|bing|yahoo)/i
+
+meta PP_LOCAL_SEO_4 (( __PP_LOCAL_SEO_01 + __PP_LOCAL_SEO_02 + __PP_LOCAL_SEO_03 + __PP_LOCAL_SEO_04 + __PP_LOCAL_SEO_05 + __PP_LOCAL_SEO_06 + __PP_LOCAL_SEO_07 + __PP_LOCAL_SEO_08 + __PP_LOCAL_SEO_09 )) > 5
+
+describe PP_LOCAL_SEO_4 Body contains too many SEO optimisation words
+score    PP_LOCAL_SEO_4 2
+
+rawbody __PP_LOCAL_TOO_MUCH_SEO /\b(SEO)\b/i
+meta PP_LOCAL_TOO_MUCH_SEO __PP_LOCAL_TOO_MUCH_SEO > 3
+describe PP_LOCAL_TOO_MUCH_SEO Too many uses of SEO (>3)
+score PP_LOCAL_TOO_MUCH_SEO 5
+tflags __PP_LOCAL_TOO_MUCH_SEO multiple maxhits=5
+
+meta PP_LOCAL_SEO_SUSPICIOUS (( __PP_LOCAL_SEO_01 + __PP_LOCAL_SEO_02 + __PP_LOCAL_SEO_07 + __PP_LOCAL_SEO_09 )) > 2
+describe PP_LOCAL_SEO_SUSPICIOUS Probably SEO spam
+score PP_LOCAL_SEO_SUSPICIOUS 3
+

@@ -1,0 +1,25 @@
+# too much sex. - this rule looks for >= 4 occurances of sex/sexy/sexual etc.
+
+body __PP_LOCAL_TOO_MUCH_SEX /\b(fuck|ass|a\$\$|f\@ck|sex|cocky|cock|c0ck|b\@anged|b\@ng|sexy|sexual|boobies|boobs|bl0w|b10w|b00bs|s3x|\$ex|pu\$\$y)\b/i
+meta PP_LOCAL_TOO_MUCH_SEX __PP_LOCAL_TOO_MUCH_SEX >= 4
+describe PP_LOCAL_TOO_MUCH_SEX Too many uses of sex/sexy/sexual/boobies etc (>4)
+score PP_LOCAL_TOO_MUCH_SEX 10
+tflags __PP_LOCAL_TOO_MUCH_SEX multiple maxhits=5
+
+
+meta PP_LOCAL_DODGY_WORDS (( __PP_LOCAL_TOO_MUCH_SEX > 0 ))
+describe PP_LOCAL_DODGY_WORDS Obfuscated words, probably sexual
+score PP_LOCAL_DODGY_WORDS 4
+
+
+body __PP_LOCAL_UNWANTED_WORDS /\b(Testosterona|metadrol|viagra|cialis|Tadalafil|sildenafil)\b/i
+meta PP_LOCAL_UNWANTED_WORDS __PP_LOCAL_UNWANTED_WORDS >= 2
+describe PP_LOCAL_UNWANTED_WORDS Unwanted words (metadrol, viagra ....)
+score PP_LOCAL_UNWANTED_WORDS 5
+tflags __PP_LOCAL_UNWANTED_WORDS multiple maxhits=3
+
+body __PP_LOCAL_SUSPECT_WORDS /\b(rock hard|erection)\b/i
+meta PP_LOCAL_SUSPECT_WORDS __PP_LOCAL_SUSPECT_WORDS >= 1
+describe PP_LOCAL_SUSPECT_WORDS suspect words (erection etc....)
+score PP_LOCAL_SUSPECT_WORDS 2
+tflags __PP_LOCAL_SUSPECT_WORDS multiple maxhits=3

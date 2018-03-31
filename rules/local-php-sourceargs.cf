@@ -1,0 +1,20 @@
+## More innocent servers hit by hackers using cli php to spam 
+## via Wordpress plugin
+## ==========================================================================
+
+header   __DN_PHPSRC    X-Source =~ /\/usr\/bin\/php/
+header   __DN_PHPSRCARG1 X-Source-Args =~ /\/usr\/bin\/php/
+header   __DN_PHPSRCARG2 X-Source-Args =~ /\/usr\/sbin\/proxyexec/
+header   __DN_PHPSRCARG3 X-Source-Args =~ /\/usr\/sbin\//
+header   __DN_PHPSRCARG4 X-Source-Args =~ /\/usr\/bin\//
+header   __DN_PHPSRCDIR1 X-Source-Dir =~ /wp-content/i
+header   __DN_PHPSRCDIR2 X-Source-Dir =~ /public_html/i
+
+meta     DN_PHPSOURCE1   (__DN_PHPSRC && __DN_PHPSRCARG1 && __DN_PHPSRCDIR1)
+score    DN_PHPSOURCE1   50
+describe DN_PHPSOURCE1   Hacked WordPress sites used to spam
+
+meta     DN_PHPSOURCE2   (__DN_PHPSRCARG2 && __DN_PHPSRCDIR2)
+score    DN_PHPSOURCE2   50
+describe DN_PHPSOURCE2   Hacked VPS CageFS
+

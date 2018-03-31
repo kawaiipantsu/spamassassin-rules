@@ -1,0 +1,39 @@
+header   PP_LOCAL_PROFANITY_SUBJECT_1 Subject =~ /\bCunt(s|ing)?\b/i
+describe PP_LOCAL_PROFANITY_SUBJECT_1 Subject: C word
+score    PP_LOCAL_PROFANITY_SUBJECT_1 1
+
+header   PP_LOCAL_PROFANITY_SUBJECT_2 Subject =~ /\bF(\#|\*|u)ck/i
+describe PP_LOCAL_PROFANITY_SUBJECT_2 Subject: contains obfuscated F word
+score    PP_LOCAL_PROFANITY_SUBJECT_2 2
+
+header   PP_LOCAL_PROFANITY_SUBJECT_3 Subject =~ /\bWank(s|er|ing)?\b/i
+describe PP_LOCAL_PROFANITY_SUBJECT_3 Subject: W word
+score    PP_LOCAL_PROFANITY_SUBJECT_3 1
+
+header   PP_LOCAL_PROFANITY_SUBJECT_4 Subject =~ /\bClit\b/i
+describe PP_LOCAL_PROFANITY_SUBJECT_4 Subject: Cl word
+score    PP_LOCAL_PROFANITY_SUBJECT_4 1
+
+header   PP_LOCAL_PROFANITY_SUBJECT_5 Subject =~ /\bBastard\b/i
+describe PP_LOCAL_PROFANITY_SUBJECT_5 Subject: B word
+score    PP_LOCAL_PROFANITY_SUBJECT_5 1
+
+header   PP_LOCAL_PROFANITY_SUBJECT_6 Subject =~ /\bPenis\b/i
+describe PP_LOCAL_PROFANITY_SUBJECT_6 Subject: P word
+score    PP_LOCAL_PROFANITY_SUBJECT_6 1
+
+header   PP_LOCAL_PROFANITY_SUBJECT_7 Subject =~ /\bFelch\b/i
+describe PP_LOCAL_PROFANITY_SUBJECT_7 Subject: Fe word
+score    PP_LOCAL_PROFANITY_SUBJECT_7 1
+
+body     PP_LOCAL_PROFANITY_BODY_1 /\bh0ney\b/i
+describe PP_LOCAL_PROFANITY_BODY_1 Body: h0ney
+score    PP_LOCAL_PROFANITY_BODY_1 1
+
+body     PP_LOCAL_PROFANITY_BODY_2 /\t\*ts\b/i
+describe PP_LOCAL_PROFANITY_BODY_2 Body: t_ts
+score    PP_LOCAL_PROFANITY_BODY_2 1
+
+body     PP_LOCAL_PROFANITY_BODY_3 /\bF(\#|\*|u)ck(s|er|ed|ing|buddy|buddies)?\b/i
+describe PP_LOCAL_PROFANITY_BODY_3 Body: obfuscated f*ck
+score    PP_LOCAL_PROFANITY_BODY_3 2

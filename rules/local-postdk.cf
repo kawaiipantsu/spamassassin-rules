@@ -1,0 +1,20 @@
+## Post DK / Post Nord Rule to let their Tracking emails get a minus score
+## ==========================================================================
+## We can match on the SPF header as it's correct and shows their server.
+## Received-SPF: None (mailfrom) identity=mailfrom; client-ip=193.3.69.7; helo=ecmail2.post.dk; envelope-from=sbe@ecmail.post.dk; receiver=<UNKNOWN> 
+## Let's match on helo=*.post\.dk;
+## AND
+## Let's match for a actual tracking link
+## https://tracking.postnord.com/dk/?id=781c167f:0025:75a4:7059:e891:13dbab581961597b:832168954994
+## ==========================================================================
+
+header   __DN_POSTDK_01 Received-SPF =~ /helo=.*\.post\.dk/i
+uri      __DN_POSTDK_02 /tracking\.postnord\.com\/dk\//
+
+meta     DN_POSTDK_1      (__DN_POSTDK_01)
+score    DN_POSTDK_1      -5
+describe DN_POSTDK_1      Allow Post Nord emails
+
+meta     DN_POSTDK_2      (__DN_POSTDK_01 && __DN_POSTDK_02)
+score    DN_POSTDK_2      -10
+describe DN_POSTDK_2      Allow Post Nord tracking emails

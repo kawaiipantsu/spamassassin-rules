@@ -1,0 +1,17 @@
+## Match Saxo Bank emails and let them get a lower score!
+## ==========================================================================
+## We can match on the SPF header as it's correct and shows their server.
+## Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=185.16.141.244; helo=mx2.saxobank.com; envelope-from=prvs=592d974e2=saxobanknotification@saxobank.com; receiver=<UNKNOWN> 
+## Let's match on helo=*.saxobank\.com;
+## ==========================================================================
+
+header   __DN_SAXOBANK_01 Received-SPF =~ /helo=.*\.post\.dk/i
+uri      __DN_SAXOBANK_02 /www\.onlinewebconnect\.com\/WebConnect\//
+
+meta     DN_SAXOBANK_1      (__DN_SAXOBANK_01)
+score    DN_SAXOBANK_1      -10
+describe DN_SAXOBANK_1      Allow SaxoBank emails
+
+meta     DN_SAXOBANK_2      (__DN_SAXOBANK_01 && __DN_SAXOBANK_02)
+score    DN_SAXOBANK_2      -20
+describe DN_SAXOBANK_2      Allow SaxoBank Margin call emails

@@ -1,0 +1,15 @@
+## Hacked server with compromised script containing spam code
+## ==========================================================================
+
+#uri      DN_PHP_HACKURL1 /\.php\?utm_source=[a-z0-9]+&utm_medium=[a-z0-9]+&utm_campaign=[a-z0-9]+&utm_term=[a-z0-9]+&utm_content=[a-z0-9]+/
+uri      DN_PHP_HACKURL1 /\/[a-z]+\.php\?utm_source=[a-zA-Z0-9]{10}&utm_medium=[a-zA-Z0-9]{10}&utm_campaign=[a-zA-Z0-9]{10}&utm_term=[a-zA-Z0-9]{10}&utm_content=[a-zA-Z0-9]{10}/i
+score    DN_PHP_HACKURL1 20
+describe DN_PHP_HACKURL1 Hacked PHP script spam link
+
+uri      DN_PHP_HACKURL2 /\/[a-z]+\.php\?\w=[a-zA-Z0-9]+(&[\w\d]+=[a-zA-Z0-9]+){2,}/i
+score    DN_PHP_HACKURL2 20
+describe DN_PHP_HACKURL2 Hacked PHP script spam link
+
+header VULN_PHPMAILER X-Mailer =~ /PHPMailer 5\.2\.[0-9] /i
+score VULN_PHPMAILER 2.75
+describe VULN_PHPMAILER Mail was sent from a vulnerable version of PHPMailer
