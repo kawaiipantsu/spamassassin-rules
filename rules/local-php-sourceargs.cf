@@ -1,6 +1,17 @@
+###
+##    ____          _ Apache SpamAssassin____        _
+##   / ___|   _ ___| |_ ___  _ __ ___   |  _ \ _   _| | ___  ___
+##  | |  | | | / __| __/ _ \| '_ ` _ \  | |_) | | | | |/ _ \/ __|
+##  | |__| |_| \__ \ || (_) | | | | | | |  _ <| |_| | |  __/\__ \
+##   \____\__,_|___/\__\___/|_| |_| |_| |_| \_\\__,_|_|\___||___/
+##             https://github.com/kawaiipantsu/spamassassin-rules
+##
+## Custom rule description:
+##
 ## More innocent servers hit by hackers using cli php to spam 
 ## via Wordpress plugin
-## ==========================================================================
+##
+#########################################################################
 
 header   __DN_PHPSRC    X-Source =~ /\/usr\/bin\/php/
 header   __DN_PHPSRCARG1 X-Source-Args =~ /\/usr\/bin\/php/

@@ -1,5 +1,16 @@
+###
+##    ____          _ Apache SpamAssassin____        _
+##   / ___|   _ ___| |_ ___  _ __ ___   |  _ \ _   _| | ___  ___
+##  | |  | | | / __| __/ _ \| '_ ` _ \  | |_) | | | | |/ _ \/ __|
+##  | |__| |_| \__ \ || (_) | | | | | | |  _ <| |_| | |  __/\__ \
+##   \____\__,_|___/\__\___/|_| |_| |_| |_| \_\\__,_|_|\___||___/
+##             https://github.com/kawaiipantsu/spamassassin-rules
+##
+## Custom rule description:
+##
 ## Hacked server with compromised script containing spam code
-## ==========================================================================
+##
+#########################################################################
 
 #uri      DN_PHP_HACKURL1 /\.php\?utm_source=[a-z0-9]+&utm_medium=[a-z0-9]+&utm_campaign=[a-z0-9]+&utm_term=[a-z0-9]+&utm_content=[a-z0-9]+/
 uri      DN_PHP_HACKURL1 /\/[a-z]+\.php\?utm_source=[a-zA-Z0-9]{10}&utm_medium=[a-zA-Z0-9]{10}&utm_campaign=[a-zA-Z0-9]{10}&utm_term=[a-zA-Z0-9]{10}&utm_content=[a-zA-Z0-9]{10}/i

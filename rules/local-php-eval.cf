@@ -1,7 +1,18 @@
+###
+##    ____          _ Apache SpamAssassin____        _
+##   / ___|   _ ___| |_ ___  _ __ ___   |  _ \ _   _| | ___  ___
+##  | |  | | | / __| __/ _ \| '_ ` _ \  | |_) | | | | |/ _ \/ __|
+##  | |__| |_| \__ \ || (_) | | | | | | |  _ <| |_| | |  __/\__ \
+##   \____\__,_|___/\__\___/|_| |_| |_| |_| \_\\__,_|_|\___||___/
+##             https://github.com/kawaiipantsu/spamassassin-rules
+##
+## Custom rule description:
+##
+## X-PHP-Originating-Script: 10000:sendme.php(3) : eval()'d code
+##
+#########################################################################
  
-# X-PHP-Originating-Script: 10000:sendme.php(3) : eval()'d code
 
 header PP_LOCAL_PHP_EVAL X-PHP-Originating-Script =~ /eval\(\)\'d code/i
 describe PP_LOCAL_PHP_EVAL Eval()'ed PHP code as source
 score PP_LOCAL_PHP_EVAL 100
-

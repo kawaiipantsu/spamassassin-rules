@@ -1,9 +1,19 @@
+###
+##    ____          _ Apache SpamAssassin____        _
+##   / ___|   _ ___| |_ ___  _ __ ___   |  _ \ _   _| | ___  ___
+##  | |  | | | / __| __/ _ \| '_ ` _ \  | |_) | | | | |/ _ \/ __|
+##  | |__| |_| \__ \ || (_) | | | | | | |  _ <| |_| | |  __/\__ \
+##   \____\__,_|___/\__\___/|_| |_| |_| |_| \_\\__,_|_|\___||___/
+##             https://github.com/kawaiipantsu/spamassassin-rules
+##
+## Custom rule description:
+##
 ## Match Saxo Bank emails and let them get a lower score!
-## ==========================================================================
 ## We can match on the SPF header as it's correct and shows their server.
 ## Received-SPF: Pass (mailfrom) identity=mailfrom; client-ip=185.16.141.244; helo=mx2.saxobank.com; envelope-from=prvs=592d974e2=saxobanknotification@saxobank.com; receiver=<UNKNOWN> 
 ## Let's match on helo=*.saxobank\.com;
-## ==========================================================================
+##
+#########################################################################
 
 header   __DN_SAXOBANK_01 Received-SPF =~ /helo=.*\.post\.dk/i
 uri      __DN_SAXOBANK_02 /www\.onlinewebconnect\.com\/WebConnect\//

@@ -1,9 +1,22 @@
-# making money crap
+###
+##    ____          _ Apache SpamAssassin____        _
+##   / ___|   _ ___| |_ ___  _ __ ___   |  _ \ _   _| | ___  ___
+##  | |  | | | / __| __/ _ \| '_ ` _ \  | |_) | | | | |/ _ \/ __|
+##  | |__| |_| \__ \ || (_) | | | | | | |  _ <| |_| | |  __/\__ \
+##   \____\__,_|___/\__\___/|_| |_| |_| |_| \_\\__,_|_|\___||___/
+##             https://github.com/kawaiipantsu/spamassassin-rules
+##
+## Custom rule description:
+##
+## Trying to catch unwanted spam/bulk about money loaning.
+## We split it up in two sections, one most likely and one just likely.
+##
+#########################################################################
 
-header   __PP_LOCAL_MONEY_1 From =~ /(Loans|Money)\w/i
+header   __PP_LOCAL_MONEY_1 From =~ /(loans|money)\w/i
 header   __PP_LOCAL_MONEY_2 List-Unsubscribe =~ /[a-z]+/i
-body     __PP_LOCAL_MONEY_3 /To view it online/i
-body     __PP_LOCAL_MONEY_4 /To stop receiving/i
+body     __PP_LOCAL_MONEY_3 /to view it online/i
+body     __PP_LOCAL_MONEY_4 /to stop receiving/i
 body     __PP_LOCAL_MONEY_5 /click here to unsubscribe/i
 
 

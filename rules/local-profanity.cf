@@ -1,3 +1,17 @@
+###
+##    ____          _ Apache SpamAssassin____        _
+##   / ___|   _ ___| |_ ___  _ __ ___   |  _ \ _   _| | ___  ___
+##  | |  | | | / __| __/ _ \| '_ ` _ \  | |_) | | | | |/ _ \/ __|
+##  | |__| |_| \__ \ || (_) | | | | | | |  _ <| |_| | |  __/\__ \
+##   \____\__,_|___/\__\___/|_| |_| |_| |_| \_\\__,_|_|\___||___/
+##             https://github.com/kawaiipantsu/spamassassin-rules
+##
+## Custom rule description:
+##
+## Basic profanity rules ...
+##
+#########################################################################
+
 header   PP_LOCAL_PROFANITY_SUBJECT_1 Subject =~ /\bCunt(s|ing)?\b/i
 describe PP_LOCAL_PROFANITY_SUBJECT_1 Subject: C word
 score    PP_LOCAL_PROFANITY_SUBJECT_1 1
