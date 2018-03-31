@@ -9,13 +9,16 @@
 # Table of Contents
 
  * [Spamassassin - What is it?](#spamassassin---what-is-it)
- * [Custom Rules](#custom-rules)
+ * [Install Custom Rules](#install-custom-rules)
    * [Where do i put them?](#where-do-i-put-them)
    * [Activating the new rules](#activating--the--new--rules)
-   * [Overview on custom rules](#overview-on-custom-rules)
-     * [Rule #01](#)
-     * [Rule #02](#)
-     * [Rule #03](#)
+     * [Known paths, maybe one of these is what you use ?](#)
+     * [Adding rules globally](#)
+     * [Adding rules for individual users (User Pref)](#)
+ * [My Custom Rules](#my-custom-rules)
+   * [Rule #01](#)
+   * [Rule #02](#)
+   * [Rule #03](#)
  * [Documentation](#documentation)
 
 ## Spamassassin - What is it?
@@ -24,30 +27,90 @@ Apsamasassin is actually maintained by Apache now, this is great news as we know
 
 > So keywords here are "scoring framwork". Keep this in mind, it will help you understand why my rules do as they do.
 
-So basically Spamassassin ends up giving your email a score derived from a bunch of rules. This is the gist of the hole system. What you then do is to tell Spamassassin and/or underlaying filters/daemons like Amavisd to mark the mail as spam or etc. quarantine it or bounce it. I'm personally using Amavisd so all of my "what to do with the score" is handled by Amavisd. All i do is to pipe the mail to the spamassassin script/service and it then scans the mail letting amavisd handle the rest.
+So basically Spamassassin ends up giving your email a score derived from a bunch of rules. This is the gist of the hole system. What you then do is to tell Spamassassin and/or underlaying filters/daemons like Amavisd to mark the mail as spam or etc. quarantine it or bounce it based on that score. I'm personally using Amavisd so all of my "what to do with the score" is handled by Amavisd. All i do is to pipe the mail to the spamassassin script/service and it then scans the mail letting amavisd handle the rest.
 
-## Custom rules
+## Install custom rules
 
 Overview on all custom rules and some basic information on how to install them and how to use them. By default spamassassin and amavis if setup propperly will automatically include all *.cf files under /etc/spamassassin.
 
 ### Where do i put them?
 
+You can add custom rules to SpamAssassin in two ways. One way is to install the rules globally in a "global pref" path and the other way is to have the rules only apply for a specific user in a "user pref" path.
+
+I only use rules added globally as mine is a dedicated SMTP server to i want this to apply to all services using Spamassassin.
+But i will show you how to do both. Please note that path's may be different on your system. It all depends on what Spamassassin is configured with.
+
 ### Activating the new rules
 
-	/etc/mail/spamassassin/local.cf
-	allow_local_rules 1
+Let's get going!
 
-### Overview on custom rules
+#### Known paths, maybe one of these is what you use ?
+
+Again, this is just some of the known places to look. It will vary from installation to installation.
+So you can't expect that the paths listed below is correct but in most cases one of them will be the right one :)
+
+Note, the last 3 paths are all private aka "user pref" paths so most likely not what you want.
+
+	/etc/spamassassin/
+	or
+	/etc/mail/spamassassin/
+	or
+	/var/lib/amavis/.spamassassin/
+	or
+	/var/spool/amavis/.spamassassin
+	or
+	/root/.spamassassin
+
+#### Adding rules globally
+
+Locate where you lcoal.cf file is, again check some of the paths above.
+In my case it's located here: /etc/spamassassin/
+
+This is also where you place your custom rules.
+All rules must end with:
+
+	.cf
+
+I usually name mine "local-ruleinfo.cf". So that i know it's a local rule and what it does.
+
+#### Adding rules for individual users (User Pref)
+
+Locate where you lcoal.cf file is, again check some of the paths above.
+In my case it's located here: /etc/spamassassin/
+
+Edit the file local.cf and make sure that the following is enabled, it's on by default but just to make sure!
+
+	cd /etc/spamassassin/	
+	$EDITOR local.cf
+	
+	# Add this line to it if not there.
+        allow_local_rules 1
+
+Now you should be able to add custom-rules.cf files to your own User_Pref path.
+Check the paths above to see what they might look like. In most cases they will be located inside your own $HOME dir.
+
+So check out the following path first
+
+	cd ~/.spamassassin
+
+Put your custom rules here if it exists.
+All rules must end with:
+
+	.cf
+
+I usually name mine "local-ruleinfo.cf". So that i know it's a local rule and what it does.
+
+## My Custom Rules
 
 > My custom rules may not all be of use to you. But if you live in the EU i would recommend to just use them all as nothing would break. What i mean by that is i might block or blacklist things that makes no sense if you don't live inside EU. So the scores wont work correctly when i'm whitelisting etc. In most cases, you can just change it or let me know and i will add your changes so it also suits your setup!
 
 Just testing how to show the rules, this is just temporarily...
 
-#### Rule #01
+### Rule #01
 
-#### Rule #02
+### Rule #02
 
-#### Rule #03
+### Rule #03
 
 ## Documentation
 
