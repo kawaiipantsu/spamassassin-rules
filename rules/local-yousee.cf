@@ -1,0 +1,38 @@
+###
+##    ____          _ Apache SpamAssassin____        _
+##   / ___|   _ ___| |_ ___  _ __ ___   |  _ \ _   _| | ___  ___
+##  | |  | | | / __| __/ _ \| '_ ` _ \  | |_) | | | | |/ _ \/ __|
+##  | |__| |_| \__ \ || (_) | | | | | | |  _ <| |_| | |  __/\__ \
+##   \____\__,_|___/\__\___/|_| |_| |_| |_| \_\\__,_|_|\___||___/
+##             https://github.com/kawaiipantsu/spamassassin-rules
+##
+## Custom rule description:
+##
+## YouSee / TDC is always target for many attacks and phising attempts.
+## It's perfectly normal that where you have a lot of potential for data
+## leak and user information you will have phising campaigns target against
+## them.
+##
+## The latests attacks seems to be targeting yousee login details.
+## It's well crafted and they try to be as legit as possible.
+##
+## They have a couple of uniqe headers we can match on.
+## X-yse-mailing: MCE
+## X-yse-spamcause:  OK,
+## 
+#########################################################################
+
+header   __DN_YOUSEE_01 X-yse-mailing =~ /.*/i
+header   __DN_YOUSEE_02 X-yse-spamcause =~ /.*/i
+
+meta     DN_YOUSEE_BLOCK_1      (__DN_YOUSEE_01)
+score    DN_YOUSEE_BLOCK_1      10
+describe DN_YOUSEE_BLOCK_1      Phishing attempt on YouSee
+
+meta     DN_YOUSEE_BLOCK_2      (__DN_YOUSEE_02)
+score    DN_YOUSEE_BLOCK_2      10
+describe DN_YOUSEE_BLOCK_2      Phishing attempt on YouSee
+
+meta     DN_YOUSEE_BLOCK_3      (__DN_YOUSEE_01 && __DN_YOUSEE_02)
+score    DN_YOUSEE_BLOCK_3      30
+describe DN_YOUSEE_BLOCK_3      Phishing attempt on YouSee
