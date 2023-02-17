@@ -11,14 +11,13 @@
  * [Spamassassin - What is it?](#spamassassin---what-is-it)
  * [Install Custom Rules](#install-custom-rules)
    * [Where do i put them?](#where-do-i-put-them)
-   * [Activating the new rules](#activating--the--new--rules)
+   * [Activating the new rules](#activating-the-new-rules)
      * [Known paths, maybe one of these is what you use ?](#)
      * [Adding rules globally](#)
      * [Adding rules for individual users (User Pref)](#)
  * [My Custom Rules](#my-custom-rules)
-   * [Rule #01](#)
-   * [Rule #02](#)
-   * [Rule #03](#)
+   * [Local Rules](#local-rules)
+   * [PhishTank Rules](#phishtank-rules)
  * [Documentation](#documentation)
 
 ## Spamassassin - What is it?
@@ -104,13 +103,15 @@ I usually name mine "local-ruleinfo.cf". So that i know it's a local rule and wh
 
 > My custom rules may not all be of use to you. But if you live in the EU i would recommend to just use them all as nothing would break. What i mean by that is i might block or blacklist things that makes no sense if you don't live inside EU. So the scores wont work correctly when i'm whitelisting etc. In most cases, you can just change it or let me know and i will add your changes so it also suits your setup!
 
-Just testing how to show the rules, this is just temporarily...
+### Local Rules
 
-### Rule #01
+These rules are more specific, things i might have encountered on my mail server that i explicitly wanted to block
 
-### Rule #02
+### PhishTank Rules
 
-### Rule #03
+These are the new PhishTank rules - Using the public database from phishtank.com i build rules and if they ever publish unvalidated and offine databases then i'm prepared for it. But basicly this will match any KNOWN web URL from Phishtank in TEXT body or HTML URI tags.
+
+Please note there is over 25000+ so i have split it up into age as well. If you take the no more than 7 days old rules you are down to only 1500 or so.
 
 ## Documentation
 
