@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0006847600
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=6847600
+## Submitted.....: 2020-11-13T15:27:52+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0006847600_MATCH	/otomoto3452\.com\/konto\.html/
+score		PHISHTANK_0006847600_MATCH	5.0
+describe	PHISHTANK_0006847600_MATCH	Phishtank ID 6847600 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0006847600_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0006847600_VALIDATED	PHISHTANK_0006847600_MATCH && __PHISHTANK_0006847600_VALCHECK
+score		PHISHTANK_0006847600_VALIDATED	2.0
+describe	PHISHTANK_0006847600_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0006847600_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0006847600_ONLINE	PHISHTANK_0006847600_MATCH && __PHISHTANK_0006847600_ONCHECK
+score		PHISHTANK_0006847600_ONLINE	2.0
+describe	PHISHTANK_0006847600_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007992495
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7992495
+## Submitted.....: 2023-01-02T22:28:43+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007992495_MATCH	/bafybeie627qr6vqecz556d6z5p4wns3ed6nhqgx3vdna44taxklkhljbvq\.ipfs\.w3s\.link\/authenticate\.html/
+score		PHISHTANK_0007992495_MATCH	5.0
+describe	PHISHTANK_0007992495_MATCH	Phishtank ID 7992495 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007992495_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007992495_VALIDATED	PHISHTANK_0007992495_MATCH && __PHISHTANK_0007992495_VALCHECK
+score		PHISHTANK_0007992495_VALIDATED	2.0
+describe	PHISHTANK_0007992495_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007992495_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007992495_ONLINE	PHISHTANK_0007992495_MATCH && __PHISHTANK_0007992495_ONCHECK
+score		PHISHTANK_0007992495_ONLINE	2.0
+describe	PHISHTANK_0007992495_ONLINE	Phishing URL still online
+
+##

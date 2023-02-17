@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007959741
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7959741
+## Submitted.....: 2022-11-29T00:24:28+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007959741_MATCH	/billowing\-lake\-c7e9\.fk01kibl\.workers\.dev\/36f408f2\-308c\-4c62\-b1c4\-ac2458ce2863/
+score		PHISHTANK_0007959741_MATCH	5.0
+describe	PHISHTANK_0007959741_MATCH	Phishtank ID 7959741 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007959741_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007959741_VALIDATED	PHISHTANK_0007959741_MATCH && __PHISHTANK_0007959741_VALCHECK
+score		PHISHTANK_0007959741_VALIDATED	2.0
+describe	PHISHTANK_0007959741_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007959741_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007959741_ONLINE	PHISHTANK_0007959741_MATCH && __PHISHTANK_0007959741_ONCHECK
+score		PHISHTANK_0007959741_ONLINE	2.0
+describe	PHISHTANK_0007959741_ONLINE	Phishing URL still online
+
+##

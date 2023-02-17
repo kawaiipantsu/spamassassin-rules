@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008021126
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8021126
+## Submitted.....: 2023-01-31T00:49:39+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008021126_MATCH	/app\-klocra\.r4gm8b3lqv\-ypj68pdzo3l2\.p\.temp\-site\.link\//
+score		PHISHTANK_0008021126_MATCH	5.0
+describe	PHISHTANK_0008021126_MATCH	Phishtank ID 8021126 (Facebook) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008021126_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008021126_VALIDATED	PHISHTANK_0008021126_MATCH && __PHISHTANK_0008021126_VALCHECK
+score		PHISHTANK_0008021126_VALIDATED	2.0
+describe	PHISHTANK_0008021126_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008021126_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008021126_ONLINE	PHISHTANK_0008021126_MATCH && __PHISHTANK_0008021126_ONCHECK
+score		PHISHTANK_0008021126_ONLINE	2.0
+describe	PHISHTANK_0008021126_ONLINE	Phishing URL still online
+
+##

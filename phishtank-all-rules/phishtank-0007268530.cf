@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007268530
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7268530
+## Submitted.....: 2021-08-19T09:30:08+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007268530_MATCH	/mestertignseekjet5\.blogspot\.com\//
+score		PHISHTANK_0007268530_MATCH	5.0
+describe	PHISHTANK_0007268530_MATCH	Phishtank ID 7268530 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007268530_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007268530_VALIDATED	PHISHTANK_0007268530_MATCH && __PHISHTANK_0007268530_VALCHECK
+score		PHISHTANK_0007268530_VALIDATED	2.0
+describe	PHISHTANK_0007268530_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007268530_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007268530_ONLINE	PHISHTANK_0007268530_MATCH && __PHISHTANK_0007268530_ONCHECK
+score		PHISHTANK_0007268530_ONLINE	2.0
+describe	PHISHTANK_0007268530_ONLINE	Phishing URL still online
+
+##

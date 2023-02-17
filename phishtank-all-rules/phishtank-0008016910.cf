@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008016910
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8016910
+## Submitted.....: 2023-01-26T00:51:56+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008016910_MATCH	/ve45rt\-0wrj\-g9fhw\-e9fgj\-wer0hbfg\-wdjnmf\-v08wehf\-0hf\.obs\.ap\-southeast\-1\.myhuaweicloud\.com\/68ki\-0klv4rnyb\-093erjkf\-049h6yt\-09gjr\-0g9h\-0ggf\.html/
+score		PHISHTANK_0008016910_MATCH	5.0
+describe	PHISHTANK_0008016910_MATCH	Phishtank ID 8016910 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008016910_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008016910_VALIDATED	PHISHTANK_0008016910_MATCH && __PHISHTANK_0008016910_VALCHECK
+score		PHISHTANK_0008016910_VALIDATED	2.0
+describe	PHISHTANK_0008016910_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008016910_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008016910_ONLINE	PHISHTANK_0008016910_MATCH && __PHISHTANK_0008016910_ONCHECK
+score		PHISHTANK_0008016910_ONLINE	2.0
+describe	PHISHTANK_0008016910_ONLINE	Phishing URL still online
+
+##

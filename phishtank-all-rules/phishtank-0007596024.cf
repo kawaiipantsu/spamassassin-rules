@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007596024
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7596024
+## Submitted.....: 2022-07-14T17:46:57+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007596024_MATCH	/jecompany\-my\.sharepoint\.com\/\:w\:\/g\/personal\/dhankins_jecompanies_com\/EZMChoMe9SxBl4Kht3dJ7mgBXdCk6dBIG800tFKd1szBjA/
+score		PHISHTANK_0007596024_MATCH	5.0
+describe	PHISHTANK_0007596024_MATCH	Phishtank ID 7596024 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007596024_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007596024_VALIDATED	PHISHTANK_0007596024_MATCH && __PHISHTANK_0007596024_VALCHECK
+score		PHISHTANK_0007596024_VALIDATED	2.0
+describe	PHISHTANK_0007596024_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007596024_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007596024_ONLINE	PHISHTANK_0007596024_MATCH && __PHISHTANK_0007596024_ONCHECK
+score		PHISHTANK_0007596024_ONLINE	2.0
+describe	PHISHTANK_0007596024_ONLINE	Phishing URL still online
+
+##

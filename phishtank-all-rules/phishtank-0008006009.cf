@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008006009
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8006009
+## Submitted.....: 2023-01-14T15:35:33+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008006009_MATCH	/storageapi\.fleek\.one\/6ec0db0f\-b333\-42e4\-a761\-1d01c3190270\-bucket\/Anm\/mbi\.html/
+score		PHISHTANK_0008006009_MATCH	5.0
+describe	PHISHTANK_0008006009_MATCH	Phishtank ID 8006009 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008006009_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008006009_VALIDATED	PHISHTANK_0008006009_MATCH && __PHISHTANK_0008006009_VALCHECK
+score		PHISHTANK_0008006009_VALIDATED	2.0
+describe	PHISHTANK_0008006009_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008006009_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008006009_ONLINE	PHISHTANK_0008006009_MATCH && __PHISHTANK_0008006009_ONCHECK
+score		PHISHTANK_0008006009_ONLINE	2.0
+describe	PHISHTANK_0008006009_ONLINE	Phishing URL still online
+
+##

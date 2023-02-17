@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008016284
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8016284
+## Submitted.....: 2023-01-25T14:09:45+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008016284_MATCH	/stellar\-flicker\-sloop\.glitch\.me\/hyasdl\.html/
+score		PHISHTANK_0008016284_MATCH	5.0
+describe	PHISHTANK_0008016284_MATCH	Phishtank ID 8016284 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008016284_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008016284_VALIDATED	PHISHTANK_0008016284_MATCH && __PHISHTANK_0008016284_VALCHECK
+score		PHISHTANK_0008016284_VALIDATED	2.0
+describe	PHISHTANK_0008016284_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008016284_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008016284_ONLINE	PHISHTANK_0008016284_MATCH && __PHISHTANK_0008016284_ONCHECK
+score		PHISHTANK_0008016284_ONLINE	2.0
+describe	PHISHTANK_0008016284_ONLINE	Phishing URL still online
+
+##

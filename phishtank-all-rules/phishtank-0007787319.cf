@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007787319
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7787319
+## Submitted.....: 2022-09-23T18:57:43+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007787319_MATCH	/ameriicanasbr\.com\/product\/smartphone\-motorola\-moto\-g9\-plus\-128gb\-4g\-wi\-fi\-tela\-6\-8\-dual\-chip\-4gb\-ram\-camera\-quadrupla\-selfie\-16mp\-azul\-indigo/
+score		PHISHTANK_0007787319_MATCH	5.0
+describe	PHISHTANK_0007787319_MATCH	Phishtank ID 7787319 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007787319_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007787319_VALIDATED	PHISHTANK_0007787319_MATCH && __PHISHTANK_0007787319_VALCHECK
+score		PHISHTANK_0007787319_VALIDATED	2.0
+describe	PHISHTANK_0007787319_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007787319_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007787319_ONLINE	PHISHTANK_0007787319_MATCH && __PHISHTANK_0007787319_ONCHECK
+score		PHISHTANK_0007787319_ONLINE	2.0
+describe	PHISHTANK_0007787319_ONLINE	Phishing URL still online
+
+##

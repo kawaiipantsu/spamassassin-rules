@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007995263
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7995263
+## Submitted.....: 2023-01-03T09:19:14+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007995263_MATCH	/email\.notify\.thinkific\.com\/c\/eJwNjsuKxCAURL8m7hJ8J1m46M38RrhetSNtoqOGhvn6EQrqLA5FecP0yhRjVHPiDGDgwEk0WgATyJS0uOKxMsmV4LAJSRndgE2Stuj8J_7Ozgd4Up_17uyug7Y4lz\-r\-HJBTOQ0KHGXwVl0Qm1UBmBWI928FZRrrQJJ5uy9tEm8Jv4zgudzv88vFMDqU1vg8jVivkahXwYMp_Vc4e0HFdf4cvYrkWrgdtVDiTVluuvxMT895fxZYifdtNj98fVpLPij1Owe7DHf_y0UU9Q/
+score		PHISHTANK_0007995263_MATCH	5.0
+describe	PHISHTANK_0007995263_MATCH	Phishtank ID 7995263 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007995263_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007995263_VALIDATED	PHISHTANK_0007995263_MATCH && __PHISHTANK_0007995263_VALCHECK
+score		PHISHTANK_0007995263_VALIDATED	2.0
+describe	PHISHTANK_0007995263_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007995263_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007995263_ONLINE	PHISHTANK_0007995263_MATCH && __PHISHTANK_0007995263_ONCHECK
+score		PHISHTANK_0007995263_ONLINE	2.0
+describe	PHISHTANK_0007995263_ONLINE	Phishing URL still online
+
+##

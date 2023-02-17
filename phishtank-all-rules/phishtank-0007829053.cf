@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007829053
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7829053
+## Submitted.....: 2022-10-13T13:13:28+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007829053_MATCH	/ipfs\.fleek\.co\/ipfs\/bafybeibe2v2a2hgl7gej3luv5ev56gizmzhwf3uoc3ldtrwowm2sc5ibzy/
+score		PHISHTANK_0007829053_MATCH	5.0
+describe	PHISHTANK_0007829053_MATCH	Phishtank ID 7829053 (Microsoft) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007829053_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007829053_VALIDATED	PHISHTANK_0007829053_MATCH && __PHISHTANK_0007829053_VALCHECK
+score		PHISHTANK_0007829053_VALIDATED	2.0
+describe	PHISHTANK_0007829053_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007829053_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007829053_ONLINE	PHISHTANK_0007829053_MATCH && __PHISHTANK_0007829053_ONCHECK
+score		PHISHTANK_0007829053_ONLINE	2.0
+describe	PHISHTANK_0007829053_ONLINE	Phishing URL still online
+
+##

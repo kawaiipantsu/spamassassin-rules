@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007786934
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7786934
+## Submitted.....: 2022-09-23T11:20:47+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007786934_MATCH	/fsb1cn\.webwave\.dev\//
+score		PHISHTANK_0007786934_MATCH	5.0
+describe	PHISHTANK_0007786934_MATCH	Phishtank ID 7786934 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007786934_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007786934_VALIDATED	PHISHTANK_0007786934_MATCH && __PHISHTANK_0007786934_VALCHECK
+score		PHISHTANK_0007786934_VALIDATED	2.0
+describe	PHISHTANK_0007786934_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007786934_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007786934_ONLINE	PHISHTANK_0007786934_MATCH && __PHISHTANK_0007786934_ONCHECK
+score		PHISHTANK_0007786934_ONLINE	2.0
+describe	PHISHTANK_0007786934_ONLINE	Phishing URL still online
+
+##

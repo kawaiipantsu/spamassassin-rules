@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007809050
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7809050
+## Submitted.....: 2022-10-03T11:54:27+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007809050_MATCH	/388e03bd\-b022\-4448\-8099\-79af0fda2f69\.mailbutler\.link\/p2\/f1265675\-f055\-4d37\-8b59\-dc2aeccbc5c1\/da66c5c0\-6872\-4ab9\-91d5\-63e53843ad2e/
+score		PHISHTANK_0007809050_MATCH	5.0
+describe	PHISHTANK_0007809050_MATCH	Phishtank ID 7809050 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007809050_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007809050_VALIDATED	PHISHTANK_0007809050_MATCH && __PHISHTANK_0007809050_VALCHECK
+score		PHISHTANK_0007809050_VALIDATED	2.0
+describe	PHISHTANK_0007809050_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007809050_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007809050_ONLINE	PHISHTANK_0007809050_MATCH && __PHISHTANK_0007809050_ONCHECK
+score		PHISHTANK_0007809050_ONLINE	2.0
+describe	PHISHTANK_0007809050_ONLINE	Phishing URL still online
+
+##

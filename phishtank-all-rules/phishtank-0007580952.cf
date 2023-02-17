@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007580952
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7580952
+## Submitted.....: 2022-07-07T17:51:17+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007580952_MATCH	/7b631qxp\.r\.us\-west\-2\.awstrack\.me\/L0\/https\:%2F%2Flnkd\.in%2FgW2X_btv\/1\/01010181d5b4121d\-ad8975c1\-fc53\-41b2\-bad9\-ecb97743ffd4\-000000\/P1oDBVTFelzzX9aMVwo_H954Np8\=278/
+score		PHISHTANK_0007580952_MATCH	5.0
+describe	PHISHTANK_0007580952_MATCH	Phishtank ID 7580952 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007580952_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007580952_VALIDATED	PHISHTANK_0007580952_MATCH && __PHISHTANK_0007580952_VALCHECK
+score		PHISHTANK_0007580952_VALIDATED	2.0
+describe	PHISHTANK_0007580952_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007580952_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007580952_ONLINE	PHISHTANK_0007580952_MATCH && __PHISHTANK_0007580952_ONCHECK
+score		PHISHTANK_0007580952_ONLINE	2.0
+describe	PHISHTANK_0007580952_ONLINE	Phishing URL still online
+
+##

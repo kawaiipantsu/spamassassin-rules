@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007460460
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7460460
+## Submitted.....: 2022-03-09T02:39:54+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007460460_MATCH	/gift\-1212\.blogspot\.com\/2022\/01\/daily\-rm8888\-shopee\-1_23\.html/
+score		PHISHTANK_0007460460_MATCH	5.0
+describe	PHISHTANK_0007460460_MATCH	Phishtank ID 7460460 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007460460_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007460460_VALIDATED	PHISHTANK_0007460460_MATCH && __PHISHTANK_0007460460_VALCHECK
+score		PHISHTANK_0007460460_VALIDATED	2.0
+describe	PHISHTANK_0007460460_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007460460_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007460460_ONLINE	PHISHTANK_0007460460_MATCH && __PHISHTANK_0007460460_ONCHECK
+score		PHISHTANK_0007460460_ONLINE	2.0
+describe	PHISHTANK_0007460460_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007940126
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7940126
+## Submitted.....: 2022-11-14T20:55:46+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007940126_MATCH	/t\.sidekickopen01\.com\/Ctc\/2O\+23284\/d2Mn3804\/Jks2\-6q7W69sMD\-6lZ3nbMj7sC_7qQkSN1r_qcNw\-dYFW4j59QR5N3Nm7N8TgD1f6dMDQN6_wCnCqSsMjW75x6ML8cQfrXW52QtNZ18mycPW4C90dw7kn082W61xD9w6708zXVkg8Rv1wMsjNW7VjrtT6_gTmbW9kgdqj5393DkN4VW9kMG_8sqW2mNFmf1\-MXY1V_r8kx1YhRyVW1dQ50l3qYc1ZW5kfqnG2m7RPqW10D_\-V6wchmlW2VFr438d4TWpW5tTlkN7k92v7f8R1BrY04/
+score		PHISHTANK_0007940126_MATCH	5.0
+describe	PHISHTANK_0007940126_MATCH	Phishtank ID 7940126 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007940126_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007940126_VALIDATED	PHISHTANK_0007940126_MATCH && __PHISHTANK_0007940126_VALCHECK
+score		PHISHTANK_0007940126_VALIDATED	2.0
+describe	PHISHTANK_0007940126_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007940126_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007940126_ONLINE	PHISHTANK_0007940126_MATCH && __PHISHTANK_0007940126_ONCHECK
+score		PHISHTANK_0007940126_ONLINE	2.0
+describe	PHISHTANK_0007940126_ONLINE	Phishing URL still online
+
+##

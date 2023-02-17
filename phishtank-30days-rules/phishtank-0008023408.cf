@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008023408
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8023408
+## Submitted.....: 2023-02-02T00:51:20+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008023408_MATCH	/muenchnernotizen\.info\/wp\-content\/plugins\/62dfa1a3658045e481c36a4f234248c4\/y\/mm\/mmd\/alldomain\/java\/index\.php/
+score		PHISHTANK_0008023408_MATCH	5.0
+describe	PHISHTANK_0008023408_MATCH	Phishtank ID 8023408 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008023408_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008023408_VALIDATED	PHISHTANK_0008023408_MATCH && __PHISHTANK_0008023408_VALCHECK
+score		PHISHTANK_0008023408_VALIDATED	2.0
+describe	PHISHTANK_0008023408_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008023408_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008023408_ONLINE	PHISHTANK_0008023408_MATCH && __PHISHTANK_0008023408_ONCHECK
+score		PHISHTANK_0008023408_ONLINE	2.0
+describe	PHISHTANK_0008023408_ONLINE	Phishing URL still online
+
+##

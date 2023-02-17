@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008028496
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8028496
+## Submitted.....: 2023-02-07T05:36:55+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008028496_MATCH	/r6energiasolar\.com\.br\/wp\-content\/%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7\/%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7%D8%AE%D8%B7\.html/
+score		PHISHTANK_0008028496_MATCH	5.0
+describe	PHISHTANK_0008028496_MATCH	Phishtank ID 8028496 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008028496_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008028496_VALIDATED	PHISHTANK_0008028496_MATCH && __PHISHTANK_0008028496_VALCHECK
+score		PHISHTANK_0008028496_VALIDATED	2.0
+describe	PHISHTANK_0008028496_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008028496_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008028496_ONLINE	PHISHTANK_0008028496_MATCH && __PHISHTANK_0008028496_ONCHECK
+score		PHISHTANK_0008028496_ONLINE	2.0
+describe	PHISHTANK_0008028496_ONLINE	Phishing URL still online
+
+##

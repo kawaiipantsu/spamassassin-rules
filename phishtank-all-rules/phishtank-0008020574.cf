@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008020574
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8020574
+## Submitted.....: 2023-01-30T14:52:40+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008020574_MATCH	/is\.gd\/assistenzaclientiaccedi/
+score		PHISHTANK_0008020574_MATCH	5.0
+describe	PHISHTANK_0008020574_MATCH	Phishtank ID 8020574 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008020574_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008020574_VALIDATED	PHISHTANK_0008020574_MATCH && __PHISHTANK_0008020574_VALCHECK
+score		PHISHTANK_0008020574_VALIDATED	2.0
+describe	PHISHTANK_0008020574_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008020574_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008020574_ONLINE	PHISHTANK_0008020574_MATCH && __PHISHTANK_0008020574_ONCHECK
+score		PHISHTANK_0008020574_ONLINE	2.0
+describe	PHISHTANK_0008020574_ONLINE	Phishing URL still online
+
+##

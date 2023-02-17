@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007968435
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7968435
+## Submitted.....: 2022-12-07T01:45:02+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007968435_MATCH	/intmecarref\.firebaseapp\.com\//
+score		PHISHTANK_0007968435_MATCH	5.0
+describe	PHISHTANK_0007968435_MATCH	Phishtank ID 7968435 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007968435_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007968435_VALIDATED	PHISHTANK_0007968435_MATCH && __PHISHTANK_0007968435_VALCHECK
+score		PHISHTANK_0007968435_VALIDATED	2.0
+describe	PHISHTANK_0007968435_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007968435_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007968435_ONLINE	PHISHTANK_0007968435_MATCH && __PHISHTANK_0007968435_ONCHECK
+score		PHISHTANK_0007968435_ONLINE	2.0
+describe	PHISHTANK_0007968435_ONLINE	Phishing URL still online
+
+##

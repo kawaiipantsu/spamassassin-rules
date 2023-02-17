@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007397274
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7397274
+## Submitted.....: 2021-12-28T12:30:02+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007397274_MATCH	/docs\.google\.com\/forms\/d\/e\/1FAIpQLSc4BagZJZmsTbNJHy7ZpY5zSx\-XrN7rEoOUOLv54Luk5tIhHA\/viewform/
+score		PHISHTANK_0007397274_MATCH	5.0
+describe	PHISHTANK_0007397274_MATCH	Phishtank ID 7397274 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007397274_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007397274_VALIDATED	PHISHTANK_0007397274_MATCH && __PHISHTANK_0007397274_VALCHECK
+score		PHISHTANK_0007397274_VALIDATED	2.0
+describe	PHISHTANK_0007397274_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007397274_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007397274_ONLINE	PHISHTANK_0007397274_MATCH && __PHISHTANK_0007397274_ONCHECK
+score		PHISHTANK_0007397274_ONLINE	2.0
+describe	PHISHTANK_0007397274_ONLINE	Phishing URL still online
+
+##

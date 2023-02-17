@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007952594
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7952594
+## Submitted.....: 2022-11-22T00:29:13+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007952594_MATCH	/office365\-login\-22e3b\.web\.app\//
+score		PHISHTANK_0007952594_MATCH	5.0
+describe	PHISHTANK_0007952594_MATCH	Phishtank ID 7952594 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007952594_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007952594_VALIDATED	PHISHTANK_0007952594_MATCH && __PHISHTANK_0007952594_VALCHECK
+score		PHISHTANK_0007952594_VALIDATED	2.0
+describe	PHISHTANK_0007952594_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007952594_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007952594_ONLINE	PHISHTANK_0007952594_MATCH && __PHISHTANK_0007952594_ONCHECK
+score		PHISHTANK_0007952594_ONLINE	2.0
+describe	PHISHTANK_0007952594_ONLINE	Phishing URL still online
+
+##

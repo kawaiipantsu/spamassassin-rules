@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007397388
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7397388
+## Submitted.....: 2021-12-28T15:57:30+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007397388_MATCH	/docs\.google\.com\/forms\/d\/e\/1FAIpQLSdYBQFLFptObqsLhflYTIC3G936BNoJaljZTk6Ct1d5MJvnnw\/viewform/
+score		PHISHTANK_0007397388_MATCH	5.0
+describe	PHISHTANK_0007397388_MATCH	Phishtank ID 7397388 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007397388_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007397388_VALIDATED	PHISHTANK_0007397388_MATCH && __PHISHTANK_0007397388_VALCHECK
+score		PHISHTANK_0007397388_VALIDATED	2.0
+describe	PHISHTANK_0007397388_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007397388_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007397388_ONLINE	PHISHTANK_0007397388_MATCH && __PHISHTANK_0007397388_ONCHECK
+score		PHISHTANK_0007397388_ONLINE	2.0
+describe	PHISHTANK_0007397388_ONLINE	Phishing URL still online
+
+##

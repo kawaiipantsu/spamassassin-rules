@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0006728512
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=6728512
+## Submitted.....: 2020-08-11T15:09:06+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0006728512_MATCH	/email302\.com\/l\/5fc15ea15e66c082e33c48babd5a8ff601a799e6\/\[emailprotected\]tageapp\.com\/\-\/www\.paypal\.com\/cgi\-bin/
+score		PHISHTANK_0006728512_MATCH	5.0
+describe	PHISHTANK_0006728512_MATCH	Phishtank ID 6728512 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0006728512_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0006728512_VALIDATED	PHISHTANK_0006728512_MATCH && __PHISHTANK_0006728512_VALCHECK
+score		PHISHTANK_0006728512_VALIDATED	2.0
+describe	PHISHTANK_0006728512_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0006728512_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0006728512_ONLINE	PHISHTANK_0006728512_MATCH && __PHISHTANK_0006728512_ONCHECK
+score		PHISHTANK_0006728512_ONLINE	2.0
+describe	PHISHTANK_0006728512_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008016362
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8016362
+## Submitted.....: 2023-01-25T15:45:40+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008016362_MATCH	/www\.suite\-trezo\.io\//
+score		PHISHTANK_0008016362_MATCH	5.0
+describe	PHISHTANK_0008016362_MATCH	Phishtank ID 8016362 (Binance) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008016362_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008016362_VALIDATED	PHISHTANK_0008016362_MATCH && __PHISHTANK_0008016362_VALCHECK
+score		PHISHTANK_0008016362_VALIDATED	2.0
+describe	PHISHTANK_0008016362_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008016362_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008016362_ONLINE	PHISHTANK_0008016362_MATCH && __PHISHTANK_0008016362_ONCHECK
+score		PHISHTANK_0008016362_ONLINE	2.0
+describe	PHISHTANK_0008016362_ONLINE	Phishing URL still online
+
+##

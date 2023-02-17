@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007549595
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7549595
+## Submitted.....: 2022-06-14T23:44:26+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007549595_MATCH	/economic\-poet\-b50\.notion\.site\/Microsoft\-Office\-365\-7782e9e7e96e4bcd8a7a528b7505a1c3/
+score		PHISHTANK_0007549595_MATCH	5.0
+describe	PHISHTANK_0007549595_MATCH	Phishtank ID 7549595 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007549595_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007549595_VALIDATED	PHISHTANK_0007549595_MATCH && __PHISHTANK_0007549595_VALCHECK
+score		PHISHTANK_0007549595_VALIDATED	2.0
+describe	PHISHTANK_0007549595_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007549595_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007549595_ONLINE	PHISHTANK_0007549595_MATCH && __PHISHTANK_0007549595_ONCHECK
+score		PHISHTANK_0007549595_ONLINE	2.0
+describe	PHISHTANK_0007549595_ONLINE	Phishing URL still online
+
+##

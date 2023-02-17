@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007574969
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7574969
+## Submitted.....: 2022-07-02T21:27:42+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007574969_MATCH	/initialredwoodtitle\.retool\.com\/embedded\/public\/d6ccf675\-6a6f\-461a\-b24c\-4f94a5869bea/
+score		PHISHTANK_0007574969_MATCH	5.0
+describe	PHISHTANK_0007574969_MATCH	Phishtank ID 7574969 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007574969_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007574969_VALIDATED	PHISHTANK_0007574969_MATCH && __PHISHTANK_0007574969_VALCHECK
+score		PHISHTANK_0007574969_VALIDATED	2.0
+describe	PHISHTANK_0007574969_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007574969_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007574969_ONLINE	PHISHTANK_0007574969_MATCH && __PHISHTANK_0007574969_ONCHECK
+score		PHISHTANK_0007574969_ONLINE	2.0
+describe	PHISHTANK_0007574969_ONLINE	Phishing URL still online
+
+##
