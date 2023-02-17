@@ -84,3 +84,8 @@ yarn-error.log*
 *.tar
 *.zip
 *.tgz
+
+# PhishTank DB Versions
+online-valid.*
+phishtank-*-db.*
+phishtank-db.*
