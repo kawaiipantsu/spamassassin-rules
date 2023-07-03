@@ -171,11 +171,15 @@ function downloadPhishTankDB() {
   if ( is_writable(__DIR__."/") ) unlink(ptDB_latest);
  }
  $url = trim(PHISHTANK_DB_URL);
+ $CRLF = "\r\n";
  $options = array(
   'http'=>array(
     'method'=>"GET",
-    'header'=>"Accept-language: en\r\n" .
-              "User-Agent: PhishTank SpamAssassin Rule Updater (github.com/kawaiipantsu/spamassassin-rules)\r\n" // Friendly UA
+    'header'=>	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8".$CRLF,
+		"Accept-Language: en-US,en;q=0.5".$CRLF,
+		"Connection: keep-alive".$CRLF,
+		"Upgrade-Insecure-Requests: 1".$CRLF,
+		"User-Agent: phishtank/soclatam".$CRLF // Something they want, picked random user
   )
  );
  $context = stream_context_create($options);
