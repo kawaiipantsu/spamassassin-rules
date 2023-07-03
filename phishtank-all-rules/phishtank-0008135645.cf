@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008135645
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8135645
+## Submitted.....: 2023-05-02T07:29:40+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008135645_MATCH	/kind\-hodgkin\.159\-203\-11\-34\.plesk\.page\/jhon\/marie\//
+score		PHISHTANK_0008135645_MATCH	5.0
+describe	PHISHTANK_0008135645_MATCH	Phishtank ID 8135645 (Deutsche Bank) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008135645_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008135645_VALIDATED	PHISHTANK_0008135645_MATCH && __PHISHTANK_0008135645_VALCHECK
+score		PHISHTANK_0008135645_VALIDATED	2.0
+describe	PHISHTANK_0008135645_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008135645_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008135645_ONLINE	PHISHTANK_0008135645_MATCH && __PHISHTANK_0008135645_ONCHECK
+score		PHISHTANK_0008135645_ONLINE	2.0
+describe	PHISHTANK_0008135645_ONLINE	Phishing URL still online
+
+##

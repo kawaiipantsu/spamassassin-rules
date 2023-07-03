@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008143180
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8143180
+## Submitted.....: 2023-05-11T09:45:59+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008143180_MATCH	/matbibaing\-\-ugo\.com\/DE__\/30aa0244d99c9d4448ea1c465cfa0bbd96fce0b2d15ae435075a3cf92e9a992c38444cdd0057ddd0554912e9c7b5377e\/R%C3%BCckerstattungsformular\.html/
+score		PHISHTANK_0008143180_MATCH	5.0
+describe	PHISHTANK_0008143180_MATCH	Phishtank ID 8143180 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008143180_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008143180_VALIDATED	PHISHTANK_0008143180_MATCH && __PHISHTANK_0008143180_VALCHECK
+score		PHISHTANK_0008143180_VALIDATED	2.0
+describe	PHISHTANK_0008143180_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008143180_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008143180_ONLINE	PHISHTANK_0008143180_MATCH && __PHISHTANK_0008143180_ONCHECK
+score		PHISHTANK_0008143180_ONLINE	2.0
+describe	PHISHTANK_0008143180_ONLINE	Phishing URL still online
+
+##

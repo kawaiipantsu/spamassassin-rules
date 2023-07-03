@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008147874
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8147874
+## Submitted.....: 2023-05-17T03:13:09+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008147874_MATCH	/bafybeibbuz2fixzaurwkiwsvbjnzjybf6zfrlrc5n32teiq5g72bj7u4tm\.ipfs\.infura\-ipfs\.io\/intelresu_onedrive786i\.html/
+score		PHISHTANK_0008147874_MATCH	5.0
+describe	PHISHTANK_0008147874_MATCH	Phishtank ID 8147874 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008147874_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008147874_VALIDATED	PHISHTANK_0008147874_MATCH && __PHISHTANK_0008147874_VALCHECK
+score		PHISHTANK_0008147874_VALIDATED	2.0
+describe	PHISHTANK_0008147874_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008147874_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008147874_ONLINE	PHISHTANK_0008147874_MATCH && __PHISHTANK_0008147874_ONCHECK
+score		PHISHTANK_0008147874_ONLINE	2.0
+describe	PHISHTANK_0008147874_ONLINE	Phishing URL still online
+
+##

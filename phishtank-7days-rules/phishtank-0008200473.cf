@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008200473
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8200473
+## Submitted.....: 2023-06-28T23:41:31+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008200473_MATCH	/stimlirs\.firebaseapp\.com\/apply\.html/
+score		PHISHTANK_0008200473_MATCH	5.0
+describe	PHISHTANK_0008200473_MATCH	Phishtank ID 8200473 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008200473_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008200473_VALIDATED	PHISHTANK_0008200473_MATCH && __PHISHTANK_0008200473_VALCHECK
+score		PHISHTANK_0008200473_VALIDATED	2.0
+describe	PHISHTANK_0008200473_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008200473_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008200473_ONLINE	PHISHTANK_0008200473_MATCH && __PHISHTANK_0008200473_ONCHECK
+score		PHISHTANK_0008200473_ONLINE	2.0
+describe	PHISHTANK_0008200473_ONLINE	Phishing URL still online
+
+##

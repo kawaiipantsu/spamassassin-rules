@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008120067
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8120067
+## Submitted.....: 2023-04-18T01:48:46+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008120067_MATCH	/sp536579\.sitebeat\.crazydomains\.com\//
+score		PHISHTANK_0008120067_MATCH	5.0
+describe	PHISHTANK_0008120067_MATCH	Phishtank ID 8120067 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008120067_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008120067_VALIDATED	PHISHTANK_0008120067_MATCH && __PHISHTANK_0008120067_VALCHECK
+score		PHISHTANK_0008120067_VALIDATED	2.0
+describe	PHISHTANK_0008120067_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008120067_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008120067_ONLINE	PHISHTANK_0008120067_MATCH && __PHISHTANK_0008120067_ONCHECK
+score		PHISHTANK_0008120067_ONLINE	2.0
+describe	PHISHTANK_0008120067_ONLINE	Phishing URL still online
+
+##

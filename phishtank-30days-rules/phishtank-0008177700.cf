@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008177700
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8177700
+## Submitted.....: 2023-06-14T06:31:00+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008177700_MATCH	/gateway\.pinata\.cloud\/ipfs\/bafybeieh26t5y7biqakh2uiajk44io7viht3xf4tsspgeksf6u4hbmexry/
+score		PHISHTANK_0008177700_MATCH	5.0
+describe	PHISHTANK_0008177700_MATCH	Phishtank ID 8177700 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008177700_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008177700_VALIDATED	PHISHTANK_0008177700_MATCH && __PHISHTANK_0008177700_VALCHECK
+score		PHISHTANK_0008177700_VALIDATED	2.0
+describe	PHISHTANK_0008177700_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008177700_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008177700_ONLINE	PHISHTANK_0008177700_MATCH && __PHISHTANK_0008177700_ONCHECK
+score		PHISHTANK_0008177700_ONLINE	2.0
+describe	PHISHTANK_0008177700_ONLINE	Phishing URL still online
+
+##

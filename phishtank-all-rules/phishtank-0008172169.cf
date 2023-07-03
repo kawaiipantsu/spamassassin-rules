@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008172169
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8172169
+## Submitted.....: 2023-06-10T18:45:08+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008172169_MATCH	/s\-pushtan\-personendaten\-verbessern\.com\//
+score		PHISHTANK_0008172169_MATCH	5.0
+describe	PHISHTANK_0008172169_MATCH	Phishtank ID 8172169 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008172169_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008172169_VALIDATED	PHISHTANK_0008172169_MATCH && __PHISHTANK_0008172169_VALCHECK
+score		PHISHTANK_0008172169_VALIDATED	2.0
+describe	PHISHTANK_0008172169_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008172169_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008172169_ONLINE	PHISHTANK_0008172169_MATCH && __PHISHTANK_0008172169_ONCHECK
+score		PHISHTANK_0008172169_ONLINE	2.0
+describe	PHISHTANK_0008172169_ONLINE	Phishing URL still online
+
+##

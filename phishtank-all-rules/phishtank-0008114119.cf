@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008114119
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8114119
+## Submitted.....: 2023-04-12T01:23:29+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008114119_MATCH	/bov\-red\-lizard\-catania119589\.codeanyapp\.com\/mt\/bov\/DH2tAyUe9AsUx7b913\//
+score		PHISHTANK_0008114119_MATCH	5.0
+describe	PHISHTANK_0008114119_MATCH	Phishtank ID 8114119 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008114119_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008114119_VALIDATED	PHISHTANK_0008114119_MATCH && __PHISHTANK_0008114119_VALCHECK
+score		PHISHTANK_0008114119_VALIDATED	2.0
+describe	PHISHTANK_0008114119_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008114119_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008114119_ONLINE	PHISHTANK_0008114119_MATCH && __PHISHTANK_0008114119_ONCHECK
+score		PHISHTANK_0008114119_ONLINE	2.0
+describe	PHISHTANK_0008114119_ONLINE	Phishing URL still online
+
+##

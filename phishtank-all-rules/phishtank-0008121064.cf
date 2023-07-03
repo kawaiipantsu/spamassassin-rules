@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008121064
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8121064
+## Submitted.....: 2023-04-19T01:31:54+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008121064_MATCH	/bancolombia\.com70081972\.repl\.co\//
+score		PHISHTANK_0008121064_MATCH	5.0
+describe	PHISHTANK_0008121064_MATCH	Phishtank ID 8121064 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008121064_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008121064_VALIDATED	PHISHTANK_0008121064_MATCH && __PHISHTANK_0008121064_VALCHECK
+score		PHISHTANK_0008121064_VALIDATED	2.0
+describe	PHISHTANK_0008121064_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008121064_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008121064_ONLINE	PHISHTANK_0008121064_MATCH && __PHISHTANK_0008121064_ONCHECK
+score		PHISHTANK_0008121064_ONLINE	2.0
+describe	PHISHTANK_0008121064_ONLINE	Phishing URL still online
+
+##

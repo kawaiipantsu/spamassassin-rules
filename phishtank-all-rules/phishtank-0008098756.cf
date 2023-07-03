@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008098756
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8098756
+## Submitted.....: 2023-03-31T01:59:56+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008098756_MATCH	/bafybeidstsl3ki5oev3ydkcm6hqgvlqmb6zt6ik5x56x3lmozcoj7msh54\.ipfs\.dweb\.link\/koreasalesreport2023\.html/
+score		PHISHTANK_0008098756_MATCH	5.0
+describe	PHISHTANK_0008098756_MATCH	Phishtank ID 8098756 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008098756_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008098756_VALIDATED	PHISHTANK_0008098756_MATCH && __PHISHTANK_0008098756_VALCHECK
+score		PHISHTANK_0008098756_VALIDATED	2.0
+describe	PHISHTANK_0008098756_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008098756_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008098756_ONLINE	PHISHTANK_0008098756_MATCH && __PHISHTANK_0008098756_ONCHECK
+score		PHISHTANK_0008098756_ONLINE	2.0
+describe	PHISHTANK_0008098756_ONLINE	Phishing URL still online
+
+##

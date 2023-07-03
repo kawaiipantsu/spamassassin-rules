@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008176095
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8176095
+## Submitted.....: 2023-06-12T23:45:32+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008176095_MATCH	/bvthr\.bmahe\.pl\/pub\/email@example\.com/
+score		PHISHTANK_0008176095_MATCH	5.0
+describe	PHISHTANK_0008176095_MATCH	Phishtank ID 8176095 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008176095_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008176095_VALIDATED	PHISHTANK_0008176095_MATCH && __PHISHTANK_0008176095_VALCHECK
+score		PHISHTANK_0008176095_VALIDATED	2.0
+describe	PHISHTANK_0008176095_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008176095_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008176095_ONLINE	PHISHTANK_0008176095_MATCH && __PHISHTANK_0008176095_ONCHECK
+score		PHISHTANK_0008176095_ONLINE	2.0
+describe	PHISHTANK_0008176095_ONLINE	Phishing URL still online
+
+##

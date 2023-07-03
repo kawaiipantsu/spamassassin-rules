@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007975843
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7975843
+## Submitted.....: 2022-12-13T17:28:55+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007975843_MATCH	/www\.bscvenusio\.com\//
+score		PHISHTANK_0007975843_MATCH	5.0
+describe	PHISHTANK_0007975843_MATCH	Phishtank ID 7975843 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007975843_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007975843_VALIDATED	PHISHTANK_0007975843_MATCH && __PHISHTANK_0007975843_VALCHECK
+score		PHISHTANK_0007975843_VALIDATED	2.0
+describe	PHISHTANK_0007975843_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007975843_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007975843_ONLINE	PHISHTANK_0007975843_MATCH && __PHISHTANK_0007975843_ONCHECK
+score		PHISHTANK_0007975843_ONLINE	2.0
+describe	PHISHTANK_0007975843_ONLINE	Phishing URL still online
+
+##

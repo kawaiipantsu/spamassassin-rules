@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008123702
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8123702
+## Submitted.....: 2023-04-21T03:56:07+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008123702_MATCH	/ipfs\.eth\.aragon\.network\/ipfs\/bafybeierwfdvmzkntvrufeenhtt32swpzac5zd2iw2yfmoollyzlmlrecy\/aspxfatejason\.html/
+score		PHISHTANK_0008123702_MATCH	5.0
+describe	PHISHTANK_0008123702_MATCH	Phishtank ID 8123702 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008123702_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008123702_VALIDATED	PHISHTANK_0008123702_MATCH && __PHISHTANK_0008123702_VALCHECK
+score		PHISHTANK_0008123702_VALIDATED	2.0
+describe	PHISHTANK_0008123702_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008123702_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008123702_ONLINE	PHISHTANK_0008123702_MATCH && __PHISHTANK_0008123702_ONCHECK
+score		PHISHTANK_0008123702_ONLINE	2.0
+describe	PHISHTANK_0008123702_ONLINE	Phishing URL still online
+
+##

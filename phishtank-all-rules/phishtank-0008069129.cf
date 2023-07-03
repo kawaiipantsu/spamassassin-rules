@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008069129
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8069129
+## Submitted.....: 2023-03-10T17:31:08+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008069129_MATCH	/0authauthorizeclientid808jhq65zt568r6dtf27hg8xd5g0xk76kqf7rjli\.hb\.bizmrg\.com\/index\.html/
+score		PHISHTANK_0008069129_MATCH	5.0
+describe	PHISHTANK_0008069129_MATCH	Phishtank ID 8069129 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008069129_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008069129_VALIDATED	PHISHTANK_0008069129_MATCH && __PHISHTANK_0008069129_VALCHECK
+score		PHISHTANK_0008069129_VALIDATED	2.0
+describe	PHISHTANK_0008069129_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008069129_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008069129_ONLINE	PHISHTANK_0008069129_MATCH && __PHISHTANK_0008069129_ONCHECK
+score		PHISHTANK_0008069129_ONLINE	2.0
+describe	PHISHTANK_0008069129_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008079708
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8079708
+## Submitted.....: 2023-03-17T17:08:51+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008079708_MATCH	/rinnovocs\-b25e8d\.ingress\-baronn\.ewp\.live\/wp\-includes\/it\/it\/arub4\/aspnet\-client\.php/
+score		PHISHTANK_0008079708_MATCH	5.0
+describe	PHISHTANK_0008079708_MATCH	Phishtank ID 8079708 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008079708_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008079708_VALIDATED	PHISHTANK_0008079708_MATCH && __PHISHTANK_0008079708_VALCHECK
+score		PHISHTANK_0008079708_VALIDATED	2.0
+describe	PHISHTANK_0008079708_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008079708_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008079708_ONLINE	PHISHTANK_0008079708_MATCH && __PHISHTANK_0008079708_ONCHECK
+score		PHISHTANK_0008079708_ONLINE	2.0
+describe	PHISHTANK_0008079708_ONLINE	Phishing URL still online
+
+##

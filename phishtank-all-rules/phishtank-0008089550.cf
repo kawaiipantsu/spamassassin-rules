@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008089550
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8089550
+## Submitted.....: 2023-03-24T15:00:39+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008089550_MATCH	/ipfs\.fleek\.co\/ipfs\/QmYsVQUsaUgSet64qbWmp9jsWg9iLM6ccpLhGfisDUHoYP\/u0026d\=DwMGaQ\/u0026c\=o5NSBS5PZxIE1KEhsQXCDm4oU\/YwLIAP1khBO%25T\/6DA\/u0026r\=scGz77uk7%25G2fmjhRXUU00axG2537bVLuyv%25xn4zIfi1H7KqICG51pYNSoQS6NeM\/u0026m\=e%25p5DNFvjueAj6qi0sJZt8Yg83IPbO1rITZmv5aTQSBkav%0FDeqSDzcnwt2EGHf\/u0026s\=uHFC\/KGJQm6CrpcbS6VArZUk7\/E\/Kzb9bV2PjY\/04Bs\/u0026e\=/
+score		PHISHTANK_0008089550_MATCH	5.0
+describe	PHISHTANK_0008089550_MATCH	Phishtank ID 8089550 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008089550_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008089550_VALIDATED	PHISHTANK_0008089550_MATCH && __PHISHTANK_0008089550_VALCHECK
+score		PHISHTANK_0008089550_VALIDATED	2.0
+describe	PHISHTANK_0008089550_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008089550_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008089550_ONLINE	PHISHTANK_0008089550_MATCH && __PHISHTANK_0008089550_ONCHECK
+score		PHISHTANK_0008089550_ONLINE	2.0
+describe	PHISHTANK_0008089550_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008027998
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8027998
+## Submitted.....: 2023-02-06T17:34:50+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008027998_MATCH	/bradescosac\-primecontato\.info\.gf\/contato\/html\//
+score		PHISHTANK_0008027998_MATCH	5.0
+describe	PHISHTANK_0008027998_MATCH	Phishtank ID 8027998 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008027998_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008027998_VALIDATED	PHISHTANK_0008027998_MATCH && __PHISHTANK_0008027998_VALCHECK
+score		PHISHTANK_0008027998_VALIDATED	2.0
+describe	PHISHTANK_0008027998_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008027998_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008027998_ONLINE	PHISHTANK_0008027998_MATCH && __PHISHTANK_0008027998_ONCHECK
+score		PHISHTANK_0008027998_ONLINE	2.0
+describe	PHISHTANK_0008027998_ONLINE	Phishing URL still online
+
+##

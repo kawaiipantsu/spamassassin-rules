@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008042751
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8042751
+## Submitted.....: 2023-02-20T09:49:08+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008042751_MATCH	/fleek\.ipfs\.io\/ipfs\/bafybeih3ffzy4v2cstq2kgms3u2hzxvjjiarwyqxoavutyptbhcjzc6kv4\//
+score		PHISHTANK_0008042751_MATCH	5.0
+describe	PHISHTANK_0008042751_MATCH	Phishtank ID 8042751 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008042751_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008042751_VALIDATED	PHISHTANK_0008042751_MATCH && __PHISHTANK_0008042751_VALCHECK
+score		PHISHTANK_0008042751_VALIDATED	2.0
+describe	PHISHTANK_0008042751_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008042751_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008042751_ONLINE	PHISHTANK_0008042751_MATCH && __PHISHTANK_0008042751_ONCHECK
+score		PHISHTANK_0008042751_ONLINE	2.0
+describe	PHISHTANK_0008042751_ONLINE	Phishing URL still online
+
+##

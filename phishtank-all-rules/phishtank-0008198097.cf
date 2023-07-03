@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008198097
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8198097
+## Submitted.....: 2023-06-27T17:22:22+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008198097_MATCH	/polserwer\.com\.pl\/File9_Archive\/Online_PDF\/en\-index\.php/
+score		PHISHTANK_0008198097_MATCH	5.0
+describe	PHISHTANK_0008198097_MATCH	Phishtank ID 8198097 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008198097_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008198097_VALIDATED	PHISHTANK_0008198097_MATCH && __PHISHTANK_0008198097_VALCHECK
+score		PHISHTANK_0008198097_VALIDATED	2.0
+describe	PHISHTANK_0008198097_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008198097_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008198097_ONLINE	PHISHTANK_0008198097_MATCH && __PHISHTANK_0008198097_ONCHECK
+score		PHISHTANK_0008198097_ONLINE	2.0
+describe	PHISHTANK_0008198097_ONLINE	Phishing URL still online
+
+##

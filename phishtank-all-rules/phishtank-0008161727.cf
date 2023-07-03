@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008161727
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8161727
+## Submitted.....: 2023-06-01T00:22:49+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008161727_MATCH	/gbcijdg\.r\.af\.d\.sendibt2\.com\/tr\/cl\/UnQFDsE0CKqm9Oh25uf1C1_Nxtr5qaw3T_cxNGtJqyoAU7NmerfRmZcs_DMh3\-RrROZNONt7jhNXWycA8hYdXs5bDm06fmenP5aKx_vIShAiSOwyAcJgW0mUr7rRPmFW15wqorvpZi1N17LP3umkmRir5G2fqxZGKzvvq3ShK7sYUefAZRghBxfzd3BOwO6gZyDv3WPv7C\-ssj4khf\-DYO_dmSuE0zYOqrFXDGCLNHZOZg/
+score		PHISHTANK_0008161727_MATCH	5.0
+describe	PHISHTANK_0008161727_MATCH	Phishtank ID 8161727 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008161727_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008161727_VALIDATED	PHISHTANK_0008161727_MATCH && __PHISHTANK_0008161727_VALCHECK
+score		PHISHTANK_0008161727_VALIDATED	2.0
+describe	PHISHTANK_0008161727_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008161727_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008161727_ONLINE	PHISHTANK_0008161727_MATCH && __PHISHTANK_0008161727_ONCHECK
+score		PHISHTANK_0008161727_ONLINE	2.0
+describe	PHISHTANK_0008161727_ONLINE	Phishing URL still online
+
+##

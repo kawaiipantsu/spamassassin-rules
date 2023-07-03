@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008152885
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8152885
+## Submitted.....: 2023-05-23T13:47:39+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008152885_MATCH	/acadf67c\.sibforms\.com\/serve\/MUIEALTDf\-CU1WoIYoCAzuS7jNM8ZlifUMQizfmD0g3Nd4WkXYGnFt5_pu7V3rox1fMexrEHM_q1a_xNNnu5Oe2MHu5YSBmdo0z3n6OIUUBv1Uv\-dk42NGJfZzMjusZYOl_o14cLangMEIunumNGg\-CaUK8LxdZymOyhlS_NfKLQsYpeVNW\-oy5T0P1X1_cr9hmHECuIW7xk0H89/
+score		PHISHTANK_0008152885_MATCH	5.0
+describe	PHISHTANK_0008152885_MATCH	Phishtank ID 8152885 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008152885_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008152885_VALIDATED	PHISHTANK_0008152885_MATCH && __PHISHTANK_0008152885_VALCHECK
+score		PHISHTANK_0008152885_VALIDATED	2.0
+describe	PHISHTANK_0008152885_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008152885_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008152885_ONLINE	PHISHTANK_0008152885_MATCH && __PHISHTANK_0008152885_ONCHECK
+score		PHISHTANK_0008152885_ONLINE	2.0
+describe	PHISHTANK_0008152885_ONLINE	Phishing URL still online
+
+##

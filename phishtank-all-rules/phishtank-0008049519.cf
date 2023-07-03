@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008049519
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8049519
+## Submitted.....: 2023-02-25T19:17:32+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008049519_MATCH	/app\-d34120b3\-1ade\-4454\-a8d7\-8050f4bf54d1\.cleverapps\.io\/F004f19441\//
+score		PHISHTANK_0008049519_MATCH	5.0
+describe	PHISHTANK_0008049519_MATCH	Phishtank ID 8049519 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008049519_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008049519_VALIDATED	PHISHTANK_0008049519_MATCH && __PHISHTANK_0008049519_VALCHECK
+score		PHISHTANK_0008049519_VALIDATED	2.0
+describe	PHISHTANK_0008049519_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008049519_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008049519_ONLINE	PHISHTANK_0008049519_MATCH && __PHISHTANK_0008049519_ONCHECK
+score		PHISHTANK_0008049519_ONLINE	2.0
+describe	PHISHTANK_0008049519_ONLINE	Phishing URL still online
+
+##

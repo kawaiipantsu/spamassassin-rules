@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008066730
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8066730
+## Submitted.....: 2023-03-08T23:06:31+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008066730_MATCH	/up02\-02oapsza2\.shopalo\.co\.pl\/a1legro\/lokal02on\/45d1ad94c743eaf9780d08d019ce4b43\/login\//
+score		PHISHTANK_0008066730_MATCH	5.0
+describe	PHISHTANK_0008066730_MATCH	Phishtank ID 8066730 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008066730_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008066730_VALIDATED	PHISHTANK_0008066730_MATCH && __PHISHTANK_0008066730_VALCHECK
+score		PHISHTANK_0008066730_VALIDATED	2.0
+describe	PHISHTANK_0008066730_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008066730_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008066730_ONLINE	PHISHTANK_0008066730_MATCH && __PHISHTANK_0008066730_ONCHECK
+score		PHISHTANK_0008066730_ONLINE	2.0
+describe	PHISHTANK_0008066730_ONLINE	Phishing URL still online
+
+##

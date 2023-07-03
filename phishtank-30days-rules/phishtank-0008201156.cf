@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008201156
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8201156
+## Submitted.....: 2023-06-29T13:49:41+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008201156_MATCH	/bafkreifiii2epwxnqnwlw2qao2anu7pypsoi3qpetkujao2djzxi4dgcw4\.ipfs\.nftstorage\.link/
+score		PHISHTANK_0008201156_MATCH	5.0
+describe	PHISHTANK_0008201156_MATCH	Phishtank ID 8201156 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008201156_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008201156_VALIDATED	PHISHTANK_0008201156_MATCH && __PHISHTANK_0008201156_VALCHECK
+score		PHISHTANK_0008201156_VALIDATED	2.0
+describe	PHISHTANK_0008201156_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008201156_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008201156_ONLINE	PHISHTANK_0008201156_MATCH && __PHISHTANK_0008201156_ONCHECK
+score		PHISHTANK_0008201156_ONLINE	2.0
+describe	PHISHTANK_0008201156_ONLINE	Phishing URL still online
+
+##

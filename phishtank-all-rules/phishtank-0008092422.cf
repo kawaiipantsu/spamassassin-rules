@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008092422
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8092422
+## Submitted.....: 2023-03-27T03:00:33+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008092422_MATCH	/43\.134\.167\.94\/v3\/signin\/identifier/
+score		PHISHTANK_0008092422_MATCH	5.0
+describe	PHISHTANK_0008092422_MATCH	Phishtank ID 8092422 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008092422_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008092422_VALIDATED	PHISHTANK_0008092422_MATCH && __PHISHTANK_0008092422_VALCHECK
+score		PHISHTANK_0008092422_VALIDATED	2.0
+describe	PHISHTANK_0008092422_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008092422_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008092422_ONLINE	PHISHTANK_0008092422_MATCH && __PHISHTANK_0008092422_ONCHECK
+score		PHISHTANK_0008092422_ONLINE	2.0
+describe	PHISHTANK_0008092422_ONLINE	Phishing URL still online
+
+##

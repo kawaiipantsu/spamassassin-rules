@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008125036
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8125036
+## Submitted.....: 2023-04-23T02:46:17+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008125036_MATCH	/gateway\.pinata\.cloud\/ipfs\/bafybeidzso4mumpjqm2d4ehwtdtsylrd4kskmpdrrgyyrew7rl3slvzjau/
+score		PHISHTANK_0008125036_MATCH	5.0
+describe	PHISHTANK_0008125036_MATCH	Phishtank ID 8125036 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008125036_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008125036_VALIDATED	PHISHTANK_0008125036_MATCH && __PHISHTANK_0008125036_VALCHECK
+score		PHISHTANK_0008125036_VALIDATED	2.0
+describe	PHISHTANK_0008125036_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008125036_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008125036_ONLINE	PHISHTANK_0008125036_MATCH && __PHISHTANK_0008125036_ONCHECK
+score		PHISHTANK_0008125036_ONLINE	2.0
+describe	PHISHTANK_0008125036_ONLINE	Phishing URL still online
+
+##

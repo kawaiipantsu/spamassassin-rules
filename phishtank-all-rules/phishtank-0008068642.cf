@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008068642
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8068642
+## Submitted.....: 2023-03-10T15:30:54+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008068642_MATCH	/www\.bitsoine\.com\/h5\//
+score		PHISHTANK_0008068642_MATCH	5.0
+describe	PHISHTANK_0008068642_MATCH	Phishtank ID 8068642 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008068642_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008068642_VALIDATED	PHISHTANK_0008068642_MATCH && __PHISHTANK_0008068642_VALCHECK
+score		PHISHTANK_0008068642_VALIDATED	2.0
+describe	PHISHTANK_0008068642_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008068642_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008068642_ONLINE	PHISHTANK_0008068642_MATCH && __PHISHTANK_0008068642_ONCHECK
+score		PHISHTANK_0008068642_ONLINE	2.0
+describe	PHISHTANK_0008068642_ONLINE	Phishing URL still online
+
+##

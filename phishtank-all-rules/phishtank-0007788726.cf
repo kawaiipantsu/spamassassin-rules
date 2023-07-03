@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007788726
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7788726
+## Submitted.....: 2022-09-24T15:00:52+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007788726_MATCH	/onlinehomeenter\.byethost3\.com\//
+score		PHISHTANK_0007788726_MATCH	5.0
+describe	PHISHTANK_0007788726_MATCH	Phishtank ID 7788726 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007788726_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007788726_VALIDATED	PHISHTANK_0007788726_MATCH && __PHISHTANK_0007788726_VALCHECK
+score		PHISHTANK_0007788726_VALIDATED	2.0
+describe	PHISHTANK_0007788726_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007788726_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007788726_ONLINE	PHISHTANK_0007788726_MATCH && __PHISHTANK_0007788726_ONCHECK
+score		PHISHTANK_0007788726_ONLINE	2.0
+describe	PHISHTANK_0007788726_ONLINE	Phishing URL still online
+
+##

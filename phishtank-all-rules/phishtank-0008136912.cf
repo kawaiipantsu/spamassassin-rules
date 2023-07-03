@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008136912
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8136912
+## Submitted.....: 2023-05-03T09:47:24+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008136912_MATCH	/tracking\.selfserviceib\.com\/tracking\/1\/click\/ejoRCcw7cfKwhilpbcPgu821W6TxL0OanO08EQE63baoFCkkGl6I5hDAClHTUf3wfO3IBpU5k\-LHSGRtSPASBcadoEjn8cuzvYIjEGb7nhzBzCOzqfQhcxJu6Z4VrBfhZr0cDFX5bHlIpdcziiwEaGp3YIY3MH5znvOTU\-YZkeC8kXfTPW\-tzvESpy6hiC9b3kkT0BYS1_r6z8xeSpU55ixce15xh\-LvYwSRY24_TwvxOP4TZznjivTWl\-KUpEBmUuyyqrfNpo9w4ACN2tI7QR1aDhIDhdIygxAj6UOd\-6UwAlflGh6TG5QiU8KsgldxZ11R0HBf1FpPNMr6coo1RHWq\-UA33qmk_p7WmJ45PFdMmaE9Df441TTUr7ZkIo2Oc4TLAQ6rLOU2w4VwBLux0Xmo1Nl88Zv2AEXdRHJMBUJR4MoH9c6PDNBfWaAlQldZlGSIB7XclOPYZztpjAveyLlm92NkYSMJerIq_J4ZLGCUPXG7L0izJFbxk01ycQ_zmAdAgjS\-M5cVKjSrWIi5KQGacRmgXzagLYz2aUY1KEhlx4kWXedaH9k4RxMwdO0AhbKzg22tJ3yDHTyDOC3y\-n6gGoZf0HqAwhq7tOTtGQRMxLgUmKBtYBfSYX9jPrLQgJ1lT00q_0rfG47zUDE_Grbotfud\-BDDOms2Zge5HWxh2hA\-9j6fn7nQf5CpZCqh\-labSWEkzdwN4bfPeED_8KYdCT2BAgBS4EWYcY8yw3oTiTCMjUOEglZMrmoCsktg6ceYKyqdCxFNQh8lH53ntu5YF0d5nhb5lnOmWe\-pbvVUzAWq9GzpYZ\-M19vUvAyMUjjVmH5abFyDfCM4IJj0damlaFAZesxdwXQO2pKZLQw\=/
+score		PHISHTANK_0008136912_MATCH	5.0
+describe	PHISHTANK_0008136912_MATCH	Phishtank ID 8136912 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008136912_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008136912_VALIDATED	PHISHTANK_0008136912_MATCH && __PHISHTANK_0008136912_VALCHECK
+score		PHISHTANK_0008136912_VALIDATED	2.0
+describe	PHISHTANK_0008136912_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008136912_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008136912_ONLINE	PHISHTANK_0008136912_MATCH && __PHISHTANK_0008136912_ONCHECK
+score		PHISHTANK_0008136912_ONLINE	2.0
+describe	PHISHTANK_0008136912_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008085804
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8085804
+## Submitted.....: 2023-03-22T01:00:43+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008085804_MATCH	/lasuperiorstereo\.com\/planovaoutlookofficevialoginmicrosoftonlineonedrevcloudstorageinternationalprojektforslagoffshoretilbud34780krypteringmicrosoftbrugeradgangskodeonpdfpowerp430943v2023\-ebizafsenderdaviddjernes\/projekttilbuddata\//
+score		PHISHTANK_0008085804_MATCH	5.0
+describe	PHISHTANK_0008085804_MATCH	Phishtank ID 8085804 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008085804_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008085804_VALIDATED	PHISHTANK_0008085804_MATCH && __PHISHTANK_0008085804_VALCHECK
+score		PHISHTANK_0008085804_VALIDATED	2.0
+describe	PHISHTANK_0008085804_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008085804_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008085804_ONLINE	PHISHTANK_0008085804_MATCH && __PHISHTANK_0008085804_ONCHECK
+score		PHISHTANK_0008085804_ONLINE	2.0
+describe	PHISHTANK_0008085804_ONLINE	Phishing URL still online
+
+##

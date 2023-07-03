@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008063801
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8063801
+## Submitted.....: 2023-03-06T19:33:26+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008063801_MATCH	/rnallservverupgradeingscvbntu3d3dcvfbgn\.glitch\.me\/att\.html/
+score		PHISHTANK_0008063801_MATCH	5.0
+describe	PHISHTANK_0008063801_MATCH	Phishtank ID 8063801 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008063801_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008063801_VALIDATED	PHISHTANK_0008063801_MATCH && __PHISHTANK_0008063801_VALCHECK
+score		PHISHTANK_0008063801_VALIDATED	2.0
+describe	PHISHTANK_0008063801_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008063801_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008063801_ONLINE	PHISHTANK_0008063801_MATCH && __PHISHTANK_0008063801_ONCHECK
+score		PHISHTANK_0008063801_ONLINE	2.0
+describe	PHISHTANK_0008063801_ONLINE	Phishing URL still online
+
+##

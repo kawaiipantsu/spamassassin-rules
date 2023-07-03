@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008130766
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8130766
+## Submitted.....: 2023-04-28T01:54:34+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008130766_MATCH	/seng\-fa4fc0e6\-c453\-4172\-b21d\-cfd7f18eb184\.myportfolio\.com\//
+score		PHISHTANK_0008130766_MATCH	5.0
+describe	PHISHTANK_0008130766_MATCH	Phishtank ID 8130766 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008130766_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008130766_VALIDATED	PHISHTANK_0008130766_MATCH && __PHISHTANK_0008130766_VALCHECK
+score		PHISHTANK_0008130766_VALIDATED	2.0
+describe	PHISHTANK_0008130766_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008130766_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008130766_ONLINE	PHISHTANK_0008130766_MATCH && __PHISHTANK_0008130766_ONCHECK
+score		PHISHTANK_0008130766_ONLINE	2.0
+describe	PHISHTANK_0008130766_ONLINE	Phishing URL still online
+
+##

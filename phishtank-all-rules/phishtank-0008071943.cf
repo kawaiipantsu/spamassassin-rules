@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008071943
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8071943
+## Submitted.....: 2023-03-12T13:47:58+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008071943_MATCH	/s3\.amazonaws\.com\/appforest_uf\/f1678602861020x642391154288772100\/ind1\.html/
+score		PHISHTANK_0008071943_MATCH	5.0
+describe	PHISHTANK_0008071943_MATCH	Phishtank ID 8071943 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008071943_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008071943_VALIDATED	PHISHTANK_0008071943_MATCH && __PHISHTANK_0008071943_VALCHECK
+score		PHISHTANK_0008071943_VALIDATED	2.0
+describe	PHISHTANK_0008071943_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008071943_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008071943_ONLINE	PHISHTANK_0008071943_MATCH && __PHISHTANK_0008071943_ONCHECK
+score		PHISHTANK_0008071943_ONLINE	2.0
+describe	PHISHTANK_0008071943_ONLINE	Phishing URL still online
+
+##

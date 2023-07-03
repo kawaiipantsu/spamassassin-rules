@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008145834
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8145834
+## Submitted.....: 2023-05-15T00:32:51+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008145834_MATCH	/cloudflare\-ipfs\.com\/ipfs\/bafybeignab6rgfvqahuqzo65shoe2h5azjrcjtfekkrm2xwnclw3mwgvhy/
+score		PHISHTANK_0008145834_MATCH	5.0
+describe	PHISHTANK_0008145834_MATCH	Phishtank ID 8145834 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008145834_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008145834_VALIDATED	PHISHTANK_0008145834_MATCH && __PHISHTANK_0008145834_VALCHECK
+score		PHISHTANK_0008145834_VALIDATED	2.0
+describe	PHISHTANK_0008145834_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008145834_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008145834_ONLINE	PHISHTANK_0008145834_MATCH && __PHISHTANK_0008145834_ONCHECK
+score		PHISHTANK_0008145834_ONLINE	2.0
+describe	PHISHTANK_0008145834_ONLINE	Phishing URL still online
+
+##

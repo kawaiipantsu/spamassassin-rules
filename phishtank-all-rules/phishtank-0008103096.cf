@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008103096
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8103096
+## Submitted.....: 2023-04-04T04:04:37+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008103096_MATCH	/www\.cubit\.net\/gllfrmny\/rchlnk\/GlobalSources\/index2\.php/
+score		PHISHTANK_0008103096_MATCH	5.0
+describe	PHISHTANK_0008103096_MATCH	Phishtank ID 8103096 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008103096_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008103096_VALIDATED	PHISHTANK_0008103096_MATCH && __PHISHTANK_0008103096_VALCHECK
+score		PHISHTANK_0008103096_VALIDATED	2.0
+describe	PHISHTANK_0008103096_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008103096_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008103096_ONLINE	PHISHTANK_0008103096_MATCH && __PHISHTANK_0008103096_ONCHECK
+score		PHISHTANK_0008103096_ONLINE	2.0
+describe	PHISHTANK_0008103096_ONLINE	Phishing URL still online
+
+##

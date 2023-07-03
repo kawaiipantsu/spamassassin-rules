@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008148082
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8148082
+## Submitted.....: 2023-05-17T03:32:57+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008148082_MATCH	/bafybeia55fb643oltdikeabbmfmlgzluqixhn4lbgple36vifk4ap5auwe\.ipfs\.nftstorage\.link\/ddoonnvth\.html/
+score		PHISHTANK_0008148082_MATCH	5.0
+describe	PHISHTANK_0008148082_MATCH	Phishtank ID 8148082 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008148082_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008148082_VALIDATED	PHISHTANK_0008148082_MATCH && __PHISHTANK_0008148082_VALCHECK
+score		PHISHTANK_0008148082_VALIDATED	2.0
+describe	PHISHTANK_0008148082_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008148082_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008148082_ONLINE	PHISHTANK_0008148082_MATCH && __PHISHTANK_0008148082_ONCHECK
+score		PHISHTANK_0008148082_ONLINE	2.0
+describe	PHISHTANK_0008148082_ONLINE	Phishing URL still online
+
+##

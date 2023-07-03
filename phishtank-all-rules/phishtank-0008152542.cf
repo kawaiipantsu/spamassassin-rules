@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008152542
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8152542
+## Submitted.....: 2023-05-23T04:04:49+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008152542_MATCH	/wuspoebzyy\.duckdns\.org/
+score		PHISHTANK_0008152542_MATCH	5.0
+describe	PHISHTANK_0008152542_MATCH	Phishtank ID 8152542 (Apple) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008152542_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008152542_VALIDATED	PHISHTANK_0008152542_MATCH && __PHISHTANK_0008152542_VALCHECK
+score		PHISHTANK_0008152542_VALIDATED	2.0
+describe	PHISHTANK_0008152542_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008152542_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008152542_ONLINE	PHISHTANK_0008152542_MATCH && __PHISHTANK_0008152542_ONCHECK
+score		PHISHTANK_0008152542_ONLINE	2.0
+describe	PHISHTANK_0008152542_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008096412
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8096412
+## Submitted.....: 2023-03-29T17:08:32+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008096412_MATCH	/8gl0yq7p\.r\.us\-west\-1\.awstrack\.me\/L0\/https\:%2F%2Faepedrosa\.com%2Fo\/1\/011101872db76140\-f1a8b593\-50ab\-4e13\-a26a\-cc0116613358\-000000\/5fvqnqlRIDGSOtaZDlJvMmrKMzc\=100/
+score		PHISHTANK_0008096412_MATCH	5.0
+describe	PHISHTANK_0008096412_MATCH	Phishtank ID 8096412 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008096412_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008096412_VALIDATED	PHISHTANK_0008096412_MATCH && __PHISHTANK_0008096412_VALCHECK
+score		PHISHTANK_0008096412_VALIDATED	2.0
+describe	PHISHTANK_0008096412_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008096412_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008096412_ONLINE	PHISHTANK_0008096412_MATCH && __PHISHTANK_0008096412_ONCHECK
+score		PHISHTANK_0008096412_ONLINE	2.0
+describe	PHISHTANK_0008096412_ONLINE	Phishing URL still online
+
+##

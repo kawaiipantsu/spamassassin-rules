@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008083445
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8083445
+## Submitted.....: 2023-03-20T17:01:03+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008083445_MATCH	/paypal\.com\-cgi\-bin\.webscr\.cmd\-secure\-login\.webscr\.cmd\-home\.country\-lang\.true\-cmd\.areuhj\.dstech\.us\.com\/mtm\/direct\/\.eJy9kt1OwkAQhd\-ll0i3IBELxguoNPgTrAjl54Zst9N2oduW3VmgGt_dRa_0Abg7c05mvuRkPi0tudW3nAyx6jsVrSuaE1YKm6XcjnhBjhApJgkTsa2AaQl2XqZ__awUYHZ0gbK2c1qkBKUG20SEStDZlsQKgWVEq_NpR6BwYi6BoUPgqe5td\-r1\-DF4HMKGr8PZNnm_mY3mLxgG_jj1Qz8EF6btTnuA1z144yu0da1j4a8nkWgFw1IPgvDWy3WCu\-fDOJuO9p4LYrk_Ft2DG8XBJAlWXbbcuQ964Xk03kzToXdIWpm_mDzPx8tux2paVKbKFGGUhAQkSDP8lnKZVgw4KxVuCirAoC_FpIxBhQaIcELzBSJv0qrKOaPIy8I5nZ2r039X5Hf7\-xbpNRtO40e51tc3I4zQFw\:1oSnna\:R88QNQV49wuVrTvY6Zmm7KJVaXA\/2/
+score		PHISHTANK_0008083445_MATCH	5.0
+describe	PHISHTANK_0008083445_MATCH	Phishtank ID 8083445 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008083445_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008083445_VALIDATED	PHISHTANK_0008083445_MATCH && __PHISHTANK_0008083445_VALCHECK
+score		PHISHTANK_0008083445_VALIDATED	2.0
+describe	PHISHTANK_0008083445_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008083445_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008083445_ONLINE	PHISHTANK_0008083445_MATCH && __PHISHTANK_0008083445_ONCHECK
+score		PHISHTANK_0008083445_ONLINE	2.0
+describe	PHISHTANK_0008083445_ONLINE	Phishing URL still online
+
+##

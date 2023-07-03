@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008181087
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8181087
+## Submitted.....: 2023-06-15T12:20:38+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008181087_MATCH	/verifica\.100\-26\-202\-207\.cprapid\.com\/Banca%20di%20Imola\/PIB%20\-%20Personal%20Internet%20Banking\.html/
+score		PHISHTANK_0008181087_MATCH	5.0
+describe	PHISHTANK_0008181087_MATCH	Phishtank ID 8181087 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008181087_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008181087_VALIDATED	PHISHTANK_0008181087_MATCH && __PHISHTANK_0008181087_VALCHECK
+score		PHISHTANK_0008181087_VALIDATED	2.0
+describe	PHISHTANK_0008181087_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008181087_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008181087_ONLINE	PHISHTANK_0008181087_MATCH && __PHISHTANK_0008181087_ONCHECK
+score		PHISHTANK_0008181087_ONLINE	2.0
+describe	PHISHTANK_0008181087_ONLINE	Phishing URL still online
+
+##

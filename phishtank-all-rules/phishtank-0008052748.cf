@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008052748
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8052748
+## Submitted.....: 2023-02-28T04:14:35+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008052748_MATCH	/werter\.mefound\.com\//
+score		PHISHTANK_0008052748_MATCH	5.0
+describe	PHISHTANK_0008052748_MATCH	Phishtank ID 8052748 (Amazon.com) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008052748_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008052748_VALIDATED	PHISHTANK_0008052748_MATCH && __PHISHTANK_0008052748_VALCHECK
+score		PHISHTANK_0008052748_VALIDATED	2.0
+describe	PHISHTANK_0008052748_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008052748_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008052748_ONLINE	PHISHTANK_0008052748_MATCH && __PHISHTANK_0008052748_ONCHECK
+score		PHISHTANK_0008052748_ONLINE	2.0
+describe	PHISHTANK_0008052748_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008159717
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8159717
+## Submitted.....: 2023-05-30T10:53:30+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008159717_MATCH	/7jin\.mj\.am\/lnk\/AVYAABhR4MYAAAAAAAAAARBQNDcAAYCsMHUAAAAAAAsCcwBkco5YZ0oCZzIOTD\-LD4hnKVjddgAB1Ik\/1\/dtMIgg2l45au2N8QudbJtQ\/aHR0cHM6Ly9jb2Rld2F2ZS5jb20uYnIvd3AtYWRtaW4vd2VidGVjaC8/
+score		PHISHTANK_0008159717_MATCH	5.0
+describe	PHISHTANK_0008159717_MATCH	Phishtank ID 8159717 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008159717_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008159717_VALIDATED	PHISHTANK_0008159717_MATCH && __PHISHTANK_0008159717_VALCHECK
+score		PHISHTANK_0008159717_VALIDATED	2.0
+describe	PHISHTANK_0008159717_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008159717_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008159717_ONLINE	PHISHTANK_0008159717_MATCH && __PHISHTANK_0008159717_ONCHECK
+score		PHISHTANK_0008159717_ONLINE	2.0
+describe	PHISHTANK_0008159717_ONLINE	Phishing URL still online
+
+##

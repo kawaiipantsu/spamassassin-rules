@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008099360
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8099360
+## Submitted.....: 2023-03-31T14:55:29+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008099360_MATCH	/email\.notify\.thinkific\.com\/c\/eJwUzEGusyAQAODTwE4DowJdsPg3XsOMzBDpr9IH0zTp6V_eBT6KmDIgaI7WBWMX473TRyQki2EKAdy0M9q0o4GHD5Dt4p0JukQ3w2JN9rs3FjcPDFOiGcJi7Y5qNr0Q_y8_w1k_Q3J7nh\-Uw0Dfp6fxwnLqMx4ir66mfwpWBavg82D\-jkzvsV4KVmbdYmqlS7lxvOotjXttajZHlT9iLKIl9iK8ffhM9eLt1Sq9k5R6_wYAAP__UOBFtg/
+score		PHISHTANK_0008099360_MATCH	5.0
+describe	PHISHTANK_0008099360_MATCH	Phishtank ID 8099360 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008099360_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008099360_VALIDATED	PHISHTANK_0008099360_MATCH && __PHISHTANK_0008099360_VALCHECK
+score		PHISHTANK_0008099360_VALIDATED	2.0
+describe	PHISHTANK_0008099360_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008099360_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008099360_ONLINE	PHISHTANK_0008099360_MATCH && __PHISHTANK_0008099360_ONCHECK
+score		PHISHTANK_0008099360_ONLINE	2.0
+describe	PHISHTANK_0008099360_ONLINE	Phishing URL still online
+
+##
