@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008301506
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8301506
+## Submitted.....: 2023-09-17T02:57:51+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008301506_MATCH	/cloudflare\-ipfs\.com\/ipfs\/bafybeiaqfoeht3pzbqy6rs4f6ke7f7iq4pvmw3iktn4rh5ftef4ov47rwy\/genfrnwht\.html/
+score		PHISHTANK_0008301506_MATCH	5.0
+describe	PHISHTANK_0008301506_MATCH	Phishtank ID 8301506 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008301506_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008301506_VALIDATED	PHISHTANK_0008301506_MATCH && __PHISHTANK_0008301506_VALCHECK
+score		PHISHTANK_0008301506_VALIDATED	2.0
+describe	PHISHTANK_0008301506_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008301506_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008301506_ONLINE	PHISHTANK_0008301506_MATCH && __PHISHTANK_0008301506_ONCHECK
+score		PHISHTANK_0008301506_ONLINE	2.0
+describe	PHISHTANK_0008301506_ONLINE	Phishing URL still online
+
+##

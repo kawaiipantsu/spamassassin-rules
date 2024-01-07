@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008244915
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8244915
+## Submitted.....: 2023-07-31T23:04:16+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008244915_MATCH	/ipfs\.eth\.aragon\.network\/ipfs\/bafybeibhjr7hn4dzek5rqg2o4ybilhijlugkg6o574jt5gnawyznc66kki\/jp\-grace\.html/
+score		PHISHTANK_0008244915_MATCH	5.0
+describe	PHISHTANK_0008244915_MATCH	Phishtank ID 8244915 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008244915_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008244915_VALIDATED	PHISHTANK_0008244915_MATCH && __PHISHTANK_0008244915_VALCHECK
+score		PHISHTANK_0008244915_VALIDATED	2.0
+describe	PHISHTANK_0008244915_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008244915_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008244915_ONLINE	PHISHTANK_0008244915_MATCH && __PHISHTANK_0008244915_ONCHECK
+score		PHISHTANK_0008244915_ONLINE	2.0
+describe	PHISHTANK_0008244915_ONLINE	Phishing URL still online
+
+##

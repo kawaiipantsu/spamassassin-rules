@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008401088
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8401088
+## Submitted.....: 2023-12-23T12:18:34+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008401088_MATCH	/203\.209\.215\.85\/~pagfaogafdsusn\/cgi\-bin\/invoice\//
+score		PHISHTANK_0008401088_MATCH	5.0
+describe	PHISHTANK_0008401088_MATCH	Phishtank ID 8401088 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008401088_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008401088_VALIDATED	PHISHTANK_0008401088_MATCH && __PHISHTANK_0008401088_VALCHECK
+score		PHISHTANK_0008401088_VALIDATED	2.0
+describe	PHISHTANK_0008401088_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008401088_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008401088_ONLINE	PHISHTANK_0008401088_MATCH && __PHISHTANK_0008401088_ONCHECK
+score		PHISHTANK_0008401088_ONLINE	2.0
+describe	PHISHTANK_0008401088_ONLINE	Phishing URL still online
+
+##

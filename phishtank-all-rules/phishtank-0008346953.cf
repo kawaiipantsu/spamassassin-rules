@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008346953
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8346953
+## Submitted.....: 2023-10-28T17:45:21+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008346953_MATCH	/bafkreidbtqz3nc7cjlw7aaiy5nqefhvw2oaw5nmvj5rs3kzbiye2rd3wmu\.ipfs\.nftstorage\.link/
+score		PHISHTANK_0008346953_MATCH	5.0
+describe	PHISHTANK_0008346953_MATCH	Phishtank ID 8346953 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008346953_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008346953_VALIDATED	PHISHTANK_0008346953_MATCH && __PHISHTANK_0008346953_VALCHECK
+score		PHISHTANK_0008346953_VALIDATED	2.0
+describe	PHISHTANK_0008346953_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008346953_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008346953_ONLINE	PHISHTANK_0008346953_MATCH && __PHISHTANK_0008346953_ONCHECK
+score		PHISHTANK_0008346953_ONLINE	2.0
+describe	PHISHTANK_0008346953_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008233123
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8233123
+## Submitted.....: 2023-07-21T00:08:18+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008233123_MATCH	/pub\-13c508930e9e43e09a4f1dfd71d1d55b\.r2\.dev\/redo70d27b174551a6909d87c1b59619370d27b174551a6909d87c1b59619370d27b174551a6909d87c1b59619370d27b174551a6909d87c1b59619370d27b174551a6909d87c1b596193redo70d27b174551a6909d87c1b59619370d27b174551a6909d87c1b59619370d27\.html/
+score		PHISHTANK_0008233123_MATCH	5.0
+describe	PHISHTANK_0008233123_MATCH	Phishtank ID 8233123 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008233123_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008233123_VALIDATED	PHISHTANK_0008233123_MATCH && __PHISHTANK_0008233123_VALCHECK
+score		PHISHTANK_0008233123_VALIDATED	2.0
+describe	PHISHTANK_0008233123_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008233123_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008233123_ONLINE	PHISHTANK_0008233123_MATCH && __PHISHTANK_0008233123_ONCHECK
+score		PHISHTANK_0008233123_ONLINE	2.0
+describe	PHISHTANK_0008233123_ONLINE	Phishing URL still online
+
+##

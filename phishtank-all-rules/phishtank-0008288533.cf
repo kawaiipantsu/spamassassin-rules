@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008288533
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8288533
+## Submitted.....: 2023-09-07T00:40:59+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008288533_MATCH	/ipfs\.eth\.aragon\.network\/ipfs\/bafybeialskoqflsvw36dmxqx3h7ymmj7zdprah6q2bmleoqgclidbmbzxm\/index2\.html/
+score		PHISHTANK_0008288533_MATCH	5.0
+describe	PHISHTANK_0008288533_MATCH	Phishtank ID 8288533 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008288533_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008288533_VALIDATED	PHISHTANK_0008288533_MATCH && __PHISHTANK_0008288533_VALCHECK
+score		PHISHTANK_0008288533_VALIDATED	2.0
+describe	PHISHTANK_0008288533_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008288533_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008288533_ONLINE	PHISHTANK_0008288533_MATCH && __PHISHTANK_0008288533_ONCHECK
+score		PHISHTANK_0008288533_ONLINE	2.0
+describe	PHISHTANK_0008288533_ONLINE	Phishing URL still online
+
+##

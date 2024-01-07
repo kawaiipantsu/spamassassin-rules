@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008282932
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8282932
+## Submitted.....: 2023-09-02T08:06:50+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008282932_MATCH	/helpmyos\.ru\/wp\-admin\/user\/eleyewellsfargo1\/9118989f1e543f959bc4f3aea1f23689/
+score		PHISHTANK_0008282932_MATCH	5.0
+describe	PHISHTANK_0008282932_MATCH	Phishtank ID 8282932 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008282932_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008282932_VALIDATED	PHISHTANK_0008282932_MATCH && __PHISHTANK_0008282932_VALCHECK
+score		PHISHTANK_0008282932_VALIDATED	2.0
+describe	PHISHTANK_0008282932_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008282932_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008282932_ONLINE	PHISHTANK_0008282932_MATCH && __PHISHTANK_0008282932_ONCHECK
+score		PHISHTANK_0008282932_ONLINE	2.0
+describe	PHISHTANK_0008282932_ONLINE	Phishing URL still online
+
+##

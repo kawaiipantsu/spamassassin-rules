@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008324344
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8324344
+## Submitted.....: 2023-10-07T06:03:37+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008324344_MATCH	/djtmfc04\.eu1\.hubspotlinksfree\.com\/Ctc\/ZX\+113\/djTMfc04\/VWPgSb4XCvXZW1K08mm2\-kHZLW2lg\-cV54cp\-FN2jjSwM3m2ndW69sMD\-6lZ3kxW1SZycD77pz1YW3rYs_Y1qJVjVF7R\-bbGDlpRW8HLcdn3f484SW1Whdx\-8NFnLMW5QN9sY5smdVlN327P_3q5xn2W4NHW9X5H5Z7sVGYBsB7Kt01MW7NbS7r1rDlzgW84wqsR8b7fpXW7388gt9k\-fGcW7lY4GV5J_lD6W2kCMf753qfPYW95Yw9W3n7QX4W93p66d2WMKq3W18hyJr8wgTrLW5kR8Mk8X9D3tW6zgTGJ4Q94zQW5909_L3_Ym98f33cqDv0/
+score		PHISHTANK_0008324344_MATCH	5.0
+describe	PHISHTANK_0008324344_MATCH	Phishtank ID 8324344 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008324344_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008324344_VALIDATED	PHISHTANK_0008324344_MATCH && __PHISHTANK_0008324344_VALCHECK
+score		PHISHTANK_0008324344_VALIDATED	2.0
+describe	PHISHTANK_0008324344_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008324344_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008324344_ONLINE	PHISHTANK_0008324344_MATCH && __PHISHTANK_0008324344_ONCHECK
+score		PHISHTANK_0008324344_ONLINE	2.0
+describe	PHISHTANK_0008324344_ONLINE	Phishing URL still online
+
+##

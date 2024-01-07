@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008372984
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8372984
+## Submitted.....: 2023-11-22T22:23:30+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008372984_MATCH	/cf\-ipfs\.com\/ipfs\/QmWDAZteCVcJfbLg65q1PCENiWvSeL5ux8BU9t8FTKmRn7\/xLqV8ETZ9c\.html/
+score		PHISHTANK_0008372984_MATCH	5.0
+describe	PHISHTANK_0008372984_MATCH	Phishtank ID 8372984 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008372984_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008372984_VALIDATED	PHISHTANK_0008372984_MATCH && __PHISHTANK_0008372984_VALCHECK
+score		PHISHTANK_0008372984_VALIDATED	2.0
+describe	PHISHTANK_0008372984_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008372984_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008372984_ONLINE	PHISHTANK_0008372984_MATCH && __PHISHTANK_0008372984_ONCHECK
+score		PHISHTANK_0008372984_ONLINE	2.0
+describe	PHISHTANK_0008372984_ONLINE	Phishing URL still online
+
+##

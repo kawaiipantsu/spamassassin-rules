@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008255517
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8255517
+## Submitted.....: 2023-08-09T23:51:34+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008255517_MATCH	/cloudflare\-ipfs\.com\/ipfs\/bafybeibsyule3vpuwi6vqhnutmk5fwgis5sr7l7ctncapj5hmfgypt6wcu\/Bill_of_lading\.html/
+score		PHISHTANK_0008255517_MATCH	5.0
+describe	PHISHTANK_0008255517_MATCH	Phishtank ID 8255517 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008255517_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008255517_VALIDATED	PHISHTANK_0008255517_MATCH && __PHISHTANK_0008255517_VALCHECK
+score		PHISHTANK_0008255517_VALIDATED	2.0
+describe	PHISHTANK_0008255517_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008255517_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008255517_ONLINE	PHISHTANK_0008255517_MATCH && __PHISHTANK_0008255517_ONCHECK
+score		PHISHTANK_0008255517_ONLINE	2.0
+describe	PHISHTANK_0008255517_ONLINE	Phishing URL still online
+
+##

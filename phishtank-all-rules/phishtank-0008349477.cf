@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008349477
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8349477
+## Submitted.....: 2023-10-31T01:33:03+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008349477_MATCH	/ipfs\.eth\.aragon\.network\/ipfs\/bafybeiebgwban6trw2ktnt25op4yemakdsok22lhoyaohaq5yb3kwo7yoe/
+score		PHISHTANK_0008349477_MATCH	5.0
+describe	PHISHTANK_0008349477_MATCH	Phishtank ID 8349477 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008349477_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008349477_VALIDATED	PHISHTANK_0008349477_MATCH && __PHISHTANK_0008349477_VALCHECK
+score		PHISHTANK_0008349477_VALIDATED	2.0
+describe	PHISHTANK_0008349477_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008349477_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008349477_ONLINE	PHISHTANK_0008349477_MATCH && __PHISHTANK_0008349477_ONCHECK
+score		PHISHTANK_0008349477_ONLINE	2.0
+describe	PHISHTANK_0008349477_ONLINE	Phishing URL still online
+
+##

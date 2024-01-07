@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008270696
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8270696
+## Submitted.....: 2023-08-23T23:28:37+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008270696_MATCH	/pub\-8b9b381d26fc4bf88d890d8f897f8ea0\.r2\.dev\/hotm8765432345UY654EDFGHJI87654EDFGHJIKO87654EDFGHJKIO987654REFGTHYUI98765RFGHJUI\-098765RTYUI98765REDFGHUI8765RET\-098765RTYUI8765TRTYUI98765TRFGHUI8765REDFGHUI87654REDFGHJKIUYTRDFGHJKIO98765TRFGHJUIU76TRFGHJU\.html/
+score		PHISHTANK_0008270696_MATCH	5.0
+describe	PHISHTANK_0008270696_MATCH	Phishtank ID 8270696 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008270696_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008270696_VALIDATED	PHISHTANK_0008270696_MATCH && __PHISHTANK_0008270696_VALCHECK
+score		PHISHTANK_0008270696_VALIDATED	2.0
+describe	PHISHTANK_0008270696_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008270696_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008270696_ONLINE	PHISHTANK_0008270696_MATCH && __PHISHTANK_0008270696_ONCHECK
+score		PHISHTANK_0008270696_ONLINE	2.0
+describe	PHISHTANK_0008270696_ONLINE	Phishing URL still online
+
+##

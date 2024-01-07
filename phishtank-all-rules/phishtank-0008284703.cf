@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008284703
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8284703
+## Submitted.....: 2023-09-04T11:15:53+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008284703_MATCH	/forms\.kyano\.app\/form\/yM9nOm9PiNTwlFjmr8ZHALAB2nwHicUK/
+score		PHISHTANK_0008284703_MATCH	5.0
+describe	PHISHTANK_0008284703_MATCH	Phishtank ID 8284703 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008284703_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008284703_VALIDATED	PHISHTANK_0008284703_MATCH && __PHISHTANK_0008284703_VALCHECK
+score		PHISHTANK_0008284703_VALIDATED	2.0
+describe	PHISHTANK_0008284703_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008284703_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008284703_ONLINE	PHISHTANK_0008284703_MATCH && __PHISHTANK_0008284703_ONCHECK
+score		PHISHTANK_0008284703_ONLINE	2.0
+describe	PHISHTANK_0008284703_ONLINE	Phishing URL still online
+
+##

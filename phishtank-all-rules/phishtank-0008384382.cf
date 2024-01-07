@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008384382
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8384382
+## Submitted.....: 2023-12-05T20:16:09+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008384382_MATCH	/autoiothiatowers\.firebaseapp\.com\/%3ferr%3d2ripo8bdx66ud9prazte51fgodlieyt4ztmf52g6nr4nvxvvnue2rzjqdta0w6hrmu9nwahri0ehfom8tkqr9jtapyuf5lzgey5qkj39yqk1rtjshppv5y89qc323lruw77uiwszlm0ynabjtfdvqibulj2wmtuhu3mgxgrf5f9zxld0k1tdbckje2scjin0tj237zogeppsamttmkpzy9imb8hzfqktgryll93d%26dispatch%3d79a7ki1bcjd5b9d980f13a777ibe07%26id%3dc39a2d8738c9/
+score		PHISHTANK_0008384382_MATCH	5.0
+describe	PHISHTANK_0008384382_MATCH	Phishtank ID 8384382 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008384382_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008384382_VALIDATED	PHISHTANK_0008384382_MATCH && __PHISHTANK_0008384382_VALCHECK
+score		PHISHTANK_0008384382_VALIDATED	2.0
+describe	PHISHTANK_0008384382_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008384382_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008384382_ONLINE	PHISHTANK_0008384382_MATCH && __PHISHTANK_0008384382_ONCHECK
+score		PHISHTANK_0008384382_ONLINE	2.0
+describe	PHISHTANK_0008384382_ONLINE	Phishing URL still online
+
+##
