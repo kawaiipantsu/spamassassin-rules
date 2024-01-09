@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008413335
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8413335
+## Submitted.....: 2024-01-08T04:25:54+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008413335_MATCH	/web\-13ce78ae\.hamdoungroup\.com\//
+score		PHISHTANK_0008413335_MATCH	5.0
+describe	PHISHTANK_0008413335_MATCH	Phishtank ID 8413335 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008413335_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008413335_VALIDATED	PHISHTANK_0008413335_MATCH && __PHISHTANK_0008413335_VALCHECK
+score		PHISHTANK_0008413335_VALIDATED	2.0
+describe	PHISHTANK_0008413335_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008413335_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008413335_ONLINE	PHISHTANK_0008413335_MATCH && __PHISHTANK_0008413335_ONCHECK
+score		PHISHTANK_0008413335_ONLINE	2.0
+describe	PHISHTANK_0008413335_ONLINE	Phishing URL still online
+
+##

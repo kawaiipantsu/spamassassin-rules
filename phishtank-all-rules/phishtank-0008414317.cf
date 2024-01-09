@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008414317
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8414317
+## Submitted.....: 2024-01-08T20:28:51+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008414317_MATCH	/seoservicesiox\.firebaseapp\.com\/%3ferr%3db0qmbz0rr7j7jwfxwuge2mltlfh8thi44wlmqjgij0fh5stc48aquvtmcruyumz2niptbupveoc1ahjudxaismgkdfdtvx618o8ezh9u7tzegmvb8jrkdizlrvw37e9esh2ja0lqhmdk4d9nhba61p7aog7q7cajiv6ajsm2dmmibnnyz2a23ofr9c71ddkltw1hm90vgwp4idx8608jvjqhobitxvpl3lmkole2%26dispatch%3d63dd06g4i54iii7bd08efj53g3kd9a%26id%3dfde8bdb7958c/
+score		PHISHTANK_0008414317_MATCH	5.0
+describe	PHISHTANK_0008414317_MATCH	Phishtank ID 8414317 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008414317_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008414317_VALIDATED	PHISHTANK_0008414317_MATCH && __PHISHTANK_0008414317_VALCHECK
+score		PHISHTANK_0008414317_VALIDATED	2.0
+describe	PHISHTANK_0008414317_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008414317_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008414317_ONLINE	PHISHTANK_0008414317_MATCH && __PHISHTANK_0008414317_ONCHECK
+score		PHISHTANK_0008414317_ONLINE	2.0
+describe	PHISHTANK_0008414317_ONLINE	Phishing URL still online
+
+##

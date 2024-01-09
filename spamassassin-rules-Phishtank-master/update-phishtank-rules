@@ -1,0 +1,205 @@
+#!/usr/bin/env php
+<?PHP
+/*****************************************************
+ *  ____  _     _     _   _____  _    _   _ _  __
+ * |  _ \| |__ (_)___| |_|_   _|/ \  | \ | | |/ /
+ * | |_) | '_ \| / __| '_ \| | / _ \ |  \| | ' /
+ * |  __/| | | | \__ \ | | | |/ ___ \| |\  | . \
+ * |_|   |_| |_|_|___/_| |_|_/_/   \_\_| \_|_|\_\
+ * SpamAssassin Rules - Update/Build script
+ *
+ * Contact: Kawaiipantsu
+ * Github: https://github.com/kawaiipantsu/spamassassin-rules
+ *
+ * Not using cURL, for quick implementation and no extra modules
+ * needed with PHP etc. But you should set some sort of UA for
+ * friendly visability for Phishtank...
+ *
+ * NOTE: PhishTank ONLY includes "ONLINE" and "VALIDATED" in their
+ *       public DB files, so the EXTRA scores will always be applied!
+ * 
+ *       I have simply added this feature in case they someday release
+ *       the full DB with "offline" and "unvalidated" urls to...
+ *
+ ****/
+
+// CONFIG
+define("DATE_FORMAT"           ,"H:i:s d-m-Y");                                      // 24:01:01 31-12-1234
+define("PHISHTANK_DB_URL"      ,"http://data.phishtank.com/data/online-valid.json"); // Must be JSON (Uncompressed)
+define("PHISHTANK_DB_ARCHIVE"  ,TRUE);                                               // Should we arhive old files?
+define("PHISHTANK_ARCHIVE_GZ"  ,TRUE);                                               // Should we compress archives?
+define("PHISHTANK_DB_DAYCHECK" ,5);                                                  // Re-Download latest DB > 5 days old
+
+define("SCORE_DEFAULT"         ,"5.0");                                              // Default score if URL is found in URI search
+define("SCORE_EXTRA_VALIDATED" ,"2.0");                                              // Extra score to add if validated by PhishTank
+define("SCORE_EXTRA_ACTIVE"    ,"2.0");                                              // Extra score to add if site still active
+
+
+
+// Script start
+cLog("==[ ".strtoupper(basename(__FILE__,'.php'))." ]===============================");
+cLog("> Checking for phishtank DB locally");
+
+// Check if PhishTank DB is avaiable locally and not older than X days
+// If not, then download it! Also make sure if we should archive old one...
+
+$timestamp = time();
+define("ptDB_latest",  "phishtank-latest-db.json");
+define("ptDB_archive", "phishtank-".$timestamp."-db.json");
+ 
+if ( is_file(ptDB_latest) && is_readable(ptDB_latest) ) {
+ cLog("> Found DB locallay");
+ $dbAge = $timestamp-filemtime(ptDB_latest);
+ $dbMaxAge = 60*60*24*PHISHTANK_DB_DAYCHECK;
+ if ($dbAge >= $dbMaxAge) {
+  cLog("  - DB is outdated, re-downloading now");
+  downloadPhishTankDB();
+  cLog("  - Loading");
+  $data = loadPhishTankDB(ptDB_latest);
+  cLog("  - Done");
+ } else {
+  cLog("  - Loading");
+  $data = loadPhishTankDB(ptDB_latest);
+  cLog("  - Done");
+ }
+} else {
+ cLog("> Did not find any local DB, downloading now");
+ downloadPhishTankDB();
+ cLog("  - Loading");
+ $data = loadPhishTankDB(ptDB_latest);
+ cLog("  - Done");
+}
+
+// We should have some data to work with now
+$totalEntries = count($data);
+cLog("> Found ${totalEntries} PhishTank entries in DB");
+
+cLog("> Cleaning up phishtank validated rule directory");
+$fullPath = __DIR__ ."/phishtank-7days-rules/";
+array_map('unlink', glob("$fullPath*.cf"));
+
+cLog("> Cleaning up phishtank online rule directory");
+$fullPath = __DIR__ ."/phishtank-30days-rules/";
+array_map('unlink', glob("$fullPath*.cf"));
+
+cLog("> Beginning to build Phishtank rules");
+foreach ( $data as $ptEntry ) {
+ $timestamp = time();
+ $timestampSub  = strtotime(trim($ptEntry["submission_time"]));
+ $ruleAge = $timestamp-$timestampSub;
+ $ruleMaxAge1 = 60*60*24*7;
+ $ruleMaxAge2 = 60*60*24*31;
+ $id    = trim($ptEntry["phish_id"]);
+ $idPad = sprintf("%010s",$id);
+ $rule = buildRule($ptEntry);
+ $filename_rule = "phishtank-".$idPad.".cf";
+ // Save rule to "all" rules
+ file_put_contents(__DIR__ ."/phishtank-all-rules/".$filename_rule,$rule);
+ // If within 7days old, save under 7days rules
+ if ( $ruleAge <= $ruleMaxAge1 ) file_put_contents(__DIR__ ."/phishtank-7days-rules/".$filename_rule,$rule);
+ // If within 30days old, save under 30days rules
+ if ( $ruleAge <= $ruleMaxAge2 ) file_put_contents(__DIR__ ."/phishtank-30days-rules/".$filename_rule,$rule);
+}
+
+
+
+
+// Function to build a SpamAssassin rule from phishtank array entry
+function buildRule($entry) {
+ $ptID = trim($entry["phish_id"]);
+ $id = sprintf("PHISHTANK_%010s",trim($entry["phish_id"]));
+ cLog("  - Building rule: ".$id);
+ $ptURL           = trim($entry["phish_detail_url"]);
+ $ptDate          = trim($entry["submission_time"]);
+ $parsed          = parse_url(trim($entry["url"]));
+ $matchURL        = array_key_exists("path",$parsed) ? $parsed['host'].$parsed['path'] : $parsed['host'];
+ $matchURL_regex  = preg_quote($matchURL, '/');
+ $bValidated      = strtolower(trim($entry["verified"])) == "yes" ? "1" : "0";
+ $bActive         = strtolower(trim($entry["online"])) == "yes" ? "1" : "0";
+ $score           = strlen(SCORE_DEFAULT) >= 1 ? SCORE_DEFAULT : "10";
+ $score_validated = strlen(SCORE_EXTRA_VALIDATED) >= 1 ? SCORE_EXTRA_VALIDATED : "10";
+ $score_online    = strlen(SCORE_EXTRA_ACTIVE) >= 1 ? SCORE_EXTRA_ACTIVE : "10";
+ $ptTarget        = "(".trim($entry["target"]).")";
+ $rule   = <<<EOD
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\\__,_|_|\___|
+##
+## Rule ID.......: ${id}
+## PhishTank URL.: ${ptURL}
+## Submitted.....: ${ptDate}
+## 
+## DEFAULT MATCH RULE
+uri\t\t${id}_MATCH\t/${matchURL_regex}/
+score\t\t${id}_MATCH\t${score}
+describe\t${id}_MATCH\tPhishtank ID ${ptID} ${ptTarget} 
+
+## VALIDATED RULE
+meta\t\t__${id}_VALCHECK\t(1*${bValidated}) > 0
+meta\t\t${id}_VALIDATED\t${id}_MATCH && __${id}_VALCHECK
+score\t\t${id}_VALIDATED\t${score_validated}
+describe\t${id}_VALIDATED\tValidated phishing url
+
+## ACTIVE/ONLINE RULE
+meta\t\t__${id}_ONCHECK\t(1*${bActive}) > 0
+meta\t\t${id}_ONLINE\t${id}_MATCH && __${id}_ONCHECK
+score\t\t${id}_ONLINE\t${score_online}
+describe\t${id}_ONLINE\tPhishing URL still online
+
+##
+EOD;
+ return $rule;
+}
+
+// Simple fetch DB function
+function downloadPhishTankDB() {
+ // Archive check - Archive if needed!
+ if ( PHISHTANK_DB_ARCHIVE && is_file(ptDB_latest) ) {
+  if ( is_writable(__DIR__."/") ) rename(ptDB_latest, ptDB_archive);
+  // If compression is wanted, do it!
+  if ( PHISHTANK_ARCHIVE_GZ ) {
+   $data = file_get_contents(ptDB_archive);
+   $gzdata = gzencode($data, 9);
+   file_put_contents(ptDB_archive.".gz", $gzdata);
+   unlink(ptDB_archive);
+  }
+ }
+ // Old file check - Unlink if needed!
+ if ( !PHISHTANK_DB_ARCHIVE && is_file(ptDB_latest) ) {
+  if ( is_writable(__DIR__."/") ) unlink(ptDB_latest);
+ }
+ $url = trim(PHISHTANK_DB_URL);
+ $CRLF = "\r\n";
+ $options = array(
+  'http'=>array(
+    'method'=>"GET",
+    'header'=>	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8".$CRLF,
+		"Accept-Language: en-US,en;q=0.5".$CRLF,
+		"Connection: keep-alive".$CRLF,
+		"Upgrade-Insecure-Requests: 1".$CRLF,
+		"User-Agent: phishtank/soclatam".$CRLF // Something they want, picked random user
+  )
+ );
+ $context = stream_context_create($options);
+ // Mae sure we can write the file before spending time downloading it ...
+ if ( is_writable(__DIR__."/") ) {
+  $content = file_get_contents($url, false, $context);
+  file_put_contents(ptDB_latest, $content);
+ }
+}
+
+// Simple load DB function
+function loadPhishTankDB() {
+ $dbarray = json_decode(file_get_contents(ptDB_latest),true);
+ return $dbarray;
+}
+
+// Simple unified function to print console logs or more etc (syslog)?
+function cLog($msg) {
+ $ts = date(DATE_FORMAT);
+ printf("[%s] %s\n",$ts,rtrim($msg));
+}
+
+?>
