@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008415934
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8415934
+## Submitted.....: 2024-01-10T07:55:14+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008415934_MATCH	/8307999\.fls\.doubleclick\.net\/activityi;src\=8307999;type\=mob18c;cat\=mob14;ord\=718829412486;gcldc\=COuk68vDzoMDFdCT_QcdZNYBcw;auiddc\=825799607\.1704742812;u2\=GA1\.2\.1441804673\.1704742811;u26\=Web;u23\=mobile;u24\=forfait_postpaid;u25\=mobile;u1\=Non%20logue;u43\=yes;u6\=forfait_postpaid_fmo_orange;u7\=DOC00000000000002055;u8\=S%c3%a9rie%20Sp%c3%a9ciale%20120Go%205G;u9\=19\.99;u10\=1;u33\=fiche_forfait;u34\=DOC00000000000002055;u35\=S%c3%a9rie%20Sp%c3%a9ciale%20120Go%205G;u36\=19\.99;u37\=forfait_postpaid_fmo_orange;u40\=false;u41\=\/tags\.tiqcdn\.com\/utag\/orange\/frshoporange\/prod\/;u63\=orange;u74\=1;u75\=https\:\/boutique\.orange\.fr\/mobile\/offre\/forfait\-serie\-speciale\-client\-internet/
+score		PHISHTANK_0008415934_MATCH	5.0
+describe	PHISHTANK_0008415934_MATCH	Phishtank ID 8415934 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008415934_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008415934_VALIDATED	PHISHTANK_0008415934_MATCH && __PHISHTANK_0008415934_VALCHECK
+score		PHISHTANK_0008415934_VALIDATED	2.0
+describe	PHISHTANK_0008415934_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008415934_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008415934_ONLINE	PHISHTANK_0008415934_MATCH && __PHISHTANK_0008415934_ONCHECK
+score		PHISHTANK_0008415934_ONLINE	2.0
+describe	PHISHTANK_0008415934_ONLINE	Phishing URL still online
+
+##

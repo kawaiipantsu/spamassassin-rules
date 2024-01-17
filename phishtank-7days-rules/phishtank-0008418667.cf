@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008418667
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8418667
+## Submitted.....: 2024-01-12T07:13:39+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008418667_MATCH	/74dosaaf\.ru\/ie\/web\/01\-24\/74985200998080\/45f474700d8r0f\/mail\/november\/re\/betrag\/ee\/swsw\/401fd0b1f6173f6790fec15e14079fc7\//
+score		PHISHTANK_0008418667_MATCH	5.0
+describe	PHISHTANK_0008418667_MATCH	Phishtank ID 8418667 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008418667_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008418667_VALIDATED	PHISHTANK_0008418667_MATCH && __PHISHTANK_0008418667_VALCHECK
+score		PHISHTANK_0008418667_VALIDATED	2.0
+describe	PHISHTANK_0008418667_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008418667_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008418667_ONLINE	PHISHTANK_0008418667_MATCH && __PHISHTANK_0008418667_ONCHECK
+score		PHISHTANK_0008418667_ONLINE	2.0
+describe	PHISHTANK_0008418667_ONLINE	Phishing URL still online
+
+##

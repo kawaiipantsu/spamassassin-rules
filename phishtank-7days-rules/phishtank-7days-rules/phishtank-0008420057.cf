@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008420057
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8420057
+## Submitted.....: 2024-01-13T01:35:33+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008420057_MATCH	/bafybeiflm6cwiy5eu356dr472xhiaptdd5z7i446n4badrthq2osxfa2be\.ipfs\.infura\-ipfs\.io/
+score		PHISHTANK_0008420057_MATCH	5.0
+describe	PHISHTANK_0008420057_MATCH	Phishtank ID 8420057 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008420057_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008420057_VALIDATED	PHISHTANK_0008420057_MATCH && __PHISHTANK_0008420057_VALCHECK
+score		PHISHTANK_0008420057_VALIDATED	2.0
+describe	PHISHTANK_0008420057_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008420057_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008420057_ONLINE	PHISHTANK_0008420057_MATCH && __PHISHTANK_0008420057_ONCHECK
+score		PHISHTANK_0008420057_ONLINE	2.0
+describe	PHISHTANK_0008420057_ONLINE	Phishing URL still online
+
+##

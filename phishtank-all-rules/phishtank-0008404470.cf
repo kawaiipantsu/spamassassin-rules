@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008404470
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8404470
+## Submitted.....: 2023-12-27T15:00:55+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008404470_MATCH	/acessos\-itau\-ativacaocartao\-online\.com\/desbloquear_o_cartao\//
+score		PHISHTANK_0008404470_MATCH	5.0
+describe	PHISHTANK_0008404470_MATCH	Phishtank ID 8404470 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008404470_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008404470_VALIDATED	PHISHTANK_0008404470_MATCH && __PHISHTANK_0008404470_VALCHECK
+score		PHISHTANK_0008404470_VALIDATED	2.0
+describe	PHISHTANK_0008404470_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008404470_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008404470_ONLINE	PHISHTANK_0008404470_MATCH && __PHISHTANK_0008404470_ONCHECK
+score		PHISHTANK_0008404470_ONLINE	2.0
+describe	PHISHTANK_0008404470_ONLINE	Phishing URL still online
+
+##
