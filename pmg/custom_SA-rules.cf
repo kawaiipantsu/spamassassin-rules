@@ -1,0 +1,170 @@
+# Short-Circuit if found in local blacklist or whitelist
+
+ifplugin Mail::SpamAssassin::Plugin::Shortcircuit
+
+meta SC_HAM (USER_IN_WHITELIST||USER_IN_DEF_WHITELIST||USER_IN_ALL_SPAM_TO||NO_RELAYS||ALL_TRUSTED)
+priority SC_HAM -1000
+shortcircuit SC_HAM ham
+score SC_HAM -20
+
+endif
+
+
+rawbody     NO_HTTP   /and paste in your browser/i
+score       NO_HTTP   4.5
+describe    NO_HTTP   No HTTP on link
+
+body        STOCKDUMP2   /Investor Alert/i
+score       STOCKDUMP2   7.0
+describe    STOCKDUMP2   Pump and Dump Investor Alert
+
+rawbody     GEOCITIES1   /\.geocities\.com\//i
+score       GEOCITIES1   5.0
+describe    GEOCITIES1   Geocities Link
+
+rawbody     GEOCITIES2   /\.geocities\.yahoo\//i
+score       GEOCITIES2   5.0
+describe    GEOCITIES2   Geocities Link 2
+
+body        SOFTWARESPAM   /attachment message\.html/
+score       SOFTWARESPAM   5.0
+describe    SOFTWARESPAM   leaker software scam
+
+rawbody     TRIPOD1   /\.tripod\.com/
+score       TRIPOD1   5.0
+describe    TRIPOD1   Tripod Link
+
+body        STOCKDUMP5   /investment advice/
+score       STOCKDUMP5   4.9
+describe    STOCKDUMP5   Pump and Dump Five
+
+header      VIRUS_SPAM   Subject =~ /Hidden message/
+score       VIRUS_SPAM   99.0
+describe    VIRUS_SPAM   Potential virus in attachment
+
+header      VIRUS_SPAM2   Subject =~ /Protected message/
+score       VIRUS_SPAM2   99.0
+describe    VIRUS_SPAM2   Potential virus in attachment 2
+
+body        STOCKDUMP8   /\W[A-Z]{4}\s*\.\s*PK\s/i
+score       STOCKDUMP8   4.5
+describe    STOCKDUMP8   Pump and Dump Microcap One
+
+body        STOCKDUMP9   /\W[A-Z]{4}\s*\.\s*OB\s/i
+score       STOCKDUMP9   4.5
+describe    STOCKDUMP9   Pump and Dump Microcap Two
+
+header      BOGUS_THREAD   ALL =~ /Thread-Index/i
+score       BOGUS_THREAD   0.5
+describe    BOGUS_THREAD   Contains Thread-Index in header
+
+body        STOCKDUMP13   /Target price/i
+score       STOCKDUMP13   10.0
+describe    STOCKDUMP13   Pump and Dump target price
+
+rawbody     MALWARE01   /ecard number/i
+score       MALWARE01   10.0
+describe    MALWARE01   E-Card Malware Attempt
+
+rawbody     NICEG   /I am nice girl/i
+score       NICEG   6.5
+describe    NICEG   Nice Girl mail order bride
+
+body        DICT_DUMP_CUSTOM01   /(((\b|\s)[a-z]{4,}\b){7,})/
+describe    DICT_DUMP_CUSTOM01   Text in non-English syntax-4X7
+score       DICT_DUMP_CUSTOM01   0.5
+
+body        DICT_DUMP_CUSTOM02   /(((\b|\s)[a-z]{5,}\b){7,})/
+describe    DICT_DUMP_CUSTOM02   Text in non-English syntax-5X7
+score       DICT_DUMP_CUSTOM02   0.8
+
+body        DICT_DUMP_CUSTOM03   /(((\b|\s)[a-z]{5,}\b){8,})/
+describe    DICT_DUMP_CUSTOM03   Text in non-English syntax-5X8
+score       DICT_DUMP_CUSTOM03   1.2
+
+header      RODENTDROPPINGS1   ALL =~ /SquirrelMail authenticated user/i
+score       RODENTDROPPINGS1   0.1
+describe    RODENTDROPPINGS1   Mail from a SquirrelMail account
+
+body        SHYSTER_ONE   /barrister/i
+score       SHYSTER_ONE   2.0
+describe    SHYSTER_ONE   Body makes reference to barrister
+
+uri         PAGE_AD   /pagead\/iclk/i
+score       PAGE_AD   4.2
+describe    PAGE_AD   Google relay to spamvertized site
+
+uri         EXE_FILE   /\w\.exe/i
+score       EXE_FILE   10.0
+describe    EXE_FILE   Potential link to executable
+
+uri         BLOGSPLAT   /\w\.blogspot\.com/i
+score       BLOGSPLAT   2.5
+describe    BLOGSPLAT   Contains link to blogspot.com
+
+header      RODENTDROPPINGS2   ALL =~ /Internet Messaging Program \(IMP\)/
+score       RODENTDROPPINGS2  0.1
+describe    RODENTDROPPINGS2  Mail from an IMP agent
+
+####################
+
+# Bump up some scores that should have low likelyhood of FP
+
+score   RCVD_IN_BL_SPAMCOP_NET  5.5
+score   RCVD_IN_SBL             5.5
+score   RCVD_IN_XBL             5.5
+score   RCVD_IN_PBL             5.5
+score   RCVD_IN_DSBL            5.0
+score   RCVD_IN_SORBS_HTTP      3.5
+score   RCVD_IN_SORBS_MISC      3.5
+score   RCVD_IN_SORBS_SMTP      4.5
+score   RCVD_IN_SORBS_SOCKS     3.5
+score   RCVD_IN_SORBS_WEB       3.5
+score   RCVD_IN_SORBS_BLOCK     4.5
+score   RCVD_IN_SORBS_ZOMBIE    3.5
+score   RCVD_IN_SORBS_DUL       4.5
+score   HTML_TAG_BALANCE_BODY   2.0
+score   HTML_TAG_BALANCE_HEAD   3.0
+score   HTML_IMAGE_ONLY_04      4.0
+score   HTML_MESSAGE            0.3
+score   INVALID_DATE            3.2
+score   RCVD_IN_NJABL_SPAM      3.5
+score   RCVD_IN_NJABL_PROXY     5.5
+score   RCVD_IN_NJABL_RELAY     4.5
+score   RCVD_IN_NJABL_MULTI     2.5
+score   RCVD_IN_NJABL_CGI       2.5
+score   ONLINE_PHARMACY         4.0
+score   URIBL_SBL               5.5
+score   URIBL_SC_SURBL          5.5
+score   URIBL_WS_SURBL          4.9
+score   URIBL_PH_SURBL          4.9
+score   URIBL_OB_SURBL          4.9
+score   URIBL_AB_SURBL          4.9
+score   URIBL_JP_SURBL          4.9
+score   URIBL_BLACK             5.0
+score   SPF_HELO_PASS           -1.0
+score   SPF_PASS                -1.0
+score   RCVD_ILLEGAL_IP         5.0
+score   RATWARE_RCVD_PF         4.8
+score   BAYES_99                4.8
+score   MICROSOFT_EXECUTABLE    20.0
+score   RDNS_NONE               4.5
+score   URIBL_RHS_DOB           3.8
+score   URIBL_DBL_SPAM          5.0
+score   RCVD_IN_PSBL            5.0
+score   RP_MATCHES_RCVD         0.0
+score   RCVD_IN_BRBL_LASTEXT    5.0
+
+# Do a summary to give more weight to blacklists
+
+meta       CUSTOM_RCVD_IN_MANY (( RCVD_IN_BL_SPAMCOP_NET + RCVD_IN_SBL + RCVD_IN_XBL + RCVD_IN_SORBS_DUL + RCVD_IN_SORBS_SMTP + RCVD_IN_NJABL_RELAY + RCVD_IN_DSBL + RCVD_IN_NJABL_SPAM + RCVD_IN_NJABL_PROXY + RCVD_IN_SORBS_HTTP + RCVD_IN_SORBS_BLOCK + RCVD_IN_PSBL + URIBL_DBL_SPAM) > 2)
+describe   CUSTOM_RCVD_IN_MANY   Message received in more than 2 RBLs
+score      CUSTOM_RCVD_IN_MANY 5.0
+
+uri    FVGT_u_HAS_2LETTERFLDR    /\/[a-zA-Z]{2}\//
+describe    FVGT_u_HAS_2LETTERFLDR    FVGT - URL has a 2 letter folder like /ab/
+score    FVGT_u_HAS_2LETTERFLDR    0.5
+
+header  FVGT_s_SINGLE_LETTER Subject =~ /\s[dfghjlmnpqstvwzDFGHJLMNPQSTVWZ]{1}\s/
+describe FVGT_s_SINGLE_LETTER FVGT - Single non-vowel seperated by spaces
+score  FVGT_s_SINGLE_LETTER 0.3

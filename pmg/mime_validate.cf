@@ -1,0 +1,45 @@
+#
+# MIME validation
+# Some simple rules to find MIME errors common in messages
+# created by bulk mail programs.
+# Typically spam, but may also trap newsletters.
+# Version 1.2
+#   by Byteplant GmbH
+#   http://www.byteplant.com
+# download latest version here:
+#   http://antispam.byteplant.com/download/mime_validate.cf
+# --------------------------------------------------------
+# Learn more about the CleanMail Anti Spam Filter here:
+# http://antispam.byteplant.com/CleanMail
+# --------------------------------------------------------
+
+# ASCII-0 can crash mail clients. This is an absolute NO!
+rawbody     MIME_ASCII0             /\0/
+describe    MIME_ASCII0             Message body contains ASCII-0 character
+score       MIME_ASCII0             1.5
+
+# RFC-2822: max message line size is 998 chars + CRLF.
+# This test does not work, because SA seems to break the lines internally.
+#rawbody     MIME_LINE_TOO_LONG      /.{998}.+/
+#describe    MIME_LINE_TOO_LONG      Message body violates RFC-2822 (line too long)
+#score       MIME_LINE_TOO_LONG      1.0
+
+# Message body contains single CR or LF character
+# RFC-2822 is a bit ambiguous here, but mail like this
+# usually originates from people that did not read it.
+rawbody     __MIME_BAD_CR           /\x0D[^\x0A]/
+# This test always matches, probably because of the newline handling in SA
+#rawbody     __MIME_BAD_LF           /[^\x0D]\x0A/
+meta        MIME_BAD_LINEBREAK      __MIME_BAD_CR
+describe    MIME_BAD_LINEBREAK      Message body with fishy line breaks
+score       MIME_BAD_LINEBREAK      0.5
+
+# Message header contains 8 bit characters.
+# This is a common MIME violation, but even more common for spammers.
+# 8-bit chars are most commonly encountered in From/Subject/To headers.
+header      __MIME_8BIT_FROM        From:raw =~ /[\x80-\xFF]/
+header      __MIME_8BIT_SUBJECT     Subject:raw =~ /[\x80-\xFF]/
+header      __MIME_8BIT_TO          To:raw =~ /[\x80-\xFF]/
+meta        MIME_8BIT_HEADER        (__MIME_8BIT_TO || __MIME_8BIT_SUBJECT || __MIME_8BIT_FROM)
+describe    MIME_8BIT_HEADER        Message header contains 8-bit character
+score       MIME_8BIT_HEADER        0.3

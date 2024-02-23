@@ -1,0 +1,119 @@
+#TBG.cf - SpamAssassin Rules
+
+#Author: Gagandeep Singh Sapra - The Big Geek
+#HomePage: https://github.com/thebiggeek/TBG-SA-RULES
+
+#This is a collection of special rules that I have developed and use on my system.
+#
+#The starting date of writing this rules began in 2005 and I only published them in 2020
+#Some of these rules only work for us and are from our Internal learnings, they may not work for you
+
+#SPAMMY-TLDS - These are TLDs that send us a lot of SPAM
+header		__TBG_SPAMMY_TLD1	Received =~ /(\.net\.ae|\.net\.id|\.ro|\.ru|\.co\.jp|\.co\.ke|\.AC\.ZA|\.com\.vn|\.vn|\.cc|\.cu\.ua|\.com\.br|\.gr|\.hr|\.dk|\.win|\.bid|\.top|\.club|\.date|\.stream|\.trade|\.icu|\.press|\.pro|\.pet|\.kim|\.red)\s/i
+describe	__TBG_SPAMMY_TLD1	TLDs Sending Spammy Emails in Received
+score		__TBG_SPAMMY_TLD1	0.5
+
+header		__TBG_SPAMMY_TLD2	From =~ /(\.net\.ae|\.net\.id|\.ro|\.ru|\.co\.jp|\.co\.ke|\.AC\.ZA|\.com\.vn|\.vn|\.cc|\.cu\.ua|\.com\.br|\.gr|\.hr|\.dk|\.win|\.bid|\.top|\.club|\.date|\.stream|\.trade|\.icu|\.press|\.pro|\.pet|\.kim|\.red)\s/i
+describe	__TBG_SPAMMY_TLD2	TLDs Sending Spammy Emails in From
+score		__TBG_SPAMMY_TLD2	0.5
+
+meta		TBG_SPAMMY_TLD 		(__TBG_SPAMMY_TLD1 && __TBG_SPAMMY_TLD2)
+describe	TBG_SPAMMY_TLD		High Spammy TLD used in Recieved and From
+
+#PHP-Scripts and Vulnerabilities that send out Mails
+
+header		__TBG_SCRIPTS_PHP1	X-PHP-Originating-Script =~ /eval\(\)\'d code/i
+header		__TBG_SCRIPTS_PHP2	X-Mailer =~ /PHP v?5\.[1234].*/i
+header		__TBG_SCRIPTS_PHP3	X-Mailer =~ /PHPMailer 5\.2\.[0-9] /i
+header		__TBG_SCRIPTS_PHP4	X-PHP-Originating-Script =~ /(post|gallery|user)\.php/i
+header		__TBG_SCRIPTS_PHP5	X-PHP-Script =~ /(post|gallery|user)\.php/i
+header		__TBG_SCRIPTS_PHP6	X-Source-Args =~ /(post|gallery|user)\.php/i
+header		__TBG_SCRIPTS_PHP7	X-Source-Args =~ /\/wp\-(content|includes)\//i
+
+meta		TBG_SCRIPTS_CMS_PHP ( __TBG_SCRIPTS_PHP1 || __TBG_SCRIPTS_PHP2 || __TBG_SCRIPTS_PHP3 || __TBG_SCRIPTS_PHP4 || __TBG_SCRIPTS_PHP5 || __TBG_SCRIPTS_PHP6 || __TBG_SCRIPTS_PHP7)
+score		TBG_SCRIPTS_CMS_PHP 1.25
+describe	TBG_SCRIPTS_CMS_PHP Possibly using Wordpress PHP mail Vulnerabilities
+
+header 		TBG_SCRIPTS_1 	X-Mailer =~ /Microsoft CDO for Windows 2000/
+describe	TBG_SCRIPTS_1 	Using CDO Mailer bug and sending SPAM #84820
+score 		TBG_SCRIPTS_1 	5
+
+#SEO Related SPAM
+header		__TBG_SUBJECT_SEO1	Subject =~ /Expiration SEO/i
+header		__TBG_SUBJECT_SEO2	Subject =~ /Top Positions/i
+header		__TBG_SUBJECT_SEO3	Subject =~ /SEO Issue/i
+header 		__TBG_SUBJECT_SEO4	Subject =~ /first page of Google/i
+
+header		__TBG_FROM_SEO1		From =~ /(Domain Expiration SEO|Final Reminder)/i
+
+body		__TBG_BODY_SEO1		/\s+(Position your website to be top-ranking|Top position in Google)/i
+body 		__TBG_BODY_SEO2		/\s+(Search Specialist|Hello Team)/i
+body 		__TBG_BODY_SEO3		/\s+(your website is great design|1st page)/i
+
+meta		TBG_SEO_SPAM		( __TBG_SUBJECT_SEO1 + __TBG_SUBJECT_SEO2 + __TBG_SUBJECT_SEO3 + __TBG_SUBJECT_SEO4 + __TBG_FROM_SEO1 + __TBG_BODY_SEO1 + __TBG_BODY_SEO2 + __TBG_BODY_SEO3 >=2)
+describe	TBG_SEO_SPAM		SEO Related Spam exists both in Body, Subject and From 
+score		TBG_SEO_SPAM		3.0
+
+#Domains Related Spam
+header		__TBG_SUBJECT_DOMAIN1	Subject =~ /This is your Final (Reminder|Notice)/i
+header		__TBG_SUBJECT_DOMAIN2	Subject =~ /Request on your Domain De-activation/i
+header		__TBG_SUBJECT_DOMAIN3	Subject =~ /You instructed us to close/i
+header		__TBG_SUBJECT_DOMAIN4	Subject =~ /Your E-mail will Expire/i
+
+header		__TBG_FROM_DOMAIN1	From =~ /(Internet Services|Domain Notice|Domain Update)/i
+header		__TBG_FROM_DOMAIN2	From =~ /(System Message)/i
+header		__TBG_FROM_DOMAIN3	From =~ /(Admin Server)/i
+header		__TBG_FROM_DOMAIN4	From =~ /(email service)/i
+
+body 		__TBG_BODY_DOMAIN1	/\s+search engine registration/i
+body 		__TBG_BODY_DOMAIN2	/\s+Email Administrator/i
+body 		__TBG_BODY_DOMAIN3	/\s+verify immediately for free to prevent permanent termination/i
+body 		__TBG_BODY_DOMAIN4	/\s+Unusual Activities in Your MailBox/i
+body 		__TBG_BODY_DOMAIN5	/\s+You have reached storage limit/i
+body 		__TBG_BODY_DOMAIN6	/\s+until you re-validate/i
+
+meta		TBG_DOMAIN_SPAM	( __TBG_SUBJECT_DOMAIN1 + __TBG_SUBJECT_DOMAIN2 + __TBG_FROM_DOMAIN3 + __TBG_SUBJECT_DOMAIN4 + __TBG_FROM_DOMAIN1 + __TBG_FROM_DOMAIN2 + __TBG_FROM_DOMAIN3 + __TBG_FROM_DOMAIN4 + __TBG_BODY_DOMAIN1 + __TBG_BODY_DOMAIN2 + __TBG_BODY_DOMAIN3 + __TBG_BODY_DOMAIN4 + __TBG_BODY_DOMAIN5 >=2)
+describe	TBG_DOMAIN_SPAM	Domain Related Spam exists both in Body, Subject and From 
+score		TBG_DOMAIN_SPAM	2.0
+
+#Fax Recieved Related Spam - Is Someone still using Faxes in 2020
+header		__TBG_SUBJECT_FAX1	Subject =~ /new fax, document/i
+header		__TBG_SUBJECT_FAX2	Subject =~ /of incoming fax/i
+header		__TBG_SUBJECT_FAX3	Subject =~ /You have received a new fax, document/i
+
+body 		__TBG_BODY_FAX1		/\s+Click Here to View FAX document/i
+body 		__TBG_BODY_FAX2		/\s+You have an incoming FAX document/i
+
+meta		TBG_FAX_SPAM		( __TBG_SUBJECT_FAX1 + __TBG_SUBJECT_FAX2 + __TBG_SUBJECT_FAX3 + __TBG_BODY_FAX1 + __TBG_BODY_FAX2 >=2 )
+describe 	TBG_FAX_SPAM		Fax Related Spam
+score		TBG_FAX_SPAM		1.2
+
+#COVID RELATED SPAM DETECTION
+#These are limited release spam detection for the current times we are in - not sure how long these will be in use
+#India is seeing a huge rise and abuse of COVID RELATED SPAM and Persistent Spammers who do not backoff
+#As I see it The COVID related spam is going to be the New VIAGRA
+
+header		__TBG_SUBJECT_COVID1	Subject =~ /Manage Statutory Compliance during Pandemic/i
+header		__TBG_SUBJECT_COVID2	Subject =~ /Coronavirus disease/i
+header		__TBG_SUBJECT_COVID3	Subject =~ /COVID19 Supplier/i
+header		__TBG_SUBJECT_COVID4	Subject =~ /COVID-19 Supplier/i
+header		__TBG_SUBJECT_COVID5	Subject =~ /covid time/i
+header 		__TBG_SUBJECT_COVID6	Subject =~ /Build post-COVID cyber immunity/i
+header		__TBG_SUBJECT_COVID7	Subject =~ /Build post-COVID immunity/i
+
+body 		__TBG_BODY_COVID1		/\s+during a pandemic/i
+body 		__TBG_BODY_COVID2		/\s+Protect yourself with high quality range of PPE/i
+body 		__TBG_BODY_COVID3		/\s+Cost Effective Personal Protective Equipment/i
+
+meta		TBG_COVID_SPAM ( __TBG_SUBJECT_COVID1 + __TBG_SUBJECT_COVID2 + __TBG_SUBJECT_COVID3 + __TBG_SUBJECT_COVID4 + __TBG_SUBJECT_COVID5 + __TBG_SUBJECT_COVID6 + __TBG_SUBJECT_COVID7 + __TBG_BODY_COVID1 + __TBG_BODY_COVID2 + __TBG_BODY_COVID3 >= 2)
+describe	TBG_COVID_SPAM	COVID Related Spam
+score		TBG_COVID_SPAM	1.7
+
+#Following Rules are inspired by the SCHAALIT & Heinlein Rules and are to tag and score spam we see in India
+#Some of these rules only work for us and are from our Internal learnings, they may not work for you
+#Following Rules are named S3BMS_BODY_XXXX and S3BMS_HEADER  - Each Rule is a Single Line Rule with an increasing serial number
+#Wherever possible I will try to add description of why this exists
+#The score here is high, to ensure that SPAM Does not go through and triggers a quarantine
+
+#This File is now split as on 13 August 2020
+
