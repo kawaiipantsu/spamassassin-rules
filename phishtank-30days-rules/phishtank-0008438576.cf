@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008438576
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8438576
+## Submitted.....: 2024-02-02T04:58:36+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008438576_MATCH	/pub\-1b65b2cfa1de4d88a583e494abc8b391\.r2\.dev\/index\.html/
+score		PHISHTANK_0008438576_MATCH	5.0
+describe	PHISHTANK_0008438576_MATCH	Phishtank ID 8438576 (Microsoft) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008438576_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008438576_VALIDATED	PHISHTANK_0008438576_MATCH && __PHISHTANK_0008438576_VALCHECK
+score		PHISHTANK_0008438576_VALIDATED	2.0
+describe	PHISHTANK_0008438576_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008438576_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008438576_ONLINE	PHISHTANK_0008438576_MATCH && __PHISHTANK_0008438576_ONCHECK
+score		PHISHTANK_0008438576_ONLINE	2.0
+describe	PHISHTANK_0008438576_ONLINE	Phishing URL still online
+
+##
