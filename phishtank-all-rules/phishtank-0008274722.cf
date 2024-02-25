@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008274722
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8274722
+## Submitted.....: 2023-08-26T22:01:07+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008274722_MATCH	/docs\.google\.com\/presentation\/d\/e\/2PACX\-1vSnErxQ4BlVYQ5NaNZ2MVJkbE5yU5fyYL8pvbr1TKTyThdCT9OhBy1kron5NVNrbqIZW1C6QDfoqnLj\/pub/
+score		PHISHTANK_0008274722_MATCH	5.0
+describe	PHISHTANK_0008274722_MATCH	Phishtank ID 8274722 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008274722_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008274722_VALIDATED	PHISHTANK_0008274722_MATCH && __PHISHTANK_0008274722_VALCHECK
+score		PHISHTANK_0008274722_VALIDATED	2.0
+describe	PHISHTANK_0008274722_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008274722_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008274722_ONLINE	PHISHTANK_0008274722_MATCH && __PHISHTANK_0008274722_ONCHECK
+score		PHISHTANK_0008274722_ONLINE	2.0
+describe	PHISHTANK_0008274722_ONLINE	Phishing URL still online
+
+##

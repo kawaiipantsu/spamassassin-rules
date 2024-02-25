@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008286939
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8286939
+## Submitted.....: 2023-09-06T04:32:33+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008286939_MATCH	/pub\-d3e507c412a242c8888c2f7241152c4a\.r2\.dev\/indexvoicemail\.html/
+score		PHISHTANK_0008286939_MATCH	5.0
+describe	PHISHTANK_0008286939_MATCH	Phishtank ID 8286939 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008286939_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008286939_VALIDATED	PHISHTANK_0008286939_MATCH && __PHISHTANK_0008286939_VALCHECK
+score		PHISHTANK_0008286939_VALIDATED	2.0
+describe	PHISHTANK_0008286939_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008286939_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008286939_ONLINE	PHISHTANK_0008286939_MATCH && __PHISHTANK_0008286939_ONCHECK
+score		PHISHTANK_0008286939_ONLINE	2.0
+describe	PHISHTANK_0008286939_ONLINE	Phishing URL still online
+
+##

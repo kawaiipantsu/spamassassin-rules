@@ -1,0 +1,135 @@
+###################################################################################
+# This is a rules configuration file for SpamAssassin
+# You may want to update to the newest version, please check
+# the website www.claudiokuenzler.com for updates.
+#
+# This file is now publicly available in the following Git repo:
+# https://github.com/Napsty/spamassassin
+#
+# Save this file where you have the other SpamAssassin cf files
+# -> usually under /usr/share/spamassassin 
+# Or copy the content and paste it into ~/.spamassassin/user_prefs
+# 
+# Filename:	75_ckrules.cf
+# Author:	Claudio Kuenzler
+# Licence:	GPL (feel free to add/delete/redistribute)
+#
+# Major Version History (minor modifications see Github repository)
+# 2009-09-22	First public version (after one month in production)
+# ...		Several rules added
+# 2010-12-10 Added CK_IPHONE_PICTURE (such mails are spam-tagged by Razor)
+# 2017-10-05 Add CK_AWARDING_GIFTS and CK_DATING, other minor modifications
+# 2019-07-05 Add Digit Domains
+###################################################################################
+
+body CK_VIAGRA_MENTIONED       /\b.*v[i!]agr[4a].*\b/i
+describe CK_VIAGRA_MENTIONED   Viagra text within e-mail
+score CK_VIAGRA_MENTIONED      5.0
+
+body CK_LOTTERY_WINNING        /\b(?:winning|lottery|lotto|euromillion[s]?|tombola)/i
+describe CK_LOTTERY_WINNING    Typical winning notification e-mails
+score CK_LOTTERY_WINNING       4.0
+
+body CK_CASINO_LOTTO           /\b(?:j[a4]ckpot[s]?|cas[1i]no|lott[0o]|slots)/i
+describe CK_CASINO_LOTTO       Typical winning notification e-mails
+score CK_CASINO_LOTTO          4.0
+
+header CK_VIAGRA_SUBJECT       Subject =~ /\bv[i!]agr[4a]\b/i
+describe CK_VIAGRA_SUBJECT     Subject contents Viagra
+score CK_VIAGRA_SUBJECT        7.0
+
+header CK_CIALIS_SUBJECT       Subject =~ /\bc[i!]alis\b/i
+describe CK_CIALIS_SUBJECT     Subject contents Cialis
+score CK_CIALIS_SUBJECT        7.0
+
+header CK_DIVERS_SUBJECT       Subject =~ /\b(?:[e]?s[ ]?ex[x]?[u]?[a]?[l1]?[l1]?[y]?|impotence|pen[1i]s|lev[i]?[t]?r[i]?[t]?a|strength|casino|aamzing|loan[s]?)\b/i
+describe CK_DIVERS_SUBJECT     Subject contents one of the words
+score CK_DIVERS_SUBJECT        5.0
+
+body CK_DIVERS_BODY            /\b(?:sex[x]?[u]?[a]?[l1]?[l1]?[y]?|er[r]?ection[s]?|impotence|pen[1i]s|lev[i]?[t]?r[i]?[t]?a|strength|loan[s]?)\b/i
+describe CK_DIVERS_BODY        Mail contents one of the words
+score CK_DIVERS_BODY           5.0
+
+header CK_ERECT_SUBJECT        Subject =~ /\b(?:er[r]?ection[s]?|erect[i]?[l]?[e]?)\b/i
+describe CK_ERECT_SUBJECT      Subject contents one of the words
+score CK_ERECT_SUBJECT         5.0
+
+header CK_SEX_SUBJECT          Subject =~ /\b.*sex.*\b/i
+describe CK_SEX_SUBJECT        Subject contents Sex
+score CK_SEX_SUBJECT           3.5
+
+header CK_SUBJECT_COCK         Subject =~ /\b.*cock.*\b/i
+describe CK_SUBJECT_COCK       Subject contents cock
+score CK_SUBJECT_COCK          3.5
+
+header CK_SUBJECT_DICK         Subject =~ /\b.*dick.*\b/i
+describe CK_SUBJECT_DICK       Subject contents dick
+score CK_SUBJECT_DICK          2.5
+
+header CK_MEDICAL_SUBJECT      Subject =~ /\b(?:pill[s]?|plils|medicin[e]?[s]?|medical|mediicnes|medication[s]?|meidcaitions|cilais|meds|ph[ar][ar]macy|pharmacie[s]?|pharmaceutic[s]?|prescription[s]?|drug[s]?|implant[s]?|dental)\b/i
+describe CK_MEDICAL_SUBJECT    Subject contents one of the words
+score CK_MEDICAL_SUBJECT       2.5
+
+body CK_MEDICAL_BODY           /\b(?:p[!i]lls|plils|medicin[e]?[s]?|mediicnes|medical|medication|medications|pharmacy|pharmacies|pharmaceutic[s]?|prescription[s]?|drug[s]?|levrita|v[i!][a4]gr[a4]|c[i!][4a]l[i!]s)\b/i
+describe CK_MEDICAL_BODY       Mail contents one of the words
+score CK_MEDICAL_BODY          1.5
+
+header CK_RAMADAN_SPAMS        Subject =~ /\bramadan (?:greeting[s]?|wish[e]?[s]?)/i
+describe CK_RAMADAN_SPAMS      Subject contents Ramadan followed by Greetings (lots of Spams in August 2009)
+score CK_RAMADAN_SPAMS         3.5
+
+body CK_STRONG_MENTIONED       /\bstrong (?:healt[h]?|cock|dick|penis)/i
+describe CK_STRONG_MENTIONED   Normally spam (be strong)
+score CK_STRONG_MENTIONED      2.75
+
+body CK_BEST_MENTIONED         /\bbest (?:health|choice|offer[s]?|penis|strength|casino[s]?|online)/i
+describe CK_BEST_MENTIONED     Normally spam (best ..)
+score CK_BEST_MENTIONED        2.5
+
+body CK_ONLINE_MENTIONED       /\bonline (?:casino|pharmacy|drug[s]?|offer[s]?|doctor[s]?)/i
+describe CK_ONLINE_MENTIONED   Normally spam (online pharmacy ..)
+score CK_ONLINE_MENTIONED      2.5
+
+body CK_FREE_MENTIONED         /\bfree (?:casino|pharmacy|drug[s]?|sex|offer[s]?|lotto|pri[cz]e[s])/i
+describe CK_FREE_MENTIONED     Normally spam (free lotto ..)
+score CK_FREE_MENTIONED        2.5
+
+body CK_PHISHING_BEGGING       /\b(?:widow[e]?[r]?|death|died|beneficiary|hunger|transaction[s]?|transfer[s]?)\b/i
+describe CK_PHISHING_BEGGING   Phishing mails to transfer money and begging for money
+score CK_PHISHING_BEGGING      2.0
+
+body CK_INTERNET_CONNECT       /\bYou need to be connected to the Internet to view and follow link\b/i
+describe CK_INTERNET_CONNECT   Spam-Mail which adivces to connect to internet (lots of spams in September 2009)
+score CK_INTERNET_CONNECT      7.0
+
+header CK_DOMAIN_LISTING	Subject =~ /\b(?:domain[s]?|dns).*(?:notice|reminder|expire|expiration).*(?:domain|seo|record).*(?:listing|list)/i
+describe CK_DOMAIN_LISTING	Company which wants to charge to list your domain
+score CK_DOMAIN_LISTING		7.0
+
+header CK_TERRA_SPAM_ADDRESS    Reply-To =~ /\b(?:terra.com)\b/i
+describe CK_TERRA_SPAM_ADDRESS  Possible spam domains
+score CK_TERRA_SPAM_ADDRESS     5.0
+
+header CK_4DIGIT_SPAM_ADDRESS   From =~ /\b\S*\@\d\d\d\d\.[a-zA-Z]*/i
+describe CK_4DIGIT_SPAM_ADDRESS Only 4 digit domain name, almost certainly spam domains
+score CK_4DIGIT_SPAM_ADDRESS    7.0
+
+header CK_ONLY_DIGIT_DOMAIN     From =~ /\b\S*\@\d*\.[a-zA-Z]*/i
+describe CK_ONLY_DIGIT_DOMAIN   Only digits domain name, likely spam domains
+score CK_ONLY_DIGIT_DOMAIN      4.0
+
+header CK_IPHONE_PICTURE	ALL =~ /boundary\=Apple\-Mail.*/
+describe CK_IPHONE_PICTURE	Mail sent by iPhone including picture only
+score CK_IPHONE_PICTURE		-15.0
+
+header CK_AWARDING_GIFTS_SJ	Subject =~ /\b(?:redeem|receive[d]?|get|looking|consider[e]?[d]?|claim|buy|find|search[i]?[n]?[g]?).*(?:award[s]?|coupon[s]?|card[s]?|reward[s]?|offer[s]?|choice[s]?|benefit[s]?|deals[s]?)\b/i
+describe CK_AWARDING_GIFTS_SJ	Typical spams rewards/coupons etc
+score CK_AWARDING_GIFTS_SJ	5.0
+
+body CK_AWARDING_GIFTS_BODY	/\b(?:redeem|receive[d]?|get|looking|consider[e]?[d]?|claim|buy|find|search[i]?[n]?[g]?).*(?:award[s]?|coupon[s]?|card[s]?|reward[s]?|offer[s]?|choice[s]?|benefit[s]?|deals[s]?)\b/i
+describe CK_AWARDING_GIFTS_BODY	Typical spams rewards/coupons etc
+score CK_AWARDING_GIFTS_BODY	3.0
+
+header CK_DATING		Subject =~ /\b(?:look[i]?[n]?[g]?|search[i]?[n]?[g]?|date|attractive|naughty|sex[y]?|beauty|beautiful[l]?[l]?[y]?|online|internet).*(?:dating|date[s]?|love|wom[ae]n|hookup[s]?|hooker[s]?|slut[s]?|secret|affair[s]?)\b/i
+describe CK_DATING		Fake dating spams
+score CK_DATING			5.0

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008402111
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8402111
+## Submitted.....: 2023-12-25T09:21:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008402111_MATCH	/amrrerdqxfekiuu\.firebaseapp\.com\//
+score		PHISHTANK_0008402111_MATCH	5.0
+describe	PHISHTANK_0008402111_MATCH	Phishtank ID 8402111 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008402111_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008402111_VALIDATED	PHISHTANK_0008402111_MATCH && __PHISHTANK_0008402111_VALCHECK
+score		PHISHTANK_0008402111_VALIDATED	2.0
+describe	PHISHTANK_0008402111_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008402111_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008402111_ONLINE	PHISHTANK_0008402111_MATCH && __PHISHTANK_0008402111_ONCHECK
+score		PHISHTANK_0008402111_ONLINE	2.0
+describe	PHISHTANK_0008402111_ONLINE	Phishing URL still online
+
+##

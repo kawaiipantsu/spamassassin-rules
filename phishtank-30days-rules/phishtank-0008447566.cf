@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008447566
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8447566
+## Submitted.....: 2024-02-09T22:37:28+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008447566_MATCH	/ipfs\.eth\.aragon\.network\/ipfs\/bafybeif23pj6ky2vvxrt2csnjr3usc2r2aloqz4yn6x36chjfachvac56a\//
+score		PHISHTANK_0008447566_MATCH	5.0
+describe	PHISHTANK_0008447566_MATCH	Phishtank ID 8447566 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008447566_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008447566_VALIDATED	PHISHTANK_0008447566_MATCH && __PHISHTANK_0008447566_VALCHECK
+score		PHISHTANK_0008447566_VALIDATED	2.0
+describe	PHISHTANK_0008447566_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008447566_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008447566_ONLINE	PHISHTANK_0008447566_MATCH && __PHISHTANK_0008447566_ONCHECK
+score		PHISHTANK_0008447566_ONLINE	2.0
+describe	PHISHTANK_0008447566_ONLINE	Phishing URL still online
+
+##

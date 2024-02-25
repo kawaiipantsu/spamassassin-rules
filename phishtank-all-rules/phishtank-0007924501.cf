@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0007924501
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=7924501
+## Submitted.....: 2022-11-07T11:15:14+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0007924501_MATCH	/docs\.google\.com\/presentation\/d\/e\/2PACX\-1vRuVBSB6wDCVMW8XNG\-7ffzd_160LbMN9PCzOKaPMIt27Vobl_t0Fiiaq32J3AeUcafoIAQhBDglA7T\/pub/
+score		PHISHTANK_0007924501_MATCH	5.0
+describe	PHISHTANK_0007924501_MATCH	Phishtank ID 7924501 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0007924501_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0007924501_VALIDATED	PHISHTANK_0007924501_MATCH && __PHISHTANK_0007924501_VALCHECK
+score		PHISHTANK_0007924501_VALIDATED	2.0
+describe	PHISHTANK_0007924501_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0007924501_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0007924501_ONLINE	PHISHTANK_0007924501_MATCH && __PHISHTANK_0007924501_ONCHECK
+score		PHISHTANK_0007924501_ONLINE	2.0
+describe	PHISHTANK_0007924501_ONLINE	Phishing URL still online
+
+##

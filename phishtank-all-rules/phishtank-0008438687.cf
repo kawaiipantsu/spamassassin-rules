@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008438687
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8438687
+## Submitted.....: 2024-02-02T08:45:24+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008438687_MATCH	/pold22\.wpenginepowered\.com\/Parkin\/Parkin\//
+score		PHISHTANK_0008438687_MATCH	5.0
+describe	PHISHTANK_0008438687_MATCH	Phishtank ID 8438687 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008438687_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008438687_VALIDATED	PHISHTANK_0008438687_MATCH && __PHISHTANK_0008438687_VALCHECK
+score		PHISHTANK_0008438687_VALIDATED	2.0
+describe	PHISHTANK_0008438687_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008438687_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008438687_ONLINE	PHISHTANK_0008438687_MATCH && __PHISHTANK_0008438687_ONCHECK
+score		PHISHTANK_0008438687_ONLINE	2.0
+describe	PHISHTANK_0008438687_ONLINE	Phishing URL still online
+
+##

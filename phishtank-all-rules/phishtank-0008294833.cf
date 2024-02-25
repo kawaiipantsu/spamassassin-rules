@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008294833
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8294833
+## Submitted.....: 2023-09-12T07:55:38+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008294833_MATCH	/etrack01\.com\/track\/click2\/eNpFj8FOxDAMRP8lgls2a8ekTm7wHQhVaettuttmYZsKAeLfCfSANJY89jvMPNsmUOM1aYV1Y7ZM3jtqLZBjaNE6_2scmbU_ILShnrDFwIcpd9ctD3C3xPw\-zXGJt7dt\-nTDw\-O4xGk2_XVRGrRKpbze09PxuH2k8yWlNJ5HE_M4SymymizlDzvFeRVVc0Bj2BnEOs6q_0cVkEBDnZUwWBkkemER6FAsnzgQ7ZSUW\-wvgHuCr2\-9l3n5AQ39Q08\=\[an\-42\]\.html/
+score		PHISHTANK_0008294833_MATCH	5.0
+describe	PHISHTANK_0008294833_MATCH	Phishtank ID 8294833 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008294833_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008294833_VALIDATED	PHISHTANK_0008294833_MATCH && __PHISHTANK_0008294833_VALCHECK
+score		PHISHTANK_0008294833_VALIDATED	2.0
+describe	PHISHTANK_0008294833_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008294833_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008294833_ONLINE	PHISHTANK_0008294833_MATCH && __PHISHTANK_0008294833_ONCHECK
+score		PHISHTANK_0008294833_ONLINE	2.0
+describe	PHISHTANK_0008294833_ONLINE	Phishing URL still online
+
+##

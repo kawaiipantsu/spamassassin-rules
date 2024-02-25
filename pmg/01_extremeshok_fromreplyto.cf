@@ -1,0 +1,50 @@
+###################
+# This is property of eXtremeSHOK.com
+# You are free to use, modify and distribute, however you may not remove this notice.
+# Copyright (c) Adrian Jon Kriel :: admin@extremeshok.com
+##################
+# PLACE THIS FILE IN: /etc/mail/spamassassin
+
+### POSITIVE SCORES (SPAM)
+## Score 2 points to mail when from and reply-to are not the same
+loadplugin FromIsNotReplyTo plugins/FromIsNotReplyTo.pm
+header FROM_NOT_REPLYTO eval:check_for_from_is_not_reply_to()
+score FROM_NOT_REPLYTO 2.0
+describe FROM_NOT_REPLYTO From does not match Reply-To
+
+## Score 5 points to mail when from domain and reply-to domain are not the same
+loadplugin FromAndReplyToIsNotSameDomain plugins/FromAndReplyToIsNotSameDomain.pm
+header FROM_NOT_REPLYTO_SAME_DOMAIN eval:check_for_from_and_reply_to_is_not_same_domain()
+score FROM_NOT_REPLYTO_SAME_DOMAIN 5.0
+describe FROM_NOT_REPLYTO_SAME_DOMAIN From domain does not match Reply-To domain
+
+
+### USER DEFINED SCORES, can be either a positive(spam) or a negative(ham) depending on your use case.
+# You will need to enable addition processing (whitelist authorized users and/or whitelist allowed sending servers) to prevent this from blocking legitimate same domain emailing.
+## Replace 0.01 with your score.
+## Score X points to mail when from domain and to domain are the same
+loadplugin FromAndToIsSameDomain plugins/FromAndToIsSameDomain.pm
+header FROM_AND_TO_IS_SAME_DOMAIN eval:check_for_from_and_to_is_same_domain()
+score FROM_AND_TO_IS_SAME_DOMAIN 0.01
+describe FROM_AND_TO_IS_SAME_DOMAIN From domain and To domain is the same
+
+
+### NEGATIVE SCORES (HAM)
+## Score -0.5 points to mail when from and to are the same.
+loadplugin FromIsTo plugins/FromIsTo.pm
+header FROM_IS_TO eval:check_for_from_is_to()
+score FROM_IS_TO -0.5
+describe FROM_IS_TO From and To is the same
+
+## Score -0.5 points to mail when from and reply-to are the same
+loadplugin FromIsReplyTo plugins/FromIsReplyTo.pm
+header FROM_IS_REPLY_TO eval:check_for_from_is_reply_to()
+score FROM_IS_REPLY_TO -0.5
+describe FROM_IS_REPLY_TO From and Repply-To is the same
+
+## Score -6 points to mail which is present in the whitelist
+# Customise plugins/FromIsNotReplyToWhitelist.pm to add/remove a whitelisted domain/email
+loadplugin FromIsNotReplyToWhitelist plugins/FromIsNotReplyToWhitelist.pm
+header FROM_NOT_REPLYTO_WHITELIST eval:check_for_from_is_not_reply_to_whitelist()
+score FROM_NOT_REPLYTO_WHITELIST -6.0
+describe FROM_NOT_REPLYTO_WHITELIST From and Reply-To Whitelisted

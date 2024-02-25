@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008385322
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8385322
+## Submitted.....: 2023-12-06T23:50:18+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008385322_MATCH	/xien\-olwia\-27a8ha7ga7dh38sj2gv26gsjj2kzam68msk3iiofff02ua\.pages\.dev\//
+score		PHISHTANK_0008385322_MATCH	5.0
+describe	PHISHTANK_0008385322_MATCH	Phishtank ID 8385322 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008385322_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008385322_VALIDATED	PHISHTANK_0008385322_MATCH && __PHISHTANK_0008385322_VALCHECK
+score		PHISHTANK_0008385322_VALIDATED	2.0
+describe	PHISHTANK_0008385322_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008385322_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008385322_ONLINE	PHISHTANK_0008385322_MATCH && __PHISHTANK_0008385322_ONCHECK
+score		PHISHTANK_0008385322_ONLINE	2.0
+describe	PHISHTANK_0008385322_ONLINE	Phishing URL still online
+
+##

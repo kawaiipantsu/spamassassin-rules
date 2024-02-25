@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008419273
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8419273
+## Submitted.....: 2024-01-12T20:53:49+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008419273_MATCH	/email\.y\.kajabimail\.net\/c\/eJxskMGO0zAQhp8mvqCt7LHjsQ8\-gKASFy77ANEknlJDE3ttF1SeHm0b4MDeRt8_80nzUynTRiuH7_SN5vTUeq58qnnr7anUHK9LT3kTMVhYtBUcFErj_CidFrxSukyRL\-kH19uUYlDOo1EOvMY9TTGAGgEANcLOVm6NvvLUb4XDA801U1yo9X2lcsvXuvCb941frrw9wh3dVZ9exw9_TeeASFEZ6xyNswdHjAsaB6NnYI\-WRAogwUilpNKjk_qgAXE\-eWKvUM8eByNvh0c1r_LDxl1cwrn30gb9foDjAMdiOxGeXg6xMq0_y2HJ6wDH5y8gBziKP9823iLXKeaV0hb\-s9bQyuWafllrByPPud\-TJa\-i8pJK4q3fyzDa4GgtjKKlvvdj0OtRay96eE6d333\-OID\-h38HAAD__2tCnPg/
+score		PHISHTANK_0008419273_MATCH	5.0
+describe	PHISHTANK_0008419273_MATCH	Phishtank ID 8419273 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008419273_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008419273_VALIDATED	PHISHTANK_0008419273_MATCH && __PHISHTANK_0008419273_VALCHECK
+score		PHISHTANK_0008419273_VALIDATED	2.0
+describe	PHISHTANK_0008419273_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008419273_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008419273_ONLINE	PHISHTANK_0008419273_MATCH && __PHISHTANK_0008419273_ONCHECK
+score		PHISHTANK_0008419273_ONLINE	2.0
+describe	PHISHTANK_0008419273_ONLINE	Phishing URL still online
+
+##

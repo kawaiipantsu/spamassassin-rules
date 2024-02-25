@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008376823
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8376823
+## Submitted.....: 2023-11-27T20:10:21+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008376823_MATCH	/cloudflare\-ipfs\.com\/ipfs\/bafybeifs2bhds6ux2n2v5263gx2nxhmmehyaqoalfz32smu5pxahlmpsoq\/grinindex\.html/
+score		PHISHTANK_0008376823_MATCH	5.0
+describe	PHISHTANK_0008376823_MATCH	Phishtank ID 8376823 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008376823_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008376823_VALIDATED	PHISHTANK_0008376823_MATCH && __PHISHTANK_0008376823_VALCHECK
+score		PHISHTANK_0008376823_VALIDATED	2.0
+describe	PHISHTANK_0008376823_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008376823_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008376823_ONLINE	PHISHTANK_0008376823_MATCH && __PHISHTANK_0008376823_ONCHECK
+score		PHISHTANK_0008376823_ONLINE	2.0
+describe	PHISHTANK_0008376823_ONLINE	Phishing URL still online
+
+##

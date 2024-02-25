@@ -1,0 +1,6 @@
+
+describe SPF_SOFTFAIL_FROM      Escalate SPF Softfails for free mail services
+header   __SPF_SOFTFAIL_FROM    Return-Path:addr =~ /\@(gmail\.com|outlook\.com|hotmail\.com|live\.com)$/i
+meta     SPF_SOFTFAIL_FROM      ( __SPF_SOFTFAIL_FROM && SPF_SOFTFAIL )
+score    SPF_SOFTFAIL_FROM      2.5
+

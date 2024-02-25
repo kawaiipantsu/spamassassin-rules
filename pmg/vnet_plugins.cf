@@ -1,0 +1,17 @@
+
+### POSITIVE SCORES (SPAM)
+### Score 3 points to mail when return-path and from are not the same supports SRS and newsletters
+
+loadplugin FromIsNotReturnPath plugins/FromIsNotReturnPath.pm
+header FROM_NOT_RETURN_PATH eval:check_for_from_is_not_return_path()
+score FROM_NOT_RETURN_PATH 3.0
+describe FROM_NOT_RETURN_PATH From does not match Return-Path while supporting SRS and newsletters
+
+#score 5 points when MIME From contains an email in place of the name and this spoofed email differs from an email part of this header
+
+loadplugin FromNameIsSpoofedEmail plugins/FromNameIsSpoofedEmail.pm
+header FROM_NAME_SPOOFED_EMAIL eval:check_for_from_name_is_not_spoofed_email()
+score FROM_NAME_SPOOFED_EMAIL 5.0
+describe FROM_NAME_SPOOFED_EMAIL MIME From contains an email in place of the name and this spoofed email differs from an email part of this header
+
+

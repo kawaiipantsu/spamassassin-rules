@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008330714
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8330714
+## Submitted.....: 2023-10-13T08:18:56+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008330714_MATCH	/8203239928320io30\.hyperphp\.com\//
+score		PHISHTANK_0008330714_MATCH	5.0
+describe	PHISHTANK_0008330714_MATCH	Phishtank ID 8330714 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008330714_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008330714_VALIDATED	PHISHTANK_0008330714_MATCH && __PHISHTANK_0008330714_VALCHECK
+score		PHISHTANK_0008330714_VALIDATED	2.0
+describe	PHISHTANK_0008330714_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008330714_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008330714_ONLINE	PHISHTANK_0008330714_MATCH && __PHISHTANK_0008330714_ONCHECK
+score		PHISHTANK_0008330714_ONLINE	2.0
+describe	PHISHTANK_0008330714_ONLINE	Phishing URL still online
+
+##

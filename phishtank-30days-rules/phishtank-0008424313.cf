@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008424313
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8424313
+## Submitted.....: 2024-01-17T01:41:19+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008424313_MATCH	/docs\.google\.com\/presentation\/d\/e\/2PACX\-1vQuqItZ4uRtABey\-1U3Xj6gu3lnk2rXa0\-1FdB87AzglEOt2SbBW7_0DVdJizXkcXdD_7nF_6l8f3Sw\/pub/
+score		PHISHTANK_0008424313_MATCH	5.0
+describe	PHISHTANK_0008424313_MATCH	Phishtank ID 8424313 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008424313_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008424313_VALIDATED	PHISHTANK_0008424313_MATCH && __PHISHTANK_0008424313_VALCHECK
+score		PHISHTANK_0008424313_VALIDATED	2.0
+describe	PHISHTANK_0008424313_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008424313_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008424313_ONLINE	PHISHTANK_0008424313_MATCH && __PHISHTANK_0008424313_ONCHECK
+score		PHISHTANK_0008424313_ONLINE	2.0
+describe	PHISHTANK_0008424313_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008374543
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8374543
+## Submitted.....: 2023-11-24T19:58:45+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008374543_MATCH	/pub\-28951006b23943e59370a299a90413e1\.r2\.dev\/9084232_uqpnxfw\.html/
+score		PHISHTANK_0008374543_MATCH	5.0
+describe	PHISHTANK_0008374543_MATCH	Phishtank ID 8374543 (Microsoft) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008374543_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008374543_VALIDATED	PHISHTANK_0008374543_MATCH && __PHISHTANK_0008374543_VALCHECK
+score		PHISHTANK_0008374543_VALIDATED	2.0
+describe	PHISHTANK_0008374543_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008374543_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008374543_ONLINE	PHISHTANK_0008374543_MATCH && __PHISHTANK_0008374543_ONCHECK
+score		PHISHTANK_0008374543_ONLINE	2.0
+describe	PHISHTANK_0008374543_ONLINE	Phishing URL still online
+
+##

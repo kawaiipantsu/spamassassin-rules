@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008338761
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8338761
+## Submitted.....: 2023-10-20T18:56:05+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008338761_MATCH	/ipfs\.eth\.aragon\.network\/ipfs\/bafybeid2kgwcmo7suswzivugarok4hcyxupoeglsuirw4ocsmahzf6lidu\/visitbarh_wetrans\.html/
+score		PHISHTANK_0008338761_MATCH	5.0
+describe	PHISHTANK_0008338761_MATCH	Phishtank ID 8338761 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008338761_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008338761_VALIDATED	PHISHTANK_0008338761_MATCH && __PHISHTANK_0008338761_VALCHECK
+score		PHISHTANK_0008338761_VALIDATED	2.0
+describe	PHISHTANK_0008338761_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008338761_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008338761_ONLINE	PHISHTANK_0008338761_MATCH && __PHISHTANK_0008338761_ONCHECK
+score		PHISHTANK_0008338761_ONLINE	2.0
+describe	PHISHTANK_0008338761_ONLINE	Phishing URL still online
+
+##

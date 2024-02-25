@@ -1,0 +1,487 @@
+# ____                           _                          _       
+#/ ___| _ __   __ _ _ __ ___    / \   ___ ___  __ _ ___ ___(_)_ __  
+#\___ \| '_ \ / _` | '_ ` _ \  / _ \ / __/ __|/ _` / __/ __| | '_ \ 
+# ___) | |_) | (_| | | | | | |/ ___ \\__ \__ \ (_| \__ \__ \ | | | |
+#|____/| .__/ \__,_|_| |_| |_/_/   \_\___/___/\__,_|___/___/_|_| |_|
+#      |_|                                                          
+#                    ____        _           
+#                   |  _ \ _   _| | ___  ___ 
+#                   | |_) | | | | |/ _ \/ __|
+#                   |  _ <| |_| | |  __/\__ \
+#                   |_| \_\\__,_|_|\___||___/
+#
+# Detection Rules for SpamAssassin
+# 📜 Charles BLANC-ROLIN ⠵ - https://www.apssis.com - https://github.com/woundride/spamassassin_rules
+# Licence CC BY-NC-SA 4.0 : https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+body EXP_OUTLOOK /OUTLOOK/i
+score EXP_OUTLOOK 1.0
+describe EXP_OUTLOOK	Suspect expression : OUTLOOK
+
+body EXP_ZIMBRA /ZIMBRA/i
+score EXP_ZIMBRA 1.0
+describe EXP_ZIMBRA	Suspect expression : ZIMBRA
+
+rawbody EXP_MAIL_CORP /Mail\s*Corporation/i
+score EXP_MAIL_CORP 3.0
+describe EXP_MAIL_CORP	Suspect expression : Mail Corporation
+
+rawbody EXP_WEBMAIL /Webmail/i
+score EXP_WEBMAIL 1.0
+describe EXP_WEBMAIL	Suspect expression : Webmail
+
+rawbody EXP_QUOTA /quota/i
+score EXP_QUOTA 0.5
+describe EXP_QUOTA	Suspect expression : quota
+
+rawbody EXP_ATTENTION /ATTENTION/i
+score EXP_ATTENTION 0.5
+describe EXP_ATTENTION	Suspect expression : ATTENTION
+
+rawbody EXP_A_JOUR /à\s*jour/i
+score EXP_A_JOUR 0.8
+describe EXP_A_JOUR	Suspect expression : à jour
+
+rawbody EXP_OPERATIONS_WINDOWS /Opérations\s*Windows/i
+score EXP_OPERATIONS_WINDOWS 3.0
+describe EXP_OPERATIONS_WINDOWS	Suspect expression : Opérations Windows
+
+rawbody EXP_CLIQUE /CLIQUE/i
+score EXP_CLIQUE 1.0
+describe EXP_CLIQUE	Suspect expression : CLIQUE
+
+rawbody EXP_ICI /ICI/i
+score EXP_ICI 0.3
+describe EXP_ICI	Suspect expression : ICI
+
+rawbody EXP_TECHNIQUE /technique/i
+score EXP_TECHNIQUE 0.3
+describe EXP_TECHNIQUE	Suspect expression : technique
+
+rawbody EXP_SUPPORT /SUPPORT/i
+score EXP_SUPPORT 0.5
+describe EXP_SUPPORT	Suspect expression : SUPPORT
+
+rawbody EXP_EQUIPE /EQUIPE/i
+score EXP_EQUIPE 0.3
+describe EXP_EQUIPE	Suspect expression : EQUIPE
+
+rawbody EXP_SERVICE /SERVICE/i
+score EXP_SERVICE 0.3
+describe EXP_SERVICE	Suspect expression : SERVICE
+
+rawbody EXP_MOT_DE_PASSE /mot\s*de\s*passe/i
+score EXP_MOT_DE_PASSE 1.0
+describe EXP_MOT_DE_PASSE	Suspect expression : mot de passe
+
+rawbody EXP_PASSWORD /PASSWORD/i
+score EXP_PASSWORD 2.0
+describe EXP_PASSWORD	Suspect expression : PASSWORD
+
+rawbody EXP_COURRIER_WEB /COURRIER\s*WEB/i
+score EXP_COURRIER_WEB 3.0
+describe EXP_COURRIER_WEB	Suspect expression : COURRIER WEB
+
+rawbody EXP_COMPTE_E-MAIL /compte\s*e-mail/i
+score EXP_COMPTE_E-MAIL 3.0
+describe EXP_COMPTE_E-MAIL	Suspect expression : compte e-mail
+
+rawbody EXP_COMPTE_EMAIL /compte\s*email/i
+score EXP_COMPTE_EMAIL 3.0
+describe EXP_COMPTE_EMAIL	Suspect expression : compte email
+
+rawbody EXP_DESACTIV /désactiv/i
+score EXP_DESACTIV 0.3
+describe EXP_DESACTIV	Suspect expression : désactiv
+
+rawbody EXP_ANTI-SPAM /anti-spam/i
+score EXP_ANTI-SPAM 0.7
+describe EXP_ANTI-SPAM	Suspect expression : anti-spam
+
+rawbody EXP_ANTISPAM /antispam/i
+score EXP_ANTISPAM 0.7
+describe EXP_ANTISPAM	Suspect expression : antispam
+
+rawbody EXP_EXPIR /expir/i
+score EXP_EXPIR 0.3
+describe EXP_EXPIR	Suspect expression : expir
+
+rawbody EXP_MESSAGERIE /messagerie/i
+score EXP_MESSAGERIE 0.3
+describe EXP_MESSAGERIE	Suspect expression : messagerie
+
+rawbody EXP_SECUR /SECUR/i
+score EXP_SECUR 0.3
+describe EXP_SECUR	Suspect expression : SECUR
+
+rawbody EXP_SECUR_A /SÉCUR/i
+score EXP_SECUR_A 0.3
+describe EXP_SECUR_A	Suspect expression : SÉCUR
+
+rawbody EXP_ADMINISTRATEUR /Administrateur/i
+score EXP_ADMINISTRATEUR 0.5
+describe EXP_ADMINISTRATEUR	Suspect expression : Administrateur
+
+body EXP_MICROSOFT /Microsoft/i
+score EXP_MICROSOFT 0.3
+describe EXP_MICROSOFT	Suspect expression : Microsoft
+
+rawbody EXP_HELP /HELP/i
+score EXP_HELP 0.8
+describe EXP_HELP	Suspect expression : HELP
+
+rawbody EXP_DESK /DESK/i
+score EXP_DESK 0.5
+describe EXP_DESK	Suspect expression : DESK
+
+rawbody EXP_ASSISTANCE /ASSISTANCE/i
+score EXP_ASSISTANCE 0.3
+describe EXP_ASSISTANCE	Suspect expression : ASSISTANCE
+
+rawbody URL_WEBHOSTAPP  /webhostapp/i
+score URL_WEBHOSTAPP 6.0
+describe URL_WEBHOSTAPP	Suspect url : webhostapp
+
+rawbody URL_YOLASITE  /yolasite/i
+score URL_YOLASITE 6.0
+describe URL_YOLASITE	Suspect url : yolasite
+
+rawbody EXP_HACK /HACK/i
+score EXP_HACK 1.5
+describe EXP_HACK	Suspect expression : HACK
+
+rawbody EXP_ACCOUNT /ACCOUNT/i
+score EXP_ACCOUNT 0.8
+describe EXP_ACCOUNT	Suspect expression : ACCOUNT
+
+rawbody EXP_UNLOCK /UNLOCK/i
+score EXP_UNLOCK 1.5
+describe EXP_UNLOCK Suspect expression : UNLOCK
+
+rawbody EXP_AIDE /AIDE/i
+score EXP_AIDE 0.3
+describe EXP_AIDE	Suspect expression : AIDE
+
+rawbody EXP_FACTURE /FACTURE/i
+score EXP_FACTURE 0.5
+describe EXP_FACTURE	Suspect expression : FACTURE
+
+rawbody EXP_MALICIOUS /MALICIOUS/i
+score EXP_MALICIOUS 0.8
+describe EXP_MALICIOUS	Suspect expression : MALICIOUS
+
+rawbody EXP_SEX /SEX/i
+score EXP_SEX 1.5
+describe EXP_SEX	Suspect expression : SEX
+
+rawbody EXP_PHOTO /PHOTO/i
+score EXP_PHOTO 0.3
+describe EXP_PHOTO	Suspect expression : PHOTO
+
+rawbody EXP_FUCK /FUCK/i
+score EXP_FUCK 3.0
+describe EXP_FUCK	Suspect expression : FUCK
+
+rawbody EXP_FUUUCK /FUUUCK/i
+score EXP_FUUUCK 3.0
+describe EXP_FUUUCK	Suspect expression : FUUUCK
+
+rawbody EXP_PUSSY /PUSSY/i
+score EXP_PUSSY 3.0
+describe EXP_PUSSY	Suspect expression : PUSSY
+
+rawbody EXP_TOMBOLA /TOMBOLA/i
+score EXP_TOMBOLA 3.0
+describe EXP_TOMBOLA	Suspect expression : TOMBOLA
+
+rawbody EXP_PORNO /PORNO/i
+score EXP_PORNO 3.0
+describe EXP_PORNO	Suspect expression : PORNO
+
+rawbody EXP_BAISE /BAISE/i
+score EXP_BAISE 1.0
+describe EXP_BAISE	Suspect expression : BAISE
+
+rawbody EXP_COPINE /COPINE/i
+score EXP_COPINE 0.5
+describe EXP_COPINE	Suspect expression : COPINE
+
+rawbody EXP_MANQUE /MANQUE/i
+score EXP_MANQUE 0.3
+describe EXP_MANQUE	Suspect expression : MANQUE
+
+rawbody EXP_RELATION /RELATION/i
+score EXP_RELATION 0.3
+describe EXP_RELATION	Suspect expression : RELATION
+
+rawbody EXP_PILLS /PILLS/i
+score EXP_PILLS 1.5
+describe EXP_PILLS	Suspect expression : PILLS
+
+rawbody EXP_VIAGRA /VIAGRA/i
+score EXP_VIAGRA 2.0
+describe EXP_VIAGRA	Suspect expression : VIAGRA
+
+rawbody EXP_PAYMENT /PAYMENT/i
+score EXP_PAYMENT 1.5
+describe EXP_PAYMENT	Suspect expression : PAYMENT
+
+rawbody URL_GODADDYSITES  /godaddysites/i
+score URL_GODADDYSITES 6.0
+describe URL_GODADDYSITES Suspect url : godaddysites
+
+rawbody URL_FOCUSINGAUSTRALIA  /focusingaustralia/i
+score URL_FOCUSINGAUSTRALIA 6.0
+describe URL_FOCUSINGAUSTRALIA	Suspect url : focusingaustralia
+
+rawbody URL_USITE-PRO  /usite.pro/i
+score URL_USITE-PRO 6.0
+describe URL_USITE-PRO  Suspect url : usite.pro
+
+rawbody EXP_VIRUS /VIRUS/i
+score EXP_VIRUS 1.0
+describe EXP_VIRUS  Suspect expression : VIRUS
+
+rawbody EXP_PHISHING /PHISHING/i
+score EXP_PHISHING 1.0
+describe EXP_PHISHING  Suspect expression : PHISHING
+
+rawbody URL_UCOZ  /ucoz/i
+score URL_UCOZ 6.0
+describe URL_UCOZ  Suspect url : ucoz
+
+rawbody URL_CLAN_SU  /clan.su/i
+score URL_CLAN_SU 6.0
+describe URL_CLAN_SU  Suspect url : clan.su
+
+rawbody URL_WEEBLY  /weebly/i
+score URL_WEEBLY 6.0
+describe URL_WEEBLY  Suspect url : weebly
+
+rawbody URL_WIXS  /wixsite/i
+score URL_WIXS 6.0
+describe URL_WIXS  Suspect url : wixsite
+
+rawbody URL_WIX  /wix.com/i
+score URL_WIX 6.0
+describe URL_WIX  Suspect url : wix.com
+
+rawbody URL_MAILUPDATE  /mailupdate/i
+score URL_MAILUPDATE 6.0
+describe URL_MAILUPDATE  Suspect url : mailupdate
+
+rawbody EXP_CHRONOPOST_FAKE_MAIL /chronopost@/i
+score EXP_CHRONOPOST_FAKE_MAIL 8.0
+describe EXP_CHRONOPOST_FAKE_MAIL  Suspect expression : chronopost@
+
+rawbody URL_CASPIO_COM  /caspio.com/i
+score URL_CASPIO_COM 6.0
+describe URL_CASPIO_COM  Suspect url : caspio.com
+
+rawbody URL_BLOGSPOT  /blogspot./i
+score URL_BLOGSPOT 6.0
+describe URL_BLOGSPOT  Suspect url : blogspot.
+
+rawbody URL_TRIPOD_COM  /tripod.com/i
+score URL_TRIPOD_COM 6.0
+describe URL_TRIPOD_COM  Suspect url : tripod.com
+
+rawbody EXP_BITCOIN /BITCOIN/i
+score EXP_BITCOIN 6.0
+describe EXP_BITCOIN Suspect expression : BITCOIN
+
+rawbody EXP_BTC /BTC/i
+score EXP_BTC 4.0
+describe EXP_BTC Suspect expression : BTC
+
+rawbody EXP_VIDEO /VIDEO/i
+score EXP_VIDEO 0.5
+describe EXP_VIDEO Suspect expression : VIDEO
+
+rawbody EXP_CAMERA /CAMERA/i
+score EXP_CAMERA 0.5
+describe EXP_CAMERA Suspect expression : CAMERA
+
+rawbody EXP_WEBCAM /WEBCAM/i
+score EXP_WEBCAM 2.0
+describe EXP_WEBCAM Suspect expression : WEBCAM
+
+rawbody EXP_MASTURB /MASTURB/i
+score EXP_MASTURB 3.0
+describe EXP_MASTURB Suspect expression : MASTURB
+
+rawbody EXP_SPECM /ʍ/i
+score EXP_SPECM 7.0
+describe EXP_SPECM Expression suspect : ʍ
+
+rawbody EXP_SPECP /Ƿ/i
+score EXP_SPECP 7.0
+describe EXP_SPECP Expression suspect : Ƿ
+
+rawbody URL_CREATORLINK_NET /creatorlink.net/i
+score URL_CREATORLINK_NET 6.0
+describe URL_CREATORLINK_NET Suspect url : creatorlink.net
+
+rawbody EXP_DELIVERY /DELIVERY/i
+score EXP_DELIVERY 1.0
+describe EXP_DELIVERY	Suspect expression : DELIVERY
+
+rawbody EXP_COMPANY /COMPANY/i
+score EXP_COMPANY 1.0
+describe EXP_COMPANY	Suspect expression : COMPANY
+
+rawbody EXP_INVOICE /INVOICE/i
+score EXP_INVOICE 1.0
+describe EXP_INVOICE	Suspect expression : INVOICE
+
+rawbody EXP_ACCOUNT /ACCOUNT/i
+score EXP_ACCOUNT 1.0
+describe EXP_ACCOUNT	Suspect expression : ACCOUNT
+
+rawbody EXP_ORDER /ORDER/i
+score EXP_ORDER 0.8
+describe EXP_ORDER	Suspect expression : ORDER
+
+rawbody EXP_PASSION /PASSION/i
+score EXP_PASSION 1.5
+describe EXP_PASSION	Suspect expression : PASSION
+
+rawbody EXP_INCROYABLE /INCROYABLE/i
+score EXP_INCROYABLE 1.5
+describe EXP_INCROYABLE	Suspect expression : INCROYABLE
+
+rawbody EXP_JET /JET/i
+score EXP_JET 0.5
+describe EXP_JET	Suspect expression : JET
+
+rawbody EXP_OEIL0 /œil/i
+score EXP_OEIL0 0.8
+describe EXP_OEIL0	Suspect expression : œil
+
+rawbody EXP_OEIL /OEIL/i
+score EXP_OEIL 0.8
+describe EXP_OEIL	Suspect expression : OEIL
+
+rawbody EXP_ATTACHMENT /attachment/i
+score EXP_ATTACHMENT 1.0
+describe EXP_ATTACHMENT       Suspect expression : attachment
+
+rawbody EXP_THANK /THANK/i
+score EXP_THANK 1.0
+describe EXP_THANK       Suspect expression : THANK
+
+body EXP_ADMINISTRADOR /ADMINISTRADOR/i
+score EXP_ADMINISTRADOR 9.0
+describe EXP_ADMINISTRADOR    Suspect expression : ADMINISTRADOR
+
+body EXP_SISTEMA /SISTEMA/i
+score EXP_SISTEMA 9.0
+describe EXP_SISTEMA    Suspect expression : SISTEMA
+
+body EXP_ELECTRONICO /electrónico/i
+score EXP_ELECTRONICO 3.0
+describe EXP_ELECTRONICO    Suspect expression : electrónico
+
+body EXP_PICCE /pičce/i
+score EXP_PICCE 9.0
+describe EXP_PICCE    Suspect expression : pičce
+
+body EXP_AURORE_COLETTE /Aurore-Colette/i
+score EXP_AURORE_COLETTE 9.0
+describe EXP_AURORE_COLETTE    Suspect expression : Aurore-Colette
+
+body EXP_AVAST /avast/i
+score EXP_AVAST 1.0
+describe EXP_AVAST    Suspect expression : avast
+
+body EXP_LOTERIE /loterie/i
+score EXP_LOTERIE 5.0
+describe EXP_LOTERIE    Suspect expression : loterie
+
+body EXP_HUISSIER /huissier/i
+score EXP_HUISSIER 1.0
+describe EXP_HUISSIER    Suspect expression : huissier
+
+body EXP_GAIN /gain/i
+score EXP_GAIN 0.7
+describe EXP_GAIN    Suspect expression : gain
+
+body EXP_FDJ /FDJ/i
+score EXP_FDJ 2.0
+describe EXP_FDJ    Suspect expression : FDJ
+
+rawbody URL_MOONFRUIT_COM /moonfruit.com/i
+score URL_MOONFRUIT_COM 6.0
+describe URL_MOONFRUIT_COM Suspect url : moonfruit.com
+
+rawbody URL_OCEANWARRIORPROJECT_COM  /oceanwarriorproject.com/i
+score URL_OCEANWARRIORPROJECT_COM 6.0
+describe URL_OCEANWARRIORPROJECT_COM  Suspect url : oceanwarriorproject.com
+
+rawbody URL_WEBLIUM  /weblium.site/i
+score URL_WEBLIUM 6.0
+describe URL_WEBLIUM Suspect url : weblium.site
+
+rawbody URL_FORMCRAFTS  /formcrafts.com/i
+score URL_FORMCRAFTS 6.0
+describe URL_FORMCRAFTS Suspect url : formcrafts.com
+
+rawbody URL_AIRCUS  /aircus.com/i
+score URL_AIRCUS 6.0
+describe URL_AIRCUS Suspect url : aircus.com
+
+rawbody URL_APP_PIPEFY  /app.pipefy.com/i
+score URL_APP_PIPEFY 6.0
+describe URL_APP_PIPEFY Suspect url : app.pipefy.com
+
+rawbody URL_BRITRIX24  /.bitrix24./i
+score URL_BRITIX24 6.0
+describe URL_BRITRIX24 Suspect url : .bitrix24.
+
+rawbody URL_AZURE  /.web.core.windows.net/i
+score URL_AZURE 6.0
+describe URL_AZURE Suspect url : .web.core.windows.net
+
+rawbody URL_000WEBHOST  /000webhost.com/i
+score URL_000WEBHOST 6.0
+describe URL_000WEBHOST Suspect url : 000webhost.com
+
+rawbody URL_COFFEECUP  /coffeecup.com/i
+score URL_COFFEECUP 6.0
+describe URL_COFFEECUP Suspect url : coffeecup.com
+
+rawbody URL_JOTFORM  /form.jotform.com/i
+score URL_JOTFORM 6.0
+describe URL_JOTFORM Suspect url : form.jotform.com
+
+rawbody URL_FORMBUCKET  /formbucket.com/i
+score URL_FORMBUCKET 6.0
+describe URL_FORMBUCKET Suspect url : formbucket.com
+
+rawbody URL_FORMSPREE  /formspree.io/i
+score URL_FORMSPREE 6.0
+describe URL_FORMSPREE Suspect url : formspree.io
+
+rawbody URL_ODOO  /odoo.com/i
+score URL_ODOO 6.0
+describe URL_ODOO Suspect url : odoo.com
+
+rawbody URL_SABFREE  /sabfree.org/i
+score URL_SABFREE 6.0
+describe URL_SABFREE Suspect url : sabfree.org
+
+rawbody URL_WORKERS  /workers.dev/i
+score URL_WORKERS 6.0
+describe URL_WORKERS Suspect url : workers.dev
+
+rawbody URL_CLICKFUNNELS  /clickfunnels.com/i
+score URL_CLICKFUNNELS 6.0
+describe URL_CLICKFUNNELS Suspect url : clickfunnels.com
+
+rawbody URL_FLEEK  /fleek.co/i
+score URL_FLEEK 6.0
+describe URL_FLEEK Suspect url : fleek.co
+
+rawbody URL_BOXMODE_IO  /boxmode.io/i
+score URL_BOXMODE_IO 6.0
+describe URL_BOXMODE_IO Suspect url : boxmode.io

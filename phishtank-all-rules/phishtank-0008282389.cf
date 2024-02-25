@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008282389
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8282389
+## Submitted.....: 2023-09-01T20:17:17+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008282389_MATCH	/chilipepper\.io\/form\/xhot\-darkyellow\-shishitos\-081cb104\-e096\-40d1\-8ece\-0f5745b9a223/
+score		PHISHTANK_0008282389_MATCH	5.0
+describe	PHISHTANK_0008282389_MATCH	Phishtank ID 8282389 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008282389_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008282389_VALIDATED	PHISHTANK_0008282389_MATCH && __PHISHTANK_0008282389_VALCHECK
+score		PHISHTANK_0008282389_VALIDATED	2.0
+describe	PHISHTANK_0008282389_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008282389_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008282389_ONLINE	PHISHTANK_0008282389_MATCH && __PHISHTANK_0008282389_ONCHECK
+score		PHISHTANK_0008282389_ONLINE	2.0
+describe	PHISHTANK_0008282389_ONLINE	Phishing URL still online
+
+##

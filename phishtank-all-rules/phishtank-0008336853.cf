@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008336853
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8336853
+## Submitted.....: 2023-10-19T07:30:07+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008336853_MATCH	/afswkwveam\.web\.app\//
+score		PHISHTANK_0008336853_MATCH	5.0
+describe	PHISHTANK_0008336853_MATCH	Phishtank ID 8336853 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008336853_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008336853_VALIDATED	PHISHTANK_0008336853_MATCH && __PHISHTANK_0008336853_VALCHECK
+score		PHISHTANK_0008336853_VALIDATED	2.0
+describe	PHISHTANK_0008336853_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008336853_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008336853_ONLINE	PHISHTANK_0008336853_MATCH && __PHISHTANK_0008336853_ONCHECK
+score		PHISHTANK_0008336853_ONLINE	2.0
+describe	PHISHTANK_0008336853_ONLINE	Phishing URL still online
+
+##

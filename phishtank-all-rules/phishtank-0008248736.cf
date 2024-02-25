@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008248736
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8248736
+## Submitted.....: 2023-08-03T22:44:44+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008248736_MATCH	/ipfs\.eth\.aragon\.network\/ipfs\/bafybeiaztvlmde6zxe6brs6aasru5hnt5ztfxoxpg2hgsweivbchycr6ce\/doone02\.html/
+score		PHISHTANK_0008248736_MATCH	5.0
+describe	PHISHTANK_0008248736_MATCH	Phishtank ID 8248736 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008248736_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008248736_VALIDATED	PHISHTANK_0008248736_MATCH && __PHISHTANK_0008248736_VALCHECK
+score		PHISHTANK_0008248736_VALIDATED	2.0
+describe	PHISHTANK_0008248736_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008248736_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008248736_ONLINE	PHISHTANK_0008248736_MATCH && __PHISHTANK_0008248736_ONCHECK
+score		PHISHTANK_0008248736_ONLINE	2.0
+describe	PHISHTANK_0008248736_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008423767
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8423767
+## Submitted.....: 2024-01-16T11:34:11+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008423767_MATCH	/laboutika\.co\/coza\/66587e7c5a7b41fc18e18066bd728a48\/b8091229b956afe616ea3836cdd98b79\/login\.php/
+score		PHISHTANK_0008423767_MATCH	5.0
+describe	PHISHTANK_0008423767_MATCH	Phishtank ID 8423767 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008423767_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008423767_VALIDATED	PHISHTANK_0008423767_MATCH && __PHISHTANK_0008423767_VALCHECK
+score		PHISHTANK_0008423767_VALIDATED	2.0
+describe	PHISHTANK_0008423767_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008423767_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008423767_ONLINE	PHISHTANK_0008423767_MATCH && __PHISHTANK_0008423767_ONCHECK
+score		PHISHTANK_0008423767_ONLINE	2.0
+describe	PHISHTANK_0008423767_ONLINE	Phishing URL still online
+
+##

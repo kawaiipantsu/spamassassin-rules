@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008357018
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8357018
+## Submitted.....: 2023-11-08T03:35:45+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008357018_MATCH	/round\-lab\-0758\.nynleefa\.workers\.dev\/5aa33c29\-bcac\-458a\-a409\-a2c33e00a6c0/
+score		PHISHTANK_0008357018_MATCH	5.0
+describe	PHISHTANK_0008357018_MATCH	Phishtank ID 8357018 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008357018_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008357018_VALIDATED	PHISHTANK_0008357018_MATCH && __PHISHTANK_0008357018_VALCHECK
+score		PHISHTANK_0008357018_VALIDATED	2.0
+describe	PHISHTANK_0008357018_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008357018_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008357018_ONLINE	PHISHTANK_0008357018_MATCH && __PHISHTANK_0008357018_ONCHECK
+score		PHISHTANK_0008357018_ONLINE	2.0
+describe	PHISHTANK_0008357018_ONLINE	Phishing URL still online
+
+##

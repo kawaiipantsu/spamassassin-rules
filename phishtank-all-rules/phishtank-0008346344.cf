@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008346344
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8346344
+## Submitted.....: 2023-10-27T19:34:07+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008346344_MATCH	/ipfs\.eth\.aragon\.network\/ipfs\/bafybeicq3rmokglk543qbswrsk7qvlswkyxljqtlnodtjoulld5nfbnp6q/
+score		PHISHTANK_0008346344_MATCH	5.0
+describe	PHISHTANK_0008346344_MATCH	Phishtank ID 8346344 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008346344_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008346344_VALIDATED	PHISHTANK_0008346344_MATCH && __PHISHTANK_0008346344_VALCHECK
+score		PHISHTANK_0008346344_VALIDATED	2.0
+describe	PHISHTANK_0008346344_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008346344_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008346344_ONLINE	PHISHTANK_0008346344_MATCH && __PHISHTANK_0008346344_ONCHECK
+score		PHISHTANK_0008346344_ONLINE	2.0
+describe	PHISHTANK_0008346344_ONLINE	Phishing URL still online
+
+##

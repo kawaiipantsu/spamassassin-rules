@@ -1,0 +1,133 @@
+#S3BMS - SENDER LIST - Renaming from S3BMS_HEADER to S3BMS_SENDER
+
+header 		S3BMS_SENDER_1		From =~ /info\@rkmumbairealtors\.(info|net|com)/
+describe	S3BMS_SENDER_1		Property related Spam
+score		S3BMS_SENDER_1		5
+	
+header 		S3BMS_SENDER_2		From =~ /akashya\.jain\@paysquare\.co\.in/
+describe	S3BMS_SENDER_2		Email Harvesting and UCE Related Spam from paysquare
+score 		S3BMS_SENDER_2 		5
+	
+header 		S3BMS_SENDER_3		From =~ /hello\@getindiagold\.co/
+describe 	S3BMS_SENDER_3		Known UCE and Spammer Related to Gold 
+score		S3BMS_SENDER_3		5
+	
+header		S3BMS_SENDER_4		From =~ /ybtechie\.com/
+describe	S3BMS_SENDER_4		UCE - Mail Listing Harvesting
+score		S3BMS_SENDER_4		5
+	
+header 		S3BMS_SENDER_5		From =~ /megin\.mathew\@design-thinking\.co/
+describe	S3BMS_SENDER_5		UCE - Mail List Harvesting Spam
+score		S3BMS_SENDER_5		5
+	
+header 		S3BMS_SENDER_6		From =~ /veena\@asdatachamps\.in/
+describe	S3BMS_SENDER_6		UCE - Mail List Harvesting and COVID related SPAM
+score		S3BMS_SENDER_6		5
+	
+header 		S3BMS_SENDER_7		From =~	/anand\@forenthics\.in/
+describe 	S3BMS_SENDER_7		UCE - Mail List Sender with No Unsubscribe Options
+score		S3BMS_SENDER_7		5
+	
+header 		S3BMS_SENDER_8		From =~ /safetycircleindia\.com/
+describe	S3BMS_SENDER_8		UCE - Mail List Sender with No Unsubscribe Options
+score		S3BMS_SENDER_8		5
+	
+header 		S3BMS_SENDER_9		From =~ /marketing\@corporateseva\.net/
+describe 	S3BMS_SENDER_9		UCE - Mail List - Persistent - Purchased Databases
+score		S3BMS_SENDER_9		5
+	
+header 		S3BMS_SENDER_10		From =~ /Prerna\.Chadha\@timesgroup\.com/
+describe	S3BMS_SENDER_10 	UCE - Mail - List - No Unsubscribe
+score 		S3BMS_SENDER_10		5
+	
+header 		S3BMS_SENDER_11 	From =~ /prerna006\@gmail\.com/
+describe	S3BMS_SENDER_11 	UCE-Mail List - No Unsubscribe Options
+score		S3BMS_SENDER_11		5
+	
+header 		S3BMS_SENDER_12 	From =~ /csr\.tandi\@gmail\.com/
+describe	S3BMS_SENDER_12		UCE-Mail List related to Covid SPAM - No Unsubscribe Option
+score		S3BMS_SENDER_12		5
+	
+header 		S3BMS_SENDER_13 	From =~ /sushanta\@thetechnobrand\.com/
+describe 	S3BMS_SENDER_13 	SEO Spammer
+score		S3BMS_SENDER_13 	5
+	
+header 		S3BMS_SENDER_14 	From =~ /target2lead\.com/
+describe	S3BMS_SENDER_14 	mailing list seller #84460
+score		S3BMS_SENDER_14 	5
+	
+header 		S3BMS_SENDER_15		From =~ /transformanceforums\.com/
+describe	S3BMS_SENDER_15 	Uses purchased Email lists to SPAM
+score 		S3BMS_SENDER_15 	5
+	
+header 		S3BMS_SENDER_16		From =~ /transformancebusinessmedia\.com/
+describe	S3BMS_SENDER_16 	Alternate Domain to same Spammer in HEADER_15
+score 		S3BMS_SENDER_16 	5
+	
+header 		S3BMS_SENDER_17 	Form =~ /globalagileenquiry\.com/
+describe 	S3BMS_SENDER_17 	Alternate Sender to Domain in HEADER_15 and HEADER_16 - Usually in Body
+score 		S3BMS_SENDER_17		5
+
+header 		S3BMS_SENDER_18		From =~	/microworldinfosol\.com/
+describe	S3BMS_SENDER_18		Spammer - Using Lists, no Unsubscribe and not accepting unsubscribe requests
+score 		S3BMS_SENDER_18		5
+
+header 		S3BMS_SENDER_19		From =~	/microworldindia\.co\.in/
+describe	S3BMS_SENDER_19		Same Spammer as HEADER_18
+score 		S3BMS_SENDER_19		5
+
+header 		S3BMS_SENDER_20		To =~ /bmailstudio\.com/
+describe 	S3BMS_SENDER_20 	Property Related Spammer using Google Groups to SPAM
+score 		S3BMS_SENDER_20		5
+
+header 		S3BMS_SENDER_21 	From =~ /hanskyadav\@hotmail\.com/
+describe 	S3BMS_SENDER_21 	Same Sender as HEADER_20 
+score 		S3BMS_SENDER_21 	5
+
+header 		S3BMS_SENDER_22		From =~ /myzamanamail\.com/
+describe 	S3BMS_SENDER_22 	From MyZamana - Dating SPAM/SCAM #84564
+score 		S3BMS_SENDER_22 	5
+
+header 		S3BMS_SENDER_23 	From =~ /myzchats\.com/
+describe 	S3BMS_SENDER_23		From MyZamana Alternative Email Domain - Dating Scam #84842
+score 		S3BMS_SENDER_23		5
+
+header 		S3BMS_SENDER_24 	From =~ /paysquare\.co\.in/
+describe 	S3BMS_SENDER_24		Spammer with no unsubscribe links in their emails
+score 		S3BMS_SENDER_24		5
+
+header 		S3BMS_SENDER_25 	From =~ /youth4work\.in/
+describe	S3BMS_SENDER_25 	Spammer with no Unsubscribe Options links
+score 		S3BMS_SENDER_25		5
+
+header 		S3BMS_SENDER_26 	From =~ /y4w\.co/
+describe	S3BMS_SENDER_26 	Spammer with no Unsubscribe Options links
+score 		S3BMS_SENDER_26		5
+
+header 		S3BMS_SENDER_27		From =~ /firstglobalsec\.com/
+describe 	S3BMS_SENDER_27		Spammer abusing paid mailig lists
+score 		S3BMS_SENDER_27		5
+
+header 		S3BMS_SENDER_28		From =~ /zimbraservice\@123\-reg\.co\.uk/
+describe	S3BMS_SENDER_28 	Spammer sending Zimbra related Spam #85134
+score		S3BMS_SENDER_28		5
+
+header 		S3BMS_SENDER_29		From =~ /pandemic\-punditry\.com/
+describe	S3BMS_SENDER_29		Spammer abusing COVID pandemic
+score 		S3BMS_SENDER_29		5
+
+header 		S3BMS_SENDER_30 	From =~ /solveerrors\.com/
+describe 	S3BMS_SENDER_30		Spammer Sending Lottery Spam
+score 		S3BMS_SENDER_30	 	5
+
+header 		S3BMS_SENDER_31 	From =~ /nbfcnow\.com/
+describe 	S3BMS_SENDER_31 	Using ROC Registry to Spam 
+score 		S3BMS_SENDER_31 	5
+
+header 		S3BMS_SENDER_32 	From =~ /muds\.co\.in/
+describe 	S3BMS_SENDER_32 	Using ROC Registry to Spam Related to SENDER_31
+score 		S3BMS_SENDER_32 	5
+
+header 		S3BMS_SENDER_33		From =~ /advidsdesigns\.net/
+describe	S3BMS_SENDER_33		Using Phishing to send Video making Emails - UCE
+score		S3BMS_SENDER_33		5

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008272504
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8272504
+## Submitted.....: 2023-08-25T00:19:29+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008272504_MATCH	/ipfs\.eth\.aragon\.network\/ipfs\/bafybeifg7htqi5uwrx2yavdr7o3m7bz2ocd6yet3penuv2c5ljleuurerm\//
+score		PHISHTANK_0008272504_MATCH	5.0
+describe	PHISHTANK_0008272504_MATCH	Phishtank ID 8272504 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008272504_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008272504_VALIDATED	PHISHTANK_0008272504_MATCH && __PHISHTANK_0008272504_VALCHECK
+score		PHISHTANK_0008272504_VALIDATED	2.0
+describe	PHISHTANK_0008272504_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008272504_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008272504_ONLINE	PHISHTANK_0008272504_MATCH && __PHISHTANK_0008272504_ONCHECK
+score		PHISHTANK_0008272504_ONLINE	2.0
+describe	PHISHTANK_0008272504_ONLINE	Phishing URL still online
+
+##

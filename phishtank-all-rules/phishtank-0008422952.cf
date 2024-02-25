@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008422952
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8422952
+## Submitted.....: 2024-01-15T19:23:34+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008422952_MATCH	/allegrolokalnie\.pl\-oferta8471264\.pl\/oferta\/1364275083139251160315617726821375415696/
+score		PHISHTANK_0008422952_MATCH	5.0
+describe	PHISHTANK_0008422952_MATCH	Phishtank ID 8422952 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008422952_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008422952_VALIDATED	PHISHTANK_0008422952_MATCH && __PHISHTANK_0008422952_VALCHECK
+score		PHISHTANK_0008422952_VALIDATED	2.0
+describe	PHISHTANK_0008422952_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008422952_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008422952_ONLINE	PHISHTANK_0008422952_MATCH && __PHISHTANK_0008422952_ONCHECK
+score		PHISHTANK_0008422952_ONLINE	2.0
+describe	PHISHTANK_0008422952_ONLINE	Phishing URL still online
+
+##

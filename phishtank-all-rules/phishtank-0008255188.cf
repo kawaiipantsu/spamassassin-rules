@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008255188
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8255188
+## Submitted.....: 2023-08-09T17:46:50+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008255188_MATCH	/script\.google\.com\/macros\/s\/AKfycbznF9i9mngvRdD9nAIsC3wEeD2H0kV0sSTD51w6a0JbWP9lwLT6F0iAJlHEJWCe0\-EdhA\/exec/
+score		PHISHTANK_0008255188_MATCH	5.0
+describe	PHISHTANK_0008255188_MATCH	Phishtank ID 8255188 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008255188_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008255188_VALIDATED	PHISHTANK_0008255188_MATCH && __PHISHTANK_0008255188_VALCHECK
+score		PHISHTANK_0008255188_VALIDATED	2.0
+describe	PHISHTANK_0008255188_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008255188_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008255188_ONLINE	PHISHTANK_0008255188_MATCH && __PHISHTANK_0008255188_ONCHECK
+score		PHISHTANK_0008255188_ONLINE	2.0
+describe	PHISHTANK_0008255188_ONLINE	Phishing URL still online
+
+##

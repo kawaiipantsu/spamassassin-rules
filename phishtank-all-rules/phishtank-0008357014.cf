@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008357014
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8357014
+## Submitted.....: 2023-11-08T03:32:59+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008357014_MATCH	/pub\-15d20d4ea241484399ad17636cfd2cbf\.r2\.dev\/link%20\(27\)\.html/
+score		PHISHTANK_0008357014_MATCH	5.0
+describe	PHISHTANK_0008357014_MATCH	Phishtank ID 8357014 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008357014_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008357014_VALIDATED	PHISHTANK_0008357014_MATCH && __PHISHTANK_0008357014_VALCHECK
+score		PHISHTANK_0008357014_VALIDATED	2.0
+describe	PHISHTANK_0008357014_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008357014_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008357014_ONLINE	PHISHTANK_0008357014_MATCH && __PHISHTANK_0008357014_ONCHECK
+score		PHISHTANK_0008357014_ONLINE	2.0
+describe	PHISHTANK_0008357014_ONLINE	Phishing URL still online
+
+##

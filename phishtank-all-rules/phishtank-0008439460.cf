@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008439460
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8439460
+## Submitted.....: 2024-02-02T21:10:16+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008439460_MATCH	/go\-case\.com\/navi\-event/
+score		PHISHTANK_0008439460_MATCH	5.0
+describe	PHISHTANK_0008439460_MATCH	Phishtank ID 8439460 (Steam) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008439460_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008439460_VALIDATED	PHISHTANK_0008439460_MATCH && __PHISHTANK_0008439460_VALCHECK
+score		PHISHTANK_0008439460_VALIDATED	2.0
+describe	PHISHTANK_0008439460_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008439460_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008439460_ONLINE	PHISHTANK_0008439460_MATCH && __PHISHTANK_0008439460_ONCHECK
+score		PHISHTANK_0008439460_ONLINE	2.0
+describe	PHISHTANK_0008439460_ONLINE	Phishing URL still online
+
+##

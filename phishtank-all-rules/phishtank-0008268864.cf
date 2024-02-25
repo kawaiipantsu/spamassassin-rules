@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008268864
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8268864
+## Submitted.....: 2023-08-22T15:01:22+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008268864_MATCH	/universalent\-j2hm84bg1\-rosamelxl\.vercel\.app/
+score		PHISHTANK_0008268864_MATCH	5.0
+describe	PHISHTANK_0008268864_MATCH	Phishtank ID 8268864 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008268864_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008268864_VALIDATED	PHISHTANK_0008268864_MATCH && __PHISHTANK_0008268864_VALCHECK
+score		PHISHTANK_0008268864_VALIDATED	2.0
+describe	PHISHTANK_0008268864_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008268864_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008268864_ONLINE	PHISHTANK_0008268864_MATCH && __PHISHTANK_0008268864_ONCHECK
+score		PHISHTANK_0008268864_ONLINE	2.0
+describe	PHISHTANK_0008268864_ONLINE	Phishing URL still online
+
+##

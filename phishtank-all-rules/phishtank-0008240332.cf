@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008240332
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8240332
+## Submitted.....: 2023-07-27T13:34:11+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008240332_MATCH	/script\.google\.com\/macros\/s\/AKfycbwoxriSHA5Zw6DsekIOt89\-PxjvJ1VK5svZc4b_7HFpLs0vsbbL4BX87eWEj02Q_bPy\/exec/
+score		PHISHTANK_0008240332_MATCH	5.0
+describe	PHISHTANK_0008240332_MATCH	Phishtank ID 8240332 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008240332_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008240332_VALIDATED	PHISHTANK_0008240332_MATCH && __PHISHTANK_0008240332_VALCHECK
+score		PHISHTANK_0008240332_VALIDATED	2.0
+describe	PHISHTANK_0008240332_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008240332_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008240332_ONLINE	PHISHTANK_0008240332_MATCH && __PHISHTANK_0008240332_ONCHECK
+score		PHISHTANK_0008240332_ONLINE	2.0
+describe	PHISHTANK_0008240332_ONLINE	Phishing URL still online
+
+##
