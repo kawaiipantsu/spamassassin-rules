@@ -1,6 +1,0 @@
-#TBG_URI.cf Contins URLS and URIs that are known to lead to SPAM
-#updated names from TBG to S3BMS to keep consistency
-
-uri 	 	S3BMS_URI_1 		/https\:\/\/*\.pawitforward\.info\/zimbra\//
-score	 	S3BMS_URI_1			5
-describe 	S3BMS_URI_1			Ticket #85134

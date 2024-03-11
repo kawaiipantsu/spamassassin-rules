@@ -1,8 +1,0 @@
-body   __PP_LOCAL_ACCT_FULL_1 /\b(Mail Team)\b/i
-body   __PP_LOCAL_ACCT_FULL_2 /\b(ALLOCATE MORE DATA TO|exceeding your free data volume)\b/
-header __PP_LOCAL_ACCT_FULL_3 Subject =~ /Email Storage Warning/i
-header __PP_LOCAL_ACCT_FULL_4 From =~ /Admin/i
-
-meta PP_LOCAL_ACCT_FULL_01 (( __PP_LOCAL_ACCT_FULL_1 + __PP_LOCAL_ACCT_FULL_2 + __PP_LOCAL_ACCT_FULL_3 + __PP_LOCAL_ACCT_FULL_4 )) > 2
-score PP_LOCAL_ACCT_FULL_01 8
-describe PP_LOCAL_ACCT_FULL_01 Phishing attempt.
