@@ -1,0 +1,24 @@
+# don't use things by default
+use_bayes 0
+bayes_auto_expire 0
+bayes_learn_to_journal 1
+
+
+ok_languages all
+
+
+envelope_sender_header X-Proxmox-Envelope-From
+
+# use fast lock (non-nfs save)
+lock_method flock
+
+
+
+
+use_bayes 0 
+
+
+
+
+include /usr/share/spamassassin-extra/kam_sa-channels_mcgrail_com.cf
+

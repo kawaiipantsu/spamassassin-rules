@@ -1,0 +1,4 @@
+header          __HS_XM_BLAT_311_WIN32 X-Mailer =~ /^Blat v3\.1\.1, a Win32 SMTP\/NNTP mailer http:\/\/www.blat.net/
+header          __HS_XOLE_BLAT_311     X-MimeOLE =~ /Produced by Blat v3\.1\.1/
+meta            HS_HEADER_SPAM_70      (__HS_XM_BLAT_311_WIN32 && __HS_XOLE_BLAT_311)
+score           HS_HEADER_SPAM_70      3.5

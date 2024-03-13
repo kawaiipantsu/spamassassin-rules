@@ -1,0 +1,258 @@
+
+# Maintainer: Alberto Caso <alberto.caso@adaptia.es>
+# Last updated: 2013.05
+
+body 		__ACP_PHIS_CUOTA_SUPERADA_BODY01 /administrador, se est.{1,3}n? ejecutando actualmente en 2\.3.GB/
+body 		__ACP_PHIS_CUOTA_SUPERADA_BODY02 /mantenimientodecuenta.net.email\.com/
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY03 /Su cuota de Webmail ha superado el l.{1,3}mite de cuota/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY04 /Your Mail Quota Has Exceeded The Set Quota/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY05 /your mail box has exceeded the storage limit set by your administrator/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY06 /Su cuota ha superado el conjunto de Webmail cuota/i
+header		__ACP_PHIS_CUOTA_SUPERADA_HEAD01 Reply-To =~ /(webmasterhelphesk211|customerservice2011).w\.cn/
+header		__ACP_PHIS_CUOTA_SUPERADA_HEAD02 Subject =~ /^Webmail Soporte T.{1,3}cnico$/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07a	/ha superado (su )?cuota/i
+#body		__ACP_PHIS_CUOTA_SUPERADA_BODY07b	/cuenta de correo electr.nico/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07c01	/Nombre de usuario/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07c02	/Contrase.{1,3}a ?:/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07c03	/(Re-escribir|(Re)?Confirmar) (la )?(contrase.{1,3}a|Contrase.{1,3}a actual)/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07c03b	/Vuelva a escribir-Contrase.{1,3}a/i
+meta		__ACP_PHIS_CUOTA_SUPERADA_BODY07c	((__ACP_PHIS_CUOTA_SUPERADA_BODY07c01 + __ACP_PHIS_CUOTA_SUPERADA_BODY07c02 + __ACP_PHIS_CUOTA_SUPERADA_BODY07c03 + __ACP_PHIS_CUOTA_SUPERADA_BODY07c03b) > 2)
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07d	/para mantener su cuenta de correo electr.{1,3}nico/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07e	/validar su buz.{1,3}n de correo/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07f	/Confirmar su identidad/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07g	/Estimado usuario de (cuenta de )?correo (electr.{1,3}nico|web)/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07h	/introduzca (los)?detalles de su cuenta/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07i	/Webmail Soporte T.{1,3}cnico/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07j01	/estamos actualizando nuestra base de datos/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07j02	/confirm(e|ar) (su identidad|(los )?detalles de su cuenta)/i
+meta		__ACP_PHIS_CUOTA_SUPERADA_BODY07j	((__ACP_PHIS_CUOTA_SUPERADA_BODY07j01 + __ACP_PHIS_CUOTA_SUPERADA_BODY07j02) > 1)
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07k	/Su buz.{1,3}n ha superado/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07l	/administrador de correo web(mail)/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY07m	/Webmail de Verificaci.{1,3}n/i
+meta		__ACP_PHIS_CUOTA_SUPERADA_BODY07_p1	((__ACP_PHIS_CUOTA_SUPERADA_BODY07a + __ACP_PHIS_CUOTA_SUPERADA_BODY07d + __ACP_PHIS_CUOTA_SUPERADA_BODY07e + __ACP_PHIS_CUOTA_SUPERADA_BODY07f + __ACP_PHIS_CUOTA_SUPERADA_BODY07g + __ACP_PHIS_CUOTA_SUPERADA_BODY07h + __ACP_PHIS_CUOTA_SUPERADA_BODY07i + __ACP_PHIS_CUOTA_SUPERADA_BODY07j + __ACP_PHIS_CUOTA_SUPERADA_BODY07k + __ACP_PHIS_CUOTA_SUPERADA_BODY07l + __ACP_PHIS_CUOTA_SUPERADA_BODY07m) > 1)
+# Si cumple al menos 2 de BODY07 y ademas esta solicitando usuario y contraseña
+meta		__ACP_PHIS_CUOTA_SUPERADA_BODY07	((__ACP_PHIS_CUOTA_SUPERADA_BODY07_p1 + __ACP_PHIS_CUOTA_SUPERADA_BODY07c) > 1)
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY08	/Webmail Estimado miembro/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY09	/se le solicita actualizar su correo web dentro de las .. horas o su direcci.n de e-mail ser. eliminado de nuestra base de datos/
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY10	/usted est.{1,3} obligado a actualizar su cuenta en .. horas o de lo contrario su cuenta ser.{1,3} cerrada/i
+body		__ACP_PHIS_CUOTA_SUPERADA_BODY11	/Confirmar su identidad Webmail/i
+header		__ACP_PHIS_CUOTA_SUPERADA_HEAD03	From =~ /Juntaextremadura Web Admin correo/i
+uri             __ACP_PHIS_CUOTA_SUPERADA_URI01         /www\.kardealer\.com\/forms\/use\/juntaextremadura\/form1\.html/
+uri             __ACP_PHIS_CUOTA_SUPERADA_URI02         /www\.skbs-cscbb\.ch\/phpForms\/use\/es\/form1\.html/
+
+describe 	ACP_PHIS_CUOTA_SUPERADA Pretends to be a quota exceded warning
+meta  		ACP_PHIS_CUOTA_SUPERADA ((__ACP_PHIS_CUOTA_SUPERADA_BODY01 + __ACP_PHIS_CUOTA_SUPERADA_BODY02 + __ACP_PHIS_CUOTA_SUPERADA_BODY03 + __ACP_PHIS_CUOTA_SUPERADA_BODY04 + __ACP_PHIS_CUOTA_SUPERADA_BODY05 + __ACP_PHIS_CUOTA_SUPERADA_BODY06 + __ACP_PHIS_CUOTA_SUPERADA_HEAD01 + __ACP_PHIS_CUOTA_SUPERADA_HEAD02 + __ACP_PHIS_CUOTA_SUPERADA_BODY07 + __ACP_PHIS_CUOTA_SUPERADA_BODY08 + __ACP_PHIS_CUOTA_SUPERADA_BODY09 + __ACP_PHIS_CUOTA_SUPERADA_BODY10 + __ACP_PHIS_CUOTA_SUPERADA_BODY11 + __ACP_PHIS_CUOTA_SUPERADA_HEAD03 + __ACP_PHIS_CUOTA_SUPERADA_URI01 + __ACP_PHIS_CUOTA_SUPERADA_URI02) > 0)
+score 		ACP_PHIS_CUOTA_SUPERADA 50.0
+
+# ACP_PROBABLE_PHIS_CUOTA_SUPERADA usa las reglas de ACP_PHIS_CUOTA_SUPERADA de un modo menos rigido y
+# por tanto mas propenso a falsos positivos
+meta		__ACP_PROBABLE_PHIS_CUOTA_SUPERADA01	((__ACP_PHIS_CUOTA_SUPERADA_BODY07_p1) > 0)
+describe	ACP_PROBABLE_PHIS_CUOTA_SUPERADA	Seems to be a false quota exceded warning
+meta		ACP_PROBABLE_PHIS_CUOTA_SUPERADA	(__ACP_PROBABLE_PHIS_CUOTA_SUPERADA01)	
+score		ACP_PROBABLE_PHIS_CUOTA_SUPERADA	4.8
+
+# Phishing virus falso
+body		__ACP_PHIS_VIRUS_BODY01	/Un virus DGTJTO se ha detectado en su cuenta de Webmail/i
+body		__ACP_PHIS_VIRUS_BODY02	/rellene los datos para actualizar tu cuenta a nuestra base de datos para evitar la propagaci.{1,3}n del virus/i 
+meta		ACP_PHIS_VIRUS		((__ACP_PHIS_VIRUS_BODY01 + __ACP_PHIS_VIRUS_BODY02) > 0)
+describe	ACP_PHIS_VIRUS		Nos alerta de un falso virus para robarnos datos
+score		ACP_PHIS_VIRUS		50.0
+
+# Español raro (expresiones sudamericanas o traducciones automáticas)
+body		__ACP_STRANGE_SPANISH1	/(Querido|Estimado)s? en (Cristo|el Se.or)/i
+meta		ACP_STRANGE_SPANISH	(__ACP_STRANGE_SPANISH1)
+describe	ACP_STRANGE_SPANISH	Strange spanish (maybe automatic translation)
+score		ACP_STRANGE_SPANISH	1.0
+
+# Tarjetas gratis
+header		__ACP_FREE_CARD01	Subject =~ /tarjeta de cr.{1,3}dito (gratis|sin coste)/i
+meta		ACP_FREE_CARD		(__ACP_FREE_CARD01)
+describe	ACP_FREE_CARD		Ofrece tarjeta de crédito gratis
+score		ACP_FREE_CARD		1.0
+
+# Ofertas en mayusculas en el asunto
+header		__ACP_OFERTAS_SHOUT01	Subject =~ /GRATIS/
+meta		ACP_OFERTAS_SHOUT	(__ACP_OFERTAS_SHOUT01)
+describe	ACP_OFERTAS_SHOUT	Nos gritan ofertas en el asunto (no recogidas en EXCLAMACION_ES)
+score		ACP_OFERTAS_SHOUT	1.6
+
+# Excusas esto no es spam
+body		__ACP_EXCUSE_NOTSPAM01	/esto no es spam/i
+body		__ACP_EXCUSE_NOTSPAM02	/this is not spam/i
+meta		ACP_EXCUSE_NOTSPAM	((__ACP_EXCUSE_NOTSPAM01 + __ACP_EXCUSE_NOTSPAM02) > 0)
+describe	ACP_EXCUSE_NOTSPAM	Dice que no es spam (excusa non petita...)
+score		ACP_EXCUSE_NOTSPAM	2.0
+
+# Direccion tomada de origenes publicos
+body		__ACP_LISTADOS_PUBLICOS01	/Sus? (datos|direcci.{1,3}n de correo electr.{1,3}nico) han? sido (tomad|obtenid|recabad)(os|a) (de|en) (bases de datos|listados|fuentes de acceso) p.{1,3}blic(o|a)s?/i
+body		__ACP_LISTADOS_PUBLICOS02	/(Los|sus) datos (de contacto|personales) han sido obtenidos (de Vd. mismo o )?de (fuentes accesibles al p.{1,3}blico|sitios p.{1,3}blicos)/i
+body		__ACP_LISTADOS_PUBLICOS03	/La informaci.{1,3}n utilizada para este env.{1,3}o publicitario proviene de fuentes p.{1,3}blicas/i
+meta		ACP_LISTADOS_PUBLICOS	((__ACP_LISTADOS_PUBLICOS01 + __ACP_LISTADOS_PUBLICOS02 + __ACP_LISTADOS_PUBLICOS03) > 0)
+describe	ACP_LISTADOS_PUBLICOS	Indica que nuestra direccion ha sido obtenida de listados publicos
+score		ACP_LISTADOS_PUBLICOS	3.0
+
+# Enviado usando software de mail marketing
+header		__ACP_MAILING_SOFTWARE01	X-Mailer =~ /eC-Messenger/
+header		__ACP_MAILING_SOFTWARE02	X-Mailer =~ /^EMS$/
+header		__ACP_MAILING_SOFTWARE03	X-Mailer =~ /phplist/
+header		__ACP_MAILING_SOFTWARE04	X-Mailer =~ /Augure/
+header		__ACP_MAILING_SOFTWARE05	X-Mailer =~ /Krasis MAILCast Server/
+header		__ACP_MAILING_SOFTWARE06	X-Mailer =~ /GMS Sender/
+header		__ACP_MAILING_SOFTWARE07	X-Mailer =~ /SmartSend/
+header		__ACP_MAILING_SOFTWARE08	X-Mailer =~ /Cabestan DMS/
+header		__ACP_MAILING_SOFTWARE09	ALL =~ /^X-YMLPcode:/i
+header          __ACP_MAILING_SOFTWARE10	X-Mailer =~ /PtSender/i
+header		__ACP_MAILING_SOFTWARE11	ALL =~ /^X-EMV-CampagneId:/i
+meta		ACP_MAILING_SOFTWARE	((__ACP_MAILING_SOFTWARE01 + __ACP_MAILING_SOFTWARE02 + __ACP_MAILING_SOFTWARE03 + __ACP_MAILING_SOFTWARE04 + __ACP_MAILING_SOFTWARE05 + __ACP_MAILING_SOFTWARE06 + __ACP_MAILING_SOFTWARE07 + __ACP_MAILING_SOFTWARE08 + __ACP_MAILING_SOFTWARE09 + __ACP_MAILING_SOFTWARE10 + __ACP_MAILING_SOFTWARE11) > 0)
+describe	ACP_MAILING_SOFTWARE	Enviado usando software de email marketing
+score		ACP_MAILING_SOFTWARE	0.90
+
+# Si no puede ver correctamente este mensaje haga click aqui
+body		__ACP_SINOVECLICKAQUI01	/(En caso de no (ver|visualizar)|Si( usted| vd\.)? no (ves?|puedes? (ver|visualizar)|visualizas?|puede leer)|Si tienes? problemas para visualizar)( correctamente)?( el contenido de)? (el|este) (correo electr.{1,3}nico|mensaje|e?\-?mail|bolet.{1,3}n)( correctamente)?,?( por favor)? (haga click?|haz click?|puls(a|e)|pinch(a|e)) aqu.{1,3}/i
+body		__ACP_SINOVECLICKAQUI02	/Pincha aqu.{1,3} para ver este e-mail correctamente/i
+meta		ACP_SINOVECLICKAQUI	((__ACP_SINOVECLICKAQUI01 + __ACP_SINOVECLICKAQUI02) > 0)
+describe	ACP_SINOVECLICKAQUI	Si no ve correctamente este correo, haga click aqui...
+score		ACP_SINOVECLICKAQUI	1.30
+
+# opt-out
+body		__ACP_OPOUT01		/En caso de que no tengamos respuesta en este env.{1,3}o, consideramos su autorizaci.{1,3}n para posteriores env.{1,3}os/i
+body		__ACP_OPOUT02		/Salvo no manifestar expresamente lo contrario, se entiende impl.{1,3}citamente que Vd\. otorga la autorizaci.{1,3}n y presta su consentimiento a la presente informaci.{1,3}n/i
+body		__ACP_OPOUT03		/Si no manifiesta lo contrario en un plazo de 30 d.{1,3}as naturales desde la recepci.{1,3}n de esta comunicaci.{1,3}n entenderemos que Usted autoriza dicho tratamiento con las finalidades indicadas/i
+body		__ACP_OPOUT04		/Si no desea recibir nuestros env.{1,3}os comerciales por medio de correo electr.{1,3}nico, pulse aqu.{1,3}. De lo contrario entendemos que s{1,3} acepta nuestros env.{1,3}os/i
+body		__ACP_OPOUT05		/En caso de no pronunciarse, considera(re)?mos que da el consentimiento para que .{0,30} contin.e(mos)? envi.{1,3}ndole informaci.{1,3}n/i
+body		__ACP_OPOUT06		/En caso de no darse de baja, consideramos que tenemos su consentimiento para enviarle(,? por correo electr.{1,3}nico,?)? informaci.{1,3}n/i
+meta		ACP_OPOUT		((__ACP_OPOUT01 + __ACP_OPOUT02 + __ACP_OPOUT03 + __ACP_OPOUT04 + __ACP_OPOUT05 + __ACP_OPOUT06) > 0)
+describe	ACP_OPOUT		Mensajes de listas op-out
+score		ACP_OPOUT		5.5
+
+# Trabajo desde casa
+header		__ACP_WORKFROMHOME01	Subject =~ /trabaj(o|a) desde casa/i
+meta		ACP_WORKFROMHOME	(__ACP_WORKFROMHOME01)
+describe	ACP_WORKFROMHOME	Parece ofrecer trabajar desde casa
+score		ACP_WORKFROMHOME	1.0
+
+# Trabajo desde casa, en ingles
+header		__ACP_WORKFROMHOME_EN01	Subject =~ /work from home/i
+meta 		ACP_WORKFROMHOME_EN	(__ACP_WORKFROMHOME_EN01)
+describe	ACP_WORKFROMHOME_EN	Parece ofrecer trabajar desde casa en ingles
+score		ACP_WORKFROMHOME_EN	3.0
+
+# Bank phishing
+header		__ACP_BANKPHIS01	From =~ /bbva\.es$/i
+body		__ACP_BANKPHIS_BANKNAME01	/BBVA/i
+body		__ACP_BANKPHIS02	/Actualizacion de datos/i
+body		__ACP_BANKPHIS03	/Necesitamos que usted verifique los datos de su cuenta/i
+body		__ACP_BANKPHIS04	/nuestra base de datos de clientes en l.{1,3}nea se encuentra en proceso de actualizaci.{1,3}n/i
+#header		__ACP_BANKPHIS05	Subject =~ /^Nueva Promoci.{1,3}n( de)? BBVA/i
+header		__ACP_BANKPHIS06	Subject =~ /^Clave de Operaciones$/i
+meta		ACP_BANKPHIS		(((ACP_BANKPHISSURE) < 1) && (__ACP_BANKPHIS_BANKNAME01) && (__ACP_BANKPHIS02 + __ACP_BANKPHIS03 + __ACP_BANKPHIS04 + __ACP_BANKPHIS06) > 0)
+describe	ACP_BANKPHIS		Phishing probable de bancos espanoles
+score		ACP_BANKPHIS		4.0
+
+header		__ACP_BANKPHISSURE01	Subject =~ /(AVISO URGENTE|Correo informativo|Noticia) de BBVA - Actualiza(r|ci.{1,3}n) (sus|de) Datos/i
+header		__ACP_BANKPHISSURE02	Subject =~ /Noticia - Nueva Promoci.{|,3}n( de)? BBVA/i
+header		__ACP_BANKPHISSURE03	Subject =~ /Actualizaci.{1,3}n de Datos - BBVA/i
+header		__ACP_BANKPHISSURE04	Subject =~ /^BBVAnet - ACTUALIZAR DATOS/i
+meta		ACP_BANKPHISSURE	((__ACP_BANKPHISSURE01 + __ACP_BANKPHISSURE02 + __ACP_BANKPHISSURE03 + __ACP_BANKPHISSURE04) > 0)
+describe	ACP_BANKPHISSURE	Phishing seguro de bancos espanoles
+score		ACP_BANKPHISSURE	6.0
+
+
+# Te han eliminado del MSN
+header		__ACP_ELIMINADOMSN01	Subject =~ /^Te han eliminado del (MSN|Messenger)!?/i
+body		__ACP_ELIMINADOMSN02	/te invita a que te fijes quien(es)?( te han? traicionado y)? te han? eliminado de (t|s)u lista de MSN Messenger/i
+header		__ACP_ELIMINADOMSN03a	Subject =~ /^Te han eliminado!$/i
+body		__ACP_ELIMINADOMSN03b	/te han eliminado de tu lista de MSN Messenger/i
+meta		__ACP_ELIMINADOMSN03	((__ACP_ELIMINADOMSN03a + __ACP_ELIMINADOMSN03b) > 1)
+header		__ACP_ELIMINADOMSN04	Subject =~ /Averigua quien te ha eliminado en MSN/i
+meta		ACP_ELIMINADOMSN	((__ACP_ELIMINADOMSN01 + __ACP_ELIMINADOMSN02 + __ACP_ELIMINADOMSN03 + __ACP_ELIMINADOMSN04) > 0)
+describe	ACP_ELIMINADOMSN	Aviso de que te han eliminado del MSN
+score		ACP_ELIMINADOMSN	3.5
+
+
+# Cuenta de publicidad
+header		__ACP_FROM_PUBLICIDAD01	From =~ /(^| |\<)publicidad\@/i
+meta		ACP_FROM_PUBLICIDAD	((__ACP_FROM_PUBLICIDAD01))
+describe	ACP_FROM_PUBLICIDAD	Procedente de cuenta publicidad@...
+score		ACP_FROM_PUBLICIDAD	4.0
+
+# Nos pide que reenviemos (complementa a REENVIA_ES)
+body		__ACP_REENVIA01	/REENV.{1,3}A ESTE E-MAIL A TUS CONOCIDOS/i
+meta		ACP_REENVIA	((__ACP_REENVIA01))
+describe	ACP_REENVIA	Nos pide que reenviemos el correo a otros
+score		ACP_REENVIA	2.6
+
+# Oferta especial
+body		__ACP_OFERTA_ESPECIAL01	/Oferta especial/i
+meta		ACP_OFERTA_ESPECIAL	((__ACP_OFERTA_ESPECIAL01))
+describe	ACP_OFERTA_ESPECIAL	Contiene el texto "Oferta especial"
+score		ACP_OFERTA_ESPECIAL	0.6
+
+
+# Confiesan que son spam
+body		__ACP_CONFIESA_SPAM01	/Si considera nuestras publicaciones como SPAM, pinche aqui/i
+meta		ACP_CONFIESA_SPAM	((__ACP_CONFIESA_SPAM01))
+describe	ACP_CONFIESA_SPAM	Confiesa que es spam
+score		ACP_CONFIESA_SPAM	5.0
+
+
+# Aviso de seguridad
+header		__ACP_AVISO_SEGURIDAD01	Subject =~ /Aviso de Seguridad/i
+meta		ACP_AVISO_SEGURIDAD	((__ACP_AVISO_SEGURIDAD01))
+describe	ACP_AVISO_SEGURIDAD	Aviso de seguridad
+score		ACP_AVISO_SEGURIDAD	1.2
+
+
+# Editorial Alto Galupe lleva anyos enviando spam indiscriminado
+header		__ACP_ALTOGALUPE01	From =~ /altogalupe-editorial.info/i
+#header		__ACP_ALTOGALUPE02	Reply-To =~ /editorial.promos-online.info/i
+header		__ACP_ALTOGALUPE02	Reply-To =~ /promos-online.info$/i
+uri		__ACP_ALTOGALUPE03	/www\.altogalupe\.com/
+meta		ACP_ALTOGALUPE		((__ACP_ALTOGALUPE01 + __ACP_ALTOGALUPE02) > 0)
+describe	ACP_ALTOGALUPE		Spam de la editorial Alto Galupe
+score		ACP_ALTOGALUPE		50.0
+
+# Lottery notification
+header		__ACP_LOTTERY01		Subject =~ /Lottery Notification/i
+meta		ACP_LOTTERY		((__ACP_LOTTERY01))
+describe	ACP_LOTTERY		Notificaciones de loteria en ingles
+score		ACP_LOTTERY		10.0
+
+# Mensajes de spam de cuentas @il?.es
+header		__ACP_FROM_ILNUMBER01	From =~ /em\@il[0-9]+.es>/i
+meta		ACP_FROM_ILNUMBER	((__ACP_FROM_ILNUMBER01))
+describe	ACP_FROM_ILNUMBER	Mensajes de spam de cuentas @il?.es
+score		ACP_FROM_ILNUMBER	8.0
+
+# Hazte socio de
+body		__ACP_HAZTE_SOCIO01	/Hazte socio de/i
+meta		ACP_HAZTE_SOCIO		((__ACP_HAZTE_SOCIO01))
+describe	ACP_HAZTE_SOCIO		Nos invitan a hacernos socios
+score		ACP_HAZTE_SOCIO		1.5
+
+# Anuncios de muchoviaje.com
+header		__ACP_MUCHOVIAJECOM01	From =~ /<newsletter\@muchoviaje\.com>/i
+meta		ACP_MUCHOVIAJECOM	((__ACP_MUCHOVIAJECOM01))
+describe	ACP_MUCHOVIAJECOM	Spam de muchoviaje.com
+score		ACP_MUCHOVIAJECOM	50.0
+
+# J.P. Monfort
+body		__ACP_JPMONFORT01	/please send an empty email with the email address you wish to remove in the subject field to remove.spain \(at\) monfort \(dot\) biz/
+meta		ACP_JPMONFORT		((__ACP_JPMONFORT01))	
+describe	ACP_JPMONFORT		Correos de J.P. Monfort / reypublica / ronda de entrevistas / dreamersland
+score		ACP_JPMONFORT		20.0
+
+# Phishing 07/2011 imita proceder Policia
+body		__ACP_PHIS_201107_POLICIA01	/Assunto:NOTIFICACI.{1,3}N DE ASISTENCIA EN LA AUDIENCIA en el procedimiento de investigaci.{1,3}n de que se trata en esta conducta/i
+body		__ACP_PHIS_201107_POLICIA02	/Para que se adjunta. com el documiento anexo. Procediemento  de esclareciemiento anti drogas/i
+body		__ACP_PHIS_201107_POLICIA03	/1 ANEXO:NOTIFICACI.{1,3}N-MPF.SCR/i
+meta		ACP_PHIS_201107_POLICIA	((__ACP_PHIS_201107_POLICIA01 + __ACP_PHIS_201107_POLICIA02 + __ACP_PHIS_201107_POLICIA03) > 0)
+describe	ACP_PHIS_201107_POLICIA	Mensajes de Phishing recibidos en 07/2011 procedentes policia.es y descarga scr infectado
+score		ACP_PHIS_201107_POLICIA	24.0
+
+# Square Travel
+uri		__ACP_SQUARETRAVEL01	/publi\.squaretravel\.es/
+meta		ACP_SQUARETRAVEL	((__ACP_SQUARETRAVEL01))
+describe	ACP_SQUARETRAVEL	Publicidad de Square Travel
+score		ACP_SQUARETRAVEL	8.0
+

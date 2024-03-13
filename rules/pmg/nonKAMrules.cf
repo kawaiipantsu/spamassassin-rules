@@ -1,0 +1,408 @@
+#FROM SA/MD/SARE LISTS - All consider public domain or fair use.
+
+#BY Warren Sallade" <warren.sallade@ewgateway.org> for Drug Spams
+
+#DISABLING DUE TO FALSE POSITIVES 2021-09-14
+rawbody   __EWG_BAD34 />\s{0,3}V\s{0,3}</i
+rawbody   __EWG_BAD35 />\s{0,3}I\s{0,3}</i
+rawbody   __EWG_BAD36 />\s{0,3}A\s{0,3}</i
+rawbody   __EWG_BAD37 />\s{0,3}G\s{0,3}</i
+rawbody   __EWG_BAD38 />\s{0,3}R\s{0,3}</i
+rawbody   __EWG_BAD39 />\s{0,3}A\s{0,3}</i
+meta  	 EWG_VIAGRA ((__EWG_BAD34 + __EWG_BAD35 + __EWG_BAD36 + __EWG_BAD37 + __EWG_BAD38 + __EWG_BAD39) > 5) 
+describe EWG_VIAGRA Viagra Obfuscation SPAM
+score  	 EWG_VIAGRA 1.0
+
+rawbody   __EWG_BAD41 />\s{0,3}C\s{0,3}</i
+rawbody   __EWG_BAD42 />\s{0,3}I\s{0,3}</i
+rawbody   __EWG_BAD43 />\s{0,3}A\s{0,3}</i
+rawbody   __EWG_BAD44 />\s{0,3}L\s{0,3}</i
+rawbody   __EWG_BAD45 />\s{0,3}I\s{0,3}</i
+rawbody   __EWG_BAD46 />\s{0,3}S\s{0,3}</i
+meta   	EWG_CIALIS ((__EWG_BAD41 + __EWG_BAD42 + __EWG_BAD43 + __EWG_BAD44 + __EWG_BAD45 + __EWG_BAD46) > 5)
+describe EWG_CIALIS Cialis Obfuscation spam
+score   EWG_CIALIS 1.0
+
+rawbody   __EWG_BAD48 />\s{0,3}V\s{0,3}</i
+rawbody   __EWG_BAD49 />\s{0,3}A\s{0,3}</i
+rawbody   __EWG_BAD50 />\s{0,3}L\s{0,3}</i
+rawbody   __EWG_BAD51 />\s{0,3}I\s{0,3}</i
+rawbody   __EWG_BAD52 />\s{0,3}U\s{0,3}</i
+rawbody   __EWG_BAD53 />\s{0,3}M\s{0,3}</i
+meta   	EWG_VALIUM ((__EWG_BAD48 + __EWG_BAD49 + __EWG_BAD50 + __EWG_BAD51 + __EWG_BAD52 + __EWG_BAD53) > 5)
+describe EWG_VALIUM Valium Obfuscation Spam
+score   EWG_VALIUM 1.000
+
+#FOR CURRENT RND_UC_CHAR SPAMS
+header SUBJ_RND_UC_CHAR_L       Subject =~ /\%RND_UC_CHAR/
+describe SUBJ_RND_UC_CHAR_L     Subject contains literal RND_UC_CHAR tag
+score SUBJ_RND_UC_CHAR_L        5.0
+
+header SUBJ_RND_UC_CHAR         Subject =~ /^Re:\s[A-Z]{2,8},\s[a-z]+\s[a-z]+\s[a-z]+\s*$/
+describe SUBJ_RND_UC_CHAR       Subject fits RND_UC_CHAR pattern
+score SUBJ_RND_UC_CHAR          1.0
+
+uri         PHARMACOURT_BIZ 	/\b(?:pharmacourt|pharmawarehouse|valuepointmeds)\.biz\b/i
+describe    PHARMACOURT_BIZ 	Includes a link to spammer www.pharmacourt.biz
+score       PHARMACOURT_BIZ 	3.0
+
+#meta        HABEAS_VIOLATOR_LOCAL   (!HABEAS_VIOLATOR && PHARMACOURT_BIZ && HABEAS_SWE)
+#describe    HABEAS_VIOLATOR_LOCAL   Spammer known to abuse Habeas mark
+#score       HABEAS_VIOLATOR_LOCAL   16.0
+
+rawbody     UAH_VIAGRA_IMAGE 	/^<center><\!--[a-zA-Z0-9]{10,20}--><a href=.+><img src=.+\/[a-z][1-9]\.gif\" border=0><\/a><\/center>$/i
+describe    UAH_VIAGRA_IMAGE	Viagra Image
+score	    UAH_VIAGRA_IMAGE    3.0
+
+
+#INVALID QMAIL 
+header  	GERMANSPAM MESSAGEID =~ /^<.*[a-z].*\.qmail\@.*>/
+describe        GERMANSPAM Contains German Spam / Invalid Qmail Message ID
+score           GERMANSPAM 3.0
+
+#GOOGLE Who really uses the "I'm Feeling Lucky" button anyway? by John Wilcock
+uri      local_GOOGLE_LUCKY /(?:\bgoogle\b).+(?:&btnI=)/i
+describe local_GOOGLE_LUCKY Redirect through Google Feeling Lucky
+score    local_GOOGLE_LUCKY 2.0
+
+#ZD.NET's OPEN REDIR by Raymond Dijkxhoorn
+uri PROLO_REDIR_ZDNET_CHECK_1 /http:\/\/.*chkpt.zdnet.com\/chkpt/
+score PROLO_REDIR_ZDNET_CHECK_1  8.0
+describe PROLO_REDIR_ZDNET_CHECK_1 PROLO_REDIR-ZDNET CHECK_1_2_3, Body
+
+#TINYTEXT by Jonathan Maliepaard <jon@enetworks.co.za>
+#describe TINY_TEXT_1              Body includes very small html text 
+#rawbody TINY_TEXT_1              /FONT-SIZE: (?:1|1.5|2|2.5|3)px/i
+#score TINY_TEXT_1                  1.5
+
+#describe TINY_TEXT_2              Body includes very small html text 
+#rawbody TINY_TEXT_2              /FONT-SIZE: (?:1|1.5|2|2.5|3)\;/i
+#score TINY_TEXT_2                  1.5
+
+
+#HABEAS MARK TOO OFTEN FORGED
+#REMOVED FOR 3.0SA #score HABEAS_SWE 0.0
+
+#patch to MS Outlook 2003 has changed the headers
+#REMOVED FOR 3.0SA #score   FORGED_MUA_OUTLOOK 0.00
+
+#SCORE ADJUSTMENTS
+#REMOVED FOR 3.0SA #score   RCVD_IN_NJABL_DIALUP    1.5
+#REMOVED FOR 3.0SA #score   RCVD_IN_DYNABLOCK       1.0
+#REMOVED FROM RULES score DNS_FROM_OPENWHOIS		2.0
+
+#
+# Abusive public hosting Raymond Dijkxhoorn
+#
+
+uri PROLO_PUBWEB_UKGEO_CHECK1 /^http:\/\/.*uk\.geocities\.com\//
+score PROLO_PUBWEB_UKGEO_CHECK1  5.0
+describe PROLO_PUBWEB_UKGEO_CHECK1 PROLO_PUBWEB_UKGEO_CHECK1, Body
+
+uri PROLO_PUBWEB_ITGEO_CHECK1 /^http:\/\/.*it\.geocities\.com\//
+score PROLO_PUBWEB_ITGEO_CHECK1  5.0
+describe PROLO_PUBWEB_ITGEO_CHECK1 PROLO_PUBWEB_ITGEO_CHECK1, Body
+
+uri PROLO_PUBWEB_WWWGEO_CHECK1 /^http:\/\/.*www\.geocities\.com\//
+score PROLO_PUBWEB_WWWGEO_CHECK1  5.0
+describe PROLO_PUBWEB_WWWGEO_CHECK1 PROLO_PUBWEB_WWWGEO_CHECK1, Body
+
+uri PROLO_HOSTING_PROHOSTING_CHK1 /^http:\/\/.*prohosting\.com\//
+score PROLO_HOSTING_PROHOSTING_CHK1  5.0
+describe PROLO_HOSTING_PROHOSTING_CHK1 PROLO_HOSTING_PROHOSTING_CHK1, Body
+
+uri PROLO_HOSTING_XTHOST_CHK1 /^http:\/\/.*xthost\.info\//
+score PROLO_HOSTING_XTHOST_CHK1  5.0
+describe PROLO_HOSTING_XTHOST_CHK1 PROLO_HOSTING_XTHOST_CHK1, Body
+
+uri PROLO_HOSTING_NET4FREE_CHK1 /^http:\/\/.*net4free\.org\//
+score PROLO_HOSTING_NET4FREE_CHK1  5.0
+describe PROLO_HOSTING_NET4FREE_CHK1 PROLO_HOSTING_NET4FREE_CHK1, Body
+
+#Raymond's SA Rules for Tripod Spams from Leo
+body            PROLO_LEO1              /85\,45|1\,21/
+body            PROLO_LEO2              /69\,95|3\,33/
+body            PROLO_LEO3              /99\,95|3\,75/
+uri             PROLO_LEO4              /http:\/\/.*\.tripod\.com/
+meta            PROLO_LEO_M1           (PROLO_LEO1 && PROLO_LEO2 && PROLO_LEO3 && PROLO_LEO4)
+
+score           PROLO_LEO1             0.1
+score           PROLO_LEO2             0.1
+score           PROLO_LEO3             0.1
+score           PROLO_LEO4             0.1
+score           PROLO_LEO_M1           8
+
+describe        PROLO_LEO1             Meta Catches all Leo drug variations so far
+describe        PROLO_LEO2             Meta Catches all Leo drug variations so far
+describe        PROLO_LEO3             Meta Catches all Leo drug variations so far
+describe        PROLO_LEO4             Meta to catch Leo now using Tripod
+describe        PROLO_LEO_M1           Catches all Leo drug variations so far
+
+#JUNK SCORES TO RECREATE ROUNDING BUG
+#score		RDNS_NONE		0.0
+#header		TEMP			Received =~ /64.18.1.27/
+#score		TEMP			-0.5
+#score           KAM_LIVE         0.0
+
+#DFS Rule for Warning: Malformed MIME virus in the wild 10-10-2013
+full __RP_ZIP_TYPE /name\s{0,2}=\s{0,2}.{0,80}\.zip/i
+full     __RP_EMPTY_CTYPE /Content-Type:\s{0,4};/i
+meta	 RP_ZIP_ECTYP __RP_EMPTY_CTYPE && __RP_ZIP_TYPE
+describe RP_ZIP_ECTYP Zip file attachment with bogus Content-Type: header
+score	 RP_ZIP_ECTYP 15
+
+#AXB TEXTAREA
+rawbody 	__AXB_RAW_TXTRO1	/\<textarea name\=\"textmain\" readonly\=\"readonly\" style\=\"width\:/
+rawbody         __AXB_RAW_TXTRO2   	/\<textarea readonly\=\"readonly\" name\=\"textmain\" style\=\"width\:/
+meta		AXB_RAW_TXTRO		(__AXB_RAW_TXTRO1 + __AXB_RAW_TXTRO2 >= 2)
+describe	AXB_RAW_TXTRO		R/O Textarea
+score		AXB_RAW_TXTRO		5.0
+
+##########################################################################
+# - Find messages with eight or more html break characters in it.
+# - From: Kevin Miller <Kevin_Miller@ci.juneau.ak.us>
+##########################################################################
+
+# HTML <BR>
+rawbody   __CBJ_GiveMeABreak1      /(?:<\/?br ?\/?>[\s\r\n]{0,4}){8}/mi
+
+# NEWLINES - DISABLED
+rawbody   __CBJ_GiveMeABreak2      /(?:[\r\n]){8}/mi
+
+# EMPTY TABLE ROWS
+rawbody   __CBJ_GiveMeABreak3      /(?:<tr><td><\/td><\/tr>[\r\n]{0,4}){4}/mi
+
+# EMPTY PARAGRAPHS
+rawbody   __CBJ_GiveMeABreak4      /(?:<p[^>]*>&nbsp;<\/p>\s*){4}|(?:<div[^>]*>&nbsp;<\/div>\s*){4}/mi
+
+meta      CBJ_GiveMeABreak      (__CBJ_GiveMeABreak1 + __CBJ_GiveMeABreak3 + __CBJ_GiveMeABreak4 >= 1)
+describe  CBJ_GiveMeABreak      Messages with consecutive break characters
+score     CBJ_GiveMeABreak      1.75
+
+# FIX FOR THE FAILURE THAT IS OUTLOOK
+meta  MSGID_MULTIPLE_AT_OUTLOOK  (MSGID_MULTIPLE_AT && __ANY_OUTLOOK_MUA && !MSGID_OUTLOOK_INVALID)
+score MSGID_MULTIPLE_AT_OUTLOOK  -1.00
+describe MSGID_MULTIPLE_AT_OUTLOOK Undo MSGID_MULTIPLE_AT for Outlook MUAs that fail at standards
+
+# SPAM THAT SAYS IT IS SPAM
+header   AXB_X_FF_SEZ_S X-Forefront-Antispam-Report =~ /^SFV\:SPM/
+describe AXB_X_FF_SEZ_S Forefront says this is spam
+score    AXB_X_FF_SEZ_S 1.5
+
+# HACKED WORDPRESS SITES
+uri        __RP_D_00069_1 /\/wp-content\/(?:plugins|themes)\/.*\.php/is
+uri        __RP_D_00069_2 /\/wp-includes\/.*\.php/is
+meta       RP_D_00069 __RP_D_00069_1 || __RP_D_00069_2
+describe   RP_D_00069 Contains URL that may point to hacked WordPress site
+score      RP_D_00069 1.2
+
+#lowering score on this rule from 1.5 to 1.2 and the stock URI_WP_HACKED_2 to 2.1
+score	   URI_WP_HACKED_2   2.1
+
+# from John Hardin <jhardin@impsec.org>
+# reported on users list 09/2014 George Johnson <georgejohnson@talaya.net>
+header    __RAND_HEADER                ALL =~ /^(?!Accept-Language|Authentication-Results|Content-|DomainKey-Signature|DKIM-|List-|MIME-|Received-SPF|Return-Path|Thread-|User-Agent)(?:[a-z]{4,}-[a-z]{3,}|[a-z]{3,}-[a-z]{5,}):\s+(?:\d{3,}[-\.][0-9a-f]{6,}|\d{6,}(?:[-\.]\d{2,5})?|[0-9a-f]{30,})$/ism
+tflags    __RAND_HEADER                multiple maxhits=5
+meta      RAND_HEADER_MANY             __RAND_HEADER > 4
+describe  RAND_HEADER_MANY             Many random gibberish message headers
+score     RAND_HEADER_MANY             1.500   # limit
+
+
+uri    AXB_URI_MLW_DROPBOX    /\/(dropbox|googlebox)\/(document|doc|invoice)\.php$/
+score  AXB_URI_MLW_DROPBOX    100
+
+# from axb - the .link tld is completely useless and spam-ridden
+# FP from 2017-09-12 removed
+if (version >= 3.004000)
+  #blacklist_uri_host link
+endif
+
+# COSTCO SPAM RULE FROM DIANNE F SKOLL
+uri        __RP_D_00081_1 /\.php\?(?:dp|k|c|t)=[\/A-Za-z0-9=+]{25}/
+header     __RP_D_00081_2 Subject =~ /\b(?:order|buying)\b/i
+meta       RP_D_00081 __RP_D_00081_1 && __RP_D_00081_2
+describe   RP_D_00081 Link to malware
+score      RP_D_00081 3.5
+
+# MORE AXB - PENDING BUG 4691
+#rawbody  MINIMAL_PAGE_128 	/\<HTML\>\<BODY\>\<\/BODY\>\<\/HTML\>/
+#range    MINIMAL_PAGE_128        byte 0:128
+#score    MINIMAL_PAGE_128        5.0
+
+#fast_body       PILLS_VIAGRA     /Blue pill and all popular Meds/
+#score           PILLS_VIAGRA     5.0
+
+#NOTE 53548 - TESTING JUNKEMAIL FILTER CHECK - TESTING WITH RULES 1/2 OF DOCUMENTED
+header __RCVD_IN_HOSTKARMA eval:check_rbl('HOSTKARMA-lastexternal','hostkarma.junkemailfilter.com.')
+describe __RCVD_IN_HOSTKARMA Sender listed in JunkEmailFilter
+tflags __RCVD_IN_HOSTKARMA net
+ 
+header RCVD_IN_HOSTKARMA_W eval:check_rbl_sub('HOSTKARMA-lastexternal', '127.0.0.1')
+describe RCVD_IN_HOSTKARMA_W Sender listed in HOSTKARMA-WHITE
+tflags RCVD_IN_HOSTKARMA_W net nice
+score RCVD_IN_HOSTKARMA_W -2.5
+ 
+header RCVD_IN_HOSTKARMA_BL eval:check_rbl_sub('HOSTKARMA-lastexternal', '127.0.0.2')
+describe RCVD_IN_HOSTKARMA_BL Sender listed in HOSTKARMA-BLACK
+tflags RCVD_IN_HOSTKARMA_BL net
+score RCVD_IN_HOSTKARMA_BL 1.5
+ 
+header RCVD_IN_HOSTKARMA_BR eval:check_rbl_sub('HOSTKARMA-lastexternal', '127.0.0.4')
+describe RCVD_IN_HOSTKARMA_BR Sender listed in HOSTKARMA-BROWN
+tflags RCVD_IN_HOSTKARMA_BR net
+score RCVD_IN_HOSTKARMA_BR 0.5
+
+#Steadramon's bogus SPF rules  - https://issues.apache.org/SpamAssassin/show_bug.cgi?id=7099 
+ifplugin Mail::SpamAssassin::Plugin::AskDNS
+  askdns PDS_SPF_ALL _SENDERDOMAIN_ TXT /^v=spf1 .+\+all$/
+  describe PDS_SPF_ALL SPF set to +all!
+  score PDS_SPF_ALL 4.5
+
+  askdns PDS_SPF_NONE _SENDERDOMAIN_ TXT /^v=spf1 \-all$/
+  describe PDS_SPF_NONE No IP is supposed to send email for this domain!
+  score PDS_SPF_NONE 3.5
+
+  askdns PDS_SPF_ONLYALL _SENDERDOMAIN_ TXT /^v=spf1 \+all$/
+  describe PDS_SPF_ONLYALL SPF only +all - very lazy
+  score PDS_SPF_ONLYALL 4.5
+endif
+
+# FROM DFS
+ifplugin Mail::SpamAssassin::Plugin::MIMEHeader
+mimeheader RP_D_00086 Content-Disposition =~ /SecureMessage\.chm/
+score      RP_D_00086 50
+describe   RP_D_00086 SecureMessage.chm malware
+endif
+
+# FROM BENNY PEDERSEN
+# sig of fill space to possible drop scanning if clients have very low
+# size on how much thay send to spamassassin in size
+
+rawbody POISEN_SPAM_PILL_1 /\ \/[a-zA-Z0-9]{5}/i
+tflags POISEN_SPAM_PILL_1 multiple maxhits=1
+describe POISEN_SPAM_PILL_1 random spam to be learned in bayes
+score POISEN_SPAM_PILL_1 0.1 0.1 0.1 0.1
+
+rawbody POISEN_SPAM_PILL_2 /\ \/\/[a-zA-Z0-9]{5}/i
+tflags POISEN_SPAM_PILL_2 multiple maxhits=1
+describe POISEN_SPAM_PILL_2 random spam to be learned in bayes
+score POISEN_SPAM_PILL_2 0.1 0.1 0.1 0.1
+
+# lets check above is in body :=)
+
+body POISEN_SPAM_PILL_3 /\ \/[a-zA-Z0-9]{5}/i
+tflags POISEN_SPAM_PILL_3 multiple maxhits=1
+describe POISEN_SPAM_PILL_3 random spam to be learned in bayes
+score POISEN_SPAM_PILL_3 0.1 0.1 0.1 0.1
+
+body POISEN_SPAM_PILL_4 /\ \/\/[a-zA-Z0-9]{5}/i
+tflags POISEN_SPAM_PILL_4 multiple maxhits=1
+describe POISEN_SPAM_PILL_4 random spam to be learned in bayes
+score POISEN_SPAM_PILL_4 0.1 0.1 0.1 0.1
+
+# meta is now
+
+meta POISEN_SPAM_PILL ((POISEN_SPAM_PILL_1 || POISEN_SPAM_PILL_2) && (!POISEN_SPAM_PILL_3 || !POISEN_SPAM_PILL_4))
+describe POISEN_SPAM_PILL Meta: its spam
+score POISEN_SPAM_PILL 0.1 0.1 0.1 0.1
+
+#HENRIK KROHNS DEPENDENCY ISSUES FROM OLD SANDBOX
+ifplugin Mail::SpamAssassin::Plugin::MIMEHeader
+  mimeheader      __HK_SPAMMY_CTFN        Content-Type =~ /name=.*?(?:lot(?:eri[ej]|t(?:ery|o))|award|prize|winn(?:er|ing)|microsoft|congrat|urgent)/mi
+  mimeheader      __HK_SPAMMY_CDFN        Content-Disposition =~ /name=.*?(?:lot(?:eri[ej]|t(?:ery|o))|award|prize|winn(?:er|ing)|microsoft|congrat|urgent)/mi
+  meta            HK_SPAMMY_FILENAME      __HK_SPAMMY_CTFN || __HK_SPAMMY_CDFN
+  score           HK_SPAMMY_FILENAME      0.5
+  describe        HK_SPAMMY_FILENAME      Content Type or Disposition is Spammy
+endif
+
+#KHOPESH DEPENDENCY ISSUES FROM OLD SANDBOX
+meta     MALFORMED_FREEMAIL     (MISSING_HEADERS||__HDRS_LCASE) && FREEMAIL_FROM
+describe MALFORMED_FREEMAIL     Bad headers on message from free email service
+score   MALFORMED_FREEMAIL     0.1
+
+#DAVE JONES / ENA OK TO ADD TO SA DEFAULT IF PROVEN WORTHY
+header          ENA_SUBJ_IS_SPACE       Subject =~ /^ $/
+describe        ENA_SUBJ_IS_SPACE       Subject is a space
+score           ENA_SUBJ_IS_SPACE       1.2
+#Lowered score from 3.2 for testing 9/19
+
+header          ENA_SUBJ_ONLY_SPACES    Subject =~ /^\s\s+$/
+describe        ENA_SUBJ_ONLY_SPACES    Subject is only spaces commonly used by spammers to get around subject checks
+score           ENA_SUBJ_ONLY_SPACES    0.2
+#Lowered score from 2.2 for testing 9/19
+
+header          ENA_SUBJ_ONLY_FWD       Subject =~ /(^Fw:\s+$|^Fw\s+$|^Fwd:\s+$|^Fwd\s+$|^Fwd: \(\d\)$|^Fwd: \[\d\]$)/i
+describe        ENA_SUBJ_ONLY_FWD       Subject is only "Fwd:"
+score           ENA_SUBJ_ONLY_FWD       2.2
+
+header          ENA_SUBJ_ONLY_RE        Subject =~ /(^Re:\s+$|^Re\s+$|^Re: \(\d\)$|^Re: \[\d\]$)/i
+describe        ENA_SUBJ_ONLY_RE        Subject is only "Re:"
+score           ENA_SUBJ_ONLY_RE        2.2
+
+header          ENA_SUBJ_LONG_WORD      Subject =~ /\b[^[:space:][:punct:]]{30}/
+describe        ENA_SUBJ_LONG_WORD      Subject has a very long word
+score           ENA_SUBJ_LONG_WORD      2.2
+
+header          ENA_SUBJ_ODD_CASE       Subject =~ /(?:[[:lower:]][[:upper:]].{0,15}){3}/
+describe        ENA_SUBJ_ODD_CASE       Subject has odd case
+score           ENA_SUBJ_ODD_CASE       2.6
+
+
+# David Jones <djones@ena.com>, SA users list, 2 Oct 2017
+
+#header   USERS_FROM_SPOOF_EMAIL_DISPLAY  From =~ /\@[a-z_]+?\.[a-z]{2,3} \</i
+#score    USERS_FROM_SPOOF_EMAIL_DISPLAY  0.1
+
+#describe USERS_FROM_SPOOF_EMAIL_DISPLAY  From trying to spoof an email address in the display name
+
+# RW <rwmaillists@googlemail.com>, SA users list, 5 Oct 2017
+
+#header   USERS_FROM_ADDR_SPACE  From:addr =~ /\s/
+#score    USERS_FROM_ADDR_SPACE  0.1
+
+
+# Note 56133, SA bug 5561
+#score FORGED_YAHOO_RCVD 0
+
+
+# RW <rwmaillists@googlemail.com>, SA users list, 26 Apr 2019
+header    BOGUS_MIME_VERSION  MIME-Version =~ /^(?!.*\b1\.0\b).+/
+score     BOGUS_MIME_VERSION  0.5
+describe  BOGUS_MIME_VERSION  bogus MIME-Version header
+
+# by Paul Stead <paul.stead@zeninternet.co.uk>
+if (version >= 3.004000)
+ifplugin Mail::SpamAssassin::Plugin::FromNameSpoof
+  # skip message signed by these DKIM senders
+  fns_ignore_dkim linkedin.com googlegroups.com yahoogroups.com yahoogroups.de
+
+  # skip messages with one or more of these headers
+  fns_ignore_headers List-Id List-Post Mailing-List X-Forwarded-For
+
+  # group similar domains to one name
+  fns_add_addrlist   (GMAIL)  *@gmail.com *@googlemail.com
+
+  # From:name and From:address don't match and owners differ
+  header   __PLUGIN_FROMNAME_SPOOF eval:check_fromname_spoof()
+
+  # From:name address matches To:address
+  header   __PLUGIN_FROMNAME_EQUALS_TO eval:check_fromname_equals_to()
+
+  meta     PDS_FROMNAME_SPOOFED_EMAIL  (__PLUGIN_FROMNAME_SPOOF && !__VIA_ML && !__VIA_RESIGNER && !__RP_MATCHES_RCVD)
+  describe PDS_FROMNAME_SPOOFED_EMAIL From:name doesn't match From:address
+  score    PDS_FROMNAME_SPOOFED_EMAIL 0.2
+
+endif
+endif
+
+# by Pedro David Marcos
+ifplugin Mail::SpamAssassin::Plugin::AskDNS
+  uri_detail      PDM_URI_GOOGLEAPIS          text =~ /check|click|update|renew|preview/i         cleaned =~ /\.googleapis\./i
+  describe        PDM_URI_GOOGLEAPIS          Rule to look for spammy Google API usage
+  score           PDM_URI_GOOGLEAPIS          3.0
+endif
+
+#RECOMMENDED BY Raymond Dijkxhoorn for SURBL to block abuses on these pages
+util_rb_3tld    ct.sendgrid.net
+util_rb_2tld    page.link
+
