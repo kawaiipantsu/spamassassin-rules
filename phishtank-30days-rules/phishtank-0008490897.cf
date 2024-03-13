@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008490897
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8490897
+## Submitted.....: 2024-03-13T02:54:04+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008490897_MATCH	/andywendt\.com/
+score		PHISHTANK_0008490897_MATCH	5.0
+describe	PHISHTANK_0008490897_MATCH	Phishtank ID 8490897 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008490897_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008490897_VALIDATED	PHISHTANK_0008490897_MATCH && __PHISHTANK_0008490897_VALCHECK
+score		PHISHTANK_0008490897_VALIDATED	2.0
+describe	PHISHTANK_0008490897_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008490897_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008490897_ONLINE	PHISHTANK_0008490897_MATCH && __PHISHTANK_0008490897_ONCHECK
+score		PHISHTANK_0008490897_ONLINE	2.0
+describe	PHISHTANK_0008490897_ONLINE	Phishing URL still online
+
+##

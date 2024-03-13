@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008483535
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8483535
+## Submitted.....: 2024-03-08T18:09:31+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008483535_MATCH	/worker\-plain\-night\-596e\.president\-post32212\.workers\.dev\//
+score		PHISHTANK_0008483535_MATCH	5.0
+describe	PHISHTANK_0008483535_MATCH	Phishtank ID 8483535 (Microsoft) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008483535_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008483535_VALIDATED	PHISHTANK_0008483535_MATCH && __PHISHTANK_0008483535_VALCHECK
+score		PHISHTANK_0008483535_VALIDATED	2.0
+describe	PHISHTANK_0008483535_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008483535_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008483535_ONLINE	PHISHTANK_0008483535_MATCH && __PHISHTANK_0008483535_ONCHECK
+score		PHISHTANK_0008483535_ONLINE	2.0
+describe	PHISHTANK_0008483535_ONLINE	Phishing URL still online
+
+##
