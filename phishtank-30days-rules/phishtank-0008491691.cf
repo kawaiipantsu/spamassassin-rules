@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008491691
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8491691
+## Submitted.....: 2024-03-13T19:22:22+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008491691_MATCH	/samwueoieudhgsuwyecube03\.pages\.dev/
+score		PHISHTANK_0008491691_MATCH	5.0
+describe	PHISHTANK_0008491691_MATCH	Phishtank ID 8491691 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008491691_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008491691_VALIDATED	PHISHTANK_0008491691_MATCH && __PHISHTANK_0008491691_VALCHECK
+score		PHISHTANK_0008491691_VALIDATED	2.0
+describe	PHISHTANK_0008491691_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008491691_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008491691_ONLINE	PHISHTANK_0008491691_MATCH && __PHISHTANK_0008491691_ONCHECK
+score		PHISHTANK_0008491691_ONLINE	2.0
+describe	PHISHTANK_0008491691_ONLINE	Phishing URL still online
+
+##

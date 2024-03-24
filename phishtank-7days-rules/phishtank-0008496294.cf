@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008496294
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8496294
+## Submitted.....: 2024-03-18T03:45:07+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008496294_MATCH	/office633b87c4cc156968b306b6c349754181633b87c4cc156968b306b6c34\.officesharesfilez\.workers\.dev/
+score		PHISHTANK_0008496294_MATCH	5.0
+describe	PHISHTANK_0008496294_MATCH	Phishtank ID 8496294 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008496294_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008496294_VALIDATED	PHISHTANK_0008496294_MATCH && __PHISHTANK_0008496294_VALCHECK
+score		PHISHTANK_0008496294_VALIDATED	2.0
+describe	PHISHTANK_0008496294_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008496294_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008496294_ONLINE	PHISHTANK_0008496294_MATCH && __PHISHTANK_0008496294_ONCHECK
+score		PHISHTANK_0008496294_ONLINE	2.0
+describe	PHISHTANK_0008496294_ONLINE	Phishing URL still online
+
+##
