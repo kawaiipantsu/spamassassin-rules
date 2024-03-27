@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008488871
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8488871
+## Submitted.....: 2024-03-11T22:35:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008488871_MATCH	/rp\.mockplus\.com\/rps\/aSH2sZTDHX/
+score		PHISHTANK_0008488871_MATCH	5.0
+describe	PHISHTANK_0008488871_MATCH	Phishtank ID 8488871 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008488871_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008488871_VALIDATED	PHISHTANK_0008488871_MATCH && __PHISHTANK_0008488871_VALCHECK
+score		PHISHTANK_0008488871_VALIDATED	2.0
+describe	PHISHTANK_0008488871_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008488871_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008488871_ONLINE	PHISHTANK_0008488871_MATCH && __PHISHTANK_0008488871_ONCHECK
+score		PHISHTANK_0008488871_ONLINE	2.0
+describe	PHISHTANK_0008488871_ONLINE	Phishing URL still online
+
+##

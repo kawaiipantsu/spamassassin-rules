@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008497576
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8497576
+## Submitted.....: 2024-03-18T17:51:17+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008497576_MATCH	/ia600200\.us\.archive\.org\/28\/items\/signin_202403\/signin\.shtml/
+score		PHISHTANK_0008497576_MATCH	5.0
+describe	PHISHTANK_0008497576_MATCH	Phishtank ID 8497576 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008497576_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008497576_VALIDATED	PHISHTANK_0008497576_MATCH && __PHISHTANK_0008497576_VALCHECK
+score		PHISHTANK_0008497576_VALIDATED	2.0
+describe	PHISHTANK_0008497576_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008497576_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008497576_ONLINE	PHISHTANK_0008497576_MATCH && __PHISHTANK_0008497576_ONCHECK
+score		PHISHTANK_0008497576_ONLINE	2.0
+describe	PHISHTANK_0008497576_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008485335
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8485335
+## Submitted.....: 2024-03-09T21:52:37+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008485335_MATCH	/adminservice\.ubpages\.com\/neymar\//
+score		PHISHTANK_0008485335_MATCH	5.0
+describe	PHISHTANK_0008485335_MATCH	Phishtank ID 8485335 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008485335_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008485335_VALIDATED	PHISHTANK_0008485335_MATCH && __PHISHTANK_0008485335_VALCHECK
+score		PHISHTANK_0008485335_VALIDATED	2.0
+describe	PHISHTANK_0008485335_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008485335_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008485335_ONLINE	PHISHTANK_0008485335_MATCH && __PHISHTANK_0008485335_ONCHECK
+score		PHISHTANK_0008485335_ONLINE	2.0
+describe	PHISHTANK_0008485335_ONLINE	Phishing URL still online
+
+##

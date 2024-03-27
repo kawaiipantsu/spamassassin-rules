@@ -1,10 +1,23 @@
 # ᵔᴥᵔ SpamAssassin - My Custom Rules!
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/davidbl.svg?style=social&label=Follow)](https://twitter.com/davidbl) [![GitHub issues](https://img.shields.io/github/issues/kawaiipantsu/spamassassin-rules.svg)](https://github.com/kawaiipantsu/spamassassin-rules/issues) [![GitHub closed issues](https://img.shields.io/github/issues-closed/kawaiipantsu/spamassassin-rules.svg)](https://github.com/kawaiipantsu/spamassassin-rules/issues) [![GitHub license](https://img.shields.io/github/license/kawaiipantsu/spamassassin-rules.svg)](https://github.com/kawaiipantsu/spamassassin-rules/blob/master/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/kawaiipantsu/spamassassin-rules.svg)](https://github.com/kawaiipantsu/spamassassin-rules/network) [![GitHub stars](https://img.shields.io/github/stars/kawaiipantsu/spamassassin-rules.svg)](https://github.com/kawaiipantsu/spamassassin-rules/stargazers)
+[![Donate with PayPal](https://img.shields.io/badge/PayPal-donate-orange)](https://www.paypal.me/alsyundawy)
+[![Sponsor with GitHub](https://img.shields.io/badge/GitHub-sponsor-orange)](https://github.com/sponsors/alsyundawy)
+[![Latest Version](https://img.shields.io/github/v/release/alsyundawy/Microsoft-Office-For-MacOS)](https://github.com/alsyundawy/Microsoft-Office-For-MacOS/releases)
+[![Maintenance Status](https://img.shields.io/maintenance/yes/9999)](https://github.com/alsyundawy/Microsoft-Office-For-MacOS/)
+[![License](https://img.shields.io/github/license/alsyundawy/Microsoft-Office-For-MacOS)](https://github.com/alsyundawy/Microsoft-Office-For-MacOS/blob/master/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/alsyundawy/Microsoft-Office-For-MacOS)](https://github.com/alsyundawy/Microsoft-Office-For-MacOS/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/alsyundawy/Microsoft-Office-For-MacOS)](https://github.com/alsyundawy/Microsoft-Office-For-MacOS/pulls)
+[![GitHub Stars](https://img.shields.io/github/stars/alsyundawy/Microsoft-Office-For-MacOS?style=social)](https://github.com/alsyundawy/Microsoft-Office-For-MacOS/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/alsyundawy/Microsoft-Office-For-MacOS?style=social)](https://github.com/alsyundawy/Microsoft-Office-For-MacOS/network/members)
+[![GitHub Contributors](https://img.shields.io/github/contributors/alsyundawy/Microsoft-Office-For-MacOS?style=social)](https://github.com/alsyundawy/Microsoft-Office-For-MacOS/graphs/contributors)
 
 > I use Spamassassin together with Amavisd and much more to support my Postfix SMTP server in fighting spam, phishing and viruses. Want to know more? - Let me know! ʘ‿ʘ
 
 [![Apache SpamAssassin (tm)](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/SpamAssassin_logo.png/1023px-SpamAssassin_logo.png "Apache SpamAssassin (tm)")](https://spamassassin.apache.org)
+
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/alsyundawy/Microsoft-Office-For-MacOS.svg?variant=adaptive)](https://starchart.cc/alsyundawy/Microsoft-Office-For-MacOS)
+
 
 # Table of Contents
 
