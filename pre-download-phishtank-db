@@ -1,6 +1,9 @@
 #!/bin/bash
 ## Try to download the file
-wget -c -O phishtank-latest-db.json http://data.phishtank.com/data/online-valid.json
+# wget -c -O phishtank-latest-db.json http://data.phishtank.com/data/online-valid.json
+
+## Stick to IPv4 (seems like their CDN fails with IPv6) also you need now to provide propper UA (yes yes just find a random username...)
+wget -4 -c -O ./phishtank-latest-db.json --user-agent="phishtank/thugsred" https://data.phishtank.com/data/online-valid.json
 
 if [ ! -f ./phishtank-latest-db.json ]
 then
