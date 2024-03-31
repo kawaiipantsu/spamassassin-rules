@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008504756
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8504756
+## Submitted.....: 2024-03-23T16:21:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008504756_MATCH	/docs\.google\.com\/presentation\/d\/e\/2PACX\-1vTdwHNPdaoq8yIwg6RyJS270slJOuloFWlsuOPk4zPMxAYLOKWrp_04vhqlk\-3J4nOw7iUra55wHW4u\/pub/
+score		PHISHTANK_0008504756_MATCH	5.0
+describe	PHISHTANK_0008504756_MATCH	Phishtank ID 8504756 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008504756_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008504756_VALIDATED	PHISHTANK_0008504756_MATCH && __PHISHTANK_0008504756_VALCHECK
+score		PHISHTANK_0008504756_VALIDATED	2.0
+describe	PHISHTANK_0008504756_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008504756_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008504756_ONLINE	PHISHTANK_0008504756_MATCH && __PHISHTANK_0008504756_ONCHECK
+score		PHISHTANK_0008504756_ONLINE	2.0
+describe	PHISHTANK_0008504756_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008510218
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8510218
+## Submitted.....: 2024-03-29T22:24:19+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008510218_MATCH	/68\.22\.205\.92\.host\.secureserver\.net\/login\-myswiss978911\//
+score		PHISHTANK_0008510218_MATCH	5.0
+describe	PHISHTANK_0008510218_MATCH	Phishtank ID 8510218 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008510218_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008510218_VALIDATED	PHISHTANK_0008510218_MATCH && __PHISHTANK_0008510218_VALCHECK
+score		PHISHTANK_0008510218_VALIDATED	2.0
+describe	PHISHTANK_0008510218_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008510218_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008510218_ONLINE	PHISHTANK_0008510218_MATCH && __PHISHTANK_0008510218_ONCHECK
+score		PHISHTANK_0008510218_ONLINE	2.0
+describe	PHISHTANK_0008510218_ONLINE	Phishing URL still online
+
+##

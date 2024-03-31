@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008508691
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8508691
+## Submitted.....: 2024-03-27T22:20:06+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008508691_MATCH	/central2\-terra\-suporte01\.ny\-2\.paas\.massivegrid\.net\/contato1\/index\.html/
+score		PHISHTANK_0008508691_MATCH	5.0
+describe	PHISHTANK_0008508691_MATCH	Phishtank ID 8508691 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008508691_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008508691_VALIDATED	PHISHTANK_0008508691_MATCH && __PHISHTANK_0008508691_VALCHECK
+score		PHISHTANK_0008508691_VALIDATED	2.0
+describe	PHISHTANK_0008508691_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008508691_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008508691_ONLINE	PHISHTANK_0008508691_MATCH && __PHISHTANK_0008508691_ONCHECK
+score		PHISHTANK_0008508691_ONLINE	2.0
+describe	PHISHTANK_0008508691_ONLINE	Phishing URL still online
+
+##
