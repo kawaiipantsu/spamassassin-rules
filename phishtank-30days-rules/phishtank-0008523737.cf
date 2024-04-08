@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008523737
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8523737
+## Submitted.....: 2024-04-05T22:25:06+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008523737_MATCH	/coreygunder\.com\/owWA3NLakh3R6\/434334%20\-%204434%20\-%204343%20\-%20344343%20\-%2043434%20\-%2034534%20\-%20434343%20\-%20434334%20\-%20434334%20\-%2035353\/43443%20\-%204335%20\-%2035335%20\-%20434333%20\-%20345353%20\-%20533535%20\-%2034535%20\-%2053553%20\-%2035335%20\-%2053535%20\-%20535353%20\-%205353\/XNMDu9GE\/9767546786/
+score		PHISHTANK_0008523737_MATCH	5.0
+describe	PHISHTANK_0008523737_MATCH	Phishtank ID 8523737 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008523737_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008523737_VALIDATED	PHISHTANK_0008523737_MATCH && __PHISHTANK_0008523737_VALCHECK
+score		PHISHTANK_0008523737_VALIDATED	2.0
+describe	PHISHTANK_0008523737_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008523737_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008523737_ONLINE	PHISHTANK_0008523737_MATCH && __PHISHTANK_0008523737_ONCHECK
+score		PHISHTANK_0008523737_ONLINE	2.0
+describe	PHISHTANK_0008523737_ONLINE	Phishing URL still online
+
+##

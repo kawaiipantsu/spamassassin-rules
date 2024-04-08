@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008514833
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8514833
+## Submitted.....: 2024-04-01T16:46:51+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008514833_MATCH	/pub\-95afdba016914f1e810782b54f87b561\.r2\.dev\/outlook\.office\.com%253Amail%253A7634\-3434\-234\-2324\-azure4324\-office3653\-7644\-4443\-434\-344%25203883%2525\.html/
+score		PHISHTANK_0008514833_MATCH	5.0
+describe	PHISHTANK_0008514833_MATCH	Phishtank ID 8514833 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008514833_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008514833_VALIDATED	PHISHTANK_0008514833_MATCH && __PHISHTANK_0008514833_VALCHECK
+score		PHISHTANK_0008514833_VALIDATED	2.0
+describe	PHISHTANK_0008514833_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008514833_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008514833_ONLINE	PHISHTANK_0008514833_MATCH && __PHISHTANK_0008514833_ONCHECK
+score		PHISHTANK_0008514833_ONLINE	2.0
+describe	PHISHTANK_0008514833_ONLINE	Phishing URL still online
+
+##

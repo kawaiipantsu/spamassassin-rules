@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008524524
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8524524
+## Submitted.....: 2024-04-06T17:01:11+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008524524_MATCH	/c23bf79d366a0f64f37edc5cc3f12774\.prls\.pl\/IPGR\/a78342u9g0\/3d3155ac64052192bbcf1172b1a526a2\/login\//
+score		PHISHTANK_0008524524_MATCH	5.0
+describe	PHISHTANK_0008524524_MATCH	Phishtank ID 8524524 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008524524_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008524524_VALIDATED	PHISHTANK_0008524524_MATCH && __PHISHTANK_0008524524_VALCHECK
+score		PHISHTANK_0008524524_VALIDATED	2.0
+describe	PHISHTANK_0008524524_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008524524_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008524524_ONLINE	PHISHTANK_0008524524_MATCH && __PHISHTANK_0008524524_ONCHECK
+score		PHISHTANK_0008524524_ONLINE	2.0
+describe	PHISHTANK_0008524524_ONLINE	Phishing URL still online
+
+##

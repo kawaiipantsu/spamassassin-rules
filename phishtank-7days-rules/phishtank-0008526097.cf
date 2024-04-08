@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008526097
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8526097
+## Submitted.....: 2024-04-07T19:28:22+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008526097_MATCH	/9d8f7fe6d45b4fc262b8bb573053aa1c\.rtyr\.pl\/IPGR\/a78342u9g0\/7742e324aeb379f7e9fd95f8187c52fb\/login\//
+score		PHISHTANK_0008526097_MATCH	5.0
+describe	PHISHTANK_0008526097_MATCH	Phishtank ID 8526097 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008526097_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008526097_VALIDATED	PHISHTANK_0008526097_MATCH && __PHISHTANK_0008526097_VALCHECK
+score		PHISHTANK_0008526097_VALIDATED	2.0
+describe	PHISHTANK_0008526097_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008526097_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008526097_ONLINE	PHISHTANK_0008526097_MATCH && __PHISHTANK_0008526097_ONCHECK
+score		PHISHTANK_0008526097_ONLINE	2.0
+describe	PHISHTANK_0008526097_ONLINE	Phishing URL still online
+
+##

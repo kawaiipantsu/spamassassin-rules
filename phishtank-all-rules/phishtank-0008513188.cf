@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008513188
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8513188
+## Submitted.....: 2024-03-31T20:24:52+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008513188_MATCH	/officedde6c95dd507ff48b539d60eff26b5dadde6c95dd507ff48b539d60ef\.theinspectiongroup\.workers\.dev/
+score		PHISHTANK_0008513188_MATCH	5.0
+describe	PHISHTANK_0008513188_MATCH	Phishtank ID 8513188 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008513188_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008513188_VALIDATED	PHISHTANK_0008513188_MATCH && __PHISHTANK_0008513188_VALCHECK
+score		PHISHTANK_0008513188_VALIDATED	2.0
+describe	PHISHTANK_0008513188_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008513188_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008513188_ONLINE	PHISHTANK_0008513188_MATCH && __PHISHTANK_0008513188_ONCHECK
+score		PHISHTANK_0008513188_ONLINE	2.0
+describe	PHISHTANK_0008513188_ONLINE	Phishing URL still online
+
+##

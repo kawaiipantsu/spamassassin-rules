@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008524731
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8524731
+## Submitted.....: 2024-04-06T23:35:08+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008524731_MATCH	/is\.gd\/RAn0Nu/
+score		PHISHTANK_0008524731_MATCH	5.0
+describe	PHISHTANK_0008524731_MATCH	Phishtank ID 8524731 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008524731_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008524731_VALIDATED	PHISHTANK_0008524731_MATCH && __PHISHTANK_0008524731_VALCHECK
+score		PHISHTANK_0008524731_VALIDATED	2.0
+describe	PHISHTANK_0008524731_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008524731_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008524731_ONLINE	PHISHTANK_0008524731_MATCH && __PHISHTANK_0008524731_ONCHECK
+score		PHISHTANK_0008524731_ONLINE	2.0
+describe	PHISHTANK_0008524731_ONLINE	Phishing URL still online
+
+##
