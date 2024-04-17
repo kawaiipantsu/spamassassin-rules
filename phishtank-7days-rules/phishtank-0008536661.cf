@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008536661
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8536661
+## Submitted.....: 2024-04-15T05:57:14+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008536661_MATCH	/pub\-4afcebadca53479e83f9e7d4bae6d5a6\.r2\.dev\/indexjs\.html/
+score		PHISHTANK_0008536661_MATCH	5.0
+describe	PHISHTANK_0008536661_MATCH	Phishtank ID 8536661 (American Express) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008536661_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008536661_VALIDATED	PHISHTANK_0008536661_MATCH && __PHISHTANK_0008536661_VALCHECK
+score		PHISHTANK_0008536661_VALIDATED	2.0
+describe	PHISHTANK_0008536661_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008536661_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008536661_ONLINE	PHISHTANK_0008536661_MATCH && __PHISHTANK_0008536661_ONCHECK
+score		PHISHTANK_0008536661_ONLINE	2.0
+describe	PHISHTANK_0008536661_ONLINE	Phishing URL still online
+
+##
