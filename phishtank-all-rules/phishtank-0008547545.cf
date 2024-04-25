@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008547545
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8547545
+## Submitted.....: 2024-04-23T07:52:35+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008547545_MATCH	/magicbath\.co\.in\/jstinta\/bluew\-ch\/clients\/username\.php/
+score		PHISHTANK_0008547545_MATCH	5.0
+describe	PHISHTANK_0008547545_MATCH	Phishtank ID 8547545 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008547545_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008547545_VALIDATED	PHISHTANK_0008547545_MATCH && __PHISHTANK_0008547545_VALCHECK
+score		PHISHTANK_0008547545_VALIDATED	2.0
+describe	PHISHTANK_0008547545_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008547545_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008547545_ONLINE	PHISHTANK_0008547545_MATCH && __PHISHTANK_0008547545_ONCHECK
+score		PHISHTANK_0008547545_ONLINE	2.0
+describe	PHISHTANK_0008547545_ONLINE	Phishing URL still online
+
+##
