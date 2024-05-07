@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008565050
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8565050
+## Submitted.....: 2024-05-06T14:10:27+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008565050_MATCH	/r\.info\.testgorilla\.com\/tr\/cl\/JzaOzmtdixTs_JIgMf_oid61J8lFKCuPperu4FMF04CTe2ISjrd8oGfwltkdQa59tchrEeD0yITD8Hw8vK274JEeuacYYNEfbkev\-eMEUJ5ZdPjlEkymZrwAUSvrN9uDbZHSZrP56ZB5haEAIsF7vqUFbRxwueeIF\-6gInjEBT\-hLww8CmFVjjW_V3HwAULJT_ncEEp\-_kk5l1qd96tzK7FkzGi9l55KzyadeM4PZFNAm_Bant\-FR9\-tTpS_s7sicpyOgGd1C6X5cu\-oJiTB\-7JQ4s3fNzdEghThC41__EY\-EJoBmo3t4cG0Y0Paz92xftdN5a38Du0r_f8qnjybrgMR3cnf7\-XPSM40hkchBg/
+score		PHISHTANK_0008565050_MATCH	5.0
+describe	PHISHTANK_0008565050_MATCH	Phishtank ID 8565050 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008565050_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008565050_VALIDATED	PHISHTANK_0008565050_MATCH && __PHISHTANK_0008565050_VALCHECK
+score		PHISHTANK_0008565050_VALIDATED	2.0
+describe	PHISHTANK_0008565050_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008565050_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008565050_ONLINE	PHISHTANK_0008565050_MATCH && __PHISHTANK_0008565050_ONCHECK
+score		PHISHTANK_0008565050_ONLINE	2.0
+describe	PHISHTANK_0008565050_ONLINE	Phishing URL still online
+
+##
