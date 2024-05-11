@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008570095
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8570095
+## Submitted.....: 2024-05-09T19:10:57+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008570095_MATCH	/5fggfgfgrfg4g4gh4hf\.blogspot\.com\//
+score		PHISHTANK_0008570095_MATCH	5.0
+describe	PHISHTANK_0008570095_MATCH	Phishtank ID 8570095 (Facebook) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008570095_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008570095_VALIDATED	PHISHTANK_0008570095_MATCH && __PHISHTANK_0008570095_VALCHECK
+score		PHISHTANK_0008570095_VALIDATED	2.0
+describe	PHISHTANK_0008570095_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008570095_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008570095_ONLINE	PHISHTANK_0008570095_MATCH && __PHISHTANK_0008570095_ONCHECK
+score		PHISHTANK_0008570095_ONLINE	2.0
+describe	PHISHTANK_0008570095_ONLINE	Phishing URL still online
+
+##
