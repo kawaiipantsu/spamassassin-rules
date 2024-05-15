@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008576726
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8576726
+## Submitted.....: 2024-05-14T20:58:15+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008576726_MATCH	/comcontactinquiryid0076da1b064d4ef098daed190f03896f\.info\/form\/personal/
+score		PHISHTANK_0008576726_MATCH	5.0
+describe	PHISHTANK_0008576726_MATCH	Phishtank ID 8576726 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008576726_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008576726_VALIDATED	PHISHTANK_0008576726_MATCH && __PHISHTANK_0008576726_VALCHECK
+score		PHISHTANK_0008576726_VALIDATED	2.0
+describe	PHISHTANK_0008576726_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008576726_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008576726_ONLINE	PHISHTANK_0008576726_MATCH && __PHISHTANK_0008576726_ONCHECK
+score		PHISHTANK_0008576726_ONLINE	2.0
+describe	PHISHTANK_0008576726_ONLINE	Phishing URL still online
+
+##

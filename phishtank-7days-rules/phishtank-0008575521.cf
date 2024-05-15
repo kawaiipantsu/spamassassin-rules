@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008575521
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8575521
+## Submitted.....: 2024-05-14T07:50:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008575521_MATCH	/us17\.list\-manage\.com\/survey/
+score		PHISHTANK_0008575521_MATCH	5.0
+describe	PHISHTANK_0008575521_MATCH	Phishtank ID 8575521 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008575521_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008575521_VALIDATED	PHISHTANK_0008575521_MATCH && __PHISHTANK_0008575521_VALCHECK
+score		PHISHTANK_0008575521_VALIDATED	2.0
+describe	PHISHTANK_0008575521_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008575521_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008575521_ONLINE	PHISHTANK_0008575521_MATCH && __PHISHTANK_0008575521_ONCHECK
+score		PHISHTANK_0008575521_ONLINE	2.0
+describe	PHISHTANK_0008575521_ONLINE	Phishing URL still online
+
+##
