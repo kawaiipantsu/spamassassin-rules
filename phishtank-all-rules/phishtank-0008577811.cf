@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008577811
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8577811
+## Submitted.....: 2024-05-16T07:03:42+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008577811_MATCH	/mmmmmmmmmmmmmm00776113442026\.000webhostapp\.com\/xxdex\.html/
+score		PHISHTANK_0008577811_MATCH	5.0
+describe	PHISHTANK_0008577811_MATCH	Phishtank ID 8577811 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008577811_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008577811_VALIDATED	PHISHTANK_0008577811_MATCH && __PHISHTANK_0008577811_VALCHECK
+score		PHISHTANK_0008577811_VALIDATED	2.0
+describe	PHISHTANK_0008577811_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008577811_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008577811_ONLINE	PHISHTANK_0008577811_MATCH && __PHISHTANK_0008577811_ONCHECK
+score		PHISHTANK_0008577811_ONLINE	2.0
+describe	PHISHTANK_0008577811_ONLINE	Phishing URL still online
+
+##
