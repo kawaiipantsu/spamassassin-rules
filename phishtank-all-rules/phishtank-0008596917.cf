@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008596917
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8596917
+## Submitted.....: 2024-06-02T01:41:14+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008596917_MATCH	/pub\-9be370c584ce41f591596de0ae3dea47\.r2\.dev\/owa\.html/
+score		PHISHTANK_0008596917_MATCH	5.0
+describe	PHISHTANK_0008596917_MATCH	Phishtank ID 8596917 (Microsoft) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008596917_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008596917_VALIDATED	PHISHTANK_0008596917_MATCH && __PHISHTANK_0008596917_VALCHECK
+score		PHISHTANK_0008596917_VALIDATED	2.0
+describe	PHISHTANK_0008596917_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008596917_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008596917_ONLINE	PHISHTANK_0008596917_MATCH && __PHISHTANK_0008596917_ONCHECK
+score		PHISHTANK_0008596917_ONLINE	2.0
+describe	PHISHTANK_0008596917_ONLINE	Phishing URL still online
+
+##

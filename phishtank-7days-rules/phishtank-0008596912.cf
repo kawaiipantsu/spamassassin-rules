@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008596912
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8596912
+## Submitted.....: 2024-06-02T01:32:46+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008596912_MATCH	/att\-104404\-109046\.weeblysite\.com\//
+score		PHISHTANK_0008596912_MATCH	5.0
+describe	PHISHTANK_0008596912_MATCH	Phishtank ID 8596912 (AT&amp;T) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008596912_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008596912_VALIDATED	PHISHTANK_0008596912_MATCH && __PHISHTANK_0008596912_VALCHECK
+score		PHISHTANK_0008596912_VALIDATED	2.0
+describe	PHISHTANK_0008596912_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008596912_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008596912_ONLINE	PHISHTANK_0008596912_MATCH && __PHISHTANK_0008596912_ONCHECK
+score		PHISHTANK_0008596912_ONLINE	2.0
+describe	PHISHTANK_0008596912_ONLINE	Phishing URL still online
+
+##

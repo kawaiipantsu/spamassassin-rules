@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008595199
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8595199
+## Submitted.....: 2024-06-01T17:42:17+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008595199_MATCH	/pub\-cf7659d5ca9341d3ab0caf93e7aff066\.r2\.dev\/adobe2024\.html/
+score		PHISHTANK_0008595199_MATCH	5.0
+describe	PHISHTANK_0008595199_MATCH	Phishtank ID 8595199 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008595199_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008595199_VALIDATED	PHISHTANK_0008595199_MATCH && __PHISHTANK_0008595199_VALCHECK
+score		PHISHTANK_0008595199_VALIDATED	2.0
+describe	PHISHTANK_0008595199_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008595199_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008595199_ONLINE	PHISHTANK_0008595199_MATCH && __PHISHTANK_0008595199_ONCHECK
+score		PHISHTANK_0008595199_ONLINE	2.0
+describe	PHISHTANK_0008595199_ONLINE	Phishing URL still online
+
+##
