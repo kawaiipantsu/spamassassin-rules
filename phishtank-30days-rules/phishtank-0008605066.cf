@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008605066
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8605066
+## Submitted.....: 2024-06-06T23:38:35+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008605066_MATCH	/account\.game\.rs\.com\-le\.ru\/en\-GB\/assisted\-login\=login_challenge\=dc197744c4a04124a6d04da6b85adcb4_ga\=2\.238398720\.1406457486\.1694086910\-1863512970\.169408678563454200/
+score		PHISHTANK_0008605066_MATCH	5.0
+describe	PHISHTANK_0008605066_MATCH	Phishtank ID 8605066 (RuneScape) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008605066_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008605066_VALIDATED	PHISHTANK_0008605066_MATCH && __PHISHTANK_0008605066_VALCHECK
+score		PHISHTANK_0008605066_VALIDATED	2.0
+describe	PHISHTANK_0008605066_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008605066_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008605066_ONLINE	PHISHTANK_0008605066_MATCH && __PHISHTANK_0008605066_ONCHECK
+score		PHISHTANK_0008605066_ONLINE	2.0
+describe	PHISHTANK_0008605066_ONLINE	Phishing URL still online
+
+##

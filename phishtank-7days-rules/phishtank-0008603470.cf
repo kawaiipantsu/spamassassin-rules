@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008603470
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8603470
+## Submitted.....: 2024-06-05T23:56:13+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008603470_MATCH	/pub\-0bf7cd9e2c85443595cf1e36e3935ce0\.r2\.dev\/woae\.html/
+score		PHISHTANK_0008603470_MATCH	5.0
+describe	PHISHTANK_0008603470_MATCH	Phishtank ID 8603470 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008603470_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008603470_VALIDATED	PHISHTANK_0008603470_MATCH && __PHISHTANK_0008603470_VALCHECK
+score		PHISHTANK_0008603470_VALIDATED	2.0
+describe	PHISHTANK_0008603470_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008603470_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008603470_ONLINE	PHISHTANK_0008603470_MATCH && __PHISHTANK_0008603470_ONCHECK
+score		PHISHTANK_0008603470_ONLINE	2.0
+describe	PHISHTANK_0008603470_ONLINE	Phishing URL still online
+
+##
