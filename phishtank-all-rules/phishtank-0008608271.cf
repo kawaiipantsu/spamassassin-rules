@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008608271
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8608271
+## Submitted.....: 2024-06-09T03:25:18+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008608271_MATCH	/altafiber11\-c4dc0c71cf67d9a8680d3c18060\.webflow\.io\//
+score		PHISHTANK_0008608271_MATCH	5.0
+describe	PHISHTANK_0008608271_MATCH	Phishtank ID 8608271 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008608271_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008608271_VALIDATED	PHISHTANK_0008608271_MATCH && __PHISHTANK_0008608271_VALCHECK
+score		PHISHTANK_0008608271_VALIDATED	2.0
+describe	PHISHTANK_0008608271_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008608271_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008608271_ONLINE	PHISHTANK_0008608271_MATCH && __PHISHTANK_0008608271_ONCHECK
+score		PHISHTANK_0008608271_ONLINE	2.0
+describe	PHISHTANK_0008608271_ONLINE	Phishing URL still online
+
+##
