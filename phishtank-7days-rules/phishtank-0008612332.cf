@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008612332
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8612332
+## Submitted.....: 2024-06-12T06:54:20+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008612332_MATCH	/nifty\-mcclintock\.67\-23\-166\-125\.plesk\.page\/alessandro\-\-_\-\-\.perrone\/angelai\-\-_\-\-acovelli\/manuela\.\-\-_\-\-rossi\/consiglio\-\-_\-\-mantova\/captcha\/index\.php/
+score		PHISHTANK_0008612332_MATCH	5.0
+describe	PHISHTANK_0008612332_MATCH	Phishtank ID 8612332 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008612332_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008612332_VALIDATED	PHISHTANK_0008612332_MATCH && __PHISHTANK_0008612332_VALCHECK
+score		PHISHTANK_0008612332_VALIDATED	2.0
+describe	PHISHTANK_0008612332_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008612332_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008612332_ONLINE	PHISHTANK_0008612332_MATCH && __PHISHTANK_0008612332_ONCHECK
+score		PHISHTANK_0008612332_ONLINE	2.0
+describe	PHISHTANK_0008612332_ONLINE	Phishing URL still online
+
+##
