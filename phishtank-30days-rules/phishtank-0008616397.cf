@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008616397
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8616397
+## Submitted.....: 2024-06-15T06:31:56+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008616397_MATCH	/game\.world\.com\-sv\.ru\/en\-GB\-assisted\-login\-login\-challenge\-dc197744c4a04124a6d04da6b85adcb4\-ga\-2\-238398720\-1406457486\-1694086910\-1863512970\-169408678563454200\-2\-238398720\-140645748/
+score		PHISHTANK_0008616397_MATCH	5.0
+describe	PHISHTANK_0008616397_MATCH	Phishtank ID 8616397 (RuneScape) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008616397_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008616397_VALIDATED	PHISHTANK_0008616397_MATCH && __PHISHTANK_0008616397_VALCHECK
+score		PHISHTANK_0008616397_VALIDATED	2.0
+describe	PHISHTANK_0008616397_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008616397_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008616397_ONLINE	PHISHTANK_0008616397_MATCH && __PHISHTANK_0008616397_ONCHECK
+score		PHISHTANK_0008616397_ONLINE	2.0
+describe	PHISHTANK_0008616397_ONLINE	Phishing URL still online
+
+##

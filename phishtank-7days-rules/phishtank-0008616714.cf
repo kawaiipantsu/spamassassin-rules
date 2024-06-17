@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008616714
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8616714
+## Submitted.....: 2024-06-15T12:21:35+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008616714_MATCH	/pub\-ce1f1d8eef18479785b40655bde46238\.r2\.dev\/pnedrive\.html/
+score		PHISHTANK_0008616714_MATCH	5.0
+describe	PHISHTANK_0008616714_MATCH	Phishtank ID 8616714 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008616714_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008616714_VALIDATED	PHISHTANK_0008616714_MATCH && __PHISHTANK_0008616714_VALCHECK
+score		PHISHTANK_0008616714_VALIDATED	2.0
+describe	PHISHTANK_0008616714_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008616714_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008616714_ONLINE	PHISHTANK_0008616714_MATCH && __PHISHTANK_0008616714_ONCHECK
+score		PHISHTANK_0008616714_ONLINE	2.0
+describe	PHISHTANK_0008616714_ONLINE	Phishing URL still online
+
+##

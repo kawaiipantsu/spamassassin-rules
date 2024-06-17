@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008616700
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8616700
+## Submitted.....: 2024-06-15T12:18:07+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008616700_MATCH	/www\.cangku7\.com\/smywbc641yr1da9c88/
+score		PHISHTANK_0008616700_MATCH	5.0
+describe	PHISHTANK_0008616700_MATCH	Phishtank ID 8616700 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008616700_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008616700_VALIDATED	PHISHTANK_0008616700_MATCH && __PHISHTANK_0008616700_VALCHECK
+score		PHISHTANK_0008616700_VALIDATED	2.0
+describe	PHISHTANK_0008616700_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008616700_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008616700_ONLINE	PHISHTANK_0008616700_MATCH && __PHISHTANK_0008616700_ONCHECK
+score		PHISHTANK_0008616700_ONLINE	2.0
+describe	PHISHTANK_0008616700_ONLINE	Phishing URL still online
+
+##

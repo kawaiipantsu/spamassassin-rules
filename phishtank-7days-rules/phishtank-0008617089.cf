@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008617089
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8617089
+## Submitted.....: 2024-06-16T03:25:48+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008617089_MATCH	/pub\-1bd04b9deb44471c93f7090002dde252\.r2\.dev\/drive\-in\.html/
+score		PHISHTANK_0008617089_MATCH	5.0
+describe	PHISHTANK_0008617089_MATCH	Phishtank ID 8617089 (Microsoft) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008617089_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008617089_VALIDATED	PHISHTANK_0008617089_MATCH && __PHISHTANK_0008617089_VALCHECK
+score		PHISHTANK_0008617089_VALIDATED	2.0
+describe	PHISHTANK_0008617089_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008617089_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008617089_ONLINE	PHISHTANK_0008617089_MATCH && __PHISHTANK_0008617089_ONCHECK
+score		PHISHTANK_0008617089_ONLINE	2.0
+describe	PHISHTANK_0008617089_ONLINE	Phishing URL still online
+
+##
