@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008620033
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8620033
+## Submitted.....: 2024-06-18T17:31:11+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008620033_MATCH	/shinecash360\.wixstudio\.io\/my\-site/
+score		PHISHTANK_0008620033_MATCH	5.0
+describe	PHISHTANK_0008620033_MATCH	Phishtank ID 8620033 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008620033_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008620033_VALIDATED	PHISHTANK_0008620033_MATCH && __PHISHTANK_0008620033_VALCHECK
+score		PHISHTANK_0008620033_VALIDATED	2.0
+describe	PHISHTANK_0008620033_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008620033_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008620033_ONLINE	PHISHTANK_0008620033_MATCH && __PHISHTANK_0008620033_ONCHECK
+score		PHISHTANK_0008620033_ONLINE	2.0
+describe	PHISHTANK_0008620033_ONLINE	Phishing URL still online
+
+##
