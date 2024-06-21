@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008622991
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8622991
+## Submitted.....: 2024-06-20T15:46:08+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008622991_MATCH	/insidious\-scythe\-bait\.glitch\.me\/public\/h581kui00\.htm/
+score		PHISHTANK_0008622991_MATCH	5.0
+describe	PHISHTANK_0008622991_MATCH	Phishtank ID 8622991 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008622991_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008622991_VALIDATED	PHISHTANK_0008622991_MATCH && __PHISHTANK_0008622991_VALCHECK
+score		PHISHTANK_0008622991_VALIDATED	2.0
+describe	PHISHTANK_0008622991_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008622991_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008622991_ONLINE	PHISHTANK_0008622991_MATCH && __PHISHTANK_0008622991_ONCHECK
+score		PHISHTANK_0008622991_ONLINE	2.0
+describe	PHISHTANK_0008622991_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008620756
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8620756
+## Submitted.....: 2024-06-19T08:45:18+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008620756_MATCH	/www\.dropbox\.com\/scl\/fi\/rtme0ci7a9wbla4ej03up\/B\.T\-Internet\-SECURITY\.paper/
+score		PHISHTANK_0008620756_MATCH	5.0
+describe	PHISHTANK_0008620756_MATCH	Phishtank ID 8620756 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008620756_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008620756_VALIDATED	PHISHTANK_0008620756_MATCH && __PHISHTANK_0008620756_VALCHECK
+score		PHISHTANK_0008620756_VALIDATED	2.0
+describe	PHISHTANK_0008620756_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008620756_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008620756_ONLINE	PHISHTANK_0008620756_MATCH && __PHISHTANK_0008620756_ONCHECK
+score		PHISHTANK_0008620756_ONLINE	2.0
+describe	PHISHTANK_0008620756_ONLINE	Phishing URL still online
+
+##
