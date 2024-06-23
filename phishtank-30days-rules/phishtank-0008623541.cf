@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008623541
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8623541
+## Submitted.....: 2024-06-21T05:36:26+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008623541_MATCH	/lavenderpm\.com\/umb\/index\.php/
+score		PHISHTANK_0008623541_MATCH	5.0
+describe	PHISHTANK_0008623541_MATCH	Phishtank ID 8623541 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008623541_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008623541_VALIDATED	PHISHTANK_0008623541_MATCH && __PHISHTANK_0008623541_VALCHECK
+score		PHISHTANK_0008623541_VALIDATED	2.0
+describe	PHISHTANK_0008623541_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008623541_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008623541_ONLINE	PHISHTANK_0008623541_MATCH && __PHISHTANK_0008623541_ONCHECK
+score		PHISHTANK_0008623541_ONLINE	2.0
+describe	PHISHTANK_0008623541_ONLINE	Phishing URL still online
+
+##
