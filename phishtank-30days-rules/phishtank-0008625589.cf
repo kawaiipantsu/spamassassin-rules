@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008625589
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8625589
+## Submitted.....: 2024-06-23T10:20:34+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008625589_MATCH	/nrp5l3v\.duckdns\.org/
+score		PHISHTANK_0008625589_MATCH	5.0
+describe	PHISHTANK_0008625589_MATCH	Phishtank ID 8625589 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008625589_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008625589_VALIDATED	PHISHTANK_0008625589_MATCH && __PHISHTANK_0008625589_VALCHECK
+score		PHISHTANK_0008625589_VALIDATED	2.0
+describe	PHISHTANK_0008625589_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008625589_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008625589_ONLINE	PHISHTANK_0008625589_MATCH && __PHISHTANK_0008625589_ONCHECK
+score		PHISHTANK_0008625589_ONLINE	2.0
+describe	PHISHTANK_0008625589_ONLINE	Phishing URL still online
+
+##

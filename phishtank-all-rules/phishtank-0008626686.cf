@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008626686
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8626686
+## Submitted.....: 2024-06-23T21:39:07+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008626686_MATCH	/tx\.reb\.gv\.uk\.zHhd\.abkarizarif\.ir\/\.zqz\/\.qxq\//
+score		PHISHTANK_0008626686_MATCH	5.0
+describe	PHISHTANK_0008626686_MATCH	Phishtank ID 8626686 (Her Majesty's Revenue and Customs) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008626686_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008626686_VALIDATED	PHISHTANK_0008626686_MATCH && __PHISHTANK_0008626686_VALCHECK
+score		PHISHTANK_0008626686_VALIDATED	2.0
+describe	PHISHTANK_0008626686_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008626686_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008626686_ONLINE	PHISHTANK_0008626686_MATCH && __PHISHTANK_0008626686_ONCHECK
+score		PHISHTANK_0008626686_ONLINE	2.0
+describe	PHISHTANK_0008626686_ONLINE	Phishing URL still online
+
+##
