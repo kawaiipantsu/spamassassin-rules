@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008629475
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8629475
+## Submitted.....: 2024-06-25T19:39:38+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008629475_MATCH	/juno\-com\-d1e505\.webflow\.io\//
+score		PHISHTANK_0008629475_MATCH	5.0
+describe	PHISHTANK_0008629475_MATCH	Phishtank ID 8629475 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008629475_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008629475_VALIDATED	PHISHTANK_0008629475_MATCH && __PHISHTANK_0008629475_VALCHECK
+score		PHISHTANK_0008629475_VALIDATED	2.0
+describe	PHISHTANK_0008629475_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008629475_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008629475_ONLINE	PHISHTANK_0008629475_MATCH && __PHISHTANK_0008629475_ONCHECK
+score		PHISHTANK_0008629475_ONLINE	2.0
+describe	PHISHTANK_0008629475_ONLINE	Phishing URL still online
+
+##
