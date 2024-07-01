@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008634671
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8634671
+## Submitted.....: 2024-06-29T17:20:23+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008634671_MATCH	/uoa9t5etd\.duckdns\.org/
+score		PHISHTANK_0008634671_MATCH	5.0
+describe	PHISHTANK_0008634671_MATCH	Phishtank ID 8634671 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008634671_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008634671_VALIDATED	PHISHTANK_0008634671_MATCH && __PHISHTANK_0008634671_VALCHECK
+score		PHISHTANK_0008634671_VALIDATED	2.0
+describe	PHISHTANK_0008634671_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008634671_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008634671_ONLINE	PHISHTANK_0008634671_MATCH && __PHISHTANK_0008634671_ONCHECK
+score		PHISHTANK_0008634671_ONLINE	2.0
+describe	PHISHTANK_0008634671_ONLINE	Phishing URL still online
+
+##

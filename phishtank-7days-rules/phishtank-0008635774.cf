@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008635774
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8635774
+## Submitted.....: 2024-06-30T19:29:09+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008635774_MATCH	/tracking\-orders\-dhi\-chn438548443985784\.standard\.us\-east\-1\.oortech\.com\/hr87uhj4redf9uijnmredfcx\/y8ds7yuhj43erudsiujkreds\/ordersdhicrypt\.htm/
+score		PHISHTANK_0008635774_MATCH	5.0
+describe	PHISHTANK_0008635774_MATCH	Phishtank ID 8635774 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008635774_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008635774_VALIDATED	PHISHTANK_0008635774_MATCH && __PHISHTANK_0008635774_VALCHECK
+score		PHISHTANK_0008635774_VALIDATED	2.0
+describe	PHISHTANK_0008635774_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008635774_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008635774_ONLINE	PHISHTANK_0008635774_MATCH && __PHISHTANK_0008635774_ONCHECK
+score		PHISHTANK_0008635774_ONLINE	2.0
+describe	PHISHTANK_0008635774_ONLINE	Phishing URL still online
+
+##
