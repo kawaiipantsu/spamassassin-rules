@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008643511
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8643511
+## Submitted.....: 2024-07-06T19:34:55+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008643511_MATCH	/att\-mail\-103086\.weeblysite\.com\//
+score		PHISHTANK_0008643511_MATCH	5.0
+describe	PHISHTANK_0008643511_MATCH	Phishtank ID 8643511 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008643511_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008643511_VALIDATED	PHISHTANK_0008643511_MATCH && __PHISHTANK_0008643511_VALCHECK
+score		PHISHTANK_0008643511_VALIDATED	2.0
+describe	PHISHTANK_0008643511_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008643511_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008643511_ONLINE	PHISHTANK_0008643511_MATCH && __PHISHTANK_0008643511_ONCHECK
+score		PHISHTANK_0008643511_ONLINE	2.0
+describe	PHISHTANK_0008643511_ONLINE	Phishing URL still online
+
+##
