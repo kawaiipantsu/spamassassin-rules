@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008656977
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8656977
+## Submitted.....: 2024-07-15T05:39:45+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008656977_MATCH	/🄻🄰🄻🄰🄱🅆🄵\.🄲🄽\/caonimaqs\=utm_sourceeed464104ae22d230dacb86e1110e101eed464104ae22d230dacb86e1110e101eed464104ae22d230dacb86e1110e101/
+score		PHISHTANK_0008656977_MATCH	5.0
+describe	PHISHTANK_0008656977_MATCH	Phishtank ID 8656977 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008656977_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008656977_VALIDATED	PHISHTANK_0008656977_MATCH && __PHISHTANK_0008656977_VALCHECK
+score		PHISHTANK_0008656977_VALIDATED	2.0
+describe	PHISHTANK_0008656977_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008656977_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008656977_ONLINE	PHISHTANK_0008656977_MATCH && __PHISHTANK_0008656977_ONCHECK
+score		PHISHTANK_0008656977_ONLINE	2.0
+describe	PHISHTANK_0008656977_ONLINE	Phishing URL still online
+
+##
