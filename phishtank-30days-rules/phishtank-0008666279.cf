@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008666279
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8666279
+## Submitted.....: 2024-07-19T22:01:49+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008666279_MATCH	/pub\-1015a218fc204e79b4f9287883af9314\.r2\.dev\/kbb2\.html/
+score		PHISHTANK_0008666279_MATCH	5.0
+describe	PHISHTANK_0008666279_MATCH	Phishtank ID 8666279 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008666279_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008666279_VALIDATED	PHISHTANK_0008666279_MATCH && __PHISHTANK_0008666279_VALCHECK
+score		PHISHTANK_0008666279_VALIDATED	2.0
+describe	PHISHTANK_0008666279_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008666279_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008666279_ONLINE	PHISHTANK_0008666279_MATCH && __PHISHTANK_0008666279_ONCHECK
+score		PHISHTANK_0008666279_ONLINE	2.0
+describe	PHISHTANK_0008666279_ONLINE	Phishing URL still online
+
+##
