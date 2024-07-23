@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008670950
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8670950
+## Submitted.....: 2024-07-22T19:54:03+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008670950_MATCH	/www\.google\.fr\/amp\/s\/www\.google\.com%2Furl%3Fq%3Dhttps%3A%2F%2Fwww\.google\.com%2Furl%3Fq%253Dhttps%25253A%25252F%25252Flinkprotect\.cudasvc\.com%25252Furl%25253Fa%25253Dhttp%25253A%25252F%25252Fau\.bestreviews\.guide%25252Famp%25252Fredirect%25253Frf_dws_location%2525253D%25252526rf_item_id%2525253D284553988%25252526rf_list_id%2525253D4693819%25252526rf_partner_id%2525253DB017M5JDX0%25252526rf_source%2525253Damazon%25252526url%2525253DaHR0cHM6Ly93d3ctZXhhbXBsZS1jb20uY2RuLmFtcHByb2plY3Qub3JnL2Mvcy9zb2ZpYTA5MjExMS5naXRodWIuaW8vd2V3b3JsZHdpZGUtc2Vuc2VpaWlpaWlpaWlpaWlpaWlpaWlpLTY3Njc4NTU2NDU2ODU3NjU4Ni8%2525253D%252526amp%25253Btypo%25253D1%252526c%25253DE%25252C1%25252C_SXgdRSlRSBw52_i2u0HwoWrGOjH4ySMlGXvfGOQnELRA64b921O8b66KJMrlpcoQpmpZjKNJ635YxJ2uD8hUcOjRUL6RP9RZ5OCQXGwPcxQqAreLP94oaglug%25252C%25252C%2526sa%253DD%2526sntz%253D1%2526usg%253DAOvVaw2lJ6i9xsAdBiZq6R3z0ABr%26sa%3DD%26source%3Deditors%26ust%3D1721663475546431%26usg%3DAOvVaw3cqcWbFI4Nz02gJojvuNFW%23bXJvbWVuZXNrb0ByaHJpbnRlcm5hdGlvbmFsLmNvbQ\=\=/
+score		PHISHTANK_0008670950_MATCH	5.0
+describe	PHISHTANK_0008670950_MATCH	Phishtank ID 8670950 (Microsoft) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008670950_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008670950_VALIDATED	PHISHTANK_0008670950_MATCH && __PHISHTANK_0008670950_VALCHECK
+score		PHISHTANK_0008670950_VALIDATED	2.0
+describe	PHISHTANK_0008670950_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008670950_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008670950_ONLINE	PHISHTANK_0008670950_MATCH && __PHISHTANK_0008670950_ONCHECK
+score		PHISHTANK_0008670950_ONLINE	2.0
+describe	PHISHTANK_0008670950_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008669453
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8669453
+## Submitted.....: 2024-07-22T01:15:58+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008669453_MATCH	/supplieradvisor\.ciamlogin\.com\/3159c7b1\-0c6d\-42f1\-9929\-f2bd2daef8bf\/oauth2\/v2\.0\/authorize/
+score		PHISHTANK_0008669453_MATCH	5.0
+describe	PHISHTANK_0008669453_MATCH	Phishtank ID 8669453 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008669453_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008669453_VALIDATED	PHISHTANK_0008669453_MATCH && __PHISHTANK_0008669453_VALCHECK
+score		PHISHTANK_0008669453_VALIDATED	2.0
+describe	PHISHTANK_0008669453_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008669453_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008669453_ONLINE	PHISHTANK_0008669453_MATCH && __PHISHTANK_0008669453_ONCHECK
+score		PHISHTANK_0008669453_ONLINE	2.0
+describe	PHISHTANK_0008669453_ONLINE	Phishing URL still online
+
+##
