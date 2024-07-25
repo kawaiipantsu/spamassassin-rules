@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008674627
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8674627
+## Submitted.....: 2024-07-24T10:21:17+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008674627_MATCH	/pub\-d44b064a84c44f84af7d028c687ac49e\.r2\.dev\/CHAMELEO\.html/
+score		PHISHTANK_0008674627_MATCH	5.0
+describe	PHISHTANK_0008674627_MATCH	Phishtank ID 8674627 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008674627_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008674627_VALIDATED	PHISHTANK_0008674627_MATCH && __PHISHTANK_0008674627_VALCHECK
+score		PHISHTANK_0008674627_VALIDATED	2.0
+describe	PHISHTANK_0008674627_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008674627_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008674627_ONLINE	PHISHTANK_0008674627_MATCH && __PHISHTANK_0008674627_ONCHECK
+score		PHISHTANK_0008674627_ONLINE	2.0
+describe	PHISHTANK_0008674627_ONLINE	Phishing URL still online
+
+##
