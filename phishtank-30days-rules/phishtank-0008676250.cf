@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008676250
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8676250
+## Submitted.....: 2024-07-25T01:48:13+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008676250_MATCH	/uts\.swq\.mybluehost\.me\/2024\/2024\//
+score		PHISHTANK_0008676250_MATCH	5.0
+describe	PHISHTANK_0008676250_MATCH	Phishtank ID 8676250 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008676250_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008676250_VALIDATED	PHISHTANK_0008676250_MATCH && __PHISHTANK_0008676250_VALCHECK
+score		PHISHTANK_0008676250_VALIDATED	2.0
+describe	PHISHTANK_0008676250_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008676250_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008676250_ONLINE	PHISHTANK_0008676250_MATCH && __PHISHTANK_0008676250_ONCHECK
+score		PHISHTANK_0008676250_ONLINE	2.0
+describe	PHISHTANK_0008676250_ONLINE	Phishing URL still online
+
+##

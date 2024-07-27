@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008676830
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8676830
+## Submitted.....: 2024-07-25T03:48:46+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008676830_MATCH	/unto\.mjt\.lu\/lnk\/AV4AAEitRhsAAAAAAAAAAP88bfIAAYCrJz0AAAAAAAWtwQBmoMgjZjoLq2VUSGqDGpCJtG8awwAFcos\/1\/e3OhQX8dmFHmtgJtlWrg4Q\/aHR0cHM6Ly9kZWNpZGV1ci1pbmZvLmNvbS9yL2YyNDkxM2Q4MjIwYzE2NzM0Y2UzMTU0MWQ_Y3Q9WVRvMU9udHpPalk2SW5OdmRYSmpaU0k3WVRveU9udHBPakE3Y3pvMU9pSmxiV0ZwYkNJN2FUb3hPMms2T0R0OWN6bzFPaUpsYldGcGJDSTdhVG80TzNNNk5Eb2ljM1JoZENJN2N6b3lNam9pTmpaaE1HTTRNak0yT1RsaE5ETXpOREl4TmpZMk5DSTdjem8wT2lKc1pXRmtJanR6T2pjNklqTXlNalF3T1RJaU8zTTZOem9pWTJoaGJtNWxiQ0k3WVRveE9udHpPalU2SW1WdFlXbHNJanRwT2pnN2ZYMCUzRCY/
+score		PHISHTANK_0008676830_MATCH	5.0
+describe	PHISHTANK_0008676830_MATCH	Phishtank ID 8676830 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008676830_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008676830_VALIDATED	PHISHTANK_0008676830_MATCH && __PHISHTANK_0008676830_VALCHECK
+score		PHISHTANK_0008676830_VALIDATED	2.0
+describe	PHISHTANK_0008676830_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008676830_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008676830_ONLINE	PHISHTANK_0008676830_MATCH && __PHISHTANK_0008676830_ONCHECK
+score		PHISHTANK_0008676830_ONLINE	2.0
+describe	PHISHTANK_0008676830_ONLINE	Phishing URL still online
+
+##

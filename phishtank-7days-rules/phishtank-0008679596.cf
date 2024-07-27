@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008679596
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8679596
+## Submitted.....: 2024-07-26T07:12:46+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008679596_MATCH	/bb3d83d470e87dacc504468bc81bb92e7ffe5189df\.indo\-ate\-vc\.com\.br\/download\/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\.eyJ1dWlkIjoiYmU1ODk4OTEtM2FmNi00MzAxLWE5OWItODM1NDg1MGUwYjc4IiwiaWF0IjoxNzIxOTc3OTU1LCJleHAiOjE3MjE5Nzc5NjF9\.OoLmGW0wb0dizJZdOWaFHGfQm3MH0hpondisgSxxA04/
+score		PHISHTANK_0008679596_MATCH	5.0
+describe	PHISHTANK_0008679596_MATCH	Phishtank ID 8679596 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008679596_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008679596_VALIDATED	PHISHTANK_0008679596_MATCH && __PHISHTANK_0008679596_VALCHECK
+score		PHISHTANK_0008679596_VALIDATED	2.0
+describe	PHISHTANK_0008679596_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008679596_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008679596_ONLINE	PHISHTANK_0008679596_MATCH && __PHISHTANK_0008679596_ONCHECK
+score		PHISHTANK_0008679596_ONLINE	2.0
+describe	PHISHTANK_0008679596_ONLINE	Phishing URL still online
+
+##
