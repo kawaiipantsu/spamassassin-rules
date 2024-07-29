@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008682541
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8682541
+## Submitted.....: 2024-07-28T02:40:44+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008682541_MATCH	/pub\-f56c790fa3ad4fa8a0d133e9bc2bc8ce\.r2\.dev\/auth_response\.html/
+score		PHISHTANK_0008682541_MATCH	5.0
+describe	PHISHTANK_0008682541_MATCH	Phishtank ID 8682541 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008682541_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008682541_VALIDATED	PHISHTANK_0008682541_MATCH && __PHISHTANK_0008682541_VALCHECK
+score		PHISHTANK_0008682541_VALIDATED	2.0
+describe	PHISHTANK_0008682541_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008682541_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008682541_ONLINE	PHISHTANK_0008682541_MATCH && __PHISHTANK_0008682541_ONCHECK
+score		PHISHTANK_0008682541_ONLINE	2.0
+describe	PHISHTANK_0008682541_ONLINE	Phishing URL still online
+
+##
