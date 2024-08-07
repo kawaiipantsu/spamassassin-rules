@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008696387
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8696387
+## Submitted.....: 2024-08-05T15:31:00+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008696387_MATCH	/onomir\.website\/_oxyguards_oxy\/ziri\/b3b32a2d422265cd25c3323ed0157f81\/_dhl2\/login\.php/
+score		PHISHTANK_0008696387_MATCH	5.0
+describe	PHISHTANK_0008696387_MATCH	Phishtank ID 8696387 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008696387_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008696387_VALIDATED	PHISHTANK_0008696387_MATCH && __PHISHTANK_0008696387_VALCHECK
+score		PHISHTANK_0008696387_VALIDATED	2.0
+describe	PHISHTANK_0008696387_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008696387_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008696387_ONLINE	PHISHTANK_0008696387_MATCH && __PHISHTANK_0008696387_ONCHECK
+score		PHISHTANK_0008696387_ONLINE	2.0
+describe	PHISHTANK_0008696387_ONLINE	Phishing URL still online
+
+##

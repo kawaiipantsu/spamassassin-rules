@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008697021
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8697021
+## Submitted.....: 2024-08-06T06:25:35+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008697021_MATCH	/docusignspsviewprivatedoc\.webflow\.io\//
+score		PHISHTANK_0008697021_MATCH	5.0
+describe	PHISHTANK_0008697021_MATCH	Phishtank ID 8697021 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008697021_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008697021_VALIDATED	PHISHTANK_0008697021_MATCH && __PHISHTANK_0008697021_VALCHECK
+score		PHISHTANK_0008697021_VALIDATED	2.0
+describe	PHISHTANK_0008697021_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008697021_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008697021_ONLINE	PHISHTANK_0008697021_MATCH && __PHISHTANK_0008697021_ONCHECK
+score		PHISHTANK_0008697021_ONLINE	2.0
+describe	PHISHTANK_0008697021_ONLINE	Phishing URL still online
+
+##
