@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008700759
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8700759
+## Submitted.....: 2024-08-08T05:30:09+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008700759_MATCH	/paginas\.site\//
+score		PHISHTANK_0008700759_MATCH	5.0
+describe	PHISHTANK_0008700759_MATCH	Phishtank ID 8700759 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008700759_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008700759_VALIDATED	PHISHTANK_0008700759_MATCH && __PHISHTANK_0008700759_VALCHECK
+score		PHISHTANK_0008700759_VALIDATED	2.0
+describe	PHISHTANK_0008700759_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008700759_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008700759_ONLINE	PHISHTANK_0008700759_MATCH && __PHISHTANK_0008700759_ONCHECK
+score		PHISHTANK_0008700759_ONLINE	2.0
+describe	PHISHTANK_0008700759_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008702713
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8702713
+## Submitted.....: 2024-08-09T17:45:26+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008702713_MATCH	/pub\-f1bf5c60a852426f88b9376b64f6112f\.r2\.dev\/bea271\.html/
+score		PHISHTANK_0008702713_MATCH	5.0
+describe	PHISHTANK_0008702713_MATCH	Phishtank ID 8702713 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008702713_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008702713_VALIDATED	PHISHTANK_0008702713_MATCH && __PHISHTANK_0008702713_VALCHECK
+score		PHISHTANK_0008702713_VALIDATED	2.0
+describe	PHISHTANK_0008702713_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008702713_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008702713_ONLINE	PHISHTANK_0008702713_MATCH && __PHISHTANK_0008702713_ONCHECK
+score		PHISHTANK_0008702713_ONLINE	2.0
+describe	PHISHTANK_0008702713_ONLINE	Phishing URL still online
+
+##
