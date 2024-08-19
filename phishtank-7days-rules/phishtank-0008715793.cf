@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008715793
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8715793
+## Submitted.....: 2024-08-16T04:46:45+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008715793_MATCH	/sec39\.net\/53012005\/_\/2024\/DHL\/LO0JGTZHZJZG\/index\.php/
+score		PHISHTANK_0008715793_MATCH	5.0
+describe	PHISHTANK_0008715793_MATCH	Phishtank ID 8715793 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008715793_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008715793_VALIDATED	PHISHTANK_0008715793_MATCH && __PHISHTANK_0008715793_VALCHECK
+score		PHISHTANK_0008715793_VALIDATED	2.0
+describe	PHISHTANK_0008715793_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008715793_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008715793_ONLINE	PHISHTANK_0008715793_MATCH && __PHISHTANK_0008715793_ONCHECK
+score		PHISHTANK_0008715793_ONLINE	2.0
+describe	PHISHTANK_0008715793_ONLINE	Phishing URL still online
+
+##

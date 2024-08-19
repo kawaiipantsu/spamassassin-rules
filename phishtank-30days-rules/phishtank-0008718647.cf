@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008718647
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8718647
+## Submitted.....: 2024-08-17T13:02:33+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008718647_MATCH	/0llx\.85412584\.xyz\//
+score		PHISHTANK_0008718647_MATCH	5.0
+describe	PHISHTANK_0008718647_MATCH	Phishtank ID 8718647 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008718647_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008718647_VALIDATED	PHISHTANK_0008718647_MATCH && __PHISHTANK_0008718647_VALCHECK
+score		PHISHTANK_0008718647_VALIDATED	2.0
+describe	PHISHTANK_0008718647_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008718647_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008718647_ONLINE	PHISHTANK_0008718647_MATCH && __PHISHTANK_0008718647_ONCHECK
+score		PHISHTANK_0008718647_ONLINE	2.0
+describe	PHISHTANK_0008718647_ONLINE	Phishing URL still online
+
+##
