@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008723451
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8723451
+## Submitted.....: 2024-08-20T16:58:59+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008723451_MATCH	/kristoffers\-dandy\-site\-a23dc7\.webflow\.io\//
+score		PHISHTANK_0008723451_MATCH	5.0
+describe	PHISHTANK_0008723451_MATCH	Phishtank ID 8723451 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008723451_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008723451_VALIDATED	PHISHTANK_0008723451_MATCH && __PHISHTANK_0008723451_VALCHECK
+score		PHISHTANK_0008723451_VALIDATED	2.0
+describe	PHISHTANK_0008723451_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008723451_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008723451_ONLINE	PHISHTANK_0008723451_MATCH && __PHISHTANK_0008723451_ONCHECK
+score		PHISHTANK_0008723451_ONLINE	2.0
+describe	PHISHTANK_0008723451_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008723044
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8723044
+## Submitted.....: 2024-08-20T14:02:42+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008723044_MATCH	/verification\-submission\.coroxhahr\.com\/17368116175351262270997793879725O8S4RQF5L6IGILH9A8YX6EGVA02IOKSN/
+score		PHISHTANK_0008723044_MATCH	5.0
+describe	PHISHTANK_0008723044_MATCH	Phishtank ID 8723044 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008723044_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008723044_VALIDATED	PHISHTANK_0008723044_MATCH && __PHISHTANK_0008723044_VALCHECK
+score		PHISHTANK_0008723044_VALIDATED	2.0
+describe	PHISHTANK_0008723044_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008723044_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008723044_ONLINE	PHISHTANK_0008723044_MATCH && __PHISHTANK_0008723044_ONCHECK
+score		PHISHTANK_0008723044_ONLINE	2.0
+describe	PHISHTANK_0008723044_ONLINE	Phishing URL still online
+
+##

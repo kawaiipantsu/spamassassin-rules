@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008721328
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8721328
+## Submitted.....: 2024-08-19T14:39:32+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008721328_MATCH	/truent\.gitbook\.io\/us/
+score		PHISHTANK_0008721328_MATCH	5.0
+describe	PHISHTANK_0008721328_MATCH	Phishtank ID 8721328 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008721328_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008721328_VALIDATED	PHISHTANK_0008721328_MATCH && __PHISHTANK_0008721328_VALCHECK
+score		PHISHTANK_0008721328_VALIDATED	2.0
+describe	PHISHTANK_0008721328_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008721328_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008721328_ONLINE	PHISHTANK_0008721328_MATCH && __PHISHTANK_0008721328_ONCHECK
+score		PHISHTANK_0008721328_ONLINE	2.0
+describe	PHISHTANK_0008721328_ONLINE	Phishing URL still online
+
+##
