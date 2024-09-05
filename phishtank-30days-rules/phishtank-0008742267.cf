@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008742267
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8742267
+## Submitted.....: 2024-09-03T19:40:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008742267_MATCH	/allegrolokainie\.pl\-oferta35897\.pl\/prywatna\/16310/
+score		PHISHTANK_0008742267_MATCH	5.0
+describe	PHISHTANK_0008742267_MATCH	Phishtank ID 8742267 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008742267_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008742267_VALIDATED	PHISHTANK_0008742267_MATCH && __PHISHTANK_0008742267_VALCHECK
+score		PHISHTANK_0008742267_VALIDATED	2.0
+describe	PHISHTANK_0008742267_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008742267_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008742267_ONLINE	PHISHTANK_0008742267_MATCH && __PHISHTANK_0008742267_ONCHECK
+score		PHISHTANK_0008742267_ONLINE	2.0
+describe	PHISHTANK_0008742267_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008741875
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8741875
+## Submitted.....: 2024-09-03T12:52:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008741875_MATCH	/pub\-463e06bcb64f4c528598980ce1e5d16e\.r2\.dev\/webmail\-aruba\-it\-v4r2b55\.20190911_12347115a5e1ad3c40a502e6eab121bae6f493a5a4f4\.html/
+score		PHISHTANK_0008741875_MATCH	5.0
+describe	PHISHTANK_0008741875_MATCH	Phishtank ID 8741875 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008741875_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008741875_VALIDATED	PHISHTANK_0008741875_MATCH && __PHISHTANK_0008741875_VALCHECK
+score		PHISHTANK_0008741875_VALIDATED	2.0
+describe	PHISHTANK_0008741875_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008741875_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008741875_ONLINE	PHISHTANK_0008741875_MATCH && __PHISHTANK_0008741875_ONCHECK
+score		PHISHTANK_0008741875_ONLINE	2.0
+describe	PHISHTANK_0008741875_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008743100
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8743100
+## Submitted.....: 2024-09-04T17:51:47+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008743100_MATCH	/maimskaloginn\.gitbook\.io\/us/
+score		PHISHTANK_0008743100_MATCH	5.0
+describe	PHISHTANK_0008743100_MATCH	Phishtank ID 8743100 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008743100_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008743100_VALIDATED	PHISHTANK_0008743100_MATCH && __PHISHTANK_0008743100_VALCHECK
+score		PHISHTANK_0008743100_VALIDATED	2.0
+describe	PHISHTANK_0008743100_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008743100_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008743100_ONLINE	PHISHTANK_0008743100_MATCH && __PHISHTANK_0008743100_ONCHECK
+score		PHISHTANK_0008743100_ONLINE	2.0
+describe	PHISHTANK_0008743100_ONLINE	Phishing URL still online
+
+##
