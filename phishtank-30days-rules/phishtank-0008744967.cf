@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008744967
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8744967
+## Submitted.....: 2024-09-05T18:25:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008744967_MATCH	/docs\-learn\-wallet\-ledgre\.gitbook\.io\/us/
+score		PHISHTANK_0008744967_MATCH	5.0
+describe	PHISHTANK_0008744967_MATCH	Phishtank ID 8744967 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008744967_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008744967_VALIDATED	PHISHTANK_0008744967_MATCH && __PHISHTANK_0008744967_VALCHECK
+score		PHISHTANK_0008744967_VALIDATED	2.0
+describe	PHISHTANK_0008744967_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008744967_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008744967_ONLINE	PHISHTANK_0008744967_MATCH && __PHISHTANK_0008744967_ONCHECK
+score		PHISHTANK_0008744967_ONLINE	2.0
+describe	PHISHTANK_0008744967_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008740267
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8740267
+## Submitted.....: 2024-09-02T11:30:21+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008740267_MATCH	/www\.surveymonkey\.com\/tr\/v1\/te\/akU_2BQc2vAhAsa_2B264x1g6_2FpF_2Fhy3EhxbpxJDHYpYZT3PErDK_2Bf6OjNYOPsqZdKwg2jE9yOMQ27t3dNJ1TwRPLKLlNdB37_2B9abzAA_2BAIboY5hjvIHYqHWZujNsDt3Hki2Vx_2BX7VBm8sduwF_2Fe6BpR48sF9wtrs9TTiVqBoduUj4Ou0TJdCGHHZIQZRpiF11aV4dsopZFIQBJ19rMvgNYHD_2BOT46zQPBLb_2FiSEnyFVJWw_2FfwhJNL6MAc0yXQOYxHkVm0hJjYkNM8AOarGrRDCY_2B8_2FDp6GIYQWu_2FnqxP7CcCZ3MEi3us7WPD5YWUdLUMM2zmz1ycHoKBkhRbaNgnu15U1CnD7n6Re7dQ2BWRLWuHFH9zNE3qjfM6TjhEysxQU4EqeJ_2Foy1A_2Bmnt5fTspYAAmIcCIhGCoJ7f_2BWAIZWHe9RH_2BnoW9FzpoP14hv5Ns65KAiywj7sdc7TJH_2B2V8bb_2B1uMgn69cxFB2L_2FuGk0r3ssFUU8dLS2kIl1aPn2li8nPn_2B_2FBdnGKEWo30fkhU6jnybqogtD4sSV0Ep_2F_2B72r0AH74COTdmGhJa1DVxTDAS8KCzKjonyrp4Y52A5yA8_2FjxxMYw_3D_3D/
+score		PHISHTANK_0008740267_MATCH	5.0
+describe	PHISHTANK_0008740267_MATCH	Phishtank ID 8740267 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008740267_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008740267_VALIDATED	PHISHTANK_0008740267_MATCH && __PHISHTANK_0008740267_VALCHECK
+score		PHISHTANK_0008740267_VALIDATED	2.0
+describe	PHISHTANK_0008740267_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008740267_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008740267_ONLINE	PHISHTANK_0008740267_MATCH && __PHISHTANK_0008740267_ONCHECK
+score		PHISHTANK_0008740267_ONLINE	2.0
+describe	PHISHTANK_0008740267_ONLINE	Phishing URL still online
+
+##

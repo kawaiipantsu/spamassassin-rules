@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008745530
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8745530
+## Submitted.....: 2024-09-05T21:30:50+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008745530_MATCH	/eqonlineservice\.atlassian\.net\/wiki\/external\/YjcyMGU1MTUyNmE3NDEyOWE4YjFkN2Q3MDFmNzhjNTY/
+score		PHISHTANK_0008745530_MATCH	5.0
+describe	PHISHTANK_0008745530_MATCH	Phishtank ID 8745530 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008745530_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008745530_VALIDATED	PHISHTANK_0008745530_MATCH && __PHISHTANK_0008745530_VALCHECK
+score		PHISHTANK_0008745530_VALIDATED	2.0
+describe	PHISHTANK_0008745530_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008745530_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008745530_ONLINE	PHISHTANK_0008745530_MATCH && __PHISHTANK_0008745530_ONCHECK
+score		PHISHTANK_0008745530_ONLINE	2.0
+describe	PHISHTANK_0008745530_ONLINE	Phishing URL still online
+
+##
