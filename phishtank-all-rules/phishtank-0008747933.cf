@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008747933
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8747933
+## Submitted.....: 2024-09-07T10:37:00+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008747933_MATCH	/coxnet\-100905\.weeblysite\.com\//
+score		PHISHTANK_0008747933_MATCH	5.0
+describe	PHISHTANK_0008747933_MATCH	Phishtank ID 8747933 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008747933_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008747933_VALIDATED	PHISHTANK_0008747933_MATCH && __PHISHTANK_0008747933_VALCHECK
+score		PHISHTANK_0008747933_VALIDATED	2.0
+describe	PHISHTANK_0008747933_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008747933_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008747933_ONLINE	PHISHTANK_0008747933_MATCH && __PHISHTANK_0008747933_ONCHECK
+score		PHISHTANK_0008747933_ONLINE	2.0
+describe	PHISHTANK_0008747933_ONLINE	Phishing URL still online
+
+##
