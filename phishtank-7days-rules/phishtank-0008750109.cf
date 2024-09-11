@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008750109
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8750109
+## Submitted.....: 2024-09-09T08:06:24+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008750109_MATCH	/www\.deuteros\.site\/c\/9aad3f2b\-9b94\-4018\-aead\-d97e157ed9eb\//
+score		PHISHTANK_0008750109_MATCH	5.0
+describe	PHISHTANK_0008750109_MATCH	Phishtank ID 8750109 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008750109_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008750109_VALIDATED	PHISHTANK_0008750109_MATCH && __PHISHTANK_0008750109_VALCHECK
+score		PHISHTANK_0008750109_VALIDATED	2.0
+describe	PHISHTANK_0008750109_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008750109_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008750109_ONLINE	PHISHTANK_0008750109_MATCH && __PHISHTANK_0008750109_ONCHECK
+score		PHISHTANK_0008750109_ONLINE	2.0
+describe	PHISHTANK_0008750109_ONLINE	Phishing URL still online
+
+##
