@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008737957
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8737957
+## Submitted.....: 2024-08-30T14:38:29+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008737957_MATCH	/yb37yjnh\.r\.us\-east\-1\.awstrack\.me\/L0\/https\:%2F%2Fmaxlogisticservices\.com%2Fodl%2Fmew\/1\/01000191a3ac19d6\-980eeabe\-a47d\-467e\-8378\-b8880a332429\-000000\/JzJUZp2h\-K_8QS8IeA9B5tTlDQ4\=389/
+score		PHISHTANK_0008737957_MATCH	5.0
+describe	PHISHTANK_0008737957_MATCH	Phishtank ID 8737957 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008737957_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008737957_VALIDATED	PHISHTANK_0008737957_MATCH && __PHISHTANK_0008737957_VALCHECK
+score		PHISHTANK_0008737957_VALIDATED	2.0
+describe	PHISHTANK_0008737957_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008737957_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008737957_ONLINE	PHISHTANK_0008737957_MATCH && __PHISHTANK_0008737957_ONCHECK
+score		PHISHTANK_0008737957_ONLINE	2.0
+describe	PHISHTANK_0008737957_ONLINE	Phishing URL still online
+
+##

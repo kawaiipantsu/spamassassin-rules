@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008759188
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8759188
+## Submitted.....: 2024-09-13T21:56:38+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008759188_MATCH	/beachproject\.com\.br\/App\-Personale\-PPVerifica\//
+score		PHISHTANK_0008759188_MATCH	5.0
+describe	PHISHTANK_0008759188_MATCH	Phishtank ID 8759188 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008759188_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008759188_VALIDATED	PHISHTANK_0008759188_MATCH && __PHISHTANK_0008759188_VALCHECK
+score		PHISHTANK_0008759188_VALIDATED	2.0
+describe	PHISHTANK_0008759188_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008759188_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008759188_ONLINE	PHISHTANK_0008759188_MATCH && __PHISHTANK_0008759188_ONCHECK
+score		PHISHTANK_0008759188_ONLINE	2.0
+describe	PHISHTANK_0008759188_ONLINE	Phishing URL still online
+
+##
