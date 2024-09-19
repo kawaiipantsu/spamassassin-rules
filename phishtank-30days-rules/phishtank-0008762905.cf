@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008762905
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8762905
+## Submitted.....: 2024-09-17T00:00:24+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008762905_MATCH	/iyingyan\.com\/login/
+score		PHISHTANK_0008762905_MATCH	5.0
+describe	PHISHTANK_0008762905_MATCH	Phishtank ID 8762905 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008762905_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008762905_VALIDATED	PHISHTANK_0008762905_MATCH && __PHISHTANK_0008762905_VALCHECK
+score		PHISHTANK_0008762905_VALIDATED	2.0
+describe	PHISHTANK_0008762905_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008762905_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008762905_ONLINE	PHISHTANK_0008762905_MATCH && __PHISHTANK_0008762905_ONCHECK
+score		PHISHTANK_0008762905_ONLINE	2.0
+describe	PHISHTANK_0008762905_ONLINE	Phishing URL still online
+
+##

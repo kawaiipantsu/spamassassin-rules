@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008765777
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8765777
+## Submitted.....: 2024-09-18T21:36:07+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008765777_MATCH	/allegrolokalnie\.874291499\.shop\/oferta\/87bf039b\-fd85\-4270\-8335\-d41e20963ca3/
+score		PHISHTANK_0008765777_MATCH	5.0
+describe	PHISHTANK_0008765777_MATCH	Phishtank ID 8765777 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008765777_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008765777_VALIDATED	PHISHTANK_0008765777_MATCH && __PHISHTANK_0008765777_VALCHECK
+score		PHISHTANK_0008765777_VALIDATED	2.0
+describe	PHISHTANK_0008765777_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008765777_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008765777_ONLINE	PHISHTANK_0008765777_MATCH && __PHISHTANK_0008765777_ONCHECK
+score		PHISHTANK_0008765777_ONLINE	2.0
+describe	PHISHTANK_0008765777_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008764072
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8764072
+## Submitted.....: 2024-09-17T20:22:14+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008764072_MATCH	/m\-sso\-s\-suite\-trzor\.webflow\.io\//
+score		PHISHTANK_0008764072_MATCH	5.0
+describe	PHISHTANK_0008764072_MATCH	Phishtank ID 8764072 (Bank of America Corporation) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008764072_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008764072_VALIDATED	PHISHTANK_0008764072_MATCH && __PHISHTANK_0008764072_VALCHECK
+score		PHISHTANK_0008764072_VALIDATED	2.0
+describe	PHISHTANK_0008764072_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008764072_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008764072_ONLINE	PHISHTANK_0008764072_MATCH && __PHISHTANK_0008764072_ONCHECK
+score		PHISHTANK_0008764072_ONLINE	2.0
+describe	PHISHTANK_0008764072_ONLINE	Phishing URL still online
+
+##
