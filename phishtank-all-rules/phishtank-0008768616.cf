@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008768616
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8768616
+## Submitted.....: 2024-09-20T00:31:52+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008768616_MATCH	/trazorloginconectt\.webflow\.io\//
+score		PHISHTANK_0008768616_MATCH	5.0
+describe	PHISHTANK_0008768616_MATCH	Phishtank ID 8768616 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008768616_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008768616_VALIDATED	PHISHTANK_0008768616_MATCH && __PHISHTANK_0008768616_VALCHECK
+score		PHISHTANK_0008768616_VALIDATED	2.0
+describe	PHISHTANK_0008768616_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008768616_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008768616_ONLINE	PHISHTANK_0008768616_MATCH && __PHISHTANK_0008768616_ONCHECK
+score		PHISHTANK_0008768616_ONLINE	2.0
+describe	PHISHTANK_0008768616_ONLINE	Phishing URL still online
+
+##
