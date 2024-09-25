@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008773948
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8773948
+## Submitted.....: 2024-09-23T10:31:33+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008773948_MATCH	/start\-s\-trzorio\.gitbook\.io\/us/
+score		PHISHTANK_0008773948_MATCH	5.0
+describe	PHISHTANK_0008773948_MATCH	Phishtank ID 8773948 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008773948_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008773948_VALIDATED	PHISHTANK_0008773948_MATCH && __PHISHTANK_0008773948_VALCHECK
+score		PHISHTANK_0008773948_VALIDATED	2.0
+describe	PHISHTANK_0008773948_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008773948_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008773948_ONLINE	PHISHTANK_0008773948_MATCH && __PHISHTANK_0008773948_ONCHECK
+score		PHISHTANK_0008773948_ONLINE	2.0
+describe	PHISHTANK_0008773948_ONLINE	Phishing URL still online
+
+##

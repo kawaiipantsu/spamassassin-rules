@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008775555
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8775555
+## Submitted.....: 2024-09-23T19:57:29+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008775555_MATCH	/111b93a\.netsolhost\.com\/service\/2654e91e34bd4fa8808d0843f9e8b10a\//
+score		PHISHTANK_0008775555_MATCH	5.0
+describe	PHISHTANK_0008775555_MATCH	Phishtank ID 8775555 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008775555_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008775555_VALIDATED	PHISHTANK_0008775555_MATCH && __PHISHTANK_0008775555_VALCHECK
+score		PHISHTANK_0008775555_VALIDATED	2.0
+describe	PHISHTANK_0008775555_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008775555_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008775555_ONLINE	PHISHTANK_0008775555_MATCH && __PHISHTANK_0008775555_ONCHECK
+score		PHISHTANK_0008775555_ONLINE	2.0
+describe	PHISHTANK_0008775555_ONLINE	Phishing URL still online
+
+##
