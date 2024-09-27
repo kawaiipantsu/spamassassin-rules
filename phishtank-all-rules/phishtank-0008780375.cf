@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008780375
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8780375
+## Submitted.....: 2024-09-26T23:30:23+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008780375_MATCH	/hbmkjxc\.com\/web\/0102\/0102_010_00/
+score		PHISHTANK_0008780375_MATCH	5.0
+describe	PHISHTANK_0008780375_MATCH	Phishtank ID 8780375 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008780375_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008780375_VALIDATED	PHISHTANK_0008780375_MATCH && __PHISHTANK_0008780375_VALCHECK
+score		PHISHTANK_0008780375_VALIDATED	2.0
+describe	PHISHTANK_0008780375_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008780375_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008780375_ONLINE	PHISHTANK_0008780375_MATCH && __PHISHTANK_0008780375_ONCHECK
+score		PHISHTANK_0008780375_ONLINE	2.0
+describe	PHISHTANK_0008780375_ONLINE	Phishing URL still online
+
+##

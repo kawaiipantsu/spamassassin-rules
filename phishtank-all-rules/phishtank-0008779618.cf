@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008779618
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8779618
+## Submitted.....: 2024-09-26T15:01:57+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008779618_MATCH	/convite\-nivel5\.selfip\.net\/d\/controle\.php/
+score		PHISHTANK_0008779618_MATCH	5.0
+describe	PHISHTANK_0008779618_MATCH	Phishtank ID 8779618 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008779618_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008779618_VALIDATED	PHISHTANK_0008779618_MATCH && __PHISHTANK_0008779618_VALCHECK
+score		PHISHTANK_0008779618_VALIDATED	2.0
+describe	PHISHTANK_0008779618_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008779618_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008779618_ONLINE	PHISHTANK_0008779618_MATCH && __PHISHTANK_0008779618_ONCHECK
+score		PHISHTANK_0008779618_ONLINE	2.0
+describe	PHISHTANK_0008779618_ONLINE	Phishing URL still online
+
+##

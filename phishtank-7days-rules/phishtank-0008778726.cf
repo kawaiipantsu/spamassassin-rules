@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008778726
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8778726
+## Submitted.....: 2024-09-26T11:34:37+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008778726_MATCH	/applink\.account\.broker\-login\-investing\.robinhoodapp\.planetanaturalaju\.com\.br\/signin\/a3676c83f5d3d6ee4ffc36f6c7f0df36d3e311e2e26e031f641e76f9d821e9baf18a16410864c4315329275db45a1d777f4d3b2f4129ba7c35141975453f64b5/
+score		PHISHTANK_0008778726_MATCH	5.0
+describe	PHISHTANK_0008778726_MATCH	Phishtank ID 8778726 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008778726_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008778726_VALIDATED	PHISHTANK_0008778726_MATCH && __PHISHTANK_0008778726_VALCHECK
+score		PHISHTANK_0008778726_VALIDATED	2.0
+describe	PHISHTANK_0008778726_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008778726_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008778726_ONLINE	PHISHTANK_0008778726_MATCH && __PHISHTANK_0008778726_ONCHECK
+score		PHISHTANK_0008778726_ONLINE	2.0
+describe	PHISHTANK_0008778726_ONLINE	Phishing URL still online
+
+##
