@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008785377
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8785377
+## Submitted.....: 2024-09-28T14:48:19+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008785377_MATCH	/robnholdlogin\-us\.gitbook\.io\/account/
+score		PHISHTANK_0008785377_MATCH	5.0
+describe	PHISHTANK_0008785377_MATCH	Phishtank ID 8785377 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008785377_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008785377_VALIDATED	PHISHTANK_0008785377_MATCH && __PHISHTANK_0008785377_VALCHECK
+score		PHISHTANK_0008785377_VALIDATED	2.0
+describe	PHISHTANK_0008785377_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008785377_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008785377_ONLINE	PHISHTANK_0008785377_MATCH && __PHISHTANK_0008785377_ONCHECK
+score		PHISHTANK_0008785377_ONLINE	2.0
+describe	PHISHTANK_0008785377_ONLINE	Phishing URL still online
+
+##
