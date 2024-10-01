@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008788233
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8788233
+## Submitted.....: 2024-09-30T11:06:21+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008788233_MATCH	/jawatankosong\.mykd\-gov\.com\/ap1\//
+score		PHISHTANK_0008788233_MATCH	5.0
+describe	PHISHTANK_0008788233_MATCH	Phishtank ID 8788233 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008788233_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008788233_VALIDATED	PHISHTANK_0008788233_MATCH && __PHISHTANK_0008788233_VALCHECK
+score		PHISHTANK_0008788233_VALIDATED	2.0
+describe	PHISHTANK_0008788233_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008788233_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008788233_ONLINE	PHISHTANK_0008788233_MATCH && __PHISHTANK_0008788233_ONCHECK
+score		PHISHTANK_0008788233_ONLINE	2.0
+describe	PHISHTANK_0008788233_ONLINE	Phishing URL still online
+
+##

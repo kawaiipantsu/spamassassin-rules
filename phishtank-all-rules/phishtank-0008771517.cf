@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008771517
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8771517
+## Submitted.....: 2024-09-20T17:34:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008771517_MATCH	/bdv\-onlinea\-aprobar\.pages\.dev\//
+score		PHISHTANK_0008771517_MATCH	5.0
+describe	PHISHTANK_0008771517_MATCH	Phishtank ID 8771517 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008771517_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008771517_VALIDATED	PHISHTANK_0008771517_MATCH && __PHISHTANK_0008771517_VALCHECK
+score		PHISHTANK_0008771517_VALIDATED	2.0
+describe	PHISHTANK_0008771517_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008771517_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008771517_ONLINE	PHISHTANK_0008771517_MATCH && __PHISHTANK_0008771517_ONCHECK
+score		PHISHTANK_0008771517_ONLINE	2.0
+describe	PHISHTANK_0008771517_ONLINE	Phishing URL still online
+
+##

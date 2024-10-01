@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008787965
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8787965
+## Submitted.....: 2024-09-30T09:36:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008787965_MATCH	/docs\.google\.com\/drawings\/d\/17U3Y9\-gUl8ICsU0ADFdw4VLKoD8p0ZW89evbd_2xii4\/edit/
+score		PHISHTANK_0008787965_MATCH	5.0
+describe	PHISHTANK_0008787965_MATCH	Phishtank ID 8787965 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008787965_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008787965_VALIDATED	PHISHTANK_0008787965_MATCH && __PHISHTANK_0008787965_VALCHECK
+score		PHISHTANK_0008787965_VALIDATED	2.0
+describe	PHISHTANK_0008787965_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008787965_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008787965_ONLINE	PHISHTANK_0008787965_MATCH && __PHISHTANK_0008787965_ONCHECK
+score		PHISHTANK_0008787965_ONLINE	2.0
+describe	PHISHTANK_0008787965_ONLINE	Phishing URL still online
+
+##
