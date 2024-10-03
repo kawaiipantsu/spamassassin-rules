@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008791682
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8791682
+## Submitted.....: 2024-10-02T20:06:00+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008791682_MATCH	/allegrolokalnie\.p24\-b09s0g0\.pl\/oferta\/b93e02d7\-9c86\-4c5b\-8322\-c44743874dda/
+score		PHISHTANK_0008791682_MATCH	5.0
+describe	PHISHTANK_0008791682_MATCH	Phishtank ID 8791682 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008791682_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008791682_VALIDATED	PHISHTANK_0008791682_MATCH && __PHISHTANK_0008791682_VALCHECK
+score		PHISHTANK_0008791682_VALIDATED	2.0
+describe	PHISHTANK_0008791682_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008791682_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008791682_ONLINE	PHISHTANK_0008791682_MATCH && __PHISHTANK_0008791682_ONCHECK
+score		PHISHTANK_0008791682_ONLINE	2.0
+describe	PHISHTANK_0008791682_ONLINE	Phishing URL still online
+
+##
