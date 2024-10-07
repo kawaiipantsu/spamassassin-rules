@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008795766
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8795766
+## Submitted.....: 2024-10-06T04:40:05+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008795766_MATCH	/mvm\-magyar\-energy24\.clere\.co\.za\/MVM\.Next\.Energiakereskedelmi\.Zrt\.hu\/M\.V\.MAramszolgaltato2024\.Z\.r\.t\.hu\/torsion\/index2\.php/
+score		PHISHTANK_0008795766_MATCH	5.0
+describe	PHISHTANK_0008795766_MATCH	Phishtank ID 8795766 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008795766_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008795766_VALIDATED	PHISHTANK_0008795766_MATCH && __PHISHTANK_0008795766_VALCHECK
+score		PHISHTANK_0008795766_VALIDATED	2.0
+describe	PHISHTANK_0008795766_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008795766_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008795766_ONLINE	PHISHTANK_0008795766_MATCH && __PHISHTANK_0008795766_ONCHECK
+score		PHISHTANK_0008795766_ONLINE	2.0
+describe	PHISHTANK_0008795766_ONLINE	Phishing URL still online
+
+##

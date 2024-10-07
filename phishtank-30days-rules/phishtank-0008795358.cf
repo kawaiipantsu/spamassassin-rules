@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008795358
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8795358
+## Submitted.....: 2024-10-05T18:51:55+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008795358_MATCH	/unbecoming\-dockertoad\.surge\.sh\/tx9zvqxj27fldjdb9pvuuqzigbymnq1xusl1m6y4hk6lksbtao488fp1lyoimwmrdpacvqo34ws745qe27p1jt3cnk29u9ol1tkf/
+score		PHISHTANK_0008795358_MATCH	5.0
+describe	PHISHTANK_0008795358_MATCH	Phishtank ID 8795358 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008795358_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008795358_VALIDATED	PHISHTANK_0008795358_MATCH && __PHISHTANK_0008795358_VALCHECK
+score		PHISHTANK_0008795358_VALIDATED	2.0
+describe	PHISHTANK_0008795358_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008795358_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008795358_ONLINE	PHISHTANK_0008795358_MATCH && __PHISHTANK_0008795358_ONCHECK
+score		PHISHTANK_0008795358_ONLINE	2.0
+describe	PHISHTANK_0008795358_ONLINE	Phishing URL still online
+
+##
