@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008804381
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8804381
+## Submitted.....: 2024-10-11T18:36:04+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008804381_MATCH	/bnxskhan\-janleop\.lflinkup\.com\//
+score		PHISHTANK_0008804381_MATCH	5.0
+describe	PHISHTANK_0008804381_MATCH	Phishtank ID 8804381 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008804381_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008804381_VALIDATED	PHISHTANK_0008804381_MATCH && __PHISHTANK_0008804381_VALCHECK
+score		PHISHTANK_0008804381_VALIDATED	2.0
+describe	PHISHTANK_0008804381_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008804381_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008804381_ONLINE	PHISHTANK_0008804381_MATCH && __PHISHTANK_0008804381_ONCHECK
+score		PHISHTANK_0008804381_ONLINE	2.0
+describe	PHISHTANK_0008804381_ONLINE	Phishing URL still online
+
+##
