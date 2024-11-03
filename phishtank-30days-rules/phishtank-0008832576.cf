@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008832576
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8832576
+## Submitted.....: 2024-11-02T23:16:49+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008832576_MATCH	/post\-kaz\.top\//
+score		PHISHTANK_0008832576_MATCH	5.0
+describe	PHISHTANK_0008832576_MATCH	Phishtank ID 8832576 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008832576_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008832576_VALIDATED	PHISHTANK_0008832576_MATCH && __PHISHTANK_0008832576_VALCHECK
+score		PHISHTANK_0008832576_VALIDATED	2.0
+describe	PHISHTANK_0008832576_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008832576_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008832576_ONLINE	PHISHTANK_0008832576_MATCH && __PHISHTANK_0008832576_ONCHECK
+score		PHISHTANK_0008832576_ONLINE	2.0
+describe	PHISHTANK_0008832576_ONLINE	Phishing URL still online
+
+##
