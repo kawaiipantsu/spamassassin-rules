@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008857495
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8857495
+## Submitted.....: 2024-11-18T13:28:38+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008857495_MATCH	/chorus\-contact\.com\/idp\.chorus\-pro\.gouv\.fr\/81dedc13cf82fa753f3a612338c22114\/wauth\.php/
+score		PHISHTANK_0008857495_MATCH	5.0
+describe	PHISHTANK_0008857495_MATCH	Phishtank ID 8857495 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008857495_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008857495_VALIDATED	PHISHTANK_0008857495_MATCH && __PHISHTANK_0008857495_VALCHECK
+score		PHISHTANK_0008857495_VALIDATED	2.0
+describe	PHISHTANK_0008857495_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008857495_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008857495_ONLINE	PHISHTANK_0008857495_MATCH && __PHISHTANK_0008857495_ONCHECK
+score		PHISHTANK_0008857495_ONLINE	2.0
+describe	PHISHTANK_0008857495_ONLINE	Phishing URL still online
+
+##

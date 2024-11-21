@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008859122
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8859122
+## Submitted.....: 2024-11-19T08:59:30+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008859122_MATCH	/notifications\.google\.com\/g\/p\/ANiao5q8jR7xHhgVAIp\-O0wVb8qfCClvQt1Esmts8Dr5oC6waeK5rFwFUbiHusQ_uiU3vnA\-wIIvhSh5JUuQQJMQ55HGjD6p1MqF0Z87JWN1v2OUF5mYXH8NGCxaGnaYZaco1lvr3UFo6i6iZFVZ8_6\-DrDBD86Fq2djV4Zva2TEbTzMjQvtTeLUPBHh\-431t8VsFfsuGd89eq8JJTsGf4Y5vOBqFBVYrA/
+score		PHISHTANK_0008859122_MATCH	5.0
+describe	PHISHTANK_0008859122_MATCH	Phishtank ID 8859122 (Instagram) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008859122_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008859122_VALIDATED	PHISHTANK_0008859122_MATCH && __PHISHTANK_0008859122_VALCHECK
+score		PHISHTANK_0008859122_VALIDATED	2.0
+describe	PHISHTANK_0008859122_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008859122_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008859122_ONLINE	PHISHTANK_0008859122_MATCH && __PHISHTANK_0008859122_ONCHECK
+score		PHISHTANK_0008859122_ONLINE	2.0
+describe	PHISHTANK_0008859122_ONLINE	Phishing URL still online
+
+##

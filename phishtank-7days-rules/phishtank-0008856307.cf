@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008856307
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8856307
+## Submitted.....: 2024-11-17T10:31:16+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008856307_MATCH	/libaobang\.com\//
+score		PHISHTANK_0008856307_MATCH	5.0
+describe	PHISHTANK_0008856307_MATCH	Phishtank ID 8856307 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008856307_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008856307_VALIDATED	PHISHTANK_0008856307_MATCH && __PHISHTANK_0008856307_VALCHECK
+score		PHISHTANK_0008856307_VALIDATED	2.0
+describe	PHISHTANK_0008856307_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008856307_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008856307_ONLINE	PHISHTANK_0008856307_MATCH && __PHISHTANK_0008856307_ONCHECK
+score		PHISHTANK_0008856307_ONLINE	2.0
+describe	PHISHTANK_0008856307_ONLINE	Phishing URL still online
+
+##
