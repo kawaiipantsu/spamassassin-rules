@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008864015
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8864015
+## Submitted.....: 2024-11-21T20:37:54+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008864015_MATCH	/mozp\.ubjoubj\.shop\/b469621f\/XyokKmlffnxhQCNfQD1ybyVf\/XjNeNyReJX5eM14kZ3\/EkOXhuMiFlY3wxeSp\-JCMyMSF\-ZHx0JTY\/vM2V8Xz8jJQ2/
+score		PHISHTANK_0008864015_MATCH	5.0
+describe	PHISHTANK_0008864015_MATCH	Phishtank ID 8864015 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008864015_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008864015_VALIDATED	PHISHTANK_0008864015_MATCH && __PHISHTANK_0008864015_VALCHECK
+score		PHISHTANK_0008864015_VALIDATED	2.0
+describe	PHISHTANK_0008864015_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008864015_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008864015_ONLINE	PHISHTANK_0008864015_MATCH && __PHISHTANK_0008864015_ONCHECK
+score		PHISHTANK_0008864015_ONLINE	2.0
+describe	PHISHTANK_0008864015_ONLINE	Phishing URL still online
+
+##
