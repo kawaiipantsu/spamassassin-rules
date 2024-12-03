@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008880244
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8880244
+## Submitted.....: 2024-12-02T08:14:34+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008880244_MATCH	/helpplans\-subscriptions\-mobileorders\-bills\-674d6b869cc1d\.gourmet94goodies\.shop\/auth\-ee_oauth2\-authorize_customer\-management\/verify\.php/
+score		PHISHTANK_0008880244_MATCH	5.0
+describe	PHISHTANK_0008880244_MATCH	Phishtank ID 8880244 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008880244_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008880244_VALIDATED	PHISHTANK_0008880244_MATCH && __PHISHTANK_0008880244_VALCHECK
+score		PHISHTANK_0008880244_VALIDATED	2.0
+describe	PHISHTANK_0008880244_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008880244_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008880244_ONLINE	PHISHTANK_0008880244_MATCH && __PHISHTANK_0008880244_ONCHECK
+score		PHISHTANK_0008880244_ONLINE	2.0
+describe	PHISHTANK_0008880244_ONLINE	Phishing URL still online
+
+##

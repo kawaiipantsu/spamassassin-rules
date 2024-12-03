@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008882358
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8882358
+## Submitted.....: 2024-12-03T01:53:08+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008882358_MATCH	/estafetay\.shop\//
+score		PHISHTANK_0008882358_MATCH	5.0
+describe	PHISHTANK_0008882358_MATCH	Phishtank ID 8882358 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008882358_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008882358_VALIDATED	PHISHTANK_0008882358_MATCH && __PHISHTANK_0008882358_VALCHECK
+score		PHISHTANK_0008882358_VALIDATED	2.0
+describe	PHISHTANK_0008882358_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008882358_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008882358_ONLINE	PHISHTANK_0008882358_MATCH && __PHISHTANK_0008882358_ONCHECK
+score		PHISHTANK_0008882358_ONLINE	2.0
+describe	PHISHTANK_0008882358_ONLINE	Phishing URL still online
+
+##
