@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008890301
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8890301
+## Submitted.....: 2024-12-06T15:22:04+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008890301_MATCH	/docs\.google\.com\/presentation\/d\/e\/2PACX\-1vSlzMDvUXOjZZITGbKvN8bb91pB9ctzW\-bDdEYgX2p4ZHqhe_lX8bDBTLKXyoUQU85NEVse4uR0aVB7\/pub/
+score		PHISHTANK_0008890301_MATCH	5.0
+describe	PHISHTANK_0008890301_MATCH	Phishtank ID 8890301 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008890301_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008890301_VALIDATED	PHISHTANK_0008890301_MATCH && __PHISHTANK_0008890301_VALCHECK
+score		PHISHTANK_0008890301_VALIDATED	2.0
+describe	PHISHTANK_0008890301_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008890301_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008890301_ONLINE	PHISHTANK_0008890301_MATCH && __PHISHTANK_0008890301_ONCHECK
+score		PHISHTANK_0008890301_ONLINE	2.0
+describe	PHISHTANK_0008890301_ONLINE	Phishing URL still online
+
+##

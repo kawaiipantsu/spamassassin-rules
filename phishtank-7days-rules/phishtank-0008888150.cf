@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008888150
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8888150
+## Submitted.....: 2024-12-06T06:02:21+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008888150_MATCH	/yurticikargoo\.me\//
+score		PHISHTANK_0008888150_MATCH	5.0
+describe	PHISHTANK_0008888150_MATCH	Phishtank ID 8888150 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008888150_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008888150_VALIDATED	PHISHTANK_0008888150_MATCH && __PHISHTANK_0008888150_VALCHECK
+score		PHISHTANK_0008888150_VALIDATED	2.0
+describe	PHISHTANK_0008888150_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008888150_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008888150_ONLINE	PHISHTANK_0008888150_MATCH && __PHISHTANK_0008888150_ONCHECK
+score		PHISHTANK_0008888150_ONLINE	2.0
+describe	PHISHTANK_0008888150_ONLINE	Phishing URL still online
+
+##
