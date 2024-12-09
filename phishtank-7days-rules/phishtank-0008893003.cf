@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008893003
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8893003
+## Submitted.....: 2024-12-08T15:32:26+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008893003_MATCH	/berbagimadani\.vercel\.app\/Snd/
+score		PHISHTANK_0008893003_MATCH	5.0
+describe	PHISHTANK_0008893003_MATCH	Phishtank ID 8893003 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008893003_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008893003_VALIDATED	PHISHTANK_0008893003_MATCH && __PHISHTANK_0008893003_VALCHECK
+score		PHISHTANK_0008893003_VALIDATED	2.0
+describe	PHISHTANK_0008893003_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008893003_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008893003_ONLINE	PHISHTANK_0008893003_MATCH && __PHISHTANK_0008893003_ONCHECK
+score		PHISHTANK_0008893003_ONLINE	2.0
+describe	PHISHTANK_0008893003_ONLINE	Phishing URL still online
+
+##
