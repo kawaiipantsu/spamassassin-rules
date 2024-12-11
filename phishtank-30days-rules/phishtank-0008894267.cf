@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008894267
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8894267
+## Submitted.....: 2024-12-09T11:12:44+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008894267_MATCH	/monlockers\.com\/index\.php/
+score		PHISHTANK_0008894267_MATCH	5.0
+describe	PHISHTANK_0008894267_MATCH	Phishtank ID 8894267 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008894267_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008894267_VALIDATED	PHISHTANK_0008894267_MATCH && __PHISHTANK_0008894267_VALCHECK
+score		PHISHTANK_0008894267_VALIDATED	2.0
+describe	PHISHTANK_0008894267_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008894267_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008894267_ONLINE	PHISHTANK_0008894267_MATCH && __PHISHTANK_0008894267_ONCHECK
+score		PHISHTANK_0008894267_ONLINE	2.0
+describe	PHISHTANK_0008894267_ONLINE	Phishing URL still online
+
+##
