@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008897059
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8897059
+## Submitted.....: 2024-12-11T14:27:54+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008897059_MATCH	/docs\.google\.com\/presentation\/d\/e\/2PACX\-1vSl37PB72Is4P3zr6fraYH47wrUJICEu5Hw\-s_9FkWYH6eYM2IfdN_zDf0n\-ABw4ay7eAhXR0KsKgQp\/pub/
+score		PHISHTANK_0008897059_MATCH	5.0
+describe	PHISHTANK_0008897059_MATCH	Phishtank ID 8897059 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008897059_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008897059_VALIDATED	PHISHTANK_0008897059_MATCH && __PHISHTANK_0008897059_VALCHECK
+score		PHISHTANK_0008897059_VALIDATED	2.0
+describe	PHISHTANK_0008897059_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008897059_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008897059_ONLINE	PHISHTANK_0008897059_MATCH && __PHISHTANK_0008897059_ONCHECK
+score		PHISHTANK_0008897059_ONLINE	2.0
+describe	PHISHTANK_0008897059_ONLINE	Phishing URL still online
+
+##
