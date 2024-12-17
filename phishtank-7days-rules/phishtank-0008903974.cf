@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008903974
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8903974
+## Submitted.....: 2024-12-16T08:38:05+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008903974_MATCH	/mcsft039945940940\.ubpages\.com\/3d12f067\-0439\-47f4\-b46a\-efcb97a19782\//
+score		PHISHTANK_0008903974_MATCH	5.0
+describe	PHISHTANK_0008903974_MATCH	Phishtank ID 8903974 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008903974_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008903974_VALIDATED	PHISHTANK_0008903974_MATCH && __PHISHTANK_0008903974_VALCHECK
+score		PHISHTANK_0008903974_VALIDATED	2.0
+describe	PHISHTANK_0008903974_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008903974_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008903974_ONLINE	PHISHTANK_0008903974_MATCH && __PHISHTANK_0008903974_ONCHECK
+score		PHISHTANK_0008903974_ONLINE	2.0
+describe	PHISHTANK_0008903974_ONLINE	Phishing URL still online
+
+##
