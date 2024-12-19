@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008906535
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8906535
+## Submitted.....: 2024-12-17T22:32:27+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008906535_MATCH	/uspsffxom\.top\//
+score		PHISHTANK_0008906535_MATCH	5.0
+describe	PHISHTANK_0008906535_MATCH	Phishtank ID 8906535 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008906535_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008906535_VALIDATED	PHISHTANK_0008906535_MATCH && __PHISHTANK_0008906535_VALCHECK
+score		PHISHTANK_0008906535_VALIDATED	2.0
+describe	PHISHTANK_0008906535_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008906535_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008906535_ONLINE	PHISHTANK_0008906535_MATCH && __PHISHTANK_0008906535_ONCHECK
+score		PHISHTANK_0008906535_ONLINE	2.0
+describe	PHISHTANK_0008906535_ONLINE	Phishing URL still online
+
+##

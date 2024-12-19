@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008908284
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8908284
+## Submitted.....: 2024-12-18T21:23:21+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008908284_MATCH	/usps\.com\-trackknx\.top\//
+score		PHISHTANK_0008908284_MATCH	5.0
+describe	PHISHTANK_0008908284_MATCH	Phishtank ID 8908284 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008908284_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008908284_VALIDATED	PHISHTANK_0008908284_MATCH && __PHISHTANK_0008908284_VALCHECK
+score		PHISHTANK_0008908284_VALIDATED	2.0
+describe	PHISHTANK_0008908284_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008908284_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008908284_ONLINE	PHISHTANK_0008908284_MATCH && __PHISHTANK_0008908284_ONCHECK
+score		PHISHTANK_0008908284_ONLINE	2.0
+describe	PHISHTANK_0008908284_ONLINE	Phishing URL still online
+
+##
