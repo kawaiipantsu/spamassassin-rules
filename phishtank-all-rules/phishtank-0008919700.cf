@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008919700
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8919700
+## Submitted.....: 2024-12-27T06:29:52+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008919700_MATCH	/srv225958\.hoster\-test\.ru\/am%202\/am%202\//
+score		PHISHTANK_0008919700_MATCH	5.0
+describe	PHISHTANK_0008919700_MATCH	Phishtank ID 8919700 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008919700_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008919700_VALIDATED	PHISHTANK_0008919700_MATCH && __PHISHTANK_0008919700_VALCHECK
+score		PHISHTANK_0008919700_VALIDATED	2.0
+describe	PHISHTANK_0008919700_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008919700_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008919700_ONLINE	PHISHTANK_0008919700_MATCH && __PHISHTANK_0008919700_ONCHECK
+score		PHISHTANK_0008919700_ONLINE	2.0
+describe	PHISHTANK_0008919700_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008921565
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8921565
+## Submitted.....: 2024-12-29T01:35:30+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008921565_MATCH	/leaflitter\.cn\/appleDASFwq23weqqw34eFSDFS5435ERWR\//
+score		PHISHTANK_0008921565_MATCH	5.0
+describe	PHISHTANK_0008921565_MATCH	Phishtank ID 8921565 (Apple) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008921565_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008921565_VALIDATED	PHISHTANK_0008921565_MATCH && __PHISHTANK_0008921565_VALCHECK
+score		PHISHTANK_0008921565_VALIDATED	2.0
+describe	PHISHTANK_0008921565_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008921565_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008921565_ONLINE	PHISHTANK_0008921565_MATCH && __PHISHTANK_0008921565_ONCHECK
+score		PHISHTANK_0008921565_ONLINE	2.0
+describe	PHISHTANK_0008921565_ONLINE	Phishing URL still online
+
+##

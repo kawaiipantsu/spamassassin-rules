@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008920626
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8920626
+## Submitted.....: 2024-12-28T06:16:50+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008920626_MATCH	/usps\.com\-trackjmq\.top\//
+score		PHISHTANK_0008920626_MATCH	5.0
+describe	PHISHTANK_0008920626_MATCH	Phishtank ID 8920626 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008920626_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008920626_VALIDATED	PHISHTANK_0008920626_MATCH && __PHISHTANK_0008920626_VALCHECK
+score		PHISHTANK_0008920626_VALIDATED	2.0
+describe	PHISHTANK_0008920626_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008920626_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008920626_ONLINE	PHISHTANK_0008920626_MATCH && __PHISHTANK_0008920626_ONCHECK
+score		PHISHTANK_0008920626_ONLINE	2.0
+describe	PHISHTANK_0008920626_ONLINE	Phishing URL still online
+
+##
