@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008923632
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8923632
+## Submitted.....: 2024-12-30T14:41:03+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008923632_MATCH	/epncquerydpt\.org\/%20arcu\/s\/a\/session_index/
+score		PHISHTANK_0008923632_MATCH	5.0
+describe	PHISHTANK_0008923632_MATCH	Phishtank ID 8923632 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008923632_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008923632_VALIDATED	PHISHTANK_0008923632_MATCH && __PHISHTANK_0008923632_VALCHECK
+score		PHISHTANK_0008923632_VALIDATED	2.0
+describe	PHISHTANK_0008923632_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008923632_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008923632_ONLINE	PHISHTANK_0008923632_MATCH && __PHISHTANK_0008923632_ONCHECK
+score		PHISHTANK_0008923632_ONLINE	2.0
+describe	PHISHTANK_0008923632_ONLINE	Phishing URL still online
+
+##
