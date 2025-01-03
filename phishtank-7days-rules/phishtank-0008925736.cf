@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008925736
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8925736
+## Submitted.....: 2025-01-02T13:09:04+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008925736_MATCH	/zen\-hellman\.67\-23\-166\-125\.plesk\.page\/popdiouef\-\-ypiufkoojmmiue\/casimiro\-\-_\-\-yvamovsky\/sean\-paolo\/dimitri\-\-__\-\-erikoo\/poimeur\-\-__\-\-plimaire\/zammer\-\-__\-\-dimitri\//
+score		PHISHTANK_0008925736_MATCH	5.0
+describe	PHISHTANK_0008925736_MATCH	Phishtank ID 8925736 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008925736_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008925736_VALIDATED	PHISHTANK_0008925736_MATCH && __PHISHTANK_0008925736_VALCHECK
+score		PHISHTANK_0008925736_VALIDATED	2.0
+describe	PHISHTANK_0008925736_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008925736_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008925736_ONLINE	PHISHTANK_0008925736_MATCH && __PHISHTANK_0008925736_ONCHECK
+score		PHISHTANK_0008925736_ONLINE	2.0
+describe	PHISHTANK_0008925736_ONLINE	Phishing URL still online
+
+##
