@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008937931
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8937931
+## Submitted.....: 2025-01-14T02:10:18+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008937931_MATCH	/639f3e0b\-55e9\-4153\-bccf\-56b5ed52c406\-00\-3md74239dcg0p\.kirk\.replit\.dev\/japanese\.html/
+score		PHISHTANK_0008937931_MATCH	5.0
+describe	PHISHTANK_0008937931_MATCH	Phishtank ID 8937931 (DHL) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008937931_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008937931_VALIDATED	PHISHTANK_0008937931_MATCH && __PHISHTANK_0008937931_VALCHECK
+score		PHISHTANK_0008937931_VALIDATED	2.0
+describe	PHISHTANK_0008937931_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008937931_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008937931_ONLINE	PHISHTANK_0008937931_MATCH && __PHISHTANK_0008937931_ONCHECK
+score		PHISHTANK_0008937931_ONLINE	2.0
+describe	PHISHTANK_0008937931_ONLINE	Phishing URL still online
+
+##
