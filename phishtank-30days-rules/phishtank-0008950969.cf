@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008950969
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8950969
+## Submitted.....: 2025-01-26T04:31:46+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008950969_MATCH	/ezdrive\.com\-w6ke\.xin\//
+score		PHISHTANK_0008950969_MATCH	5.0
+describe	PHISHTANK_0008950969_MATCH	Phishtank ID 8950969 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008950969_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008950969_VALIDATED	PHISHTANK_0008950969_MATCH && __PHISHTANK_0008950969_VALCHECK
+score		PHISHTANK_0008950969_VALIDATED	2.0
+describe	PHISHTANK_0008950969_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008950969_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008950969_ONLINE	PHISHTANK_0008950969_MATCH && __PHISHTANK_0008950969_ONCHECK
+score		PHISHTANK_0008950969_ONLINE	2.0
+describe	PHISHTANK_0008950969_ONLINE	Phishing URL still online
+
+##
