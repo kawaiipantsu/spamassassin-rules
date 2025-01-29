@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008955331
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8955331
+## Submitted.....: 2025-01-28T18:53:49+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008955331_MATCH	/docs\.google\.com\/drawings\/d\/1Mg923ZzBcKHodQwP3wgCBY8Rv3o0Lwobs1YHY0r2QS0\/edit/
+score		PHISHTANK_0008955331_MATCH	5.0
+describe	PHISHTANK_0008955331_MATCH	Phishtank ID 8955331 (eBay, Inc.) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008955331_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008955331_VALIDATED	PHISHTANK_0008955331_MATCH && __PHISHTANK_0008955331_VALCHECK
+score		PHISHTANK_0008955331_VALIDATED	2.0
+describe	PHISHTANK_0008955331_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008955331_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008955331_ONLINE	PHISHTANK_0008955331_MATCH && __PHISHTANK_0008955331_ONCHECK
+score		PHISHTANK_0008955331_ONLINE	2.0
+describe	PHISHTANK_0008955331_ONLINE	Phishing URL still online
+
+##
