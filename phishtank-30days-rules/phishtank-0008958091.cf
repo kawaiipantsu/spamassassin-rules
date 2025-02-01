@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008958091
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8958091
+## Submitted.....: 2025-01-31T09:45:43+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008958091_MATCH	/email\.about\.me\/c\/eJyMks9uozwUxZ_GbKJGxsZgFiwSSNR\-7df_akfdIGMujVuwkTFM0qcfOVE0ZDcSEva5Px\-fe2Upul6oT43Y\-rwsVY1YkUUpJZQHMwA6odpyGKsvkM4jKFmjZD0OYJeNsoO7Fx2gpPAfyRdqWLidcIuDGRHdLtCGoDRHfD237K3xZqX2J1mRPVpTj9Ipo\-eUBal6BdqVtemE0p789GGW0nRzcJbNl_81hYOub4WDWQw1CXlYbLzLBXnoj8CrFXoQx6DiApiEVcLLnsqNdta0QZ2FCeUkgOM_pCnhSbDLsIS4TmuZch6yELM4lVGYsqpKoSFC0EBlBBOGQ5JiTjhOlk0SM8F5DDEPQwIJirCozOiWHQRttnOuHxBdIbJFZHsu\-B3djq4rBzNaCYgWE1iDSOy1Dmo1dogWcBrYUZRGO9AO0UKeOjjr5z5psTnhjOA3sKpR8tT0iXNgveXFkBCJ_bXee0K0yJv8Lv78gRrutM6r27f98_B9R9\-b\-mb9XBJBX1arVpfF2MvmN2P8ZR99XP2Yh_fJvj7d9tvXzXT_cv3xpPg3weYx\-q9XE9y8xVe_4Pp_gg_XD44V8eFrlWNEGC0Cm0mjtYJK7FOMIvz3_bjMBwtcVsFOTMqMVrTBlJE_AQAA___vjQX5/
+score		PHISHTANK_0008958091_MATCH	5.0
+describe	PHISHTANK_0008958091_MATCH	Phishtank ID 8958091 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008958091_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008958091_VALIDATED	PHISHTANK_0008958091_MATCH && __PHISHTANK_0008958091_VALCHECK
+score		PHISHTANK_0008958091_VALIDATED	2.0
+describe	PHISHTANK_0008958091_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008958091_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008958091_ONLINE	PHISHTANK_0008958091_MATCH && __PHISHTANK_0008958091_ONCHECK
+score		PHISHTANK_0008958091_ONLINE	2.0
+describe	PHISHTANK_0008958091_ONLINE	Phishing URL still online
+
+##
