@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008963851
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8963851
+## Submitted.....: 2025-02-06T07:33:15+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008963851_MATCH	/allegrolokalnie\.pl\-propozycje\-ogloszen\-9211\.icu\/aukcja\/31231ac4186f5\-feeb\-447a\-9ff6\-0195db0d9646/
+score		PHISHTANK_0008963851_MATCH	5.0
+describe	PHISHTANK_0008963851_MATCH	Phishtank ID 8963851 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008963851_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008963851_VALIDATED	PHISHTANK_0008963851_MATCH && __PHISHTANK_0008963851_VALCHECK
+score		PHISHTANK_0008963851_VALIDATED	2.0
+describe	PHISHTANK_0008963851_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008963851_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008963851_ONLINE	PHISHTANK_0008963851_MATCH && __PHISHTANK_0008963851_ONCHECK
+score		PHISHTANK_0008963851_ONLINE	2.0
+describe	PHISHTANK_0008963851_ONLINE	Phishing URL still online
+
+##
