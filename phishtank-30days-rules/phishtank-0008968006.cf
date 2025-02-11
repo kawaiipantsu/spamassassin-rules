@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008968006
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8968006
+## Submitted.....: 2025-02-09T05:22:35+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008968006_MATCH	/direya\.com\/JAe7vX1n2\-ytOoqF0A\-SB1\.htm/
+score		PHISHTANK_0008968006_MATCH	5.0
+describe	PHISHTANK_0008968006_MATCH	Phishtank ID 8968006 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008968006_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008968006_VALIDATED	PHISHTANK_0008968006_MATCH && __PHISHTANK_0008968006_VALCHECK
+score		PHISHTANK_0008968006_VALIDATED	2.0
+describe	PHISHTANK_0008968006_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008968006_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008968006_ONLINE	PHISHTANK_0008968006_MATCH && __PHISHTANK_0008968006_ONCHECK
+score		PHISHTANK_0008968006_ONLINE	2.0
+describe	PHISHTANK_0008968006_ONLINE	Phishing URL still online
+
+##

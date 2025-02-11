@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008968539
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8968539
+## Submitted.....: 2025-02-09T18:29:55+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008968539_MATCH	/ezdrivema\.com\-paydc\.top\/pay\//
+score		PHISHTANK_0008968539_MATCH	5.0
+describe	PHISHTANK_0008968539_MATCH	Phishtank ID 8968539 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008968539_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008968539_VALIDATED	PHISHTANK_0008968539_MATCH && __PHISHTANK_0008968539_VALCHECK
+score		PHISHTANK_0008968539_VALIDATED	2.0
+describe	PHISHTANK_0008968539_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008968539_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008968539_ONLINE	PHISHTANK_0008968539_MATCH && __PHISHTANK_0008968539_ONCHECK
+score		PHISHTANK_0008968539_ONLINE	2.0
+describe	PHISHTANK_0008968539_ONLINE	Phishing URL still online
+
+##
