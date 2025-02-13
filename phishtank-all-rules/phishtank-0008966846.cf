@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008966846
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8966846
+## Submitted.....: 2025-02-08T18:20:07+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008966846_MATCH	/rrpand\.tricodesdev\.com\/panda\/redlining\/aeon/
+score		PHISHTANK_0008966846_MATCH	5.0
+describe	PHISHTANK_0008966846_MATCH	Phishtank ID 8966846 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008966846_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008966846_VALIDATED	PHISHTANK_0008966846_MATCH && __PHISHTANK_0008966846_VALCHECK
+score		PHISHTANK_0008966846_VALIDATED	2.0
+describe	PHISHTANK_0008966846_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008966846_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008966846_ONLINE	PHISHTANK_0008966846_MATCH && __PHISHTANK_0008966846_ONCHECK
+score		PHISHTANK_0008966846_ONLINE	2.0
+describe	PHISHTANK_0008966846_ONLINE	Phishing URL still online
+
+##
