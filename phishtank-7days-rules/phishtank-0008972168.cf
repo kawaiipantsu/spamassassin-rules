@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008972168
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8972168
+## Submitted.....: 2025-02-12T14:19:26+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008972168_MATCH	/v12jrpmy\.r\.us\-west\-2\.awstrack\.me\/L0\/https\:%2F%2Fserv7se\.nyc3\.cdn\.digitaloceanspaces\.com%2Findex\-\.html%23alvaro\.fernandes@cgd\.pt\/1\/01010194fa2db69d\-1a5d94a2\-e769\-414d\-a4eb\-fe375ebf7f93\-000000\/ieOFI7001h0Cpltlu9_TNWGormY\=413/
+score		PHISHTANK_0008972168_MATCH	5.0
+describe	PHISHTANK_0008972168_MATCH	Phishtank ID 8972168 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008972168_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008972168_VALIDATED	PHISHTANK_0008972168_MATCH && __PHISHTANK_0008972168_VALCHECK
+score		PHISHTANK_0008972168_VALIDATED	2.0
+describe	PHISHTANK_0008972168_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008972168_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008972168_ONLINE	PHISHTANK_0008972168_MATCH && __PHISHTANK_0008972168_ONCHECK
+score		PHISHTANK_0008972168_ONLINE	2.0
+describe	PHISHTANK_0008972168_ONLINE	Phishing URL still online
+
+##
