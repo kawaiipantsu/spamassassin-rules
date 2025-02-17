@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008974764
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8974764
+## Submitted.....: 2025-02-15T14:25:16+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008974764_MATCH	/cadeau\-dofus\.com\/fr\/mmorpg\/actualites\/news\/pack\-special8678764\//
+score		PHISHTANK_0008974764_MATCH	5.0
+describe	PHISHTANK_0008974764_MATCH	Phishtank ID 8974764 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008974764_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008974764_VALIDATED	PHISHTANK_0008974764_MATCH && __PHISHTANK_0008974764_VALCHECK
+score		PHISHTANK_0008974764_VALIDATED	2.0
+describe	PHISHTANK_0008974764_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008974764_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008974764_ONLINE	PHISHTANK_0008974764_MATCH && __PHISHTANK_0008974764_ONCHECK
+score		PHISHTANK_0008974764_ONLINE	2.0
+describe	PHISHTANK_0008974764_ONLINE	Phishing URL still online
+
+##
