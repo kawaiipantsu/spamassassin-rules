@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008975212
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8975212
+## Submitted.....: 2025-02-15T18:20:50+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008975212_MATCH	/paytollmce\.vip\//
+score		PHISHTANK_0008975212_MATCH	5.0
+describe	PHISHTANK_0008975212_MATCH	Phishtank ID 8975212 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008975212_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008975212_VALIDATED	PHISHTANK_0008975212_MATCH && __PHISHTANK_0008975212_VALCHECK
+score		PHISHTANK_0008975212_VALIDATED	2.0
+describe	PHISHTANK_0008975212_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008975212_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008975212_ONLINE	PHISHTANK_0008975212_MATCH && __PHISHTANK_0008975212_ONCHECK
+score		PHISHTANK_0008975212_ONLINE	2.0
+describe	PHISHTANK_0008975212_ONLINE	Phishing URL still online
+
+##
