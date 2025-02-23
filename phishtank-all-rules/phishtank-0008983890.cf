@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008983890
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8983890
+## Submitted.....: 2025-02-22T21:30:22+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008983890_MATCH	/tp001\.vip\//
+score		PHISHTANK_0008983890_MATCH	5.0
+describe	PHISHTANK_0008983890_MATCH	Phishtank ID 8983890 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008983890_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008983890_VALIDATED	PHISHTANK_0008983890_MATCH && __PHISHTANK_0008983890_VALCHECK
+score		PHISHTANK_0008983890_VALIDATED	2.0
+describe	PHISHTANK_0008983890_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008983890_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008983890_ONLINE	PHISHTANK_0008983890_MATCH && __PHISHTANK_0008983890_ONCHECK
+score		PHISHTANK_0008983890_ONLINE	2.0
+describe	PHISHTANK_0008983890_ONLINE	Phishing URL still online
+
+##
