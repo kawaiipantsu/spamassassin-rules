@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008990394
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8990394
+## Submitted.....: 2025-02-25T16:32:48+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008990394_MATCH	/0lx\-938i\.wqoksh\.com\/method\/page\/03c9cdfbfd9a9ec51f636d1f63d6cd69b7017f72d274d1928c969f4eb2494943/
+score		PHISHTANK_0008990394_MATCH	5.0
+describe	PHISHTANK_0008990394_MATCH	Phishtank ID 8990394 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008990394_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008990394_VALIDATED	PHISHTANK_0008990394_MATCH && __PHISHTANK_0008990394_VALCHECK
+score		PHISHTANK_0008990394_VALIDATED	2.0
+describe	PHISHTANK_0008990394_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008990394_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008990394_ONLINE	PHISHTANK_0008990394_MATCH && __PHISHTANK_0008990394_ONCHECK
+score		PHISHTANK_0008990394_ONLINE	2.0
+describe	PHISHTANK_0008990394_ONLINE	Phishing URL still online
+
+##
