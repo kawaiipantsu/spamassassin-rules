@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008992562
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8992562
+## Submitted.....: 2025-02-27T23:51:04+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008992562_MATCH	/new\-\-app\-\-\-coinbasepro\-\-y\-\-\-\-cdn\.webflow\.io\//
+score		PHISHTANK_0008992562_MATCH	5.0
+describe	PHISHTANK_0008992562_MATCH	Phishtank ID 8992562 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008992562_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008992562_VALIDATED	PHISHTANK_0008992562_MATCH && __PHISHTANK_0008992562_VALCHECK
+score		PHISHTANK_0008992562_VALIDATED	2.0
+describe	PHISHTANK_0008992562_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008992562_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008992562_ONLINE	PHISHTANK_0008992562_MATCH && __PHISHTANK_0008992562_ONCHECK
+score		PHISHTANK_0008992562_ONLINE	2.0
+describe	PHISHTANK_0008992562_ONLINE	Phishing URL still online
+
+##
