@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0008994377
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=8994377
+## Submitted.....: 2025-03-01T02:57:41+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0008994377_MATCH	/getipass\.com\-ticketews\.xin\//
+score		PHISHTANK_0008994377_MATCH	5.0
+describe	PHISHTANK_0008994377_MATCH	Phishtank ID 8994377 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0008994377_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0008994377_VALIDATED	PHISHTANK_0008994377_MATCH && __PHISHTANK_0008994377_VALCHECK
+score		PHISHTANK_0008994377_VALIDATED	2.0
+describe	PHISHTANK_0008994377_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0008994377_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0008994377_ONLINE	PHISHTANK_0008994377_MATCH && __PHISHTANK_0008994377_ONCHECK
+score		PHISHTANK_0008994377_ONLINE	2.0
+describe	PHISHTANK_0008994377_ONLINE	Phishing URL still online
+
+##
