@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009006198
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9006198
+## Submitted.....: 2025-03-07T15:37:16+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009006198_MATCH	/runbox\-105330\.square\.site\//
+score		PHISHTANK_0009006198_MATCH	5.0
+describe	PHISHTANK_0009006198_MATCH	Phishtank ID 9006198 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009006198_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009006198_VALIDATED	PHISHTANK_0009006198_MATCH && __PHISHTANK_0009006198_VALCHECK
+score		PHISHTANK_0009006198_VALIDATED	2.0
+describe	PHISHTANK_0009006198_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009006198_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009006198_ONLINE	PHISHTANK_0009006198_MATCH && __PHISHTANK_0009006198_ONCHECK
+score		PHISHTANK_0009006198_ONLINE	2.0
+describe	PHISHTANK_0009006198_ONLINE	Phishing URL still online
+
+##
