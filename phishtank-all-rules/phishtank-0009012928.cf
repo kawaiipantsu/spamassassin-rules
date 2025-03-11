@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009012928
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9012928
+## Submitted.....: 2025-03-10T12:34:22+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009012928_MATCH	/mypeachpass\.com\-djhw\.xin\//
+score		PHISHTANK_0009012928_MATCH	5.0
+describe	PHISHTANK_0009012928_MATCH	Phishtank ID 9012928 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009012928_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009012928_VALIDATED	PHISHTANK_0009012928_MATCH && __PHISHTANK_0009012928_VALCHECK
+score		PHISHTANK_0009012928_VALIDATED	2.0
+describe	PHISHTANK_0009012928_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009012928_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009012928_ONLINE	PHISHTANK_0009012928_MATCH && __PHISHTANK_0009012928_ONCHECK
+score		PHISHTANK_0009012928_ONLINE	2.0
+describe	PHISHTANK_0009012928_ONLINE	Phishing URL still online
+
+##
