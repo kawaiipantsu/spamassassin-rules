@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009021934
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9021934
+## Submitted.....: 2025-03-15T14:19:19+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009021934_MATCH	/allegrolokalnie\.kategorie\-ogrodowe\-413523\.icu\/aukcja\/domek\-dla\-dzieci\-kompletny\-malowany\-484832/
+score		PHISHTANK_0009021934_MATCH	5.0
+describe	PHISHTANK_0009021934_MATCH	Phishtank ID 9021934 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009021934_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009021934_VALIDATED	PHISHTANK_0009021934_MATCH && __PHISHTANK_0009021934_VALCHECK
+score		PHISHTANK_0009021934_VALIDATED	2.0
+describe	PHISHTANK_0009021934_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009021934_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009021934_ONLINE	PHISHTANK_0009021934_MATCH && __PHISHTANK_0009021934_ONCHECK
+score		PHISHTANK_0009021934_ONLINE	2.0
+describe	PHISHTANK_0009021934_ONLINE	Phishing URL still online
+
+##
