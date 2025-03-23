@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009027607
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9027607
+## Submitted.....: 2025-03-23T00:47:14+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009027607_MATCH	/reserverunlocker\.com\/pac\/calcul\.php/
+score		PHISHTANK_0009027607_MATCH	5.0
+describe	PHISHTANK_0009027607_MATCH	Phishtank ID 9027607 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009027607_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009027607_VALIDATED	PHISHTANK_0009027607_MATCH && __PHISHTANK_0009027607_VALCHECK
+score		PHISHTANK_0009027607_VALIDATED	2.0
+describe	PHISHTANK_0009027607_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009027607_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009027607_ONLINE	PHISHTANK_0009027607_MATCH && __PHISHTANK_0009027607_ONCHECK
+score		PHISHTANK_0009027607_ONLINE	2.0
+describe	PHISHTANK_0009027607_ONLINE	Phishing URL still online
+
+##
