@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009036446
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9036446
+## Submitted.....: 2025-03-28T23:08:42+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009036446_MATCH	/driveezmd\.com\-iwdm\.xin\//
+score		PHISHTANK_0009036446_MATCH	5.0
+describe	PHISHTANK_0009036446_MATCH	Phishtank ID 9036446 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009036446_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009036446_VALIDATED	PHISHTANK_0009036446_MATCH && __PHISHTANK_0009036446_VALCHECK
+score		PHISHTANK_0009036446_VALIDATED	2.0
+describe	PHISHTANK_0009036446_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009036446_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009036446_ONLINE	PHISHTANK_0009036446_MATCH && __PHISHTANK_0009036446_ONCHECK
+score		PHISHTANK_0009036446_ONLINE	2.0
+describe	PHISHTANK_0009036446_ONLINE	Phishing URL still online
+
+##

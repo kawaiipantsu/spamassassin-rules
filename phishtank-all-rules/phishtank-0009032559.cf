@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009032559
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9032559
+## Submitted.....: 2025-03-27T12:06:12+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009032559_MATCH	/e\-zpassny\.com\-rhdg\.vip\//
+score		PHISHTANK_0009032559_MATCH	5.0
+describe	PHISHTANK_0009032559_MATCH	Phishtank ID 9032559 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009032559_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009032559_VALIDATED	PHISHTANK_0009032559_MATCH && __PHISHTANK_0009032559_VALCHECK
+score		PHISHTANK_0009032559_VALIDATED	2.0
+describe	PHISHTANK_0009032559_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009032559_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009032559_ONLINE	PHISHTANK_0009032559_MATCH && __PHISHTANK_0009032559_ONCHECK
+score		PHISHTANK_0009032559_ONLINE	2.0
+describe	PHISHTANK_0009032559_ONLINE	Phishing URL still online
+
+##
