@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009038409
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9038409
+## Submitted.....: 2025-03-29T06:06:25+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009038409_MATCH	/zpassny\.com\-ietctf\.xin\//
+score		PHISHTANK_0009038409_MATCH	5.0
+describe	PHISHTANK_0009038409_MATCH	Phishtank ID 9038409 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009038409_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009038409_VALIDATED	PHISHTANK_0009038409_MATCH && __PHISHTANK_0009038409_VALCHECK
+score		PHISHTANK_0009038409_VALIDATED	2.0
+describe	PHISHTANK_0009038409_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009038409_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009038409_ONLINE	PHISHTANK_0009038409_MATCH && __PHISHTANK_0009038409_ONCHECK
+score		PHISHTANK_0009038409_ONLINE	2.0
+describe	PHISHTANK_0009038409_ONLINE	Phishing URL still online
+
+##
