@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009047012
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9047012
+## Submitted.....: 2025-04-03T21:59:58+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009047012_MATCH	/allegrolokalnie\.pl\-propozycje\-inne\-17\.icu/
+score		PHISHTANK_0009047012_MATCH	5.0
+describe	PHISHTANK_0009047012_MATCH	Phishtank ID 9047012 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009047012_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009047012_VALIDATED	PHISHTANK_0009047012_MATCH && __PHISHTANK_0009047012_VALCHECK
+score		PHISHTANK_0009047012_VALIDATED	2.0
+describe	PHISHTANK_0009047012_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009047012_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009047012_ONLINE	PHISHTANK_0009047012_MATCH && __PHISHTANK_0009047012_ONCHECK
+score		PHISHTANK_0009047012_ONLINE	2.0
+describe	PHISHTANK_0009047012_ONLINE	Phishing URL still online
+
+##

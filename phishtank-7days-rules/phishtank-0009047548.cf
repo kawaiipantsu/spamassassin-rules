@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009047548
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9047548
+## Submitted.....: 2025-04-04T17:25:14+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009047548_MATCH	/olx\-pl\.preownedproducts\.sbs\/payment\/bfbd8935998b\/sgb/
+score		PHISHTANK_0009047548_MATCH	5.0
+describe	PHISHTANK_0009047548_MATCH	Phishtank ID 9047548 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009047548_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009047548_VALIDATED	PHISHTANK_0009047548_MATCH && __PHISHTANK_0009047548_VALCHECK
+score		PHISHTANK_0009047548_VALIDATED	2.0
+describe	PHISHTANK_0009047548_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009047548_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009047548_ONLINE	PHISHTANK_0009047548_MATCH && __PHISHTANK_0009047548_ONCHECK
+score		PHISHTANK_0009047548_ONLINE	2.0
+describe	PHISHTANK_0009047548_ONLINE	Phishing URL still online
+
+##
