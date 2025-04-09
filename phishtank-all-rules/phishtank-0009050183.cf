@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009050183
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9050183
+## Submitted.....: 2025-04-07T01:52:28+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009050183_MATCH	/docs\.google\.com\/drawings\/d\/1OoVSZSy0zTFn3_GIxM5sCdIck6kwvRkDva3GZmdLUQ8\/edit/
+score		PHISHTANK_0009050183_MATCH	5.0
+describe	PHISHTANK_0009050183_MATCH	Phishtank ID 9050183 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009050183_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009050183_VALIDATED	PHISHTANK_0009050183_MATCH && __PHISHTANK_0009050183_VALCHECK
+score		PHISHTANK_0009050183_VALIDATED	2.0
+describe	PHISHTANK_0009050183_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009050183_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009050183_ONLINE	PHISHTANK_0009050183_MATCH && __PHISHTANK_0009050183_ONCHECK
+score		PHISHTANK_0009050183_ONLINE	2.0
+describe	PHISHTANK_0009050183_ONLINE	Phishing URL still online
+
+##
