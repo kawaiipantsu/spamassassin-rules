@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009055176
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9055176
+## Submitted.....: 2025-04-10T06:59:09+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009055176_MATCH	/com\-etcikg\.vip\//
+score		PHISHTANK_0009055176_MATCH	5.0
+describe	PHISHTANK_0009055176_MATCH	Phishtank ID 9055176 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009055176_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009055176_VALIDATED	PHISHTANK_0009055176_MATCH && __PHISHTANK_0009055176_VALCHECK
+score		PHISHTANK_0009055176_VALIDATED	2.0
+describe	PHISHTANK_0009055176_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009055176_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009055176_ONLINE	PHISHTANK_0009055176_MATCH && __PHISHTANK_0009055176_ONCHECK
+score		PHISHTANK_0009055176_ONLINE	2.0
+describe	PHISHTANK_0009055176_ONLINE	Phishing URL still online
+
+##

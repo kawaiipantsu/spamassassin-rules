@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009054476
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9054476
+## Submitted.....: 2025-04-10T04:28:46+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009054476_MATCH	/eranne\.s3\.us\-east\-2\.amazonaws\.com\/drives\.html/
+score		PHISHTANK_0009054476_MATCH	5.0
+describe	PHISHTANK_0009054476_MATCH	Phishtank ID 9054476 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009054476_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009054476_VALIDATED	PHISHTANK_0009054476_MATCH && __PHISHTANK_0009054476_VALCHECK
+score		PHISHTANK_0009054476_VALIDATED	2.0
+describe	PHISHTANK_0009054476_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009054476_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009054476_ONLINE	PHISHTANK_0009054476_MATCH && __PHISHTANK_0009054476_ONCHECK
+score		PHISHTANK_0009054476_ONLINE	2.0
+describe	PHISHTANK_0009054476_ONLINE	Phishing URL still online
+
+##
