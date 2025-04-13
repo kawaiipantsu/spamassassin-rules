@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009058368
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9058368
+## Submitted.....: 2025-04-11T14:45:03+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009058368_MATCH	/tracking\.worlds\-connected\.co\/tracking\/1\/click\/W\-2DZXPxuxjD_MQwEsULWpj3hX47b8inflAbfBKAm1BevAm4AuCQmLvE_VegXsc6DGnor0ls4nSVrHxnF_xeENi71_UdKnVRjgtRAAKY8o_rWbIm3jrCrse2iFuN4GDyiHKtm2tJOSLogDiEmXWCGHqPrhwxlCPb_lVqHzzc4Vm7yJmdKrxubU1lGjjgFkL1l1\-VDAqMv0lPgGAmo4nGZh_75MCKHUH1nGeT2ofsX9Tod5CIcFolms9lXGMs0Uc0HkAqDQUS7_bIhtFhWoSdl\-\-NtMZ1fI2lnWzaCZY3gRzoU1DuC4nH9HJQEQ7mUct4xxlUD3SiLcrqV398I3ZGh3xZj8H7xbxZROPm9zoTH_mjDVmPbIvBFclMuDtwPSQbTY6bUKAJeVZQZiudSyC33r1fzl6lTd8KG\-9N6RKqFgzKWUEMnn2sZVLRQmMLG_gjkKBG1FQkW9aLUenykMoD5taivC1A\-KBJzowO0p4d9MdnAmnA_ITuq_Fh01h\-Bl5I9nNbattTNHlPIgOviJCdd7kZWdCW8aURoxWmp2O3GKFM0hIlk7HYqieT6bQO82nDNAJP2Ts91CjSCJtU0qDA8VRNynIH7_zzLey0YlUyQDvtMxpxww17u87Da9sqnoBmPs\-54ersOckF8vDdO9KV1bk5UUNAyXxlsWW6OzrZxe6g2A95wiz_UVrhrOzZUl_TWwLVeLNzk2d0GtGij9y1qydCkZjmRvHz9JNwKTrhbnCGtNCIQzMruJDMbDBkeFFTMgp865IVpP_inJbn5i6fLrGwshyK3so1zrvhFtnQL_DoXIRJblwZ4HOSieuzuqmlcsUG8Y8QMTe_uS\-6PwcJDNVYrtKjWQrBM3YPhICOMocGpWs41skurbfoavWAXFmXyq9NFpMCYCdI_vbP7eD306xd_dKAOeq4Z8zfdUBgYxk/
+score		PHISHTANK_0009058368_MATCH	5.0
+describe	PHISHTANK_0009058368_MATCH	Phishtank ID 9058368 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009058368_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009058368_VALIDATED	PHISHTANK_0009058368_MATCH && __PHISHTANK_0009058368_VALCHECK
+score		PHISHTANK_0009058368_VALIDATED	2.0
+describe	PHISHTANK_0009058368_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009058368_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009058368_ONLINE	PHISHTANK_0009058368_MATCH && __PHISHTANK_0009058368_ONCHECK
+score		PHISHTANK_0009058368_ONLINE	2.0
+describe	PHISHTANK_0009058368_ONLINE	Phishing URL still online
+
+##
