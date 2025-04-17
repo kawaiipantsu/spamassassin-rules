@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009062931
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9062931
+## Submitted.....: 2025-04-15T12:17:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009062931_MATCH	/corrir\.tempurl\.host\/wp\-wordpress\/konsleh\/web\/pay\.php/
+score		PHISHTANK_0009062931_MATCH	5.0
+describe	PHISHTANK_0009062931_MATCH	Phishtank ID 9062931 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009062931_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009062931_VALIDATED	PHISHTANK_0009062931_MATCH && __PHISHTANK_0009062931_VALCHECK
+score		PHISHTANK_0009062931_VALIDATED	2.0
+describe	PHISHTANK_0009062931_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009062931_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009062931_ONLINE	PHISHTANK_0009062931_MATCH && __PHISHTANK_0009062931_ONCHECK
+score		PHISHTANK_0009062931_ONLINE	2.0
+describe	PHISHTANK_0009062931_ONLINE	Phishing URL still online
+
+##
