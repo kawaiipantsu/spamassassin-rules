@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009073635
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9073635
+## Submitted.....: 2025-04-25T13:01:45+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009073635_MATCH	/docs\.google\.com\/presentation\/d\/e\/2PACX\-1vSd4rnfCUYnx3iHxRTYaDJbhsk786gsp_WGEB7pnkiWVOPJPRPxkBSCITfLHJ_Jd6JcD3gO5Q\-V4ZWW\/pub/
+score		PHISHTANK_0009073635_MATCH	5.0
+describe	PHISHTANK_0009073635_MATCH	Phishtank ID 9073635 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009073635_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009073635_VALIDATED	PHISHTANK_0009073635_MATCH && __PHISHTANK_0009073635_VALCHECK
+score		PHISHTANK_0009073635_VALIDATED	2.0
+describe	PHISHTANK_0009073635_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009073635_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009073635_ONLINE	PHISHTANK_0009073635_MATCH && __PHISHTANK_0009073635_ONCHECK
+score		PHISHTANK_0009073635_ONLINE	2.0
+describe	PHISHTANK_0009073635_ONLINE	Phishing URL still online
+
+##
