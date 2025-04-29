@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009079947
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9079947
+## Submitted.....: 2025-04-28T11:28:37+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009079947_MATCH	/rebrand\.ly\/874b18/
+score		PHISHTANK_0009079947_MATCH	5.0
+describe	PHISHTANK_0009079947_MATCH	Phishtank ID 9079947 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009079947_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009079947_VALIDATED	PHISHTANK_0009079947_MATCH && __PHISHTANK_0009079947_VALCHECK
+score		PHISHTANK_0009079947_VALIDATED	2.0
+describe	PHISHTANK_0009079947_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009079947_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009079947_ONLINE	PHISHTANK_0009079947_MATCH && __PHISHTANK_0009079947_ONCHECK
+score		PHISHTANK_0009079947_ONLINE	2.0
+describe	PHISHTANK_0009079947_ONLINE	Phishing URL still online
+
+##
