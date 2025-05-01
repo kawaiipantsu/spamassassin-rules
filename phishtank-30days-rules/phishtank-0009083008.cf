@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009083008
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9083008
+## Submitted.....: 2025-05-01T00:26:44+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009083008_MATCH	/suce\-869\.weeblysite\.com\//
+score		PHISHTANK_0009083008_MATCH	5.0
+describe	PHISHTANK_0009083008_MATCH	Phishtank ID 9083008 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009083008_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009083008_VALIDATED	PHISHTANK_0009083008_MATCH && __PHISHTANK_0009083008_VALCHECK
+score		PHISHTANK_0009083008_VALIDATED	2.0
+describe	PHISHTANK_0009083008_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009083008_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009083008_ONLINE	PHISHTANK_0009083008_MATCH && __PHISHTANK_0009083008_ONCHECK
+score		PHISHTANK_0009083008_ONLINE	2.0
+describe	PHISHTANK_0009083008_ONLINE	Phishing URL still online
+
+##
