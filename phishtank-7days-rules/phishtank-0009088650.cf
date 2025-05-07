@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009088650
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9088650
+## Submitted.....: 2025-05-06T06:39:12+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009088650_MATCH	/juicy\-comfortable\-mine\.glitch\.me\/ajax\.html/
+score		PHISHTANK_0009088650_MATCH	5.0
+describe	PHISHTANK_0009088650_MATCH	Phishtank ID 9088650 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009088650_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009088650_VALIDATED	PHISHTANK_0009088650_MATCH && __PHISHTANK_0009088650_VALCHECK
+score		PHISHTANK_0009088650_VALIDATED	2.0
+describe	PHISHTANK_0009088650_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009088650_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009088650_ONLINE	PHISHTANK_0009088650_MATCH && __PHISHTANK_0009088650_ONCHECK
+score		PHISHTANK_0009088650_ONLINE	2.0
+describe	PHISHTANK_0009088650_ONLINE	Phishing URL still online
+
+##
