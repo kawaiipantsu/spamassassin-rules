@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009091036
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9091036
+## Submitted.....: 2025-05-07T21:10:26+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009091036_MATCH	/gov\.ukapply\.sbs\//
+score		PHISHTANK_0009091036_MATCH	5.0
+describe	PHISHTANK_0009091036_MATCH	Phishtank ID 9091036 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009091036_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009091036_VALIDATED	PHISHTANK_0009091036_MATCH && __PHISHTANK_0009091036_VALCHECK
+score		PHISHTANK_0009091036_VALIDATED	2.0
+describe	PHISHTANK_0009091036_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009091036_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009091036_ONLINE	PHISHTANK_0009091036_MATCH && __PHISHTANK_0009091036_ONCHECK
+score		PHISHTANK_0009091036_ONLINE	2.0
+describe	PHISHTANK_0009091036_ONLINE	Phishing URL still online
+
+##

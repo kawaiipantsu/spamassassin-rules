@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009091622
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9091622
+## Submitted.....: 2025-05-08T00:03:29+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009091622_MATCH	/assets\-eur\.mkt\.dynamics\.com\/5cae0c50\-101a\-f011\-9aed\-000d3a4a154e\/digitalassets\/standaloneforms\/d366fc0c\-b325\-f011\-8c4d\-6045bd8d9b87/
+score		PHISHTANK_0009091622_MATCH	5.0
+describe	PHISHTANK_0009091622_MATCH	Phishtank ID 9091622 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009091622_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009091622_VALIDATED	PHISHTANK_0009091622_MATCH && __PHISHTANK_0009091622_VALCHECK
+score		PHISHTANK_0009091622_VALIDATED	2.0
+describe	PHISHTANK_0009091622_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009091622_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009091622_ONLINE	PHISHTANK_0009091622_MATCH && __PHISHTANK_0009091622_ONCHECK
+score		PHISHTANK_0009091622_ONLINE	2.0
+describe	PHISHTANK_0009091622_ONLINE	Phishing URL still online
+
+##
