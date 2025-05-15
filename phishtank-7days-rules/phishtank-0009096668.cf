@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009096668
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9096668
+## Submitted.....: 2025-05-12T17:21:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009096668_MATCH	/sj7fhpln\.r\.eu\-west\-1\.awstrack\.me\/I0\/01020196c57ab22e\-bbef6526\-f110\-4d09\-9745\-e4db5c40117d\-000000\/MP1DF6SIwWnbW08928KUnz6RJ7Q\=425/
+score		PHISHTANK_0009096668_MATCH	5.0
+describe	PHISHTANK_0009096668_MATCH	Phishtank ID 9096668 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009096668_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009096668_VALIDATED	PHISHTANK_0009096668_MATCH && __PHISHTANK_0009096668_VALCHECK
+score		PHISHTANK_0009096668_VALIDATED	2.0
+describe	PHISHTANK_0009096668_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009096668_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009096668_ONLINE	PHISHTANK_0009096668_MATCH && __PHISHTANK_0009096668_ONCHECK
+score		PHISHTANK_0009096668_ONLINE	2.0
+describe	PHISHTANK_0009096668_ONLINE	Phishing URL still online
+
+##

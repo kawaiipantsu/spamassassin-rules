@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009095337
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9095337
+## Submitted.....: 2025-05-11T06:25:27+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009095337_MATCH	/purollator\.etciqi\.vip\//
+score		PHISHTANK_0009095337_MATCH	5.0
+describe	PHISHTANK_0009095337_MATCH	Phishtank ID 9095337 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009095337_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009095337_VALIDATED	PHISHTANK_0009095337_MATCH && __PHISHTANK_0009095337_VALCHECK
+score		PHISHTANK_0009095337_VALIDATED	2.0
+describe	PHISHTANK_0009095337_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009095337_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009095337_ONLINE	PHISHTANK_0009095337_MATCH && __PHISHTANK_0009095337_ONCHECK
+score		PHISHTANK_0009095337_ONLINE	2.0
+describe	PHISHTANK_0009095337_ONLINE	Phishing URL still online
+
+##

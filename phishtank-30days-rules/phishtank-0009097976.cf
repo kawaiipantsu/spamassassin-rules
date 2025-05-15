@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009097976
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9097976
+## Submitted.....: 2025-05-13T21:13:56+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009097976_MATCH	/26colm1h651903aaa7c\.blogspot\.com\//
+score		PHISHTANK_0009097976_MATCH	5.0
+describe	PHISHTANK_0009097976_MATCH	Phishtank ID 9097976 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009097976_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009097976_VALIDATED	PHISHTANK_0009097976_MATCH && __PHISHTANK_0009097976_VALCHECK
+score		PHISHTANK_0009097976_VALIDATED	2.0
+describe	PHISHTANK_0009097976_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009097976_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009097976_ONLINE	PHISHTANK_0009097976_MATCH && __PHISHTANK_0009097976_ONCHECK
+score		PHISHTANK_0009097976_ONLINE	2.0
+describe	PHISHTANK_0009097976_ONLINE	Phishing URL still online
+
+##
