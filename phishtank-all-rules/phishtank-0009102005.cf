@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009102005
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9102005
+## Submitted.....: 2025-05-17T11:37:47+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009102005_MATCH	/txdmv\.gov\-tsn\.win\//
+score		PHISHTANK_0009102005_MATCH	5.0
+describe	PHISHTANK_0009102005_MATCH	Phishtank ID 9102005 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009102005_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009102005_VALIDATED	PHISHTANK_0009102005_MATCH && __PHISHTANK_0009102005_VALCHECK
+score		PHISHTANK_0009102005_VALIDATED	2.0
+describe	PHISHTANK_0009102005_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009102005_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009102005_ONLINE	PHISHTANK_0009102005_MATCH && __PHISHTANK_0009102005_ONCHECK
+score		PHISHTANK_0009102005_ONLINE	2.0
+describe	PHISHTANK_0009102005_ONLINE	Phishing URL still online
+
+##

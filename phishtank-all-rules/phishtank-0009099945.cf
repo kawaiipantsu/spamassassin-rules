@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009099945
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9099945
+## Submitted.....: 2025-05-16T02:13:51+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009099945_MATCH	/ejwsnu\.cn\/oinu\//
+score		PHISHTANK_0009099945_MATCH	5.0
+describe	PHISHTANK_0009099945_MATCH	Phishtank ID 9099945 (JCB Card) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009099945_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009099945_VALIDATED	PHISHTANK_0009099945_MATCH && __PHISHTANK_0009099945_VALCHECK
+score		PHISHTANK_0009099945_VALIDATED	2.0
+describe	PHISHTANK_0009099945_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009099945_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009099945_ONLINE	PHISHTANK_0009099945_MATCH && __PHISHTANK_0009099945_ONCHECK
+score		PHISHTANK_0009099945_ONLINE	2.0
+describe	PHISHTANK_0009099945_ONLINE	Phishing URL still online
+
+##

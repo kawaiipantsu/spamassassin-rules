@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009102467
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9102467
+## Submitted.....: 2025-05-17T15:27:33+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009102467_MATCH	/speckle\-clear\-pulsar\.glitch\.me\/public\/NLvA05NG\.htm/
+score		PHISHTANK_0009102467_MATCH	5.0
+describe	PHISHTANK_0009102467_MATCH	Phishtank ID 9102467 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009102467_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009102467_VALIDATED	PHISHTANK_0009102467_MATCH && __PHISHTANK_0009102467_VALCHECK
+score		PHISHTANK_0009102467_VALIDATED	2.0
+describe	PHISHTANK_0009102467_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009102467_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009102467_ONLINE	PHISHTANK_0009102467_MATCH && __PHISHTANK_0009102467_ONCHECK
+score		PHISHTANK_0009102467_ONLINE	2.0
+describe	PHISHTANK_0009102467_ONLINE	Phishing URL still online
+
+##
