@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009104063
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9104063
+## Submitted.....: 2025-05-19T15:30:09+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009104063_MATCH	/email\.m\.teachable\.com\/c\/eJwszkGO6yAMgOHTwDKyHZyEBYu36TUqQ5yCHpQqYUaa24\-m6vrXL317iIuKtxpwnR0xIqPVJqXeT01aXuNe9mCIcGW_eCIEQ2RzQO9iiiDrjmnFKJGBknMCsAgfi7clEJBDQoaNmHHaNPHhYdt2N5MmMQ7aNFRSllh1Sr3ZGvIYr8vM_wzdDN2y7FJLrdL43Ztelzz0Q5rnzS_09pyh1B95PrI8i3HQv0bt_f90nPZKuff6OYgc\-tX_Hd\-BfgMAAP__gl9J0g/
+score		PHISHTANK_0009104063_MATCH	5.0
+describe	PHISHTANK_0009104063_MATCH	Phishtank ID 9104063 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009104063_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009104063_VALIDATED	PHISHTANK_0009104063_MATCH && __PHISHTANK_0009104063_VALCHECK
+score		PHISHTANK_0009104063_VALIDATED	2.0
+describe	PHISHTANK_0009104063_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009104063_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009104063_ONLINE	PHISHTANK_0009104063_MATCH && __PHISHTANK_0009104063_ONCHECK
+score		PHISHTANK_0009104063_ONLINE	2.0
+describe	PHISHTANK_0009104063_ONLINE	Phishing URL still online
+
+##

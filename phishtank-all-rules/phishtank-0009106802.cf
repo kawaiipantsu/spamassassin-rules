@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009106802
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9106802
+## Submitted.....: 2025-05-22T04:32:41+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009106802_MATCH	/sbisec4japan\.com\/sbi/
+score		PHISHTANK_0009106802_MATCH	5.0
+describe	PHISHTANK_0009106802_MATCH	Phishtank ID 9106802 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009106802_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009106802_VALIDATED	PHISHTANK_0009106802_MATCH && __PHISHTANK_0009106802_VALCHECK
+score		PHISHTANK_0009106802_VALIDATED	2.0
+describe	PHISHTANK_0009106802_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009106802_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009106802_ONLINE	PHISHTANK_0009106802_MATCH && __PHISHTANK_0009106802_ONCHECK
+score		PHISHTANK_0009106802_ONLINE	2.0
+describe	PHISHTANK_0009106802_ONLINE	Phishing URL still online
+
+##
