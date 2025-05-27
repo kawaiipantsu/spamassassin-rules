@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009109494
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9109494
+## Submitted.....: 2025-05-26T00:43:00+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009109494_MATCH	/y53a09txb5ntt\-pages\-dev\.translate\.goog\/apple\.com\.html/
+score		PHISHTANK_0009109494_MATCH	5.0
+describe	PHISHTANK_0009109494_MATCH	Phishtank ID 9109494 (Apple) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009109494_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009109494_VALIDATED	PHISHTANK_0009109494_MATCH && __PHISHTANK_0009109494_VALCHECK
+score		PHISHTANK_0009109494_VALIDATED	2.0
+describe	PHISHTANK_0009109494_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009109494_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009109494_ONLINE	PHISHTANK_0009109494_MATCH && __PHISHTANK_0009109494_ONCHECK
+score		PHISHTANK_0009109494_ONLINE	2.0
+describe	PHISHTANK_0009109494_ONLINE	Phishing URL still online
+
+##
