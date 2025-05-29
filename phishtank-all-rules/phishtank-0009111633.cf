@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009111633
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9111633
+## Submitted.....: 2025-05-27T21:48:00+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009111633_MATCH	/email\.double\.serviceautopilot\.com\/c\/eJwsj0tuxCAQRE9jdli4oWl6wSKbuQffGRQTLNtjaW4fOcquVFV60kujb\-Hn07LHHHM1dZEBEkrj2MgYK0kdAylGZJtAZF8tg7Oi\-IWMA9JgUJQe2tqyB87VuUgScgVpKCnJCycJUBxHgqoIxMsHoKiqJSJyDMXEJWBISmntLNbConlQgArBLggEOFtNrE1kh4UdwTIZlcc7rmU\-yn61VML7HFtbxzmn0cXqX\-e5HZP\-muAxwaM_r__fce9zLnf52fZR23pnsfsjrKX38f06w24no5630x_t8vAbAAD__9BBV1g/
+score		PHISHTANK_0009111633_MATCH	5.0
+describe	PHISHTANK_0009111633_MATCH	Phishtank ID 9111633 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009111633_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009111633_VALIDATED	PHISHTANK_0009111633_MATCH && __PHISHTANK_0009111633_VALCHECK
+score		PHISHTANK_0009111633_VALIDATED	2.0
+describe	PHISHTANK_0009111633_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009111633_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009111633_ONLINE	PHISHTANK_0009111633_MATCH && __PHISHTANK_0009111633_ONCHECK
+score		PHISHTANK_0009111633_ONLINE	2.0
+describe	PHISHTANK_0009111633_ONLINE	Phishing URL still online
+
+##
