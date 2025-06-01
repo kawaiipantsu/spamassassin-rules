@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009115102
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9115102
+## Submitted.....: 2025-05-31T01:48:09+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009115102_MATCH	/s3\.us\-east\-2\.amazonaws\.com\/payhoa\-production\/f2f3836084df90373beb0750bd89392b66c8a570c163cbbcd672131a5e1658e6/
+score		PHISHTANK_0009115102_MATCH	5.0
+describe	PHISHTANK_0009115102_MATCH	Phishtank ID 9115102 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009115102_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009115102_VALIDATED	PHISHTANK_0009115102_MATCH && __PHISHTANK_0009115102_VALCHECK
+score		PHISHTANK_0009115102_VALIDATED	2.0
+describe	PHISHTANK_0009115102_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009115102_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009115102_ONLINE	PHISHTANK_0009115102_MATCH && __PHISHTANK_0009115102_ONCHECK
+score		PHISHTANK_0009115102_ONLINE	2.0
+describe	PHISHTANK_0009115102_ONLINE	Phishing URL still online
+
+##
