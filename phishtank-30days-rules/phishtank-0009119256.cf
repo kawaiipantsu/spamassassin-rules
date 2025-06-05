@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009119256
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9119256
+## Submitted.....: 2025-06-04T18:01:31+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009119256_MATCH	/allegro\.pl\-oferta45334\.com/
+score		PHISHTANK_0009119256_MATCH	5.0
+describe	PHISHTANK_0009119256_MATCH	Phishtank ID 9119256 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009119256_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009119256_VALIDATED	PHISHTANK_0009119256_MATCH && __PHISHTANK_0009119256_VALCHECK
+score		PHISHTANK_0009119256_VALIDATED	2.0
+describe	PHISHTANK_0009119256_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009119256_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009119256_ONLINE	PHISHTANK_0009119256_MATCH && __PHISHTANK_0009119256_ONCHECK
+score		PHISHTANK_0009119256_ONLINE	2.0
+describe	PHISHTANK_0009119256_ONLINE	Phishing URL still online
+
+##
