@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009119577
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9119577
+## Submitted.....: 2025-06-05T01:32:58+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009119577_MATCH	/rack\-spcemail\.weebly\.com\//
+score		PHISHTANK_0009119577_MATCH	5.0
+describe	PHISHTANK_0009119577_MATCH	Phishtank ID 9119577 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009119577_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009119577_VALIDATED	PHISHTANK_0009119577_MATCH && __PHISHTANK_0009119577_VALCHECK
+score		PHISHTANK_0009119577_VALIDATED	2.0
+describe	PHISHTANK_0009119577_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009119577_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009119577_ONLINE	PHISHTANK_0009119577_MATCH && __PHISHTANK_0009119577_ONCHECK
+score		PHISHTANK_0009119577_ONLINE	2.0
+describe	PHISHTANK_0009119577_ONLINE	Phishing URL still online
+
+##
