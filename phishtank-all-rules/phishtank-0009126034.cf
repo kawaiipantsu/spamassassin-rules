@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009126034
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9126034
+## Submitted.....: 2025-06-12T15:50:33+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009126034_MATCH	/g0h30bpd\.r\.eu\-west\-1\.awstrack\.me\/L0\/https\:%2F%2Fwww\.irs\.gov\/1\/01020197607379c6\-40dbd535\-2b18\-4a61\-a4d1\-36f1366aee6d\-000000\/ELdNodWtm5yRvZlbQ9ecWep6mPc\=430/
+score		PHISHTANK_0009126034_MATCH	5.0
+describe	PHISHTANK_0009126034_MATCH	Phishtank ID 9126034 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009126034_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009126034_VALIDATED	PHISHTANK_0009126034_MATCH && __PHISHTANK_0009126034_VALCHECK
+score		PHISHTANK_0009126034_VALIDATED	2.0
+describe	PHISHTANK_0009126034_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009126034_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009126034_ONLINE	PHISHTANK_0009126034_MATCH && __PHISHTANK_0009126034_ONCHECK
+score		PHISHTANK_0009126034_ONLINE	2.0
+describe	PHISHTANK_0009126034_ONLINE	Phishing URL still online
+
+##
