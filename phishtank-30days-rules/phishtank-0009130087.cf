@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009130087
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9130087
+## Submitted.....: 2025-06-17T21:48:48+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009130087_MATCH	/bncra530a2cd1462ebc67b4155bd35cd5452\.uguerkcue\.icu\/jump\.php/
+score		PHISHTANK_0009130087_MATCH	5.0
+describe	PHISHTANK_0009130087_MATCH	Phishtank ID 9130087 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009130087_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009130087_VALIDATED	PHISHTANK_0009130087_MATCH && __PHISHTANK_0009130087_VALCHECK
+score		PHISHTANK_0009130087_VALIDATED	2.0
+describe	PHISHTANK_0009130087_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009130087_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009130087_ONLINE	PHISHTANK_0009130087_MATCH && __PHISHTANK_0009130087_ONCHECK
+score		PHISHTANK_0009130087_ONLINE	2.0
+describe	PHISHTANK_0009130087_ONLINE	Phishing URL still online
+
+##
