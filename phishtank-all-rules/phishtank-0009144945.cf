@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009144945
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9144945
+## Submitted.....: 2025-07-03T01:10:00+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009144945_MATCH	/bsagawanauthoritati\.sexidude\.com\/bot\-check/
+score		PHISHTANK_0009144945_MATCH	5.0
+describe	PHISHTANK_0009144945_MATCH	Phishtank ID 9144945 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009144945_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009144945_VALIDATED	PHISHTANK_0009144945_MATCH && __PHISHTANK_0009144945_VALCHECK
+score		PHISHTANK_0009144945_VALIDATED	2.0
+describe	PHISHTANK_0009144945_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009144945_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009144945_ONLINE	PHISHTANK_0009144945_MATCH && __PHISHTANK_0009144945_ONCHECK
+score		PHISHTANK_0009144945_ONLINE	2.0
+describe	PHISHTANK_0009144945_ONLINE	Phishing URL still online
+
+##
