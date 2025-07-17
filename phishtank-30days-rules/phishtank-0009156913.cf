@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009156913
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9156913
+## Submitted.....: 2025-07-16T12:50:34+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009156913_MATCH	/commercialfoodequipment\.com\.au\/tracking\/go\/369f07\/1f3135\/c459b0\/0fca41\/53a93d\/5768ab\/aee80f\/f27c6a\/41f2a6\/d4c70b\/338f6b\/835bcc\/69ee97\/cca029\/ffa17f\/78de62\/293834\/0df517\/03c56d\/f3cfdb/
+score		PHISHTANK_0009156913_MATCH	5.0
+describe	PHISHTANK_0009156913_MATCH	Phishtank ID 9156913 (Australian Taxation Office) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009156913_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009156913_VALIDATED	PHISHTANK_0009156913_MATCH && __PHISHTANK_0009156913_VALCHECK
+score		PHISHTANK_0009156913_VALIDATED	2.0
+describe	PHISHTANK_0009156913_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009156913_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009156913_ONLINE	PHISHTANK_0009156913_MATCH && __PHISHTANK_0009156913_ONCHECK
+score		PHISHTANK_0009156913_ONLINE	2.0
+describe	PHISHTANK_0009156913_ONLINE	Phishing URL still online
+
+##

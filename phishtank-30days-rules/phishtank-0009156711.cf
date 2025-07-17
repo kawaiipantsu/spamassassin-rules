@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009156711
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9156711
+## Submitted.....: 2025-07-16T09:41:43+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009156711_MATCH	/allegro\.pl\-kategorie81273946\.com/
+score		PHISHTANK_0009156711_MATCH	5.0
+describe	PHISHTANK_0009156711_MATCH	Phishtank ID 9156711 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009156711_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009156711_VALIDATED	PHISHTANK_0009156711_MATCH && __PHISHTANK_0009156711_VALCHECK
+score		PHISHTANK_0009156711_VALIDATED	2.0
+describe	PHISHTANK_0009156711_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009156711_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009156711_ONLINE	PHISHTANK_0009156711_MATCH && __PHISHTANK_0009156711_ONCHECK
+score		PHISHTANK_0009156711_ONLINE	2.0
+describe	PHISHTANK_0009156711_ONLINE	Phishing URL still online
+
+##
