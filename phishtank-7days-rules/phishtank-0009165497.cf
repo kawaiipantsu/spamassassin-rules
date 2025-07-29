@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009165497
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9165497
+## Submitted.....: 2025-07-25T12:51:56+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009165497_MATCH	/iesanjosen2\.edu\.co\/1a2z3x4cf\/index\.html/
+score		PHISHTANK_0009165497_MATCH	5.0
+describe	PHISHTANK_0009165497_MATCH	Phishtank ID 9165497 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009165497_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009165497_VALIDATED	PHISHTANK_0009165497_MATCH && __PHISHTANK_0009165497_VALCHECK
+score		PHISHTANK_0009165497_VALIDATED	2.0
+describe	PHISHTANK_0009165497_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009165497_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009165497_ONLINE	PHISHTANK_0009165497_MATCH && __PHISHTANK_0009165497_ONCHECK
+score		PHISHTANK_0009165497_ONLINE	2.0
+describe	PHISHTANK_0009165497_ONLINE	Phishing URL still online
+
+##

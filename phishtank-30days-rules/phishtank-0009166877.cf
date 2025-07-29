@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009166877
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9166877
+## Submitted.....: 2025-07-27T23:30:57+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009166877_MATCH	/allegrolokalnle\.pl43923\.cfd\/prywatna\/16980/
+score		PHISHTANK_0009166877_MATCH	5.0
+describe	PHISHTANK_0009166877_MATCH	Phishtank ID 9166877 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009166877_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009166877_VALIDATED	PHISHTANK_0009166877_MATCH && __PHISHTANK_0009166877_VALCHECK
+score		PHISHTANK_0009166877_VALIDATED	2.0
+describe	PHISHTANK_0009166877_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009166877_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009166877_ONLINE	PHISHTANK_0009166877_MATCH && __PHISHTANK_0009166877_ONCHECK
+score		PHISHTANK_0009166877_ONLINE	2.0
+describe	PHISHTANK_0009166877_ONLINE	Phishing URL still online
+
+##
