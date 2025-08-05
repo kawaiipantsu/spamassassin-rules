@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009171930
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9171930
+## Submitted.....: 2025-08-02T00:50:59+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009171930_MATCH	/bafybeib6umdzfvqg7w3oh46smtifbsozgzbpglbs2zc46egdjdf5evfxbm\.ipfs\.dweb\.link\//
+score		PHISHTANK_0009171930_MATCH	5.0
+describe	PHISHTANK_0009171930_MATCH	Phishtank ID 9171930 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009171930_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009171930_VALIDATED	PHISHTANK_0009171930_MATCH && __PHISHTANK_0009171930_VALCHECK
+score		PHISHTANK_0009171930_VALIDATED	2.0
+describe	PHISHTANK_0009171930_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009171930_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009171930_ONLINE	PHISHTANK_0009171930_MATCH && __PHISHTANK_0009171930_ONCHECK
+score		PHISHTANK_0009171930_ONLINE	2.0
+describe	PHISHTANK_0009171930_ONLINE	Phishing URL still online
+
+##
