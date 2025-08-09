@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009174602
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9174602
+## Submitted.....: 2025-08-05T04:24:30+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009174602_MATCH	/sbisbutfgd\.top\/ETGate\/ControlID\=WPLETacR001Control\//
+score		PHISHTANK_0009174602_MATCH	5.0
+describe	PHISHTANK_0009174602_MATCH	Phishtank ID 9174602 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009174602_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009174602_VALIDATED	PHISHTANK_0009174602_MATCH && __PHISHTANK_0009174602_VALCHECK
+score		PHISHTANK_0009174602_VALIDATED	2.0
+describe	PHISHTANK_0009174602_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009174602_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009174602_ONLINE	PHISHTANK_0009174602_MATCH && __PHISHTANK_0009174602_ONCHECK
+score		PHISHTANK_0009174602_ONLINE	2.0
+describe	PHISHTANK_0009174602_ONLINE	Phishing URL still online
+
+##

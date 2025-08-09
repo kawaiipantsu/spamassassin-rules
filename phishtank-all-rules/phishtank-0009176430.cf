@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009176430
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9176430
+## Submitted.....: 2025-08-07T03:07:17+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009176430_MATCH	/bafkreiatrtofuuxkeqrnyhtyiber7si5qmom3nlqkmvdy25ztssmbwektm\.ipfs\.dweb\.link\//
+score		PHISHTANK_0009176430_MATCH	5.0
+describe	PHISHTANK_0009176430_MATCH	Phishtank ID 9176430 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009176430_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009176430_VALIDATED	PHISHTANK_0009176430_MATCH && __PHISHTANK_0009176430_VALCHECK
+score		PHISHTANK_0009176430_VALIDATED	2.0
+describe	PHISHTANK_0009176430_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009176430_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009176430_ONLINE	PHISHTANK_0009176430_MATCH && __PHISHTANK_0009176430_ONCHECK
+score		PHISHTANK_0009176430_ONLINE	2.0
+describe	PHISHTANK_0009176430_ONLINE	Phishing URL still online
+
+##

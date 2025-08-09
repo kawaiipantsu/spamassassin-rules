@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009178744
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9178744
+## Submitted.....: 2025-08-08T21:19:05+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009178744_MATCH	/g6h8\-bjf0gedxb3gdb3gz\.australiacentral\-01\.azurewebsites\.net\//
+score		PHISHTANK_0009178744_MATCH	5.0
+describe	PHISHTANK_0009178744_MATCH	Phishtank ID 9178744 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009178744_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009178744_VALIDATED	PHISHTANK_0009178744_MATCH && __PHISHTANK_0009178744_VALCHECK
+score		PHISHTANK_0009178744_VALIDATED	2.0
+describe	PHISHTANK_0009178744_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009178744_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009178744_ONLINE	PHISHTANK_0009178744_MATCH && __PHISHTANK_0009178744_ONCHECK
+score		PHISHTANK_0009178744_ONLINE	2.0
+describe	PHISHTANK_0009178744_ONLINE	Phishing URL still online
+
+##

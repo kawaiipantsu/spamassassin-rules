@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009178714
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9178714
+## Submitted.....: 2025-08-08T21:13:13+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009178714_MATCH	/webmailonlinecare\.s3\.us\-east\-005\.backblazeb2\.com\/rindex\+\(2\)\.html/
+score		PHISHTANK_0009178714_MATCH	5.0
+describe	PHISHTANK_0009178714_MATCH	Phishtank ID 9178714 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009178714_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009178714_VALIDATED	PHISHTANK_0009178714_MATCH && __PHISHTANK_0009178714_VALCHECK
+score		PHISHTANK_0009178714_VALIDATED	2.0
+describe	PHISHTANK_0009178714_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009178714_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009178714_ONLINE	PHISHTANK_0009178714_MATCH && __PHISHTANK_0009178714_ONCHECK
+score		PHISHTANK_0009178714_ONLINE	2.0
+describe	PHISHTANK_0009178714_ONLINE	Phishing URL still online
+
+##
