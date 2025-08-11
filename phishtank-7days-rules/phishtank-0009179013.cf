@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009179013
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9179013
+## Submitted.....: 2025-08-09T13:31:51+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009179013_MATCH	/bkp\.salmanahmad\.online\/ZitGUGp1U24xM2FaSzhPMmxRb2k4WmRuaDhNZjZTUG1EZzlQd1MzYklmcDI0dXJPZzY4RzFwNjVOM2pYWHpReWMxdE1ta0ZnUXhYWS9FMm5HQldXNGVBMStNMUl3cDhOajNCQ0RxbXJVZlU9/
+score		PHISHTANK_0009179013_MATCH	5.0
+describe	PHISHTANK_0009179013_MATCH	Phishtank ID 9179013 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009179013_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009179013_VALIDATED	PHISHTANK_0009179013_MATCH && __PHISHTANK_0009179013_VALCHECK
+score		PHISHTANK_0009179013_VALIDATED	2.0
+describe	PHISHTANK_0009179013_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009179013_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009179013_ONLINE	PHISHTANK_0009179013_MATCH && __PHISHTANK_0009179013_ONCHECK
+score		PHISHTANK_0009179013_ONLINE	2.0
+describe	PHISHTANK_0009179013_ONLINE	Phishing URL still online
+
+##
