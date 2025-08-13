@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009180060
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9180060
+## Submitted.....: 2025-08-11T05:57:44+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009180060_MATCH	/vertimatik\.com\/fg\/NEWBRTIT\/BRTIT\/post\/index\.php/
+score		PHISHTANK_0009180060_MATCH	5.0
+describe	PHISHTANK_0009180060_MATCH	Phishtank ID 9180060 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009180060_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009180060_VALIDATED	PHISHTANK_0009180060_MATCH && __PHISHTANK_0009180060_VALCHECK
+score		PHISHTANK_0009180060_VALIDATED	2.0
+describe	PHISHTANK_0009180060_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009180060_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009180060_ONLINE	PHISHTANK_0009180060_MATCH && __PHISHTANK_0009180060_ONCHECK
+score		PHISHTANK_0009180060_ONLINE	2.0
+describe	PHISHTANK_0009180060_ONLINE	Phishing URL still online
+
+##
