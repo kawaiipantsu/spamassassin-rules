@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009182559
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9182559
+## Submitted.....: 2025-08-13T14:01:12+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009182559_MATCH	/3jjdw\.sbs\/8xf95bdy\/r5VFkd\/7/
+score		PHISHTANK_0009182559_MATCH	5.0
+describe	PHISHTANK_0009182559_MATCH	Phishtank ID 9182559 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009182559_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009182559_VALIDATED	PHISHTANK_0009182559_MATCH && __PHISHTANK_0009182559_VALCHECK
+score		PHISHTANK_0009182559_VALIDATED	2.0
+describe	PHISHTANK_0009182559_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009182559_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009182559_ONLINE	PHISHTANK_0009182559_MATCH && __PHISHTANK_0009182559_ONCHECK
+score		PHISHTANK_0009182559_ONLINE	2.0
+describe	PHISHTANK_0009182559_ONLINE	Phishing URL still online
+
+##

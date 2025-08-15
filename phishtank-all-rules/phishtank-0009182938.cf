@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009182938
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9182938
+## Submitted.....: 2025-08-13T20:48:24+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009182938_MATCH	/app\.cliqueseuresgat\.shop/
+score		PHISHTANK_0009182938_MATCH	5.0
+describe	PHISHTANK_0009182938_MATCH	Phishtank ID 9182938 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009182938_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009182938_VALIDATED	PHISHTANK_0009182938_MATCH && __PHISHTANK_0009182938_VALCHECK
+score		PHISHTANK_0009182938_VALIDATED	2.0
+describe	PHISHTANK_0009182938_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009182938_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009182938_ONLINE	PHISHTANK_0009182938_MATCH && __PHISHTANK_0009182938_ONCHECK
+score		PHISHTANK_0009182938_ONLINE	2.0
+describe	PHISHTANK_0009182938_ONLINE	Phishing URL still online
+
+##
