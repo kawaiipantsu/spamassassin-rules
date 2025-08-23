@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009188259
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9188259
+## Submitted.....: 2025-08-19T10:43:47+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009188259_MATCH	/paiement\-flowbird\.com\/as\.php/
+score		PHISHTANK_0009188259_MATCH	5.0
+describe	PHISHTANK_0009188259_MATCH	Phishtank ID 9188259 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009188259_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009188259_VALIDATED	PHISHTANK_0009188259_MATCH && __PHISHTANK_0009188259_VALCHECK
+score		PHISHTANK_0009188259_VALIDATED	2.0
+describe	PHISHTANK_0009188259_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009188259_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009188259_ONLINE	PHISHTANK_0009188259_MATCH && __PHISHTANK_0009188259_ONCHECK
+score		PHISHTANK_0009188259_ONLINE	2.0
+describe	PHISHTANK_0009188259_ONLINE	Phishing URL still online
+
+##

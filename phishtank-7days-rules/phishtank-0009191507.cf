@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009191507
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9191507
+## Submitted.....: 2025-08-22T13:54:29+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009191507_MATCH	/trajet\-pbr\.com\/colis/
+score		PHISHTANK_0009191507_MATCH	5.0
+describe	PHISHTANK_0009191507_MATCH	Phishtank ID 9191507 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009191507_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009191507_VALIDATED	PHISHTANK_0009191507_MATCH && __PHISHTANK_0009191507_VALCHECK
+score		PHISHTANK_0009191507_VALIDATED	2.0
+describe	PHISHTANK_0009191507_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009191507_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009191507_ONLINE	PHISHTANK_0009191507_MATCH && __PHISHTANK_0009191507_ONCHECK
+score		PHISHTANK_0009191507_ONLINE	2.0
+describe	PHISHTANK_0009191507_ONLINE	Phishing URL still online
+
+##
