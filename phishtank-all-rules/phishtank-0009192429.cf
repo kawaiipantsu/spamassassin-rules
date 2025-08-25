@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009192429
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9192429
+## Submitted.....: 2025-08-23T22:22:14+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009192429_MATCH	/pub\-1a4cc99d3f654e3eb8ef1420e6bf1430\.r2\.dev\/index\.html/
+score		PHISHTANK_0009192429_MATCH	5.0
+describe	PHISHTANK_0009192429_MATCH	Phishtank ID 9192429 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009192429_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009192429_VALIDATED	PHISHTANK_0009192429_MATCH && __PHISHTANK_0009192429_VALCHECK
+score		PHISHTANK_0009192429_VALIDATED	2.0
+describe	PHISHTANK_0009192429_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009192429_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009192429_ONLINE	PHISHTANK_0009192429_MATCH && __PHISHTANK_0009192429_ONCHECK
+score		PHISHTANK_0009192429_ONLINE	2.0
+describe	PHISHTANK_0009192429_ONLINE	Phishing URL still online
+
+##

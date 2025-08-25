@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009192085
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9192085
+## Submitted.....: 2025-08-23T01:54:43+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009192085_MATCH	/allegrolokalnie\.pl\-oferta6293724\.icu\//
+score		PHISHTANK_0009192085_MATCH	5.0
+describe	PHISHTANK_0009192085_MATCH	Phishtank ID 9192085 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009192085_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009192085_VALIDATED	PHISHTANK_0009192085_MATCH && __PHISHTANK_0009192085_VALCHECK
+score		PHISHTANK_0009192085_VALIDATED	2.0
+describe	PHISHTANK_0009192085_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009192085_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009192085_ONLINE	PHISHTANK_0009192085_MATCH && __PHISHTANK_0009192085_ONCHECK
+score		PHISHTANK_0009192085_ONLINE	2.0
+describe	PHISHTANK_0009192085_ONLINE	Phishing URL still online
+
+##
