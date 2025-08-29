@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009196439
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9196439
+## Submitted.....: 2025-08-28T07:47:43+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009196439_MATCH	/netflix\-simplemember\-payment\-update\.imi\.lat\//
+score		PHISHTANK_0009196439_MATCH	5.0
+describe	PHISHTANK_0009196439_MATCH	Phishtank ID 9196439 (Netflix) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009196439_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009196439_VALIDATED	PHISHTANK_0009196439_MATCH && __PHISHTANK_0009196439_VALCHECK
+score		PHISHTANK_0009196439_VALIDATED	2.0
+describe	PHISHTANK_0009196439_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009196439_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009196439_ONLINE	PHISHTANK_0009196439_MATCH && __PHISHTANK_0009196439_ONCHECK
+score		PHISHTANK_0009196439_ONLINE	2.0
+describe	PHISHTANK_0009196439_ONLINE	Phishing URL still online
+
+##
