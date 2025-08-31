@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009198114
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9198114
+## Submitted.....: 2025-08-29T20:35:14+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009198114_MATCH	/allegrolokalnie\.pi\-id9178190\.icu/
+score		PHISHTANK_0009198114_MATCH	5.0
+describe	PHISHTANK_0009198114_MATCH	Phishtank ID 9198114 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009198114_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009198114_VALIDATED	PHISHTANK_0009198114_MATCH && __PHISHTANK_0009198114_VALCHECK
+score		PHISHTANK_0009198114_VALIDATED	2.0
+describe	PHISHTANK_0009198114_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009198114_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009198114_ONLINE	PHISHTANK_0009198114_MATCH && __PHISHTANK_0009198114_ONCHECK
+score		PHISHTANK_0009198114_ONLINE	2.0
+describe	PHISHTANK_0009198114_ONLINE	Phishing URL still online
+
+##
