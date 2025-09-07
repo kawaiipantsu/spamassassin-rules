@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009201888
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9201888
+## Submitted.....: 2025-09-03T09:32:08+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009201888_MATCH	/apps\-ulys\.com\/index\.php/
+score		PHISHTANK_0009201888_MATCH	5.0
+describe	PHISHTANK_0009201888_MATCH	Phishtank ID 9201888 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009201888_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009201888_VALIDATED	PHISHTANK_0009201888_MATCH && __PHISHTANK_0009201888_VALCHECK
+score		PHISHTANK_0009201888_VALIDATED	2.0
+describe	PHISHTANK_0009201888_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009201888_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009201888_ONLINE	PHISHTANK_0009201888_MATCH && __PHISHTANK_0009201888_ONCHECK
+score		PHISHTANK_0009201888_ONLINE	2.0
+describe	PHISHTANK_0009201888_ONLINE	Phishing URL still online
+
+##
