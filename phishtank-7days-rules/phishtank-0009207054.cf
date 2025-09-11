@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009207054
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9207054
+## Submitted.....: 2025-09-09T18:33:06+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009207054_MATCH	/assets\-oce\.mkt\.dynamics\.com\/6d80cf9c\-9588\-f011\-a701\-002248d3a9c7\/digitalassets\/standaloneforms\/b7b8a719\-958d\-f011\-b4cb\-6045bd3e5e05/
+score		PHISHTANK_0009207054_MATCH	5.0
+describe	PHISHTANK_0009207054_MATCH	Phishtank ID 9207054 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009207054_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009207054_VALIDATED	PHISHTANK_0009207054_MATCH && __PHISHTANK_0009207054_VALCHECK
+score		PHISHTANK_0009207054_VALIDATED	2.0
+describe	PHISHTANK_0009207054_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009207054_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009207054_ONLINE	PHISHTANK_0009207054_MATCH && __PHISHTANK_0009207054_ONCHECK
+score		PHISHTANK_0009207054_ONLINE	2.0
+describe	PHISHTANK_0009207054_ONLINE	Phishing URL still online
+
+##
