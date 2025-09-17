@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009212500
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9212500
+## Submitted.....: 2025-09-15T21:07:25+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009212500_MATCH	/k6fifq\.top\/koljin\/tep\/direct\/loging\/shink\=A4MzY\//
+score		PHISHTANK_0009212500_MATCH	5.0
+describe	PHISHTANK_0009212500_MATCH	Phishtank ID 9212500 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009212500_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009212500_VALIDATED	PHISHTANK_0009212500_MATCH && __PHISHTANK_0009212500_VALCHECK
+score		PHISHTANK_0009212500_VALIDATED	2.0
+describe	PHISHTANK_0009212500_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009212500_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009212500_ONLINE	PHISHTANK_0009212500_MATCH && __PHISHTANK_0009212500_ONCHECK
+score		PHISHTANK_0009212500_ONLINE	2.0
+describe	PHISHTANK_0009212500_ONLINE	Phishing URL still online
+
+##

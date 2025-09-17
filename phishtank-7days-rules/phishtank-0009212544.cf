@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009212544
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9212544
+## Submitted.....: 2025-09-15T22:57:56+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009212544_MATCH	/pay\.compra\-segura\.me\/checkout\/02c133b9\-4a39\-4320\-a701\-f9c375e20cb9/
+score		PHISHTANK_0009212544_MATCH	5.0
+describe	PHISHTANK_0009212544_MATCH	Phishtank ID 9212544 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009212544_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009212544_VALIDATED	PHISHTANK_0009212544_MATCH && __PHISHTANK_0009212544_VALCHECK
+score		PHISHTANK_0009212544_VALIDATED	2.0
+describe	PHISHTANK_0009212544_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009212544_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009212544_ONLINE	PHISHTANK_0009212544_MATCH && __PHISHTANK_0009212544_ONCHECK
+score		PHISHTANK_0009212544_ONLINE	2.0
+describe	PHISHTANK_0009212544_ONLINE	Phishing URL still online
+
+##

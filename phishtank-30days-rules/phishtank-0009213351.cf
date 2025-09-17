@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009213351
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9213351
+## Submitted.....: 2025-09-16T16:51:56+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009213351_MATCH	/olx\.bezpiecznie24cyfrowecloud\.cfd\/p\/cs_live_U1FCdqBsZiSh8Xxc4lDSWJmS8RomrTCUAloHAC7zvpRGi8f1OW4rzqCk6ZrwsV9KbY9mm1s0wdepwSuJ1D6yPKextWBUbMAKGGvfmBDeRd8gVGCoWcXXErJcpXLFIUC9NKDZVbzYTuAtPqXG1pR9Mdw4F4mVuwWoH7AYwSAcconRmoxAQ02EeSZfUeZW7KrxaFGImGbXp8yrDACR2dL76kElGgxvwkSZ8UxUw6qfzQMsRK5erILpHbegnV1pwmvg1klYISBHMACf3Isu3syeptUlzywQCo9a2unmLHDcRVuNWGW5XcLp2NNP0fqQha1ZU9u9w941LhOsEPSQOxGalK1tcVtcun/
+score		PHISHTANK_0009213351_MATCH	5.0
+describe	PHISHTANK_0009213351_MATCH	Phishtank ID 9213351 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009213351_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009213351_VALIDATED	PHISHTANK_0009213351_MATCH && __PHISHTANK_0009213351_VALCHECK
+score		PHISHTANK_0009213351_VALIDATED	2.0
+describe	PHISHTANK_0009213351_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009213351_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009213351_ONLINE	PHISHTANK_0009213351_MATCH && __PHISHTANK_0009213351_ONCHECK
+score		PHISHTANK_0009213351_ONLINE	2.0
+describe	PHISHTANK_0009213351_ONLINE	Phishing URL still online
+
+##
