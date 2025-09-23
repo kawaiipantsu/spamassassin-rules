@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009218068
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9218068
+## Submitted.....: 2025-09-22T09:34:32+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009218068_MATCH	/zitcom_0uowe_sign_on_mvyhhasf6j_l5umsiiu10\.dranataliaxavier\.com\.br\/GIpi2G2kBLSK0aAYHOcF0KYeenk8FLVhVv1xJkF5ceDLbSSyDd\/Dz6Y1DEqAuMHDQaIJeurTbs\/PnwVHbIdTkyHxz69tSQftQoeRL3yzFEzbeJHygUk6pppQ4eBFP\-\/9H8ejzrkLPm9mG9R3bRHJVn2ZBG3cB8LUJKGQuinuvLFdt8UmS/
+score		PHISHTANK_0009218068_MATCH	5.0
+describe	PHISHTANK_0009218068_MATCH	Phishtank ID 9218068 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009218068_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009218068_VALIDATED	PHISHTANK_0009218068_MATCH && __PHISHTANK_0009218068_VALCHECK
+score		PHISHTANK_0009218068_VALIDATED	2.0
+describe	PHISHTANK_0009218068_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009218068_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009218068_ONLINE	PHISHTANK_0009218068_MATCH && __PHISHTANK_0009218068_ONCHECK
+score		PHISHTANK_0009218068_ONLINE	2.0
+describe	PHISHTANK_0009218068_ONLINE	Phishing URL still online
+
+##
