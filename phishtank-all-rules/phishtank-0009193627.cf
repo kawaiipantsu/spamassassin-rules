@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009193627
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9193627
+## Submitted.....: 2025-08-25T14:01:13+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009193627_MATCH	/app\.saasfirst\.com\/backend\/marketing\/w\/0f4a27c5823f3a94e46c\/m\/12\/c\/5a2afba18d32a0cb1f004728509bd74f3ca3e960\/s\/55796\/click/
+score		PHISHTANK_0009193627_MATCH	5.0
+describe	PHISHTANK_0009193627_MATCH	Phishtank ID 9193627 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009193627_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009193627_VALIDATED	PHISHTANK_0009193627_MATCH && __PHISHTANK_0009193627_VALCHECK
+score		PHISHTANK_0009193627_VALIDATED	2.0
+describe	PHISHTANK_0009193627_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009193627_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009193627_ONLINE	PHISHTANK_0009193627_MATCH && __PHISHTANK_0009193627_ONCHECK
+score		PHISHTANK_0009193627_ONLINE	2.0
+describe	PHISHTANK_0009193627_ONLINE	Phishing URL still online
+
+##

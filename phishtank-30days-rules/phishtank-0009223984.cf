@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009223984
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9223984
+## Submitted.....: 2025-09-27T10:37:06+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009223984_MATCH	/www\.dropbox\.com\/scl\/fi\/gh11cnhf1a1g3rg6fj0pg\/Shared\-a\-doc\.file\-Invoice\-INV10934\.paper/
+score		PHISHTANK_0009223984_MATCH	5.0
+describe	PHISHTANK_0009223984_MATCH	Phishtank ID 9223984 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009223984_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009223984_VALIDATED	PHISHTANK_0009223984_MATCH && __PHISHTANK_0009223984_VALCHECK
+score		PHISHTANK_0009223984_VALIDATED	2.0
+describe	PHISHTANK_0009223984_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009223984_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009223984_ONLINE	PHISHTANK_0009223984_MATCH && __PHISHTANK_0009223984_ONCHECK
+score		PHISHTANK_0009223984_ONLINE	2.0
+describe	PHISHTANK_0009223984_ONLINE	Phishing URL still online
+
+##
