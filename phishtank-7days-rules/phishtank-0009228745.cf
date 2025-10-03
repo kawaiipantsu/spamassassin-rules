@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009228745
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9228745
+## Submitted.....: 2025-10-02T23:56:47+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009228745_MATCH	/ch59244\-wordpress\-6q85h\.tw1\.ru\/wp\-content\/plugins\/vsndd\-jvca\/vsndd\-jvca\/pages\/region\.php/
+score		PHISHTANK_0009228745_MATCH	5.0
+describe	PHISHTANK_0009228745_MATCH	Phishtank ID 9228745 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009228745_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009228745_VALIDATED	PHISHTANK_0009228745_MATCH && __PHISHTANK_0009228745_VALCHECK
+score		PHISHTANK_0009228745_VALIDATED	2.0
+describe	PHISHTANK_0009228745_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009228745_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009228745_ONLINE	PHISHTANK_0009228745_MATCH && __PHISHTANK_0009228745_ONCHECK
+score		PHISHTANK_0009228745_ONLINE	2.0
+describe	PHISHTANK_0009228745_ONLINE	Phishing URL still online
+
+##
