@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009229283
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9229283
+## Submitted.....: 2025-10-03T08:14:07+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009229283_MATCH	/514d8fcd77c540819917c6e5c5ad416e\.9to38\.shop\/b4f72e624e5b4ccb90984f2159716e19/
+score		PHISHTANK_0009229283_MATCH	5.0
+describe	PHISHTANK_0009229283_MATCH	Phishtank ID 9229283 (Amazon.com) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009229283_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009229283_VALIDATED	PHISHTANK_0009229283_MATCH && __PHISHTANK_0009229283_VALCHECK
+score		PHISHTANK_0009229283_VALIDATED	2.0
+describe	PHISHTANK_0009229283_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009229283_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009229283_ONLINE	PHISHTANK_0009229283_MATCH && __PHISHTANK_0009229283_ONCHECK
+score		PHISHTANK_0009229283_ONLINE	2.0
+describe	PHISHTANK_0009229283_ONLINE	Phishing URL still online
+
+##
