@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009241027
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9241027
+## Submitted.....: 2025-10-15T03:50:08+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009241027_MATCH	/co515685\-wordpress\-ixd7o\.tw1\.ru\/wp\-content\/plugins\/nwca\-ddcanw\/nwca\-ddcanw\/pages\/region\.php/
+score		PHISHTANK_0009241027_MATCH	5.0
+describe	PHISHTANK_0009241027_MATCH	Phishtank ID 9241027 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009241027_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009241027_VALIDATED	PHISHTANK_0009241027_MATCH && __PHISHTANK_0009241027_VALCHECK
+score		PHISHTANK_0009241027_VALIDATED	2.0
+describe	PHISHTANK_0009241027_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009241027_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009241027_ONLINE	PHISHTANK_0009241027_MATCH && __PHISHTANK_0009241027_ONCHECK
+score		PHISHTANK_0009241027_ONLINE	2.0
+describe	PHISHTANK_0009241027_ONLINE	Phishing URL still online
+
+##

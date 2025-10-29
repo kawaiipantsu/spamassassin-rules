@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009241950
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9241950
+## Submitted.....: 2025-10-15T20:23:44+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009241950_MATCH	/docs\.google\.com\/presentation\/d\/e\/2PACX\-1vTF1cGvn9jpRh76qNlfHOYnZyiYqIME9TXmXGgNwktvorCc9GKhtN7qbuuj2OxLDTyD8_LAnpjUQ6xK\/pub/
+score		PHISHTANK_0009241950_MATCH	5.0
+describe	PHISHTANK_0009241950_MATCH	Phishtank ID 9241950 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009241950_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009241950_VALIDATED	PHISHTANK_0009241950_MATCH && __PHISHTANK_0009241950_VALCHECK
+score		PHISHTANK_0009241950_VALIDATED	2.0
+describe	PHISHTANK_0009241950_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009241950_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009241950_ONLINE	PHISHTANK_0009241950_MATCH && __PHISHTANK_0009241950_ONCHECK
+score		PHISHTANK_0009241950_ONLINE	2.0
+describe	PHISHTANK_0009241950_ONLINE	Phishing URL still online
+
+##

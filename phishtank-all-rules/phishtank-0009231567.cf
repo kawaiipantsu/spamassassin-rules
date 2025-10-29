@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009231567
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9231567
+## Submitted.....: 2025-10-06T08:09:17+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009231567_MATCH	/b2f99\.subskrypcje\.hair\/Przedplata\/\.d84a627b56f98fa578e3d9ccc24fb953\/login\//
+score		PHISHTANK_0009231567_MATCH	5.0
+describe	PHISHTANK_0009231567_MATCH	Phishtank ID 9231567 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009231567_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009231567_VALIDATED	PHISHTANK_0009231567_MATCH && __PHISHTANK_0009231567_VALCHECK
+score		PHISHTANK_0009231567_VALIDATED	2.0
+describe	PHISHTANK_0009231567_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009231567_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009231567_ONLINE	PHISHTANK_0009231567_MATCH && __PHISHTANK_0009231567_ONCHECK
+score		PHISHTANK_0009231567_ONLINE	2.0
+describe	PHISHTANK_0009231567_ONLINE	Phishing URL still online
+
+##

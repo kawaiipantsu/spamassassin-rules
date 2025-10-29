@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009233223
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9233223
+## Submitted.....: 2025-10-07T15:35:59+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009233223_MATCH	/s\-cas\-unicaen\-fr\.weebly\.com\//
+score		PHISHTANK_0009233223_MATCH	5.0
+describe	PHISHTANK_0009233223_MATCH	Phishtank ID 9233223 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009233223_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009233223_VALIDATED	PHISHTANK_0009233223_MATCH && __PHISHTANK_0009233223_VALCHECK
+score		PHISHTANK_0009233223_VALIDATED	2.0
+describe	PHISHTANK_0009233223_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009233223_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009233223_ONLINE	PHISHTANK_0009233223_MATCH && __PHISHTANK_0009233223_ONCHECK
+score		PHISHTANK_0009233223_ONLINE	2.0
+describe	PHISHTANK_0009233223_ONLINE	Phishing URL still online
+
+##

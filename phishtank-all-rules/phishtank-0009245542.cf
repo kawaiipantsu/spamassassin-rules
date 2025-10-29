@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009245542
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9245542
+## Submitted.....: 2025-10-20T17:00:17+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009245542_MATCH	/revenue\.arkansasaa\.fans/
+score		PHISHTANK_0009245542_MATCH	5.0
+describe	PHISHTANK_0009245542_MATCH	Phishtank ID 9245542 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009245542_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009245542_VALIDATED	PHISHTANK_0009245542_MATCH && __PHISHTANK_0009245542_VALCHECK
+score		PHISHTANK_0009245542_VALIDATED	2.0
+describe	PHISHTANK_0009245542_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009245542_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009245542_ONLINE	PHISHTANK_0009245542_MATCH && __PHISHTANK_0009245542_ONCHECK
+score		PHISHTANK_0009245542_ONLINE	2.0
+describe	PHISHTANK_0009245542_ONLINE	Phishing URL still online
+
+##

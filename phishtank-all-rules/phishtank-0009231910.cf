@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009231910
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9231910
+## Submitted.....: 2025-10-06T14:32:34+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009231910_MATCH	/sptr\.eocampaign1\.com\/f\/a\/07QJGDV96eWXgW65rKrO5Q~~\/AAAHURA~\/7mDqyNLyZ_dvftYXv\-\-GuyQ9EnBum49rNNpub1JJrpqJ5lHaamZ7OTHP0h7Dlk9dUY93NWLV5V0PYiRmBthsuat6g7A6pzWeIGKnLp5GSsTSedB1jb1fnQlfTcLGbVXJulRsJS85flOkR9gzmmexONdfBdLpu76wjAbL9Wdj7YJBJtlzj6FLqDPoCb0LlNN_lzuDYmLjNO5rB9zsI5GA6PVrdSYD63p6LO7JgS9aWUpbwNbfH5M2PkCexPBKWXgxPrhNZhbPOAQmcIDzIemsUHQ06wyvxxZeQ4YPK40dLpY~/
+score		PHISHTANK_0009231910_MATCH	5.0
+describe	PHISHTANK_0009231910_MATCH	Phishtank ID 9231910 (Microsoft) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009231910_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009231910_VALIDATED	PHISHTANK_0009231910_MATCH && __PHISHTANK_0009231910_VALCHECK
+score		PHISHTANK_0009231910_VALIDATED	2.0
+describe	PHISHTANK_0009231910_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009231910_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009231910_ONLINE	PHISHTANK_0009231910_MATCH && __PHISHTANK_0009231910_ONCHECK
+score		PHISHTANK_0009231910_ONLINE	2.0
+describe	PHISHTANK_0009231910_ONLINE	Phishing URL still online
+
+##

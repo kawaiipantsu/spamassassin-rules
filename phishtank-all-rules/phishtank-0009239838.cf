@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009239838
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9239838
+## Submitted.....: 2025-10-14T01:01:49+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009239838_MATCH	/crossfitsurfcityusa\.com\/fgaeaxqn\//
+score		PHISHTANK_0009239838_MATCH	5.0
+describe	PHISHTANK_0009239838_MATCH	Phishtank ID 9239838 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009239838_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009239838_VALIDATED	PHISHTANK_0009239838_MATCH && __PHISHTANK_0009239838_VALCHECK
+score		PHISHTANK_0009239838_VALIDATED	2.0
+describe	PHISHTANK_0009239838_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009239838_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009239838_ONLINE	PHISHTANK_0009239838_MATCH && __PHISHTANK_0009239838_ONCHECK
+score		PHISHTANK_0009239838_ONLINE	2.0
+describe	PHISHTANK_0009239838_ONLINE	Phishing URL still online
+
+##

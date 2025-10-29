@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009243569
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9243569
+## Submitted.....: 2025-10-17T12:49:47+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009243569_MATCH	/novomed\-pal\.com\/media\/k2\/assets\/vendors\/studio\-42\/elfinder\/php\/plugins\/AutoResize\/default\.php/
+score		PHISHTANK_0009243569_MATCH	5.0
+describe	PHISHTANK_0009243569_MATCH	Phishtank ID 9243569 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009243569_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009243569_VALIDATED	PHISHTANK_0009243569_MATCH && __PHISHTANK_0009243569_VALCHECK
+score		PHISHTANK_0009243569_VALIDATED	2.0
+describe	PHISHTANK_0009243569_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009243569_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009243569_ONLINE	PHISHTANK_0009243569_MATCH && __PHISHTANK_0009243569_ONCHECK
+score		PHISHTANK_0009243569_ONLINE	2.0
+describe	PHISHTANK_0009243569_ONLINE	Phishing URL still online
+
+##
