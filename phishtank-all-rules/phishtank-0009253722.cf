@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009253722
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9253722
+## Submitted.....: 2025-10-30T08:57:34+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009253722_MATCH	/fbcratcliff\.org\/mradq\/968747470733A2F2F737664656967706C2E6170616E656C2E696E\/666F2F766E63706275746D2F6447687062473875614746695A584A7A64484A76614541786457356B4D53356B5A513D3D/
+score		PHISHTANK_0009253722_MATCH	5.0
+describe	PHISHTANK_0009253722_MATCH	Phishtank ID 9253722 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009253722_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009253722_VALIDATED	PHISHTANK_0009253722_MATCH && __PHISHTANK_0009253722_VALCHECK
+score		PHISHTANK_0009253722_VALIDATED	2.0
+describe	PHISHTANK_0009253722_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009253722_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009253722_ONLINE	PHISHTANK_0009253722_MATCH && __PHISHTANK_0009253722_ONCHECK
+score		PHISHTANK_0009253722_ONLINE	2.0
+describe	PHISHTANK_0009253722_ONLINE	Phishing URL still online
+
+##
