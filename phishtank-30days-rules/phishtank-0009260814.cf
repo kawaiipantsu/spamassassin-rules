@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009260814
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9260814
+## Submitted.....: 2025-11-06T21:10:47+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009260814_MATCH	/contatobeneficios\.live\/90327409328981123514937193123494973284623684123901823981293012903129836123761274512641461273861294709147912471824571245715248126492174914812941274512654124521486214\//
+score		PHISHTANK_0009260814_MATCH	5.0
+describe	PHISHTANK_0009260814_MATCH	Phishtank ID 9260814 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009260814_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009260814_VALIDATED	PHISHTANK_0009260814_MATCH && __PHISHTANK_0009260814_VALCHECK
+score		PHISHTANK_0009260814_VALIDATED	2.0
+describe	PHISHTANK_0009260814_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009260814_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009260814_ONLINE	PHISHTANK_0009260814_MATCH && __PHISHTANK_0009260814_ONCHECK
+score		PHISHTANK_0009260814_ONLINE	2.0
+describe	PHISHTANK_0009260814_ONLINE	Phishing URL still online
+
+##
