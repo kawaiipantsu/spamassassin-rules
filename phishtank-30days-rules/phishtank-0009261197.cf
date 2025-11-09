@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009261197
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9261197
+## Submitted.....: 2025-11-07T08:27:49+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009261197_MATCH	/wordpress\-1546208\-5980326\.cloudwaysapps\.com\/zed\//
+score		PHISHTANK_0009261197_MATCH	5.0
+describe	PHISHTANK_0009261197_MATCH	Phishtank ID 9261197 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009261197_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009261197_VALIDATED	PHISHTANK_0009261197_MATCH && __PHISHTANK_0009261197_VALCHECK
+score		PHISHTANK_0009261197_VALIDATED	2.0
+describe	PHISHTANK_0009261197_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009261197_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009261197_ONLINE	PHISHTANK_0009261197_MATCH && __PHISHTANK_0009261197_ONCHECK
+score		PHISHTANK_0009261197_ONLINE	2.0
+describe	PHISHTANK_0009261197_ONLINE	Phishing URL still online
+
+##
