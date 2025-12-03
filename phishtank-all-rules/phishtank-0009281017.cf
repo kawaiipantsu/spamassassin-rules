@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009281017
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9281017
+## Submitted.....: 2025-12-01T18:06:24+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009281017_MATCH	/rbfcu\-star\.azurewebsites\.net\/\(S\(efyv3vy2e2iy5d4wwon2q0ha\)\)\/Main\/Login/
+score		PHISHTANK_0009281017_MATCH	5.0
+describe	PHISHTANK_0009281017_MATCH	Phishtank ID 9281017 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009281017_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009281017_VALIDATED	PHISHTANK_0009281017_MATCH && __PHISHTANK_0009281017_VALCHECK
+score		PHISHTANK_0009281017_VALIDATED	2.0
+describe	PHISHTANK_0009281017_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009281017_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009281017_ONLINE	PHISHTANK_0009281017_MATCH && __PHISHTANK_0009281017_ONCHECK
+score		PHISHTANK_0009281017_ONLINE	2.0
+describe	PHISHTANK_0009281017_ONLINE	Phishing URL still online
+
+##

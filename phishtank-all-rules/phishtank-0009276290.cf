@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009276290
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9276290
+## Submitted.....: 2025-11-25T00:40:22+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009276290_MATCH	/site121877220ltd\.com\//
+score		PHISHTANK_0009276290_MATCH	5.0
+describe	PHISHTANK_0009276290_MATCH	Phishtank ID 9276290 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009276290_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009276290_VALIDATED	PHISHTANK_0009276290_MATCH && __PHISHTANK_0009276290_VALCHECK
+score		PHISHTANK_0009276290_VALIDATED	2.0
+describe	PHISHTANK_0009276290_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009276290_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009276290_ONLINE	PHISHTANK_0009276290_MATCH && __PHISHTANK_0009276290_ONCHECK
+score		PHISHTANK_0009276290_ONLINE	2.0
+describe	PHISHTANK_0009276290_ONLINE	Phishing URL still online
+
+##

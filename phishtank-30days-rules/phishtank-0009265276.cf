@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009265276
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9265276
+## Submitted.....: 2025-11-12T05:21:25+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009265276_MATCH	/expertisap\.com\.br\/regroup\/tallness\//
+score		PHISHTANK_0009265276_MATCH	5.0
+describe	PHISHTANK_0009265276_MATCH	Phishtank ID 9265276 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009265276_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009265276_VALIDATED	PHISHTANK_0009265276_MATCH && __PHISHTANK_0009265276_VALCHECK
+score		PHISHTANK_0009265276_VALIDATED	2.0
+describe	PHISHTANK_0009265276_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009265276_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009265276_ONLINE	PHISHTANK_0009265276_MATCH && __PHISHTANK_0009265276_ONCHECK
+score		PHISHTANK_0009265276_ONLINE	2.0
+describe	PHISHTANK_0009265276_ONLINE	Phishing URL still online
+
+##

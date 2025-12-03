@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009268979
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9268979
+## Submitted.....: 2025-11-16T05:31:00+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009268979_MATCH	/www\.miricanvas\.com\/v2\/design2\/v\/920ed7ef\-00e8\-4f0c\-b250\-628f5302b8a2/
+score		PHISHTANK_0009268979_MATCH	5.0
+describe	PHISHTANK_0009268979_MATCH	Phishtank ID 9268979 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009268979_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009268979_VALIDATED	PHISHTANK_0009268979_MATCH && __PHISHTANK_0009268979_VALCHECK
+score		PHISHTANK_0009268979_VALIDATED	2.0
+describe	PHISHTANK_0009268979_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009268979_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009268979_ONLINE	PHISHTANK_0009268979_MATCH && __PHISHTANK_0009268979_ONCHECK
+score		PHISHTANK_0009268979_ONLINE	2.0
+describe	PHISHTANK_0009268979_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009277742
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9277742
+## Submitted.....: 2025-11-26T15:57:34+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009277742_MATCH	/activobank\.click\/E4V2PY5033KCKWCILQV24WJ9U7\/login/
+score		PHISHTANK_0009277742_MATCH	5.0
+describe	PHISHTANK_0009277742_MATCH	Phishtank ID 9277742 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009277742_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009277742_VALIDATED	PHISHTANK_0009277742_MATCH && __PHISHTANK_0009277742_VALCHECK
+score		PHISHTANK_0009277742_VALIDATED	2.0
+describe	PHISHTANK_0009277742_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009277742_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009277742_ONLINE	PHISHTANK_0009277742_MATCH && __PHISHTANK_0009277742_ONCHECK
+score		PHISHTANK_0009277742_ONLINE	2.0
+describe	PHISHTANK_0009277742_ONLINE	Phishing URL still online
+
+##

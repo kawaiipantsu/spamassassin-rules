@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009278924
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9278924
+## Submitted.....: 2025-11-28T15:27:42+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009278924_MATCH	/tinyurl\.com\/mvdjhdvw/
+score		PHISHTANK_0009278924_MATCH	5.0
+describe	PHISHTANK_0009278924_MATCH	Phishtank ID 9278924 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009278924_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009278924_VALIDATED	PHISHTANK_0009278924_MATCH && __PHISHTANK_0009278924_VALCHECK
+score		PHISHTANK_0009278924_VALIDATED	2.0
+describe	PHISHTANK_0009278924_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009278924_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009278924_ONLINE	PHISHTANK_0009278924_MATCH && __PHISHTANK_0009278924_ONCHECK
+score		PHISHTANK_0009278924_ONLINE	2.0
+describe	PHISHTANK_0009278924_ONLINE	Phishing URL still online
+
+##
