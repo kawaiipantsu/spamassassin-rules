@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009288897
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9288897
+## Submitted.....: 2025-12-12T13:19:55+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009288897_MATCH	/www\.surveymonkey\.com\/tr\/v1\/te\/AHXAgYDjiWJSPB3zlPl2In_2Fa51qzcOLRRVMFNjHt2X3LD9SD59kZKZqTYWK2XtymYZwHweIBPnaK_2BFoNX_2B9oKVCQziDbe5FBPeRjN_2BX2j1_2B_2FIlItBQnxs8DleME06bKKsVUOUkOhHN_2FqKZAnjBuI5eve647NA0obgvWm5OFXPhDI1NaZKvKFDVyfm7Sama1GVYZfcmNglfDHYhrkM4FJ7FsQteKU40KhLqqzMj7_2BEjaIADAfBWyzW9eSkT_2BXpanJN0Vd_2B7_2FAxvn_2Bb6VpYn90eQ_3D_3D/
+score		PHISHTANK_0009288897_MATCH	5.0
+describe	PHISHTANK_0009288897_MATCH	Phishtank ID 9288897 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009288897_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009288897_VALIDATED	PHISHTANK_0009288897_MATCH && __PHISHTANK_0009288897_VALCHECK
+score		PHISHTANK_0009288897_VALIDATED	2.0
+describe	PHISHTANK_0009288897_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009288897_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009288897_ONLINE	PHISHTANK_0009288897_MATCH && __PHISHTANK_0009288897_ONCHECK
+score		PHISHTANK_0009288897_ONLINE	2.0
+describe	PHISHTANK_0009288897_ONLINE	Phishing URL still online
+
+##
