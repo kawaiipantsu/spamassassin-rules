@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009291946
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9291946
+## Submitted.....: 2025-12-16T15:46:38+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009291946_MATCH	/cc4fgxmd\.r\.us\-west\-2\.awstrack\.me\/L0\/https\:%2F%2Fspaces\.hightail\.com%2Freceive%2FltMxaG7Ofi%2FVmljdG9yaWFEQFNwZW5jZXJXYWx0ZXJhbmRUb3kub25taWNyb3NvZnQuY29t\/2\/0101019b2233060e\-fb1e0924\-6d2b\-457d\-83ba\-bc99c61c67ec\-000000\/ZVJe_9lMV5eiMHDBSsIUZtcTrTg\=457/
+score		PHISHTANK_0009291946_MATCH	5.0
+describe	PHISHTANK_0009291946_MATCH	Phishtank ID 9291946 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009291946_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009291946_VALIDATED	PHISHTANK_0009291946_MATCH && __PHISHTANK_0009291946_VALCHECK
+score		PHISHTANK_0009291946_VALIDATED	2.0
+describe	PHISHTANK_0009291946_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009291946_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009291946_ONLINE	PHISHTANK_0009291946_MATCH && __PHISHTANK_0009291946_ONCHECK
+score		PHISHTANK_0009291946_ONLINE	2.0
+describe	PHISHTANK_0009291946_ONLINE	Phishing URL still online
+
+##
