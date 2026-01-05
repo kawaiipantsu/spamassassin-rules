@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009297769
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9297769
+## Submitted.....: 2025-12-23T12:58:49+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009297769_MATCH	/public\-eur\.mkt\.dynamics\.com\/api\/orgs\/198b884b\-46c8\-f011\-8729\-7c1e52fcab52\/r\/QnmGbaGLTU6A40to_LgCABAAAAA/
+score		PHISHTANK_0009297769_MATCH	5.0
+describe	PHISHTANK_0009297769_MATCH	Phishtank ID 9297769 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009297769_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009297769_VALIDATED	PHISHTANK_0009297769_MATCH && __PHISHTANK_0009297769_VALCHECK
+score		PHISHTANK_0009297769_VALIDATED	2.0
+describe	PHISHTANK_0009297769_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009297769_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009297769_ONLINE	PHISHTANK_0009297769_MATCH && __PHISHTANK_0009297769_ONCHECK
+score		PHISHTANK_0009297769_ONLINE	2.0
+describe	PHISHTANK_0009297769_ONLINE	Phishing URL still online
+
+##

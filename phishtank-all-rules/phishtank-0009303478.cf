@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009303478
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9303478
+## Submitted.....: 2026-01-02T18:58:48+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009303478_MATCH	/beneficioparacliente\-a3bbc4daeb2c\.herokuapp\.com\//
+score		PHISHTANK_0009303478_MATCH	5.0
+describe	PHISHTANK_0009303478_MATCH	Phishtank ID 9303478 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009303478_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009303478_VALIDATED	PHISHTANK_0009303478_MATCH && __PHISHTANK_0009303478_VALCHECK
+score		PHISHTANK_0009303478_VALIDATED	2.0
+describe	PHISHTANK_0009303478_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009303478_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009303478_ONLINE	PHISHTANK_0009303478_MATCH && __PHISHTANK_0009303478_ONCHECK
+score		PHISHTANK_0009303478_ONLINE	2.0
+describe	PHISHTANK_0009303478_ONLINE	Phishing URL still online
+
+##

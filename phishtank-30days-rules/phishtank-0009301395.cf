@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009301395
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9301395
+## Submitted.....: 2025-12-30T04:11:31+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009301395_MATCH	/qefrmdm\.cn\/kKFg3c\/user\/zAEUZYn12dZ91pT\/X8pYGpe0\/promo\/F\-2GiMyDOB38yFA\/8gkzrha9\/account\/gJVv5\/tracking\/3qztv_t8Lc2O/
+score		PHISHTANK_0009301395_MATCH	5.0
+describe	PHISHTANK_0009301395_MATCH	Phishtank ID 9301395 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009301395_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009301395_VALIDATED	PHISHTANK_0009301395_MATCH && __PHISHTANK_0009301395_VALCHECK
+score		PHISHTANK_0009301395_VALIDATED	2.0
+describe	PHISHTANK_0009301395_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009301395_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009301395_ONLINE	PHISHTANK_0009301395_MATCH && __PHISHTANK_0009301395_ONCHECK
+score		PHISHTANK_0009301395_ONLINE	2.0
+describe	PHISHTANK_0009301395_ONLINE	Phishing URL still online
+
+##

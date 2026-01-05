@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009300224
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9300224
+## Submitted.....: 2025-12-28T04:18:41+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009300224_MATCH	/zaxyy\.troniva\.cfd\/8ped9qt1fq7yM0gmflsj4t/
+score		PHISHTANK_0009300224_MATCH	5.0
+describe	PHISHTANK_0009300224_MATCH	Phishtank ID 9300224 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009300224_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009300224_VALIDATED	PHISHTANK_0009300224_MATCH && __PHISHTANK_0009300224_VALCHECK
+score		PHISHTANK_0009300224_VALIDATED	2.0
+describe	PHISHTANK_0009300224_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009300224_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009300224_ONLINE	PHISHTANK_0009300224_MATCH && __PHISHTANK_0009300224_ONCHECK
+score		PHISHTANK_0009300224_ONLINE	2.0
+describe	PHISHTANK_0009300224_ONLINE	Phishing URL still online
+
+##
