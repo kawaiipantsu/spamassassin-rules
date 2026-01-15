@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009311965
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9311965
+## Submitted.....: 2026-01-14T15:49:11+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009311965_MATCH	/87\-106\-50\-204\.cprapid\.com\/de\/update\.php/
+score		PHISHTANK_0009311965_MATCH	5.0
+describe	PHISHTANK_0009311965_MATCH	Phishtank ID 9311965 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009311965_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009311965_VALIDATED	PHISHTANK_0009311965_MATCH && __PHISHTANK_0009311965_VALCHECK
+score		PHISHTANK_0009311965_VALIDATED	2.0
+describe	PHISHTANK_0009311965_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009311965_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009311965_ONLINE	PHISHTANK_0009311965_MATCH && __PHISHTANK_0009311965_ONCHECK
+score		PHISHTANK_0009311965_ONLINE	2.0
+describe	PHISHTANK_0009311965_ONLINE	Phishing URL still online
+
+##
