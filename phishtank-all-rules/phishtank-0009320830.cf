@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009320830
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9320830
+## Submitted.....: 2026-01-25T09:55:53+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009320830_MATCH	/kristalnevsehir\.com\/portal\/medieval\-legends\-competition\-p1o7j4k2o8d6h6l0f5m3z6i9d8x1/
+score		PHISHTANK_0009320830_MATCH	5.0
+describe	PHISHTANK_0009320830_MATCH	Phishtank ID 9320830 (RuneScape) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009320830_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009320830_VALIDATED	PHISHTANK_0009320830_MATCH && __PHISHTANK_0009320830_VALCHECK
+score		PHISHTANK_0009320830_VALIDATED	2.0
+describe	PHISHTANK_0009320830_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009320830_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009320830_ONLINE	PHISHTANK_0009320830_MATCH && __PHISHTANK_0009320830_ONCHECK
+score		PHISHTANK_0009320830_ONLINE	2.0
+describe	PHISHTANK_0009320830_ONLINE	Phishing URL still online
+
+##

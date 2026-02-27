@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009354221
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9354221
+## Submitted.....: 2026-02-26T07:15:06+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009354221_MATCH	/allegrolokalnie\.pl\-kategoria598498452\.bond/
+score		PHISHTANK_0009354221_MATCH	5.0
+describe	PHISHTANK_0009354221_MATCH	Phishtank ID 9354221 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009354221_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009354221_VALIDATED	PHISHTANK_0009354221_MATCH && __PHISHTANK_0009354221_VALCHECK
+score		PHISHTANK_0009354221_VALIDATED	2.0
+describe	PHISHTANK_0009354221_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009354221_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009354221_ONLINE	PHISHTANK_0009354221_MATCH && __PHISHTANK_0009354221_ONCHECK
+score		PHISHTANK_0009354221_ONLINE	2.0
+describe	PHISHTANK_0009354221_ONLINE	Phishing URL still online
+
+##

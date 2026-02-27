@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009314240
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9314240
+## Submitted.....: 2026-01-17T05:21:09+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009314240_MATCH	/manageaccountwebappsockedservermanagerawjdwaworsdf\.ezwebsites\.com\//
+score		PHISHTANK_0009314240_MATCH	5.0
+describe	PHISHTANK_0009314240_MATCH	Phishtank ID 9314240 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009314240_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009314240_VALIDATED	PHISHTANK_0009314240_MATCH && __PHISHTANK_0009314240_VALCHECK
+score		PHISHTANK_0009314240_VALIDATED	2.0
+describe	PHISHTANK_0009314240_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009314240_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009314240_ONLINE	PHISHTANK_0009314240_MATCH && __PHISHTANK_0009314240_ONCHECK
+score		PHISHTANK_0009314240_ONLINE	2.0
+describe	PHISHTANK_0009314240_ONLINE	Phishing URL still online
+
+##

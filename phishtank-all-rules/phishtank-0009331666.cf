@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009331666
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9331666
+## Submitted.....: 2026-02-03T20:23:55+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009331666_MATCH	/secure\-web\.cisco\.com\/1CY7uxUJ8lCQ9PsPcq1wCeldyPcrbEE2eYDdbsKJyq0SBWlYqqaQFKQy3L6JAq5YhM53DW3YGRbYYqA8q89NRP0c9rk_X9\-bViyboXXP6OWrFlZFz7SNLs5SEaNc7I0u9VhL4wjVCz6L6sI5DjuUbOFGNcdZ6b8YOb3DOCGiAQjvMObbo5w0XqKaCWg9840Uf7wp0ktFE4bDYhqMuk6t6YvYd8GDpdXLszxrX55JvCYBPGhS9X9KxR\-ks69JqSs\-xh6ASB29uDSMFg2SO8ymLnuCw1i2QsmUAO3y9HrbPq6kWYsZ\-96HIDXeZk4o6FYSHsM6JP7yBaSTVLIgwnsgxYfZZgrB92NcL5C6z8oedltiTz30Ake6ZSeJO98Y3f3I_EldRyikHvFxqMja5QK9COmHlHpSpS5LDbDSaavdmDkM\/https%3A%2F%2Fgrandedestaque\.com\.br%2Fcgi%2Findex\.php/
+score		PHISHTANK_0009331666_MATCH	5.0
+describe	PHISHTANK_0009331666_MATCH	Phishtank ID 9331666 (Internal Revenue Service) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009331666_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009331666_VALIDATED	PHISHTANK_0009331666_MATCH && __PHISHTANK_0009331666_VALCHECK
+score		PHISHTANK_0009331666_VALIDATED	2.0
+describe	PHISHTANK_0009331666_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009331666_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009331666_ONLINE	PHISHTANK_0009331666_MATCH && __PHISHTANK_0009331666_ONCHECK
+score		PHISHTANK_0009331666_ONLINE	2.0
+describe	PHISHTANK_0009331666_ONLINE	Phishing URL still online
+
+##

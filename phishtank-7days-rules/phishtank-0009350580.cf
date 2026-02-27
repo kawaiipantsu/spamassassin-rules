@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009350580
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9350580
+## Submitted.....: 2026-02-21T06:40:03+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009350580_MATCH	/damjidesign\.com\/Y1VOmrKrG6/
+score		PHISHTANK_0009350580_MATCH	5.0
+describe	PHISHTANK_0009350580_MATCH	Phishtank ID 9350580 (Sumitomo Mitsui Banking Corporation) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009350580_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009350580_VALIDATED	PHISHTANK_0009350580_MATCH && __PHISHTANK_0009350580_VALCHECK
+score		PHISHTANK_0009350580_VALIDATED	2.0
+describe	PHISHTANK_0009350580_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009350580_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009350580_ONLINE	PHISHTANK_0009350580_MATCH && __PHISHTANK_0009350580_ONCHECK
+score		PHISHTANK_0009350580_ONLINE	2.0
+describe	PHISHTANK_0009350580_ONLINE	Phishing URL still online
+
+##

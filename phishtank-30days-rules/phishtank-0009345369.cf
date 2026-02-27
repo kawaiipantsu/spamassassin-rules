@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009345369
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9345369
+## Submitted.....: 2026-02-14T22:51:38+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009345369_MATCH	/qrco\.de\/bgccX9/
+score		PHISHTANK_0009345369_MATCH	5.0
+describe	PHISHTANK_0009345369_MATCH	Phishtank ID 9345369 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009345369_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009345369_VALIDATED	PHISHTANK_0009345369_MATCH && __PHISHTANK_0009345369_VALCHECK
+score		PHISHTANK_0009345369_VALIDATED	2.0
+describe	PHISHTANK_0009345369_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009345369_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009345369_ONLINE	PHISHTANK_0009345369_MATCH && __PHISHTANK_0009345369_ONCHECK
+score		PHISHTANK_0009345369_ONLINE	2.0
+describe	PHISHTANK_0009345369_ONLINE	Phishing URL still online
+
+##

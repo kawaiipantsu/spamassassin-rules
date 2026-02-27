@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009319015
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9319015
+## Submitted.....: 2026-01-23T16:54:38+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009319015_MATCH	/farmrio\-site\.vercel\.app\/colecao/
+score		PHISHTANK_0009319015_MATCH	5.0
+describe	PHISHTANK_0009319015_MATCH	Phishtank ID 9319015 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009319015_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009319015_VALIDATED	PHISHTANK_0009319015_MATCH && __PHISHTANK_0009319015_VALCHECK
+score		PHISHTANK_0009319015_VALIDATED	2.0
+describe	PHISHTANK_0009319015_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009319015_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009319015_ONLINE	PHISHTANK_0009319015_MATCH && __PHISHTANK_0009319015_ONCHECK
+score		PHISHTANK_0009319015_ONLINE	2.0
+describe	PHISHTANK_0009319015_ONLINE	Phishing URL still online
+
+##

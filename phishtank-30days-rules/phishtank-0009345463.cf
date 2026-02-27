@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009345463
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9345463
+## Submitted.....: 2026-02-15T04:15:06+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009345463_MATCH	/docs\-trezzrrr\-cdn\.github\.io\/en\-us/
+score		PHISHTANK_0009345463_MATCH	5.0
+describe	PHISHTANK_0009345463_MATCH	Phishtank ID 9345463 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009345463_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009345463_VALIDATED	PHISHTANK_0009345463_MATCH && __PHISHTANK_0009345463_VALCHECK
+score		PHISHTANK_0009345463_VALIDATED	2.0
+describe	PHISHTANK_0009345463_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009345463_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009345463_ONLINE	PHISHTANK_0009345463_MATCH && __PHISHTANK_0009345463_ONCHECK
+score		PHISHTANK_0009345463_ONLINE	2.0
+describe	PHISHTANK_0009345463_ONLINE	Phishing URL still online
+
+##

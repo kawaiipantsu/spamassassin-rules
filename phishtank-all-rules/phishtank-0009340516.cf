@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009340516
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9340516
+## Submitted.....: 2026-02-11T05:01:51+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009340516_MATCH	/connectiiontodoomaiins\.weebly\.com\//
+score		PHISHTANK_0009340516_MATCH	5.0
+describe	PHISHTANK_0009340516_MATCH	Phishtank ID 9340516 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009340516_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009340516_VALIDATED	PHISHTANK_0009340516_MATCH && __PHISHTANK_0009340516_VALCHECK
+score		PHISHTANK_0009340516_VALIDATED	2.0
+describe	PHISHTANK_0009340516_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009340516_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009340516_ONLINE	PHISHTANK_0009340516_MATCH && __PHISHTANK_0009340516_ONCHECK
+score		PHISHTANK_0009340516_ONLINE	2.0
+describe	PHISHTANK_0009340516_ONLINE	Phishing URL still online
+
+##

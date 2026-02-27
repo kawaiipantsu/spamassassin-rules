@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009323483
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9323483
+## Submitted.....: 2026-01-27T18:09:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009323483_MATCH	/kundenfang\.sbs\/AKMf8RXTA/
+score		PHISHTANK_0009323483_MATCH	5.0
+describe	PHISHTANK_0009323483_MATCH	Phishtank ID 9323483 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009323483_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009323483_VALIDATED	PHISHTANK_0009323483_MATCH && __PHISHTANK_0009323483_VALCHECK
+score		PHISHTANK_0009323483_VALIDATED	2.0
+describe	PHISHTANK_0009323483_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009323483_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009323483_ONLINE	PHISHTANK_0009323483_MATCH && __PHISHTANK_0009323483_ONCHECK
+score		PHISHTANK_0009323483_ONLINE	2.0
+describe	PHISHTANK_0009323483_ONLINE	Phishing URL still online
+
+##

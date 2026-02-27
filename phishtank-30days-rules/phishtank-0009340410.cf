@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009340410
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9340410
+## Submitted.....: 2026-02-11T00:49:07+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009340410_MATCH	/2x2landgarage\.jp\/interview\//
+score		PHISHTANK_0009340410_MATCH	5.0
+describe	PHISHTANK_0009340410_MATCH	Phishtank ID 9340410 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009340410_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009340410_VALIDATED	PHISHTANK_0009340410_MATCH && __PHISHTANK_0009340410_VALCHECK
+score		PHISHTANK_0009340410_VALIDATED	2.0
+describe	PHISHTANK_0009340410_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009340410_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009340410_ONLINE	PHISHTANK_0009340410_MATCH && __PHISHTANK_0009340410_ONCHECK
+score		PHISHTANK_0009340410_ONLINE	2.0
+describe	PHISHTANK_0009340410_ONLINE	Phishing URL still online
+
+##

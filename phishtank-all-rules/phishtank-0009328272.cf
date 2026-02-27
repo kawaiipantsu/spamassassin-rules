@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009328272
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9328272
+## Submitted.....: 2026-01-31T11:58:47+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009328272_MATCH	/q\-r\.to\/bgafuL/
+score		PHISHTANK_0009328272_MATCH	5.0
+describe	PHISHTANK_0009328272_MATCH	Phishtank ID 9328272 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009328272_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009328272_VALIDATED	PHISHTANK_0009328272_MATCH && __PHISHTANK_0009328272_VALCHECK
+score		PHISHTANK_0009328272_VALIDATED	2.0
+describe	PHISHTANK_0009328272_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009328272_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009328272_ONLINE	PHISHTANK_0009328272_MATCH && __PHISHTANK_0009328272_ONCHECK
+score		PHISHTANK_0009328272_ONLINE	2.0
+describe	PHISHTANK_0009328272_ONLINE	Phishing URL still online
+
+##

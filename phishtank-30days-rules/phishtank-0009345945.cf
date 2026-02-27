@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009345945
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9345945
+## Submitted.....: 2026-02-16T04:30:28+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009345945_MATCH	/universitytowers\.org\/iox\.html/
+score		PHISHTANK_0009345945_MATCH	5.0
+describe	PHISHTANK_0009345945_MATCH	Phishtank ID 9345945 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009345945_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009345945_VALIDATED	PHISHTANK_0009345945_MATCH && __PHISHTANK_0009345945_VALCHECK
+score		PHISHTANK_0009345945_VALIDATED	2.0
+describe	PHISHTANK_0009345945_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009345945_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009345945_ONLINE	PHISHTANK_0009345945_MATCH && __PHISHTANK_0009345945_ONCHECK
+score		PHISHTANK_0009345945_ONLINE	2.0
+describe	PHISHTANK_0009345945_ONLINE	Phishing URL still online
+
+##

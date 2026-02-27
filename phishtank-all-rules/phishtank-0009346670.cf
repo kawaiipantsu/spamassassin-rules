@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009346670
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9346670
+## Submitted.....: 2026-02-16T19:23:01+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009346670_MATCH	/ed4641ae\-f961\-4efe\-9222\-58e5ff4b50e9\-00\-12va56hpx7xwi\.picard\.replit\.dev\/Credito\/index\.html/
+score		PHISHTANK_0009346670_MATCH	5.0
+describe	PHISHTANK_0009346670_MATCH	Phishtank ID 9346670 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009346670_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009346670_VALIDATED	PHISHTANK_0009346670_MATCH && __PHISHTANK_0009346670_VALCHECK
+score		PHISHTANK_0009346670_VALIDATED	2.0
+describe	PHISHTANK_0009346670_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009346670_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009346670_ONLINE	PHISHTANK_0009346670_MATCH && __PHISHTANK_0009346670_ONCHECK
+score		PHISHTANK_0009346670_ONLINE	2.0
+describe	PHISHTANK_0009346670_ONLINE	Phishing URL still online
+
+##

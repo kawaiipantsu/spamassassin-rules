@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009352412
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9352412
+## Submitted.....: 2026-02-24T07:30:29+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009352412_MATCH	/dottssaangelamarcuzzopsicologaepsicoterapeuta\.it\/abura\/5795ca9c21d1a522998b819aa6ec7fca\/AreaUtenti_Lang\.php/
+score		PHISHTANK_0009352412_MATCH	5.0
+describe	PHISHTANK_0009352412_MATCH	Phishtank ID 9352412 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009352412_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009352412_VALIDATED	PHISHTANK_0009352412_MATCH && __PHISHTANK_0009352412_VALCHECK
+score		PHISHTANK_0009352412_VALIDATED	2.0
+describe	PHISHTANK_0009352412_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009352412_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009352412_ONLINE	PHISHTANK_0009352412_MATCH && __PHISHTANK_0009352412_ONCHECK
+score		PHISHTANK_0009352412_ONLINE	2.0
+describe	PHISHTANK_0009352412_ONLINE	Phishing URL still online
+
+##

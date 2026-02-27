@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009347671
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9347671
+## Submitted.....: 2026-02-17T22:41:11+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009347671_MATCH	/pub\-8b5d025763dc430f9b12d777221d0254\.r2\.dev\/AMEEEP9394\.html/
+score		PHISHTANK_0009347671_MATCH	5.0
+describe	PHISHTANK_0009347671_MATCH	Phishtank ID 9347671 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009347671_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009347671_VALIDATED	PHISHTANK_0009347671_MATCH && __PHISHTANK_0009347671_VALCHECK
+score		PHISHTANK_0009347671_VALIDATED	2.0
+describe	PHISHTANK_0009347671_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009347671_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009347671_ONLINE	PHISHTANK_0009347671_MATCH && __PHISHTANK_0009347671_ONCHECK
+score		PHISHTANK_0009347671_ONLINE	2.0
+describe	PHISHTANK_0009347671_ONLINE	Phishing URL still online
+
+##

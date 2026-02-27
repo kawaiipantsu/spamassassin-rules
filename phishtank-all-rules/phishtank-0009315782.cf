@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009315782
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9315782
+## Submitted.....: 2026-01-20T07:16:09+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009315782_MATCH	/shieldpoint\.live\/r2\.php/
+score		PHISHTANK_0009315782_MATCH	5.0
+describe	PHISHTANK_0009315782_MATCH	Phishtank ID 9315782 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009315782_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009315782_VALIDATED	PHISHTANK_0009315782_MATCH && __PHISHTANK_0009315782_VALCHECK
+score		PHISHTANK_0009315782_VALIDATED	2.0
+describe	PHISHTANK_0009315782_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009315782_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009315782_ONLINE	PHISHTANK_0009315782_MATCH && __PHISHTANK_0009315782_ONCHECK
+score		PHISHTANK_0009315782_ONLINE	2.0
+describe	PHISHTANK_0009315782_ONLINE	Phishing URL still online
+
+##

@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009344994
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9344994
+## Submitted.....: 2026-02-14T10:59:56+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009344994_MATCH	/mrelais\-lockerselect\.com\/login/
+score		PHISHTANK_0009344994_MATCH	5.0
+describe	PHISHTANK_0009344994_MATCH	Phishtank ID 9344994 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009344994_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009344994_VALIDATED	PHISHTANK_0009344994_MATCH && __PHISHTANK_0009344994_VALCHECK
+score		PHISHTANK_0009344994_VALIDATED	2.0
+describe	PHISHTANK_0009344994_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009344994_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009344994_ONLINE	PHISHTANK_0009344994_MATCH && __PHISHTANK_0009344994_ONCHECK
+score		PHISHTANK_0009344994_ONLINE	2.0
+describe	PHISHTANK_0009344994_ONLINE	Phishing URL still online
+
+##

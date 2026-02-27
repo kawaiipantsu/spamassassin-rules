@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009345456
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9345456
+## Submitted.....: 2026-02-15T03:45:45+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009345456_MATCH	/51jx\-q\.vercel\.app\//
+score		PHISHTANK_0009345456_MATCH	5.0
+describe	PHISHTANK_0009345456_MATCH	Phishtank ID 9345456 (Facebook) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009345456_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009345456_VALIDATED	PHISHTANK_0009345456_MATCH && __PHISHTANK_0009345456_VALCHECK
+score		PHISHTANK_0009345456_VALIDATED	2.0
+describe	PHISHTANK_0009345456_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009345456_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009345456_ONLINE	PHISHTANK_0009345456_MATCH && __PHISHTANK_0009345456_ONCHECK
+score		PHISHTANK_0009345456_ONLINE	2.0
+describe	PHISHTANK_0009345456_ONLINE	Phishing URL still online
+
+##
