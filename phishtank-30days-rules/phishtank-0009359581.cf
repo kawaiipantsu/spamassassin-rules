@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009359581
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9359581
+## Submitted.....: 2026-03-05T07:24:06+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009359581_MATCH	/global\-connect\.ghost\.io\/start\-setup\//
+score		PHISHTANK_0009359581_MATCH	5.0
+describe	PHISHTANK_0009359581_MATCH	Phishtank ID 9359581 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009359581_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009359581_VALIDATED	PHISHTANK_0009359581_MATCH && __PHISHTANK_0009359581_VALCHECK
+score		PHISHTANK_0009359581_VALIDATED	2.0
+describe	PHISHTANK_0009359581_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009359581_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009359581_ONLINE	PHISHTANK_0009359581_MATCH && __PHISHTANK_0009359581_ONCHECK
+score		PHISHTANK_0009359581_ONLINE	2.0
+describe	PHISHTANK_0009359581_ONLINE	Phishing URL still online
+
+##

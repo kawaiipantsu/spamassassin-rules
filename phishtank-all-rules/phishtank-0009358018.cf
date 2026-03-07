@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009358018
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9358018
+## Submitted.....: 2026-03-03T11:35:11+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009358018_MATCH	/tuyethang001982\-design\.github\.io\/KIEM\-TRA\-TX\-KH2\-K11\//
+score		PHISHTANK_0009358018_MATCH	5.0
+describe	PHISHTANK_0009358018_MATCH	Phishtank ID 9358018 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009358018_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009358018_VALIDATED	PHISHTANK_0009358018_MATCH && __PHISHTANK_0009358018_VALCHECK
+score		PHISHTANK_0009358018_VALIDATED	2.0
+describe	PHISHTANK_0009358018_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009358018_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009358018_ONLINE	PHISHTANK_0009358018_MATCH && __PHISHTANK_0009358018_ONCHECK
+score		PHISHTANK_0009358018_ONLINE	2.0
+describe	PHISHTANK_0009358018_ONLINE	Phishing URL still online
+
+##
