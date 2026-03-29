@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009375418
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9375418
+## Submitted.....: 2026-03-25T18:59:35+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009375418_MATCH	/ethscanner\.digital\/tx\/0xc7e0cfaf19a5ad37ca77be241fcaa5c89ff105dccdce539165e9340b835ff052/
+score		PHISHTANK_0009375418_MATCH	5.0
+describe	PHISHTANK_0009375418_MATCH	Phishtank ID 9375418 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009375418_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009375418_VALIDATED	PHISHTANK_0009375418_MATCH && __PHISHTANK_0009375418_VALCHECK
+score		PHISHTANK_0009375418_VALIDATED	2.0
+describe	PHISHTANK_0009375418_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009375418_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009375418_ONLINE	PHISHTANK_0009375418_MATCH && __PHISHTANK_0009375418_ONCHECK
+score		PHISHTANK_0009375418_ONLINE	2.0
+describe	PHISHTANK_0009375418_ONLINE	Phishing URL still online
+
+##

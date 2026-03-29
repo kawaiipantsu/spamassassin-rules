@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009373624
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9373624
+## Submitted.....: 2026-03-23T16:21:43+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009373624_MATCH	/ebook\-logownie2375c37b8938bdd201182bbf616a044625eb\.dynamicsolarshading\.org\/klsjiudf\/pages\/step\-one\.php/
+score		PHISHTANK_0009373624_MATCH	5.0
+describe	PHISHTANK_0009373624_MATCH	Phishtank ID 9373624 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009373624_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009373624_VALIDATED	PHISHTANK_0009373624_MATCH && __PHISHTANK_0009373624_VALCHECK
+score		PHISHTANK_0009373624_VALIDATED	2.0
+describe	PHISHTANK_0009373624_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009373624_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009373624_ONLINE	PHISHTANK_0009373624_MATCH && __PHISHTANK_0009373624_ONCHECK
+score		PHISHTANK_0009373624_ONLINE	2.0
+describe	PHISHTANK_0009373624_ONLINE	Phishing URL still online
+
+##
