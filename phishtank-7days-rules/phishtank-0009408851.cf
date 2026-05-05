@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009408851
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9408851
+## Submitted.....: 2026-04-29T19:48:44+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009408851_MATCH	/allegrolokalnie\.pls3fasfess11xk\.sbs\/transakcja\/lokalnie\/b67d8997\-e966\-4ba6\-93b0\-96b23a9ca3c1/
+score		PHISHTANK_0009408851_MATCH	5.0
+describe	PHISHTANK_0009408851_MATCH	Phishtank ID 9408851 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009408851_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009408851_VALIDATED	PHISHTANK_0009408851_MATCH && __PHISHTANK_0009408851_VALCHECK
+score		PHISHTANK_0009408851_VALIDATED	2.0
+describe	PHISHTANK_0009408851_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009408851_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009408851_ONLINE	PHISHTANK_0009408851_MATCH && __PHISHTANK_0009408851_ONCHECK
+score		PHISHTANK_0009408851_ONLINE	2.0
+describe	PHISHTANK_0009408851_ONLINE	Phishing URL still online
+
+##

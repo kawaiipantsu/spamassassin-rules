@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009390979
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9390979
+## Submitted.....: 2026-04-13T07:17:03+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009390979_MATCH	/www\.mijn\.overheid\.nl\.bc1q3jluwy2c03h5w8ehmd53nn2lmechszr4c22lev\.goldmansdevelopment\.com\.fj\/berichtenbox\.php/
+score		PHISHTANK_0009390979_MATCH	5.0
+describe	PHISHTANK_0009390979_MATCH	Phishtank ID 9390979 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009390979_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009390979_VALIDATED	PHISHTANK_0009390979_MATCH && __PHISHTANK_0009390979_VALCHECK
+score		PHISHTANK_0009390979_VALIDATED	2.0
+describe	PHISHTANK_0009390979_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009390979_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009390979_ONLINE	PHISHTANK_0009390979_MATCH && __PHISHTANK_0009390979_ONCHECK
+score		PHISHTANK_0009390979_ONLINE	2.0
+describe	PHISHTANK_0009390979_ONLINE	Phishing URL still online
+
+##

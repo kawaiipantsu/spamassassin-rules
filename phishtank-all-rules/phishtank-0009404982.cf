@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009404982
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9404982
+## Submitted.....: 2026-04-26T16:27:15+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009404982_MATCH	/allegrolokalnie\.381d\.click\/oferta\/Opony\-letnie\-4szt\-Continental\-PremiumContact\-7\-20555R16\-91V\-Nowy\-4hqcjv0/
+score		PHISHTANK_0009404982_MATCH	5.0
+describe	PHISHTANK_0009404982_MATCH	Phishtank ID 9404982 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009404982_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009404982_VALIDATED	PHISHTANK_0009404982_MATCH && __PHISHTANK_0009404982_VALCHECK
+score		PHISHTANK_0009404982_VALIDATED	2.0
+describe	PHISHTANK_0009404982_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009404982_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009404982_ONLINE	PHISHTANK_0009404982_MATCH && __PHISHTANK_0009404982_ONCHECK
+score		PHISHTANK_0009404982_ONLINE	2.0
+describe	PHISHTANK_0009404982_ONLINE	Phishing URL still online
+
+##

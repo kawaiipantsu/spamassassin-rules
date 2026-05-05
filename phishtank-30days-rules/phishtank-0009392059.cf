@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009392059
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9392059
+## Submitted.....: 2026-04-14T00:13:16+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009392059_MATCH	/bradesco\.auditoriatalao\.com\/inicio/
+score		PHISHTANK_0009392059_MATCH	5.0
+describe	PHISHTANK_0009392059_MATCH	Phishtank ID 9392059 (Bradesco) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009392059_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009392059_VALIDATED	PHISHTANK_0009392059_MATCH && __PHISHTANK_0009392059_VALCHECK
+score		PHISHTANK_0009392059_VALIDATED	2.0
+describe	PHISHTANK_0009392059_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009392059_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009392059_ONLINE	PHISHTANK_0009392059_MATCH && __PHISHTANK_0009392059_ONCHECK
+score		PHISHTANK_0009392059_ONLINE	2.0
+describe	PHISHTANK_0009392059_ONLINE	Phishing URL still online
+
+##
