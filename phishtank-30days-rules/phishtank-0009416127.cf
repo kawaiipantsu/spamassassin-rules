@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009416127
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9416127
+## Submitted.....: 2026-05-05T14:00:17+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009416127_MATCH	/creditmuteull\.s\-host\.net\//
+score		PHISHTANK_0009416127_MATCH	5.0
+describe	PHISHTANK_0009416127_MATCH	Phishtank ID 9416127 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009416127_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009416127_VALIDATED	PHISHTANK_0009416127_MATCH && __PHISHTANK_0009416127_VALCHECK
+score		PHISHTANK_0009416127_VALIDATED	2.0
+describe	PHISHTANK_0009416127_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009416127_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009416127_ONLINE	PHISHTANK_0009416127_MATCH && __PHISHTANK_0009416127_ONCHECK
+score		PHISHTANK_0009416127_ONLINE	2.0
+describe	PHISHTANK_0009416127_ONLINE	Phishing URL still online
+
+##
