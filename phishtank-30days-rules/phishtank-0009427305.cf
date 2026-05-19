@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009427305
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9427305
+## Submitted.....: 2026-05-18T14:30:05+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009427305_MATCH	/www\.hbqmwh\.com\//
+score		PHISHTANK_0009427305_MATCH	5.0
+describe	PHISHTANK_0009427305_MATCH	Phishtank ID 9427305 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009427305_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009427305_VALIDATED	PHISHTANK_0009427305_MATCH && __PHISHTANK_0009427305_VALCHECK
+score		PHISHTANK_0009427305_VALIDATED	2.0
+describe	PHISHTANK_0009427305_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009427305_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009427305_ONLINE	PHISHTANK_0009427305_MATCH && __PHISHTANK_0009427305_ONCHECK
+score		PHISHTANK_0009427305_ONLINE	2.0
+describe	PHISHTANK_0009427305_ONLINE	Phishing URL still online
+
+##
