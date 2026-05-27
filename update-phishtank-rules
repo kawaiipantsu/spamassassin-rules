@@ -102,39 +102,76 @@ foreach ( $data as $ptEntry ) {
 }
 
 
-
-
-// Function to build a SpamAssassin rule from phishtank array entry
+// Function to build a SpamAssassin rule from phishtank array entry (Updated to eleminate False positive
 function buildRule($entry) {
- $ptID = trim($entry["phish_id"]);
- $id = sprintf("PHISHTANK_%010s",trim($entry["phish_id"]));
- cLog("  - Building rule: ".$id);
- $ptURL           = trim($entry["phish_detail_url"]);
- $ptDate          = trim($entry["submission_time"]);
- $parsed          = parse_url(trim($entry["url"]));
- $matchURL        = array_key_exists("path",$parsed) ? $parsed['host'].$parsed['path'] : $parsed['host'];
- $matchURL_regex  = preg_quote($matchURL, '/');
- $bValidated      = strtolower(trim($entry["verified"])) == "yes" ? "1" : "0";
- $bActive         = strtolower(trim($entry["online"])) == "yes" ? "1" : "0";
- $score           = strlen(SCORE_DEFAULT) >= 1 ? SCORE_DEFAULT : "10";
- $score_validated = strlen(SCORE_EXTRA_VALIDATED) >= 1 ? SCORE_EXTRA_VALIDATED : "10";
- $score_online    = strlen(SCORE_EXTRA_ACTIVE) >= 1 ? SCORE_EXTRA_ACTIVE : "10";
- $ptTarget        = "(".trim($entry["target"]).")";
- $rule   = <<<EOD
-##  ____  _     _     _   _____           _      ____        _
-## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
-## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
-## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
-## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\\__,_|_|\___|
-##
+
+    $ptID = trim($entry["phish_id"]);
+    $id   = sprintf("PHISHTANK_%010s", $ptID);
+    cLog("  - Building rule: " . $id);
+
+    $ptURL  = trim($entry["phish_detail_url"]);
+    $ptDate = trim($entry["submission_time"]);
+
+    /*
+     * ------------------------------------------------------------------
+     * FIX: Preserve full URL semantics
+     * ------------------------------------------------------------------
+     * - Decode HTML entities (fixes &amp;)
+     * - Parse URL normally
+     * - Build match using host + path + query + fragment
+     *
+     * This prevents false positives like:
+     *   www.google.com/url
+     * by ensuring the rule matches the FULL redirect URL,
+     * not just the redirect endpoint.
+     */
+    $rawURL = html_entity_decode(trim($entry["url"]), ENT_QUOTES | ENT_HTML5);
+    $parsed = parse_url($rawURL);
+
+    if (!isset($parsed['host'])) {
+        cLog("    ! Invalid URL, skipping rule");
+        return null;
+    }
+
+    // Host is mandatory
+    $matchURL = $parsed['host'];
+
+    // Path (default "/" if missing)
+    if (isset($parsed['path'])) {
+        $matchURL .= $parsed['path'];
+    } else {
+        $matchURL .= '/';
+    }
+
+    // Query (THIS IS THE CRITICAL FIX)
+    if (isset($parsed['query']) && $parsed['query'] !== '') {
+        $matchURL .= '?' . $parsed['query'];
+    }
+
+    // Fragment (rare, but lets it)
+    if (isset($parsed['fragment']) && $parsed['fragment'] !== '') {
+        $matchURL .= '#' . $parsed['fragment'];
+    }
+
+    // Escape for SpamAssassin regex (PHP equivalent of re.escape)
+    $matchURL_regex = preg_quote($matchURL, '/');
+
+    $bValidated      = strtolower(trim($entry["verified"])) == "yes" ? "1" : "0";
+    $bActive         = strtolower(trim($entry["online"])) == "yes" ? "1" : "0";
+    $score           = strlen(SCORE_DEFAULT) >= 1 ? SCORE_DEFAULT : "10";
+    $score_validated = strlen(SCORE_EXTRA_VALIDATED) >= 1 ? SCORE_EXTRA_VALIDATED : "10";
+    $score_online    = strlen(SCORE_EXTRA_ACTIVE) >= 1 ? SCORE_EXTRA_ACTIVE : "10";
+    $ptTarget        = "(" . trim($entry["target"]) . ")";
+
+    $rule = <<<EOD
 ## Rule ID.......: ${id}
 ## PhishTank URL.: ${ptURL}
 ## Submitted.....: ${ptDate}
-## 
+##
 ## DEFAULT MATCH RULE
 uri\t\t${id}_MATCH\t/${matchURL_regex}/
 score\t\t${id}_MATCH\t${score}
-describe\t${id}_MATCH\tPhishtank ID ${ptID} ${ptTarget} 
+describe\t${id}_MATCH\tPhishtank ID ${ptID} ${ptTarget}
 
 ## VALIDATED RULE
 meta\t\t__${id}_VALCHECK\t(1*${bValidated}) > 0
@@ -146,11 +183,11 @@ describe\t${id}_VALIDATED\tValidated phishing url
 meta\t\t__${id}_ONCHECK\t(1*${bActive}) > 0
 meta\t\t${id}_ONLINE\t${id}_MATCH && __${id}_ONCHECK
 score\t\t${id}_ONLINE\t${score_online}
-describe\t${id}_ONLINE\tPhishing URL still online
-
+describe\t\t${id}_ONLINE\tPhishing URL still online
 ##
 EOD;
- return $rule;
+
+    return $rule;
 }
 
 // Simple fetch DB function
