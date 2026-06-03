@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009441081
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9441081
+## Submitted.....: 2026-06-01T22:28:55+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009441081_MATCH	/paypay\-bank\-fpy\.github\.io\/i/
+score		PHISHTANK_0009441081_MATCH	5.0
+describe	PHISHTANK_0009441081_MATCH	Phishtank ID 9441081 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009441081_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009441081_VALIDATED	PHISHTANK_0009441081_MATCH && __PHISHTANK_0009441081_VALCHECK
+score		PHISHTANK_0009441081_VALIDATED	2.0
+describe	PHISHTANK_0009441081_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009441081_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009441081_ONLINE	PHISHTANK_0009441081_MATCH && __PHISHTANK_0009441081_ONCHECK
+score		PHISHTANK_0009441081_ONLINE	2.0
+describe	PHISHTANK_0009441081_ONLINE	Phishing URL still online
+
+##
