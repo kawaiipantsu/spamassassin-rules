@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009444638
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9444638
+## Submitted.....: 2026-06-05T13:24:41+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009444638_MATCH	/allegrolokalnie\.181421442\-wszystkie\.shop\/oferta\/Ponton\-Kolibri\-330\-z\-silnikiem\-Mercury\-3/
+score		PHISHTANK_0009444638_MATCH	5.0
+describe	PHISHTANK_0009444638_MATCH	Phishtank ID 9444638 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009444638_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009444638_VALIDATED	PHISHTANK_0009444638_MATCH && __PHISHTANK_0009444638_VALCHECK
+score		PHISHTANK_0009444638_VALIDATED	2.0
+describe	PHISHTANK_0009444638_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009444638_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009444638_ONLINE	PHISHTANK_0009444638_MATCH && __PHISHTANK_0009444638_ONCHECK
+score		PHISHTANK_0009444638_ONLINE	2.0
+describe	PHISHTANK_0009444638_ONLINE	Phishing URL still online
+
+##
