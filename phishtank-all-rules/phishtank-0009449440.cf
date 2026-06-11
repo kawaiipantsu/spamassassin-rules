@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009449440
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9449440
+## Submitted.....: 2026-06-10T15:30:14+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009449440_MATCH	/sender\.zohoinsights\.eu\/ck1\/13ef\.4aba358de\/e294e0d0\-63ee\-11f1\-adf5\-76699466976f\/7e88bfe0a14260ed6ff77623453ca1068ae0d102\/2/
+score		PHISHTANK_0009449440_MATCH	5.0
+describe	PHISHTANK_0009449440_MATCH	Phishtank ID 9449440 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009449440_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009449440_VALIDATED	PHISHTANK_0009449440_MATCH && __PHISHTANK_0009449440_VALCHECK
+score		PHISHTANK_0009449440_VALIDATED	2.0
+describe	PHISHTANK_0009449440_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009449440_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009449440_ONLINE	PHISHTANK_0009449440_MATCH && __PHISHTANK_0009449440_ONCHECK
+score		PHISHTANK_0009449440_ONLINE	2.0
+describe	PHISHTANK_0009449440_ONLINE	Phishing URL still online
+
+##
