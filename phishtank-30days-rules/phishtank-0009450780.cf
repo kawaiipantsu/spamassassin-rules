@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009450780
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9450780
+## Submitted.....: 2026-06-12T06:09:55+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009450780_MATCH	/official\-trser\-io\.wixstudio\.com\/en\-us/
+score		PHISHTANK_0009450780_MATCH	5.0
+describe	PHISHTANK_0009450780_MATCH	Phishtank ID 9450780 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009450780_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009450780_VALIDATED	PHISHTANK_0009450780_MATCH && __PHISHTANK_0009450780_VALCHECK
+score		PHISHTANK_0009450780_VALIDATED	2.0
+describe	PHISHTANK_0009450780_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009450780_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009450780_ONLINE	PHISHTANK_0009450780_MATCH && __PHISHTANK_0009450780_ONCHECK
+score		PHISHTANK_0009450780_ONLINE	2.0
+describe	PHISHTANK_0009450780_ONLINE	Phishing URL still online
+
+##
