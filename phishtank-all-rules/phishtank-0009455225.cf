@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009455225
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9455225
+## Submitted.....: 2026-06-16T20:31:54+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009455225_MATCH	/apple0d76cd38f0534778a97f4b98af49f6b3\.4g7f9p\.cn\/Apple6a61cc8721c846a3ae217d712f4dc0e7/
+score		PHISHTANK_0009455225_MATCH	5.0
+describe	PHISHTANK_0009455225_MATCH	Phishtank ID 9455225 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009455225_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009455225_VALIDATED	PHISHTANK_0009455225_MATCH && __PHISHTANK_0009455225_VALCHECK
+score		PHISHTANK_0009455225_VALIDATED	2.0
+describe	PHISHTANK_0009455225_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009455225_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009455225_ONLINE	PHISHTANK_0009455225_MATCH && __PHISHTANK_0009455225_ONCHECK
+score		PHISHTANK_0009455225_ONLINE	2.0
+describe	PHISHTANK_0009455225_ONLINE	Phishing URL still online
+
+##
