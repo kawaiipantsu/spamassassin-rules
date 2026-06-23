@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009460166
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9460166
+## Submitted.....: 2026-06-22T21:54:59+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009460166_MATCH	/allegrolokalnie\.letnie\-okazje4637287641\.cyou\/oferta\/id\-2rdj5p9e8\-quad\-kayo\-at125\-4x4\-atv\-sportowy\-stan\-idealny/
+score		PHISHTANK_0009460166_MATCH	5.0
+describe	PHISHTANK_0009460166_MATCH	Phishtank ID 9460166 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009460166_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009460166_VALIDATED	PHISHTANK_0009460166_MATCH && __PHISHTANK_0009460166_VALCHECK
+score		PHISHTANK_0009460166_VALIDATED	2.0
+describe	PHISHTANK_0009460166_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009460166_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009460166_ONLINE	PHISHTANK_0009460166_MATCH && __PHISHTANK_0009460166_ONCHECK
+score		PHISHTANK_0009460166_ONLINE	2.0
+describe	PHISHTANK_0009460166_ONLINE	Phishing URL still online
+
+##
