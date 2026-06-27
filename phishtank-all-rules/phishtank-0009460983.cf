@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009460983
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9460983
+## Submitted.....: 2026-06-23T22:01:40+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009460983_MATCH	/allegrolokalnie\.rezerwacja7862\.sbs\/oferta\/Nowy\-G%C5%82o%C5%9Bnik\-JBL\-Partybox\-1000\-Bluetooth\-%7C\-Gwarancja\-%7C\-1100W\/157395527/
+score		PHISHTANK_0009460983_MATCH	5.0
+describe	PHISHTANK_0009460983_MATCH	Phishtank ID 9460983 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009460983_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009460983_VALIDATED	PHISHTANK_0009460983_MATCH && __PHISHTANK_0009460983_VALCHECK
+score		PHISHTANK_0009460983_VALIDATED	2.0
+describe	PHISHTANK_0009460983_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009460983_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009460983_ONLINE	PHISHTANK_0009460983_MATCH && __PHISHTANK_0009460983_ONCHECK
+score		PHISHTANK_0009460983_ONLINE	2.0
+describe	PHISHTANK_0009460983_ONLINE	Phishing URL still online
+
+##

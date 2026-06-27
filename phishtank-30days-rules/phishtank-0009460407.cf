@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009460407
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9460407
+## Submitted.....: 2026-06-23T06:55:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009460407_MATCH	/chinta009\.top\//
+score		PHISHTANK_0009460407_MATCH	5.0
+describe	PHISHTANK_0009460407_MATCH	Phishtank ID 9460407 (Amazon.com) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009460407_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009460407_VALIDATED	PHISHTANK_0009460407_MATCH && __PHISHTANK_0009460407_VALCHECK
+score		PHISHTANK_0009460407_VALIDATED	2.0
+describe	PHISHTANK_0009460407_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009460407_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009460407_ONLINE	PHISHTANK_0009460407_MATCH && __PHISHTANK_0009460407_ONCHECK
+score		PHISHTANK_0009460407_ONLINE	2.0
+describe	PHISHTANK_0009460407_ONLINE	Phishing URL still online
+
+##

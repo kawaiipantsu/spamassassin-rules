@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009462579
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9462579
+## Submitted.....: 2026-06-25T12:52:27+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009462579_MATCH	/allegrolokalnie\.lokalna\-ofeta2356446\.shop\/oferta\/jacuzzi\-lay\-z\-spa\-bali\-okazja\/462172282/
+score		PHISHTANK_0009462579_MATCH	5.0
+describe	PHISHTANK_0009462579_MATCH	Phishtank ID 9462579 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009462579_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009462579_VALIDATED	PHISHTANK_0009462579_MATCH && __PHISHTANK_0009462579_VALCHECK
+score		PHISHTANK_0009462579_VALIDATED	2.0
+describe	PHISHTANK_0009462579_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009462579_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009462579_ONLINE	PHISHTANK_0009462579_MATCH && __PHISHTANK_0009462579_ONCHECK
+score		PHISHTANK_0009462579_ONLINE	2.0
+describe	PHISHTANK_0009462579_ONLINE	Phishing URL still online
+
+##
