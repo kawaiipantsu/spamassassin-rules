@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009465326
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9465326
+## Submitted.....: 2026-06-29T03:19:31+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009465326_MATCH	/usc1\.contabostorage\.com\/3bb9dfb6e1eb421aad93c14d14f8edb4\:bless874\/all\-domain1\.html/
+score		PHISHTANK_0009465326_MATCH	5.0
+describe	PHISHTANK_0009465326_MATCH	Phishtank ID 9465326 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009465326_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009465326_VALIDATED	PHISHTANK_0009465326_MATCH && __PHISHTANK_0009465326_VALCHECK
+score		PHISHTANK_0009465326_VALIDATED	2.0
+describe	PHISHTANK_0009465326_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009465326_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009465326_ONLINE	PHISHTANK_0009465326_MATCH && __PHISHTANK_0009465326_ONCHECK
+score		PHISHTANK_0009465326_ONLINE	2.0
+describe	PHISHTANK_0009465326_ONLINE	Phishing URL still online
+
+##
