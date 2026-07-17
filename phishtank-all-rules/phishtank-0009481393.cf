@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009481393
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9481393
+## Submitted.....: 2026-07-16T16:00:19+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009481393_MATCH	/triumphant\-kimchi\-070481\.framer\.app\//
+score		PHISHTANK_0009481393_MATCH	5.0
+describe	PHISHTANK_0009481393_MATCH	Phishtank ID 9481393 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009481393_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009481393_VALIDATED	PHISHTANK_0009481393_MATCH && __PHISHTANK_0009481393_VALCHECK
+score		PHISHTANK_0009481393_VALIDATED	2.0
+describe	PHISHTANK_0009481393_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009481393_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009481393_ONLINE	PHISHTANK_0009481393_MATCH && __PHISHTANK_0009481393_ONCHECK
+score		PHISHTANK_0009481393_ONLINE	2.0
+describe	PHISHTANK_0009481393_ONLINE	Phishing URL still online
+
+##

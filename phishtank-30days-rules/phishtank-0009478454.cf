@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009478454
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9478454
+## Submitted.....: 2026-07-14T10:56:03+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009478454_MATCH	/meituamaxklog\.gitbook\.io\//
+score		PHISHTANK_0009478454_MATCH	5.0
+describe	PHISHTANK_0009478454_MATCH	Phishtank ID 9478454 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009478454_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009478454_VALIDATED	PHISHTANK_0009478454_MATCH && __PHISHTANK_0009478454_VALCHECK
+score		PHISHTANK_0009478454_VALIDATED	2.0
+describe	PHISHTANK_0009478454_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009478454_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009478454_ONLINE	PHISHTANK_0009478454_MATCH && __PHISHTANK_0009478454_ONCHECK
+score		PHISHTANK_0009478454_ONLINE	2.0
+describe	PHISHTANK_0009478454_ONLINE	Phishing URL still online
+
+##
