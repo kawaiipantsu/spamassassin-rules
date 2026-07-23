@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009482115
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9482115
+## Submitted.....: 2026-07-17T07:27:49+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009482115_MATCH	/allegrolokalnie\.oferta280zywn09\.forum\/oferta\/id\-jup0zof\-dji\-mini\-4\-pro\-fly\-more\-combo\-rc2\-\-dodatkowe\-akcesoria\-\-tylko\-47\-min\-czasu\-lotu\-stan\-jak\-nowy/
+score		PHISHTANK_0009482115_MATCH	5.0
+describe	PHISHTANK_0009482115_MATCH	Phishtank ID 9482115 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009482115_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009482115_VALIDATED	PHISHTANK_0009482115_MATCH && __PHISHTANK_0009482115_VALCHECK
+score		PHISHTANK_0009482115_VALIDATED	2.0
+describe	PHISHTANK_0009482115_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009482115_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009482115_ONLINE	PHISHTANK_0009482115_MATCH && __PHISHTANK_0009482115_ONCHECK
+score		PHISHTANK_0009482115_ONLINE	2.0
+describe	PHISHTANK_0009482115_ONLINE	Phishing URL still online
+
+##
