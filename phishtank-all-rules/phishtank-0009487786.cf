@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009487786
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9487786
+## Submitted.....: 2026-07-26T04:09:44+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009487786_MATCH	/humorous\-methods\-192582\.framer\.app\//
+score		PHISHTANK_0009487786_MATCH	5.0
+describe	PHISHTANK_0009487786_MATCH	Phishtank ID 9487786 (Microsoft) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009487786_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009487786_VALIDATED	PHISHTANK_0009487786_MATCH && __PHISHTANK_0009487786_VALCHECK
+score		PHISHTANK_0009487786_VALIDATED	2.0
+describe	PHISHTANK_0009487786_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009487786_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009487786_ONLINE	PHISHTANK_0009487786_MATCH && __PHISHTANK_0009487786_ONCHECK
+score		PHISHTANK_0009487786_ONLINE	2.0
+describe	PHISHTANK_0009487786_ONLINE	Phishing URL still online
+
+##
