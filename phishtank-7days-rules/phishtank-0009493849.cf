@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009493849
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9493849
+## Submitted.....: 2026-08-01T18:09:12+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009493849_MATCH	/metaamusk\-un\-wuleet\.gitbook\.io\/login/
+score		PHISHTANK_0009493849_MATCH	5.0
+describe	PHISHTANK_0009493849_MATCH	Phishtank ID 9493849 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009493849_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009493849_VALIDATED	PHISHTANK_0009493849_MATCH && __PHISHTANK_0009493849_VALCHECK
+score		PHISHTANK_0009493849_VALIDATED	2.0
+describe	PHISHTANK_0009493849_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009493849_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009493849_ONLINE	PHISHTANK_0009493849_MATCH && __PHISHTANK_0009493849_ONCHECK
+score		PHISHTANK_0009493849_ONLINE	2.0
+describe	PHISHTANK_0009493849_ONLINE	Phishing URL still online
+
+##
