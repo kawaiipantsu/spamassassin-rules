@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009501291
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9501291
+## Submitted.....: 2026-08-09T18:45:28+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009501291_MATCH	/sender\.zohoinsights\-crm\.com\/ck1\/2d6f\.327230a\/b0a503b0\-93c9\-11f1\-8920\-765e7256bde4\/449092ae6f1a62ddb272c4483cff61d0cbfb4da0\/2/
+score		PHISHTANK_0009501291_MATCH	5.0
+describe	PHISHTANK_0009501291_MATCH	Phishtank ID 9501291 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009501291_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009501291_VALIDATED	PHISHTANK_0009501291_MATCH && __PHISHTANK_0009501291_VALCHECK
+score		PHISHTANK_0009501291_VALIDATED	2.0
+describe	PHISHTANK_0009501291_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009501291_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009501291_ONLINE	PHISHTANK_0009501291_MATCH && __PHISHTANK_0009501291_ONCHECK
+score		PHISHTANK_0009501291_ONLINE	2.0
+describe	PHISHTANK_0009501291_ONLINE	Phishing URL still online
+
+##

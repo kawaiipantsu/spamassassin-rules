@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009501921
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9501921
+## Submitted.....: 2026-08-10T14:09:10+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009501921_MATCH	/www\.tipf8rs3xheswl0lzzb02v1osuilufrm\.waak2735\.de\/myMail\/0197f430d4b05f8f777bd816fcb2fce0\//
+score		PHISHTANK_0009501921_MATCH	5.0
+describe	PHISHTANK_0009501921_MATCH	Phishtank ID 9501921 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009501921_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009501921_VALIDATED	PHISHTANK_0009501921_MATCH && __PHISHTANK_0009501921_VALCHECK
+score		PHISHTANK_0009501921_VALIDATED	2.0
+describe	PHISHTANK_0009501921_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009501921_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009501921_ONLINE	PHISHTANK_0009501921_MATCH && __PHISHTANK_0009501921_ONCHECK
+score		PHISHTANK_0009501921_ONLINE	2.0
+describe	PHISHTANK_0009501921_ONLINE	Phishing URL still online
+
+##
