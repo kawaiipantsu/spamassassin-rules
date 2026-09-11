@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009519805
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9519805
+## Submitted.....: 2026-09-07T15:31:34+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009519805_MATCH	/stark\-vermolt\.com\//
+score		PHISHTANK_0009519805_MATCH	5.0
+describe	PHISHTANK_0009519805_MATCH	Phishtank ID 9519805 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009519805_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009519805_VALIDATED	PHISHTANK_0009519805_MATCH && __PHISHTANK_0009519805_VALCHECK
+score		PHISHTANK_0009519805_VALIDATED	2.0
+describe	PHISHTANK_0009519805_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009519805_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009519805_ONLINE	PHISHTANK_0009519805_MATCH && __PHISHTANK_0009519805_ONCHECK
+score		PHISHTANK_0009519805_ONLINE	2.0
+describe	PHISHTANK_0009519805_ONLINE	Phishing URL still online
+
+##

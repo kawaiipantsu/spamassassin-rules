@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009520145
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9520145
+## Submitted.....: 2026-09-08T06:20:23+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009520145_MATCH	/webmail\-aruba\-areaclienti\.sys\-webm73\.sbs\//
+score		PHISHTANK_0009520145_MATCH	5.0
+describe	PHISHTANK_0009520145_MATCH	Phishtank ID 9520145 (Other) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009520145_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009520145_VALIDATED	PHISHTANK_0009520145_MATCH && __PHISHTANK_0009520145_VALCHECK
+score		PHISHTANK_0009520145_VALIDATED	2.0
+describe	PHISHTANK_0009520145_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009520145_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009520145_ONLINE	PHISHTANK_0009520145_MATCH && __PHISHTANK_0009520145_ONCHECK
+score		PHISHTANK_0009520145_ONLINE	2.0
+describe	PHISHTANK_0009520145_ONLINE	Phishing URL still online
+
+##
