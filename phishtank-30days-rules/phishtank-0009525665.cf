@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009525665
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9525665
+## Submitted.....: 2026-09-15T17:46:48+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009525665_MATCH	/allegrolokalnie\.id38djw7d29ds872bf6723fd\.sbs\/2055516\-goodyear\-opony\-ca%C5%82oroc\/93595/
+score		PHISHTANK_0009525665_MATCH	5.0
+describe	PHISHTANK_0009525665_MATCH	Phishtank ID 9525665 (Allegro) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009525665_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009525665_VALIDATED	PHISHTANK_0009525665_MATCH && __PHISHTANK_0009525665_VALCHECK
+score		PHISHTANK_0009525665_VALIDATED	2.0
+describe	PHISHTANK_0009525665_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009525665_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009525665_ONLINE	PHISHTANK_0009525665_MATCH && __PHISHTANK_0009525665_ONCHECK
+score		PHISHTANK_0009525665_ONLINE	2.0
+describe	PHISHTANK_0009525665_ONLINE	Phishing URL still online
+
+##

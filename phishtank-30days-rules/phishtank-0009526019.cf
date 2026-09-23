@@ -1,0 +1,28 @@
+##  ____  _     _     _   _____           _      ____        _
+## |  _ \| |__ (_)___| |_|_   _|_ _ _ __ | | __ |  _ \ _   _| | ___
+## | |_) | '_ \| / __| '_ \| |/ _` | '_ \| |/ / | |_) | | | | |/ _ \
+## |  __/| | | | \__ \ | | | | (_| | | | |   <  |  _ <| |_| | |  __/
+## |_|   |_| |_|_|___/_| |_|_|\__,_|_| |_|_|\_\ |_| \_\\__,_|_|\___|
+##
+## Rule ID.......: PHISHTANK_0009526019
+## PhishTank URL.: http://www.phishtank.com/phish_detail.php?phish_id=9526019
+## Submitted.....: 2026-09-16T09:36:45+00:00
+## 
+## DEFAULT MATCH RULE
+uri		PHISHTANK_0009526019_MATCH	/bbejahhc\.r\.bh\.d\.sendibt3\.com\/tr\/cl\/c7B9p8Be6vmGUT1UGd5Lj4Cc5u5pzCbyiT6XLciJXl1ZpE2x\-dmX96Hu6jEKfBCpZGuJXkShkw12c_Z_4\-QjPcFLTKaKyEuLqvKseVSNnPXSXTGmvqBonml4frt4TPAKgyuu8n1YRQtZbhfZUxPdE3V12nwRlrS1YW93rVfxOyKse5gQ0guAl07wRcO9GxYDIrp\-5vJepkkCAAZcZw63Jv3bG5ISU\-2j\-aOllw7IKgxYDDN4XXBCuoUKpvbI_AIAxyPcP09\-wrsuMoT79Mc841X0_cnANUDvDfw/
+score		PHISHTANK_0009526019_MATCH	5.0
+describe	PHISHTANK_0009526019_MATCH	Phishtank ID 9526019 (Amazon.com) 
+
+## VALIDATED RULE
+meta		__PHISHTANK_0009526019_VALCHECK	(1*1) > 0
+meta		PHISHTANK_0009526019_VALIDATED	PHISHTANK_0009526019_MATCH && __PHISHTANK_0009526019_VALCHECK
+score		PHISHTANK_0009526019_VALIDATED	2.0
+describe	PHISHTANK_0009526019_VALIDATED	Validated phishing url
+
+## ACTIVE/ONLINE RULE
+meta		__PHISHTANK_0009526019_ONCHECK	(1*1) > 0
+meta		PHISHTANK_0009526019_ONLINE	PHISHTANK_0009526019_MATCH && __PHISHTANK_0009526019_ONCHECK
+score		PHISHTANK_0009526019_ONLINE	2.0
+describe	PHISHTANK_0009526019_ONLINE	Phishing URL still online
+
+##
